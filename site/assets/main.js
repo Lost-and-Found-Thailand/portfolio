@@ -50,8 +50,12 @@
         },
         { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
       );
-      revealEls.forEach(function (el, i) {
-        el.style.transitionDelay = Math.min(i % 4, 3) * 80 + "ms";
+      var groupCounts = new Map();
+      revealEls.forEach(function (el) {
+        var parent = el.parentElement;
+        var idx = groupCounts.get(parent) || 0;
+        groupCounts.set(parent, idx + 1);
+        el.style.transitionDelay = Math.min(idx, 5) * 70 + "ms";
         io.observe(el);
       });
     }
@@ -215,6 +219,79 @@
           }
         );
       });
+    });
+  }
+
+  /* Scroll progress bar */
+  var progressBar = document.createElement("div");
+  progressBar.className = "ldm-scroll-progress";
+  document.body.appendChild(progressBar);
+  var updateProgress = function () {
+    var h = document.documentElement;
+    var scrollable = h.scrollHeight - h.clientHeight;
+    var pct = scrollable > 0 ? (h.scrollTop / scrollable) * 100 : 0;
+    progressBar.style.width = pct + "%";
+  };
+  updateProgress();
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  window.addEventListener("resize", updateProgress);
+
+  /* Custom cursor: dot follows exactly, ring lags for a trailing feel */
+  if (pointerFine && !reduceMotion) {
+    document.body.classList.add("has-custom-cursor");
+    var cursorDot = document.createElement("div");
+    cursorDot.className = "ldm-cursor-dot";
+    var cursorRing = document.createElement("div");
+    cursorRing.className = "ldm-cursor-ring";
+    document.body.appendChild(cursorDot);
+    document.body.appendChild(cursorRing);
+
+    var mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+    window.addEventListener(
+      "pointermove",
+      function (e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursorDot.style.transform = "translate(" + mouseX + "px," + mouseY + "px) translate(-50%,-50%)";
+        cursorDot.classList.add("is-active");
+        cursorRing.classList.add("is-active");
+      },
+      { passive: true }
+    );
+    document.addEventListener("pointerleave", function () {
+      cursorDot.classList.remove("is-active");
+      cursorRing.classList.remove("is-active");
+    });
+
+    (function ringLoop() {
+      ringX += (mouseX - ringX) * 0.18;
+      ringY += (mouseY - ringY) * 0.18;
+      cursorRing.style.transform = "translate(" + ringX + "px," + ringY + "px) translate(-50%,-50%)";
+      requestAnimationFrame(ringLoop);
+    })();
+
+    var hoverables = document.querySelectorAll(
+      "a, button, .btn, input, textarea, select, .ldm-case, .card, .ldm-service, .ldm-service-detail"
+    );
+    hoverables.forEach(function (el) {
+      el.addEventListener("pointerenter", function () { cursorRing.classList.add("is-hovering"); });
+      el.addEventListener("pointerleave", function () { cursorRing.classList.remove("is-hovering"); });
+    });
+  }
+
+  /* Cursor-follow "View Case Study" label */
+  var caseCards = document.querySelectorAll(".ldm-case");
+  if (pointerFine && !reduceMotion && caseCards.length) {
+    var hoverLabel = document.createElement("div");
+    hoverLabel.className = "ldm-hover-label";
+    hoverLabel.textContent = "View Case Study →";
+    document.body.appendChild(hoverLabel);
+    caseCards.forEach(function (el) {
+      el.addEventListener("pointerenter", function () { hoverLabel.classList.add("is-active"); });
+      el.addEventListener("pointermove", function (e) {
+        hoverLabel.style.transform = "translate(" + e.clientX + "px," + (e.clientY - 50) + "px) translate(-50%,-50%)";
+      });
+      el.addEventListener("pointerleave", function () { hoverLabel.classList.remove("is-active"); });
     });
   }
 })();
