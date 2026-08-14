@@ -14,9 +14,10 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  /* Mobile menu toggle. Also forces the header bar fully opaque while open —
-     otherwise its transparent top strip lets the animated hero grid drift
-     behind the logo/close button, reading as visual clutter/overlap. */
+  /* Mobile menu toggle. The overlay now sits above the header entirely
+     (z-index) while open and carries its own close button (below), so
+     nothing about closing the menu depends on the header staying visible
+     or on top of it — see that button's comment for why. */
   var burger = document.querySelector(".ldm-burger");
   var mobileMenu = document.querySelector(".ldm-mobile-menu");
   if (mobileMenu && mobileMenu.parentElement !== document.body) {
@@ -29,6 +30,20 @@
     document.body.appendChild(mobileMenu);
   }
   if (burger && mobileMenu) {
+    /* Give the overlay its own close button rather than relying on the
+       header's burger-turned-X staying visually on top of it — in at
+       least one in-app WebView browser the header did not reliably
+       stack above the full-screen menu, making that X effectively
+       disappear. A close control inside the overlay itself can't have
+       that problem, since the overlay is by definition the topmost
+       thing on screen while open. */
+    var closeBtn = document.createElement("button");
+    closeBtn.type = "button";
+    closeBtn.className = "ldm-mobile-menu-close";
+    closeBtn.setAttribute("aria-label", "Close menu");
+    closeBtn.innerHTML = "<span></span><span></span>";
+    mobileMenu.insertBefore(closeBtn, mobileMenu.firstChild);
+
     var setMenuOpen = function (open) {
       burger.classList.toggle("is-open", open);
       mobileMenu.classList.toggle("is-open", open);
@@ -41,6 +56,9 @@
     };
     burger.addEventListener("click", function () {
       setMenuOpen(!burger.classList.contains("is-open"));
+    });
+    closeBtn.addEventListener("click", function () {
+      setMenuOpen(false);
     });
     mobileMenu.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
