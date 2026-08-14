@@ -36,6 +36,13 @@ jobs:
           <p><a href="site/index.html">Continue to the site</a></p>
           EOF
 
+      - name: Cache-bust CSS/JS
+        run: |
+          SHORT_SHA="${GITHUB_SHA::7}"
+          find dist/site -name "*.html" -print0 | xargs -0 sed -i \
+            -e "s|assets/main.css\"|assets/main.css?v=${SHORT_SHA}\"|g" \
+            -e "s|assets/main.js\"|assets/main.js?v=${SHORT_SHA}\"|g"
+
       - uses: actions/configure-pages@v5
         with:
           enablement: true
