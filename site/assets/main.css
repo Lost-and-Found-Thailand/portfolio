@@ -8,6 +8,7 @@
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
+body { margin: 0; }
 img { max-width: 100%; display: block; }
 
 /* ---------- Nav ---------- */
@@ -438,11 +439,15 @@ img { max-width: 100%; display: block; }
    ============================================================ */
 
 /* ---------- Sticky glass nav (fixes the .nav/.ldm-nav selector
-   mismatch in tokens.css, which never matched the real header) ---------- */
+   mismatch in tokens.css, which never matched the real header, and
+   restores the vertical padding that mismatch also dropped — without
+   it the header shrank to ~25px tall, leaving a gap above the
+   mobile menu, which starts at a hardcoded top:68px) ---------- */
 .ldm-nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  padding: 22px 0;
   background: rgba(2, 2, 1, 0);
   border-bottom: 1px solid transparent;
   transition: background-color 500ms var(--ease-premium),
@@ -454,6 +459,10 @@ img { max-width: 100%; display: block; }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
+}
+.ldm-nav.is-menu-open {
+  background: var(--color-black);
+  border-bottom: 1px solid transparent;
 }
 
 /* ---------- Cross-document view transitions (progressive enhancement) ---------- */

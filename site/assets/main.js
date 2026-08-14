@@ -14,7 +14,9 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  /* Mobile menu toggle */
+  /* Mobile menu toggle. Also forces the header bar fully opaque while open —
+     otherwise its transparent top strip lets the animated hero grid drift
+     behind the logo/close button, reading as visual clutter/overlap. */
   var burger = document.querySelector(".ldm-burger");
   var mobileMenu = document.querySelector(".ldm-mobile-menu");
   if (burger && mobileMenu) {
@@ -23,12 +25,14 @@
       mobileMenu.classList.toggle("is-open", open);
       burger.setAttribute("aria-expanded", open ? "true" : "false");
       document.body.style.overflow = open ? "hidden" : "";
+      if (nav) nav.classList.toggle("is-menu-open", open);
     });
     mobileMenu.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
         burger.classList.remove("is-open");
         mobileMenu.classList.remove("is-open");
         document.body.style.overflow = "";
+        if (nav) nav.classList.remove("is-menu-open");
       });
     });
   }
