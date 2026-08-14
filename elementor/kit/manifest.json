@@ -1,0 +1,26 @@
+{
+  "name": "kit-liam-digital-marketing",
+  "title": "Liam Digital Marketing",
+  "description": "Global brand kit for Liam Digital Marketing \u2014 monochrome color system, Manrope/Inter typography scale and button styles.",
+  "thumbnail": false,
+  "created_by": "elementor",
+  "source": "local",
+  "elementor_version": "3.20.0",
+  "wp_version": "6.4",
+  "site-settings": {
+    "global_colors": "Global Colors",
+    "global_typography": "Global Fonts",
+    "theme_style_typography": "Theme Style - Typography",
+    "theme_style_buttons": "Theme Style - Buttons",
+    "theme_style_images": "Theme Style - Images",
+    "theme_style_form_fields": "Theme Style - Form Fields",
+    "layout_settings": "Layout Settings",
+    "lightbox_settings": "Lightbox"
+  },
+  "plugins": [],
+  "export_settings": {
+    "include": [
+      "settings"
+    ]
+  }
+}

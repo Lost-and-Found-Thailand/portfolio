@@ -1,0 +1,504 @@
+{
+  "content": [
+    {
+      "id": "568ae4f",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        }
+      },
+      "elements": [
+        {
+          "id": "70263e9",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "3ec0676",
+              "elType": "widget",
+              "settings": {
+                "title": "WHAT I DO",
+                "header_size": "p",
+                "align": "left",
+                "title_color": "#A1A1A1",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_weight": "600",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 2
+                }
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "cd8d0f6",
+              "elType": "widget",
+              "settings": {
+                "title": "Strategy, media and data working as one system.",
+                "header_size": "h2",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 44
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "64000f0",
+              "elType": "widget",
+              "settings": {
+                "space": {
+                  "unit": "px",
+                  "size": 48
+                }
+              },
+              "elements": [],
+              "widgetType": "spacer"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "25027fa",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        },
+        "gap": {
+          "unit": "px",
+          "size": 1
+        }
+      },
+      "elements": [
+        {
+          "id": "121b038",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "#020201",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "32",
+              "bottom": "40",
+              "left": "32",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "ddf4fda",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-family:Manrope;font-weight:700;\">01</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "c4bbf52",
+              "elType": "widget",
+              "settings": {
+                "title": "Paid Media",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "4ee8e51",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Meta Ads, Google Ads, Performance Max and Search campaigns.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "a8e970e",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "#020201",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "32",
+              "bottom": "40",
+              "left": "32",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "1c0bee6",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-family:Manrope;font-weight:700;\">02</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "5086ca7",
+              "elType": "widget",
+              "settings": {
+                "title": "Lead Generation",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "58e06d1",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Campaigns designed around qualified enquiries rather than vanity metrics.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "dee8cd5",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "#020201",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "32",
+              "bottom": "40",
+              "left": "32",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "79158bd",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-family:Manrope;font-weight:700;\">03</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "8902683",
+              "elType": "widget",
+              "settings": {
+                "title": "Conversion Tracking",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "799755c",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">GA4, Google Tag Manager, Meta Pixel, conversion APIs and event tracking.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "a2c5136",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "#020201",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "32",
+              "bottom": "40",
+              "left": "32",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "ed9aa01",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-family:Manrope;font-weight:700;\">04</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "1939ff8",
+              "elType": "widget",
+              "settings": {
+                "title": "Marketing Analytics",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "4e7b214",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Measurement systems, dashboards, attribution and campaign analysis.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "efba8e1",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "#020201",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "32",
+              "bottom": "40",
+              "left": "32",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "b667c72",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-family:Manrope;font-weight:700;\">05</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "58ab83d",
+              "elType": "widget",
+              "settings": {
+                "title": "Conversion Optimization",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "39cb942",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Landing pages, forms, funnels and conversion journeys.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "c9ad8bc",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "#020201",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "32",
+              "bottom": "40",
+              "left": "32",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "773245a",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-family:Manrope;font-weight:700;\">06</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "b9b70b3",
+              "elType": "widget",
+              "settings": {
+                "title": "Digital Strategy",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "dcc2fcb",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Data-driven marketing strategy and growth planning.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Reusable Section \u2014 Services",
+  "type": "section"
+}

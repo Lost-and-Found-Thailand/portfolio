@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 200" fill="none" role="img" aria-label="Liam Digital Marketing">
+  <g transform="translate(0,46) scale(0.5)">
+    <polyline points="36,28 36,188 130,188" fill="none" stroke="#020201" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="180,188 180,28 250,150 320,28 320,188" fill="none" stroke="#020201" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="210" y="98" font-family="Manrope, sans-serif" font-weight="800" font-size="66" fill="#020201" letter-spacing="-1">Liam Digital</text>
+  <text x="212" y="140" font-family="Inter, sans-serif" font-weight="600" font-size="22" letter-spacing="6" fill="#020201">MARKETING</text>
+</svg>

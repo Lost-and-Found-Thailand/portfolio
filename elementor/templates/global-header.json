@@ -1,0 +1,142 @@
+{
+  "content": [
+    {
+      "id": "1fa4a1e",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "padding": {
+          "unit": "px",
+          "top": "20",
+          "right": "0",
+          "bottom": "20",
+          "left": "0",
+          "isLinked": false
+        },
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        },
+        "sticky": "top",
+        "sticky_effects_offset": 0
+      },
+      "elements": [
+        {
+          "id": "11171dd",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25
+          },
+          "elements": [
+            {
+              "id": "cb01539",
+              "elType": "widget",
+              "settings": {
+                "image": {
+                  "url": "",
+                  "alt": "Liam Digital Marketing logo \u2014 replace with brand-kit/logo/logo-lockup-white.svg",
+                  "id": ""
+                },
+                "width": {
+                  "unit": "px",
+                  "size": 170
+                }
+              },
+              "elements": [],
+              "widgetType": "image"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "1cd9859",
+          "elType": "column",
+          "settings": {
+            "_column_size": 50
+          },
+          "elements": [
+            {
+              "id": "0629a17",
+              "elType": "widget",
+              "settings": {
+                "icon_list": [
+                  {
+                    "text": "Work",
+                    "selected_icon": {
+                      "value": "fas fa-circle",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "text": "Services",
+                    "selected_icon": {
+                      "value": "fas fa-circle",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "text": "About",
+                    "selected_icon": {
+                      "value": "fas fa-circle",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "text": "Results",
+                    "selected_icon": {
+                      "value": "fas fa-circle",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "text": "Contact",
+                    "selected_icon": {
+                      "value": "fas fa-circle",
+                      "library": "fa-solid"
+                    }
+                  }
+                ],
+                "view": "inline",
+                "icon_align": "left"
+              },
+              "elements": [],
+              "widgetType": "icon-list"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "211b812",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25
+          },
+          "elements": [
+            {
+              "id": "d58df08",
+              "elType": "widget",
+              "settings": {
+                "text": "Let's Talk",
+                "link": {
+                  "url": "/contact",
+                  "is_external": "",
+                  "nofollow": ""
+                },
+                "button_css_id": "ldm-btn-secondary"
+              },
+              "elements": [],
+              "widgetType": "button"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Global Header \u2014 Liam Digital Marketing",
+  "type": "header"
+}

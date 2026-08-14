@@ -1,0 +1,342 @@
+{
+  "content": [
+    {
+      "id": "e02f8ee",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        }
+      },
+      "elements": [
+        {
+          "id": "ec8e996",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "b75e25e",
+              "elType": "widget",
+              "settings": {
+                "title": "HOW I WORK",
+                "header_size": "p",
+                "align": "left",
+                "title_color": "#A1A1A1",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_weight": "600",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 2
+                }
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "4185adf",
+              "elType": "widget",
+              "settings": {
+                "title": "A simple, disciplined process.",
+                "header_size": "h2",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 44
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "7e43226",
+              "elType": "widget",
+              "settings": {
+                "space": {
+                  "unit": "px",
+                  "size": 48
+                }
+              },
+              "elements": [],
+              "widgetType": "spacer"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "eaa65b3",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        }
+      },
+      "elements": [
+        {
+          "id": "7079b25",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25,
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "24",
+              "right": "16",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "486a351",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#171717;-webkit-text-stroke:1px #A1A1A1;font-family:Manrope;font-weight:800;font-size:40px;\">01</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "9b19892",
+              "elType": "widget",
+              "settings": {
+                "title": "Discover",
+                "header_size": "h4",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "45dcc95",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Understand the business, audience and objectives.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "ad6250f",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25,
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "24",
+              "right": "16",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "08e178c",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#171717;-webkit-text-stroke:1px #A1A1A1;font-family:Manrope;font-weight:800;font-size:40px;\">02</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "680f968",
+              "elType": "widget",
+              "settings": {
+                "title": "Build",
+                "header_size": "h4",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "c05d2d3",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Develop the campaign, tracking and creative strategy.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "b770598",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25,
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "24",
+              "right": "16",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "1c0d4c5",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#171717;-webkit-text-stroke:1px #A1A1A1;font-family:Manrope;font-weight:800;font-size:40px;\">03</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "63f1925",
+              "elType": "widget",
+              "settings": {
+                "title": "Optimize",
+                "header_size": "h4",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "d5b1cf4",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Analyze performance and continuously improve.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "cd0574d",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25,
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "24",
+              "right": "16",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "9b88c63",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#171717;-webkit-text-stroke:1px #A1A1A1;font-family:Manrope;font-weight:800;font-size:40px;\">04</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "3666133",
+              "elType": "widget",
+              "settings": {
+                "title": "Scale",
+                "header_size": "h4",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "623bdef",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Increase what works and eliminate what doesn't.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Reusable Section \u2014 Process",
+  "type": "section"
+}

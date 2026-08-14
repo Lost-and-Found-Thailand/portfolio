@@ -1,0 +1,232 @@
+{
+  "content": [
+    {
+      "id": "909ebe2",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        },
+        "padding": {
+          "unit": "px",
+          "top": "64",
+          "right": "0",
+          "bottom": "32",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "4b9d29d",
+          "elType": "column",
+          "settings": {
+            "_column_size": 40
+          },
+          "elements": [
+            {
+              "id": "88643d0",
+              "elType": "widget",
+              "settings": {
+                "image": {
+                  "url": "",
+                  "alt": "Liam Digital Marketing logo \u2014 replace with brand-kit/logo/logo-lockup-white.svg",
+                  "id": ""
+                },
+                "width": {
+                  "unit": "px",
+                  "size": 150
+                }
+              },
+              "elements": [],
+              "widgetType": "image"
+            },
+            {
+              "id": "4abafdf",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;margin-top:12px;\">Performance Marketing &bull; Analytics &bull; Growth</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "ab34d86",
+          "elType": "column",
+          "settings": {
+            "_column_size": 30
+          },
+          "elements": [
+            {
+              "id": "39d3577",
+              "elType": "widget",
+              "settings": {
+                "title": "SITE",
+                "header_size": "p",
+                "align": "left",
+                "title_color": "#A1A1A1"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "ae1f476",
+              "elType": "widget",
+              "settings": {
+                "icon_list": [
+                  {
+                    "text": "Work",
+                    "selected_icon": {
+                      "value": "fas fa-circle",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "text": "Services",
+                    "selected_icon": {
+                      "value": "fas fa-circle",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "text": "About",
+                    "selected_icon": {
+                      "value": "fas fa-circle",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "text": "Contact",
+                    "selected_icon": {
+                      "value": "fas fa-circle",
+                      "library": "fa-solid"
+                    }
+                  }
+                ]
+              },
+              "elements": [],
+              "widgetType": "icon-list"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "1d471cc",
+          "elType": "column",
+          "settings": {
+            "_column_size": 30
+          },
+          "elements": [
+            {
+              "id": "15ea7e9",
+              "elType": "widget",
+              "settings": {
+                "title": "CONNECT",
+                "header_size": "p",
+                "align": "left",
+                "title_color": "#A1A1A1"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "b55abc0",
+              "elType": "widget",
+              "settings": {
+                "icon_list": [
+                  {
+                    "text": "Email",
+                    "selected_icon": {
+                      "value": "fas fa-circle",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "text": "LinkedIn",
+                    "selected_icon": {
+                      "value": "fas fa-circle",
+                      "library": "fa-solid"
+                    }
+                  },
+                  {
+                    "text": "Instagram",
+                    "selected_icon": {
+                      "value": "fas fa-circle",
+                      "library": "fa-solid"
+                    }
+                  }
+                ]
+              },
+              "elements": [],
+              "widgetType": "icon-list"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "8049133",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        },
+        "border_border": "solid",
+        "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": false
+        },
+        "border_color": "#171717",
+        "padding": {
+          "unit": "px",
+          "top": "24",
+          "right": "0",
+          "bottom": "24",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "4df074d",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "f046e3f",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-size:13px;\">&copy; 2026 Liam Digital Marketing. All rights reserved.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Global Footer \u2014 Liam Digital Marketing",
+  "type": "footer"
+}

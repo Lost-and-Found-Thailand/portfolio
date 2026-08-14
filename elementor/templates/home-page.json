@@ -1,0 +1,1923 @@
+{
+  "content": [
+    {
+      "id": "5f26e03",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "0",
+          "bottom": "120",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "56",
+          "right": "0",
+          "bottom": "56",
+          "left": "0",
+          "isLinked": false
+        },
+        "content_width": {
+          "unit": "px",
+          "size": 900
+        }
+      },
+      "elements": [
+        {
+          "id": "b940993",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "align": "center"
+          },
+          "elements": [
+            {
+              "id": "58e1463",
+              "elType": "widget",
+              "settings": {
+                "space": {
+                  "unit": "px",
+                  "size": 40
+                }
+              },
+              "elements": [],
+              "widgetType": "spacer"
+            },
+            {
+              "id": "d59363b",
+              "elType": "widget",
+              "settings": {
+                "title": "AVAILABLE FOR SELECT PROJECTS",
+                "header_size": "p",
+                "align": "center",
+                "css_classes": "ldm-eyebrow",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_weight": "600",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 2
+                },
+                "title_color": "#A1A1A1"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "c71197e",
+              "elType": "widget",
+              "settings": {
+                "title": "Digital Marketing Built Around Growth.",
+                "header_size": "h1",
+                "align": "center",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "800",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 88
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 56
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 38
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.0
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "4d9ebc4",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"text-align:center;max-width:640px;margin:24px auto 0;color:#A1A1A1;font-size:18px;\">I help ambitious brands turn paid media, data, creative and technology into measurable business growth.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "bf4e1b9",
+              "elType": "widget",
+              "settings": {
+                "space": {
+                  "unit": "px",
+                  "size": 32
+                }
+              },
+              "elements": [],
+              "widgetType": "spacer"
+            },
+            {
+              "id": "278bb04",
+              "elType": "widget",
+              "settings": {
+                "text": "View My Work",
+                "link": {
+                  "url": "/work",
+                  "is_external": "",
+                  "nofollow": ""
+                },
+                "align": "center",
+                "background_color": "#FFFFFF",
+                "button_text_color": "#020201",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "10",
+                  "right": "10",
+                  "bottom": "10",
+                  "left": "10",
+                  "isLinked": true
+                },
+                "text_padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "32",
+                  "bottom": "16",
+                  "left": "32",
+                  "isLinked": false
+                }
+              },
+              "elements": [],
+              "widgetType": "button"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "c4db5c0",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        }
+      },
+      "elements": [
+        {
+          "id": "f5c9ff2",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25,
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#171717"
+          },
+          "elements": [
+            {
+              "id": "bcd2087",
+              "elType": "widget",
+              "settings": {
+                "starting_number": 0,
+                "ending_number": 0,
+                "suffix": "%",
+                "title": "",
+                "thousand_separator": "",
+                "prefix": "+",
+                "number_color": "#C8FF00",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "800",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 48
+                }
+              },
+              "elements": [],
+              "widgetType": "counter"
+            },
+            {
+              "id": "716887b",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-size:14px;margin-top:8px;\">ROAS improvement \u2014 sample data, replace with real results</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "0fc2781",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25,
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#171717"
+          },
+          "elements": [
+            {
+              "id": "0b0d521",
+              "elType": "widget",
+              "settings": {
+                "starting_number": 0,
+                "ending_number": 0,
+                "suffix": "+",
+                "title": "",
+                "thousand_separator": "",
+                "prefix": "",
+                "number_color": "#C8FF00",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "800",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 48
+                }
+              },
+              "elements": [],
+              "widgetType": "counter"
+            },
+            {
+              "id": "1f6e862",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-size:14px;margin-top:8px;\">Leads generated \u2014 sample data, replace with real results</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "ba019e2",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25,
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#171717"
+          },
+          "elements": [
+            {
+              "id": "e52f507",
+              "elType": "widget",
+              "settings": {
+                "starting_number": 0,
+                "ending_number": 0,
+                "suffix": "%",
+                "title": "",
+                "thousand_separator": "",
+                "prefix": "",
+                "number_color": "#C8FF00",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "800",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 48
+                }
+              },
+              "elements": [],
+              "widgetType": "counter"
+            },
+            {
+              "id": "0e5d43e",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-size:14px;margin-top:8px;\">Conversion rate growth \u2014 sample data, replace with real results</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "90d9be9",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25,
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#171717"
+          },
+          "elements": [
+            {
+              "id": "26678d3",
+              "elType": "widget",
+              "settings": {
+                "starting_number": 0,
+                "ending_number": 0,
+                "suffix": "K+",
+                "title": "",
+                "thousand_separator": "",
+                "prefix": "$",
+                "number_color": "#C8FF00",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "800",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 48
+                }
+              },
+              "elements": [],
+              "widgetType": "counter"
+            },
+            {
+              "id": "f28d325",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-size:14px;margin-top:8px;\">Ad spend managed \u2014 sample data, replace with real results</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "1082f55",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "0",
+          "bottom": "120",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "56",
+          "right": "0",
+          "bottom": "56",
+          "left": "0",
+          "isLinked": false
+        },
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        }
+      },
+      "elements": [
+        {
+          "id": "6db8d05",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "dfc8704",
+              "elType": "column",
+              "settings": {
+                "_column_size": 100
+              },
+              "elements": [
+                {
+                  "id": "c0e4ffa",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "SELECTED WORK",
+                    "header_size": "p",
+                    "align": "left",
+                    "title_color": "#A1A1A1",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_weight": "600",
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 2
+                    }
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "1b83716",
+                  "elType": "widget",
+                  "settings": {
+                    "title": "Campaigns and growth systems built to perform.",
+                    "header_size": "h2",
+                    "align": "left",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Manrope",
+                    "typography_font_weight": "700",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 44
+                    },
+                    "title_color": "#FFFFFF"
+                  },
+                  "elements": [],
+                  "widgetType": "heading"
+                },
+                {
+                  "id": "2e38520",
+                  "elType": "widget",
+                  "settings": {
+                    "space": {
+                      "unit": "px",
+                      "size": 48
+                    }
+                  },
+                  "elements": [],
+                  "widgetType": "spacer"
+                }
+              ],
+              "isInner": false
+            },
+            {
+              "id": "d5a42db",
+              "elType": "section",
+              "settings": {
+                "background_background": "classic",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "1",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "border_color": "#171717",
+                "padding": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "0",
+                  "bottom": "32",
+                  "left": "0",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "de34c3f",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 60
+                  },
+                  "elements": [
+                    {
+                      "id": "ac2cc12",
+                      "elType": "widget",
+                      "settings": {
+                        "image": {
+                          "url": "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
+                          "id": ""
+                        },
+                        "title_text": "Tirtha Bali",
+                        "description_text": "Luxury Weddings \u2014 Paid Media, Lead Generation, Conversion Tracking<br>Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.",
+                        "title_typography_typography": "custom",
+                        "title_typography_font_family": "Manrope",
+                        "title_typography_font_weight": "800"
+                      },
+                      "elements": [],
+                      "widgetType": "image-box"
+                    }
+                  ],
+                  "isInner": false
+                },
+                {
+                  "id": "58ee1ce",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 40
+                  },
+                  "elements": [
+                    {
+                      "id": "53ae464",
+                      "elType": "widget",
+                      "settings": {
+                        "editor": "<p style=\"color:#C8FF00;font-family:Manrope;font-weight:800;font-size:22px;\">+XX% Qualified Enquiries</p>"
+                      },
+                      "elements": [],
+                      "widgetType": "text-editor"
+                    },
+                    {
+                      "id": "6b37151",
+                      "elType": "widget",
+                      "settings": {
+                        "text": "View Case Study",
+                        "link": {
+                          "url": "/case-study",
+                          "is_external": "",
+                          "nofollow": ""
+                        },
+                        "button_css_id": "ldm-btn-secondary"
+                      },
+                      "elements": [],
+                      "widgetType": "button"
+                    }
+                  ],
+                  "isInner": false
+                }
+              ],
+              "isInner": true
+            },
+            {
+              "id": "49ca8c4",
+              "elType": "section",
+              "settings": {
+                "background_background": "classic",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "1",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "border_color": "#171717",
+                "padding": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "0",
+                  "bottom": "32",
+                  "left": "0",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "f6c08bf",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 60
+                  },
+                  "elements": [
+                    {
+                      "id": "e4033af",
+                      "elType": "widget",
+                      "settings": {
+                        "image": {
+                          "url": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1200&auto=format&fit=crop",
+                          "id": ""
+                        },
+                        "title_text": "Project Name",
+                        "description_text": "Hospitality \u2014 Performance Marketing, Analytics<br>Building a measurement system that connected ad spend directly to booking revenue.",
+                        "title_typography_typography": "custom",
+                        "title_typography_font_family": "Manrope",
+                        "title_typography_font_weight": "800"
+                      },
+                      "elements": [],
+                      "widgetType": "image-box"
+                    }
+                  ],
+                  "isInner": false
+                },
+                {
+                  "id": "20fa60e",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 40
+                  },
+                  "elements": [
+                    {
+                      "id": "b43f148",
+                      "elType": "widget",
+                      "settings": {
+                        "editor": "<p style=\"color:#C8FF00;font-family:Manrope;font-weight:800;font-size:22px;\">+XX% ROAS</p>"
+                      },
+                      "elements": [],
+                      "widgetType": "text-editor"
+                    },
+                    {
+                      "id": "5d93813",
+                      "elType": "widget",
+                      "settings": {
+                        "text": "View Case Study",
+                        "link": {
+                          "url": "/case-study",
+                          "is_external": "",
+                          "nofollow": ""
+                        },
+                        "button_css_id": "ldm-btn-secondary"
+                      },
+                      "elements": [],
+                      "widgetType": "button"
+                    }
+                  ],
+                  "isInner": false
+                }
+              ],
+              "isInner": true
+            },
+            {
+              "id": "5250c94",
+              "elType": "section",
+              "settings": {
+                "background_background": "classic",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "1",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "border_color": "#171717",
+                "padding": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "0",
+                  "bottom": "32",
+                  "left": "0",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "b129240",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 60
+                  },
+                  "elements": [
+                    {
+                      "id": "c81e91a",
+                      "elType": "widget",
+                      "settings": {
+                        "image": {
+                          "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+                          "id": ""
+                        },
+                        "title_text": "Project Name",
+                        "description_text": "Lifestyle \u2014 Conversion Optimization, Digital Strategy<br>Rebuilding the conversion journey to lift landing page performance across paid channels.",
+                        "title_typography_typography": "custom",
+                        "title_typography_font_family": "Manrope",
+                        "title_typography_font_weight": "800"
+                      },
+                      "elements": [],
+                      "widgetType": "image-box"
+                    }
+                  ],
+                  "isInner": false
+                },
+                {
+                  "id": "2f8ed03",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 40
+                  },
+                  "elements": [
+                    {
+                      "id": "8199146",
+                      "elType": "widget",
+                      "settings": {
+                        "editor": "<p style=\"color:#C8FF00;font-family:Manrope;font-weight:800;font-size:22px;\">+XX% Conversion Rate</p>"
+                      },
+                      "elements": [],
+                      "widgetType": "text-editor"
+                    },
+                    {
+                      "id": "0143ae9",
+                      "elType": "widget",
+                      "settings": {
+                        "text": "View Case Study",
+                        "link": {
+                          "url": "/case-study",
+                          "is_external": "",
+                          "nofollow": ""
+                        },
+                        "button_css_id": "ldm-btn-secondary"
+                      },
+                      "elements": [],
+                      "widgetType": "button"
+                    }
+                  ],
+                  "isInner": false
+                }
+              ],
+              "isInner": true
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "4adba26",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "56",
+          "right": "0",
+          "bottom": "56",
+          "left": "0",
+          "isLinked": false
+        },
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        }
+      },
+      "elements": [
+        {
+          "id": "70263e9",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "3ec0676",
+              "elType": "widget",
+              "settings": {
+                "title": "WHAT I DO",
+                "header_size": "p",
+                "align": "left",
+                "title_color": "#A1A1A1",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_weight": "600",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 2
+                }
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "cd8d0f6",
+              "elType": "widget",
+              "settings": {
+                "title": "Strategy, media and data working as one system.",
+                "header_size": "h2",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 44
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "64000f0",
+              "elType": "widget",
+              "settings": {
+                "space": {
+                  "unit": "px",
+                  "size": 48
+                }
+              },
+              "elements": [],
+              "widgetType": "spacer"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "5fcd768",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "120",
+          "left": "0",
+          "isLinked": false
+        },
+        "gap": {
+          "unit": "px",
+          "size": 1
+        }
+      },
+      "elements": [
+        {
+          "id": "121b038",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "#020201",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "32",
+              "bottom": "40",
+              "left": "32",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "ddf4fda",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-family:Manrope;font-weight:700;\">01</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "c4bbf52",
+              "elType": "widget",
+              "settings": {
+                "title": "Paid Media",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "4ee8e51",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Meta Ads, Google Ads, Performance Max and Search campaigns.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "a8e970e",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "#020201",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "32",
+              "bottom": "40",
+              "left": "32",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "1c0bee6",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-family:Manrope;font-weight:700;\">02</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "5086ca7",
+              "elType": "widget",
+              "settings": {
+                "title": "Lead Generation",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "58e06d1",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Campaigns designed around qualified enquiries rather than vanity metrics.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "dee8cd5",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "#020201",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "32",
+              "bottom": "40",
+              "left": "32",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "79158bd",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-family:Manrope;font-weight:700;\">03</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "8902683",
+              "elType": "widget",
+              "settings": {
+                "title": "Conversion Tracking",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "799755c",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">GA4, Google Tag Manager, Meta Pixel, conversion APIs and event tracking.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "a2c5136",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "#020201",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "32",
+              "bottom": "40",
+              "left": "32",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "ed9aa01",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-family:Manrope;font-weight:700;\">04</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "1939ff8",
+              "elType": "widget",
+              "settings": {
+                "title": "Marketing Analytics",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "4e7b214",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Measurement systems, dashboards, attribution and campaign analysis.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "efba8e1",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "#020201",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "32",
+              "bottom": "40",
+              "left": "32",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "b667c72",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-family:Manrope;font-weight:700;\">05</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "58ab83d",
+              "elType": "widget",
+              "settings": {
+                "title": "Conversion Optimization",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "39cb942",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Landing pages, forms, funnels and conversion journeys.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "c9ad8bc",
+          "elType": "column",
+          "settings": {
+            "_column_size": 33,
+            "background_background": "classic",
+            "background_color": "#020201",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "32",
+              "bottom": "40",
+              "left": "32",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "773245a",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-family:Manrope;font-weight:700;\">06</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "b9b70b3",
+              "elType": "widget",
+              "settings": {
+                "title": "Digital Strategy",
+                "header_size": "h3",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 22
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "dcc2fcb",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Data-driven marketing strategy and growth planning.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "f7bd5f4",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        }
+      },
+      "elements": [
+        {
+          "id": "ec8e996",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "b75e25e",
+              "elType": "widget",
+              "settings": {
+                "title": "HOW I WORK",
+                "header_size": "p",
+                "align": "left",
+                "title_color": "#A1A1A1",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_weight": "600",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 2
+                }
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "4185adf",
+              "elType": "widget",
+              "settings": {
+                "title": "A simple, disciplined process.",
+                "header_size": "h2",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 44
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "7e43226",
+              "elType": "widget",
+              "settings": {
+                "space": {
+                  "unit": "px",
+                  "size": 48
+                }
+              },
+              "elements": [],
+              "widgetType": "spacer"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "d6dea84",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "120",
+          "left": "0",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "7079b25",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25,
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "24",
+              "right": "16",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "486a351",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#171717;-webkit-text-stroke:1px #A1A1A1;font-family:Manrope;font-weight:800;font-size:40px;\">01</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "9b19892",
+              "elType": "widget",
+              "settings": {
+                "title": "Discover",
+                "header_size": "h4",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "45dcc95",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Understand the business, audience and objectives.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "ad6250f",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25,
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "24",
+              "right": "16",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "08e178c",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#171717;-webkit-text-stroke:1px #A1A1A1;font-family:Manrope;font-weight:800;font-size:40px;\">02</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "680f968",
+              "elType": "widget",
+              "settings": {
+                "title": "Build",
+                "header_size": "h4",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "c05d2d3",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Develop the campaign, tracking and creative strategy.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "b770598",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25,
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "24",
+              "right": "16",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "1c0d4c5",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#171717;-webkit-text-stroke:1px #A1A1A1;font-family:Manrope;font-weight:800;font-size:40px;\">03</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "63f1925",
+              "elType": "widget",
+              "settings": {
+                "title": "Optimize",
+                "header_size": "h4",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "d5b1cf4",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Analyze performance and continuously improve.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "cd0574d",
+          "elType": "column",
+          "settings": {
+            "_column_size": 25,
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#171717",
+            "padding": {
+              "unit": "px",
+              "top": "24",
+              "right": "16",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "9b88c63",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#171717;-webkit-text-stroke:1px #A1A1A1;font-family:Manrope;font-weight:800;font-size:40px;\">04</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "3666133",
+              "elType": "widget",
+              "settings": {
+                "title": "Scale",
+                "header_size": "h4",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "623bdef",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;\">Increase what works and eliminate what doesn't.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "17aac15",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "0",
+          "bottom": "120",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "56",
+          "right": "0",
+          "bottom": "56",
+          "left": "0",
+          "isLinked": false
+        },
+        "content_width": {
+          "unit": "px",
+          "size": 1280
+        }
+      },
+      "elements": [
+        {
+          "id": "bc5d6b2",
+          "elType": "column",
+          "settings": {
+            "_column_size": 50
+          },
+          "elements": [
+            {
+              "id": "3df0290",
+              "elType": "widget",
+              "settings": {
+                "title": "ABOUT",
+                "header_size": "p",
+                "align": "left",
+                "title_color": "#A1A1A1",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_weight": "600",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 2
+                }
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "c2f8054",
+              "elType": "widget",
+              "settings": {
+                "title": "I work at the intersection of marketing, technology and data.",
+                "header_size": "h2",
+                "align": "left",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 38
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            }
+          ],
+          "isInner": false
+        },
+        {
+          "id": "4002144",
+          "elType": "column",
+          "settings": {
+            "_column_size": 50
+          },
+          "elements": [
+            {
+              "id": "0bc220f",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"color:#A1A1A1;font-size:18px;\">Performance marketing specialist with experience across hospitality, luxury and lifestyle brands \u2014 building paid media, tracking and analytics systems that connect ad spend to real business outcomes.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "2bfd2a1",
+              "elType": "widget",
+              "settings": {
+                "space": {
+                  "unit": "px",
+                  "size": 24
+                }
+              },
+              "elements": [],
+              "widgetType": "spacer"
+            },
+            {
+              "id": "7f33342",
+              "elType": "widget",
+              "settings": {
+                "text": "More About Me",
+                "link": {
+                  "url": "/about",
+                  "is_external": "",
+                  "nofollow": ""
+                },
+                "button_css_id": "ldm-btn-secondary"
+              },
+              "elements": [],
+              "widgetType": "button"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "e20f853",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#020201",
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "0",
+          "bottom": "120",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "80",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "56",
+          "right": "0",
+          "bottom": "56",
+          "left": "0",
+          "isLinked": false
+        },
+        "content_width": {
+          "unit": "px",
+          "size": 760
+        }
+      },
+      "elements": [
+        {
+          "id": "80ea8e4",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "align": "center"
+          },
+          "elements": [
+            {
+              "id": "c11834c",
+              "elType": "widget",
+              "settings": {
+                "title": "CONTACT",
+                "header_size": "p",
+                "align": "center",
+                "title_color": "#A1A1A1",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_weight": "600",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 2
+                }
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "ff15f1e",
+              "elType": "widget",
+              "settings": {
+                "title": "Let's Build Something That Performs.",
+                "header_size": "h2",
+                "align": "center",
+                "typography_typography": "custom",
+                "typography_font_family": "Manrope",
+                "typography_font_weight": "700",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 44
+                },
+                "title_color": "#FFFFFF"
+              },
+              "elements": [],
+              "widgetType": "heading"
+            },
+            {
+              "id": "3d2289f",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p style=\"text-align:center;color:#A1A1A1;font-size:18px;\">Have a project, campaign or growth challenge? Let's talk.</p>"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "42b7706",
+              "elType": "widget",
+              "settings": {
+                "space": {
+                  "unit": "px",
+                  "size": 32
+                }
+              },
+              "elements": [],
+              "widgetType": "spacer"
+            },
+            {
+              "id": "c99ef7c",
+              "elType": "widget",
+              "settings": {
+                "text": "Start a Conversation",
+                "link": {
+                  "url": "/contact",
+                  "is_external": "",
+                  "nofollow": ""
+                },
+                "align": "center",
+                "background_color": "#FFFFFF",
+                "button_text_color": "#020201",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "10",
+                  "right": "10",
+                  "bottom": "10",
+                  "left": "10",
+                  "isLinked": true
+                },
+                "text_padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "32",
+                  "bottom": "16",
+                  "left": "32",
+                  "isLinked": false
+                }
+              },
+              "elements": [],
+              "widgetType": "button"
+            }
+          ],
+          "isInner": false
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Home \u2014 Liam Digital Marketing",
+  "type": "page"
+}
