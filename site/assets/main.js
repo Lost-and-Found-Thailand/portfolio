@@ -316,20 +316,4 @@
       el.addEventListener("pointerleave", function () { cursorRing.classList.remove("is-hovering"); });
     });
   }
-
-  /* Cursor-follow "View Case Study" label */
-  var caseCards = document.querySelectorAll(".ldm-case");
-  if (pointerFine && !reduceMotion && caseCards.length) {
-    var hoverLabel = document.createElement("div");
-    hoverLabel.className = "ldm-hover-label";
-    hoverLabel.textContent = "View Case Study →";
-    document.body.appendChild(hoverLabel);
-    caseCards.forEach(function (el) {
-      el.addEventListener("pointerenter", function () { hoverLabel.classList.add("is-active"); });
-      el.addEventListener("pointermove", function (e) {
-        hoverLabel.style.transform = "translate(" + e.clientX + "px," + (e.clientY - 50) + "px) translate(-50%,-50%)";
-      });
-      el.addEventListener("pointerleave", function () { hoverLabel.classList.remove("is-active"); });
-    });
-  }
 })();
