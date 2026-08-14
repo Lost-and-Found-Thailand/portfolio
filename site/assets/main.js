@@ -2,6 +2,7 @@
   "use strict";
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var pointerFine = window.matchMedia("(pointer: fine)").matches;
 
   /* Sticky nav background on scroll */
   var nav = document.querySelector(".ldm-nav");
@@ -90,6 +91,130 @@
       var suffix = el.getAttribute("data-suffix") || "";
       var prefix = el.getAttribute("data-prefix") || "";
       el.textContent = prefix + target + suffix;
+    });
+  }
+
+  /* Split-word heading reveal */
+  if (!reduceMotion) {
+    var headings = document.querySelectorAll(".ldm-hero h1.fs-hero, .ldm-page-header h1");
+    headings.forEach(function (el, headingIndex) {
+      var text = el.textContent;
+      el.setAttribute("aria-label", text);
+      el.innerHTML = "";
+      var tokens = text.split(/(\s+)/);
+      var wordIndex = 0;
+      tokens.forEach(function (token) {
+        if (!token) return;
+        if (/^\s+$/.test(token)) {
+          el.appendChild(document.createTextNode(token));
+          return;
+        }
+        var outer = document.createElement("span");
+        outer.className = "ldm-word";
+        outer.setAttribute("aria-hidden", "true");
+        var inner = document.createElement("span");
+        inner.className = "ldm-word-inner";
+        inner.textContent = token;
+        inner.style.transitionDelay = (headingIndex * 100 + wordIndex * 55) + "ms";
+        outer.appendChild(inner);
+        el.appendChild(outer);
+        wordIndex += 1;
+      });
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { el.classList.add("is-split-visible"); });
+      });
+    });
+  }
+
+  /* Cursor spotlight glow */
+  if (pointerFine && !reduceMotion) {
+    var glow = document.createElement("div");
+    glow.className = "ldm-cursor-glow";
+    document.body.appendChild(glow);
+    window.addEventListener(
+      "pointermove",
+      function (e) {
+        glow.style.setProperty("--mx", e.clientX + "px");
+        glow.style.setProperty("--my", e.clientY + "px");
+        glow.classList.add("is-active");
+      },
+      { passive: true }
+    );
+    document.addEventListener("pointerleave", function () {
+      glow.classList.remove("is-active");
+    });
+  }
+
+  /* Nav hover slider pill */
+  var navLinksEl = document.querySelector(".ldm-nav-links");
+  if (navLinksEl && !reduceMotion) {
+    var pill = document.createElement("span");
+    pill.className = "ldm-nav-pill";
+    navLinksEl.insertBefore(pill, navLinksEl.firstChild);
+    navLinksEl.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("mouseenter", function () {
+        var r = a.getBoundingClientRect();
+        var pr = navLinksEl.getBoundingClientRect();
+        pill.style.width = r.width + "px";
+        pill.style.transform = "translate(" + (r.left - pr.left) + "px, -50%)";
+        navLinksEl.classList.add("is-hovering");
+      });
+    });
+    navLinksEl.addEventListener("mouseleave", function () {
+      navLinksEl.classList.remove("is-hovering");
+    });
+  }
+
+  /* Magnetic buttons */
+  if (pointerFine && !reduceMotion) {
+    var magneticEls = document.querySelectorAll(".btn, .ldm-nav-cta");
+    magneticEls.forEach(function (el) {
+      el.addEventListener("pointerenter", function () {
+        el.style.transitionDuration = "0ms";
+      });
+      el.addEventListener("pointermove", function (e) {
+        var r = el.getBoundingClientRect();
+        var dx = e.clientX - (r.left + r.width / 2);
+        var dy = e.clientY - (r.top + r.height / 2);
+        el.style.transform = "translate3d(" + (dx * 0.25) + "px, " + (dy * 0.35) + "px, 0)";
+      });
+      el.addEventListener("pointerleave", function () {
+        el.style.transitionDuration = "";
+        el.style.transform = "";
+      });
+    });
+  }
+
+  /* 3D tilt on cards */
+  if (pointerFine && !reduceMotion) {
+    var tiltSelector = ".ldm-case, .ldm-service-detail, .ldm-service, .card";
+    var tiltEls = Array.prototype.filter.call(
+      document.querySelectorAll(tiltSelector),
+      function (el) { return !el.querySelector("form"); }
+    );
+    tiltEls.forEach(function (el) {
+      el.addEventListener("pointerenter", function () {
+        el.style.transitionDuration = "0ms";
+      });
+      el.addEventListener("pointermove", function (e) {
+        var r = el.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        var maxDeg = 5;
+        el.style.transform =
+          "perspective(900px) rotateX(" + (-py * maxDeg) + "deg) rotateY(" + (px * maxDeg) + "deg)";
+      });
+      el.addEventListener("pointerleave", function () {
+        el.style.transitionDuration = "400ms";
+        el.style.transform = "";
+        el.addEventListener(
+          "transitionend",
+          function handler() {
+            el.style.transitionDuration = "";
+            el.removeEventListener("transitionend", handler);
+          }
+        );
+      });
     });
   }
 })();

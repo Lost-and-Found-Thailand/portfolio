@@ -394,3 +394,116 @@ img { max-width: 100%; display: block; }
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
 }
+
+/* ============================================================
+   MODERN INTERACTION LAYER
+   ============================================================ */
+
+/* ---------- Sticky glass nav (fixes the .nav/.ldm-nav selector
+   mismatch in tokens.css, which never matched the real header) ---------- */
+.ldm-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(2, 2, 1, 0);
+  border-bottom: 1px solid transparent;
+  transition: background-color 500ms var(--ease-premium),
+              border-color 500ms var(--ease-premium),
+              backdrop-filter 500ms var(--ease-premium);
+}
+.ldm-nav.is-scrolled {
+  background: rgba(2, 2, 1, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ---------- Cross-document view transitions (progressive enhancement) ---------- */
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(root) { animation: 220ms var(--ease-premium) both ldm-vt-out; }
+::view-transition-new(root) { animation: 320ms var(--ease-premium) both ldm-vt-in; }
+@keyframes ldm-vt-out { to { opacity: 0; transform: scale(0.985); } }
+@keyframes ldm-vt-in { from { opacity: 0; transform: scale(1.015); } }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+/* ---------- Blur-in reveal, layered on brand-kit's fade/translate reveal ---------- */
+.ldm .reveal {
+  filter: blur(6px);
+  transition: opacity var(--dur-slow) var(--ease-premium),
+              transform var(--dur-slow) var(--ease-premium),
+              filter var(--dur-slow) var(--ease-premium);
+}
+.ldm .reveal.is-visible { filter: blur(0); }
+
+/* ---------- Split-word heading reveal ---------- */
+.ldm-word { display: inline-block; overflow: hidden; vertical-align: top; }
+.ldm-word-inner {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 700ms var(--ease-premium);
+  will-change: transform;
+}
+.is-split-visible .ldm-word-inner { transform: translateY(0); }
+
+/* ---------- Film-grain texture ---------- */
+body.ldm::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+/* ---------- Cursor spotlight glow (JS sets --mx/--my; pointer:fine only) ---------- */
+.ldm-cursor-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 400ms var(--ease-premium);
+  background: radial-gradient(560px circle at var(--mx, 50%) var(--my, 50%), rgba(200, 255, 0, 0.07), transparent 42%);
+}
+.ldm-cursor-glow.is-active { opacity: 1; }
+
+/* ---------- Nav hover slider pill ---------- */
+.ldm-nav-links { position: relative; }
+.ldm-nav-pill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 34px;
+  width: 0;
+  border-radius: var(--radius-pill);
+  background: rgba(245, 245, 245, 0.07);
+  border: 1px solid var(--color-border);
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: transform 320ms var(--ease-premium), width 320ms var(--ease-premium), opacity 200ms var(--ease-premium);
+  pointer-events: none;
+  z-index: 0;
+}
+.ldm-nav-links.is-hovering .ldm-nav-pill { opacity: 1; }
+.ldm-nav-links a { position: relative; z-index: 1; }
+
+/* ---------- Marquee edge fade + pause on hover ---------- */
+.ldm-marquee-wrap {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+.ldm-marquee-wrap:hover .ldm-marquee-track { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ldm-word-inner { transition: none; transform: none; }
+  .ldm-cursor-glow { display: none; }
+}
