@@ -124,9 +124,47 @@
         el.appendChild(outer);
         wordIndex += 1;
       });
+      var innerWords = el.querySelectorAll(".ldm-word-inner");
+      if (innerWords.length) innerWords[innerWords.length - 1].classList.add("ldm-word-shimmer");
       requestAnimationFrame(function () {
         requestAnimationFrame(function () { el.classList.add("is-split-visible"); });
       });
+    });
+  }
+
+  /* Shimmer on the last word of major section headlines (no full split —
+     these headings sit inside a .reveal element and already fade/slide in
+     as a block, so only the trailing word is isolated) */
+  if (!reduceMotion) {
+    var subHeadings = document.querySelectorAll(".ldm-section-head h2, .ldm-about h2, .ldm-contact h2");
+    subHeadings.forEach(function (el) {
+      var text = el.textContent;
+      var lastSpace = text.trimEnd().lastIndexOf(" ");
+      var head = lastSpace === -1 ? "" : text.slice(0, lastSpace + 1);
+      var lastWord = lastSpace === -1 ? text : text.slice(lastSpace + 1);
+      if (!lastWord) return;
+      el.innerHTML = "";
+      el.appendChild(document.createTextNode(head));
+      var span = document.createElement("span");
+      span.className = "ldm-word-shimmer";
+      span.textContent = lastWord;
+      el.appendChild(span);
+    });
+  }
+
+  /* Energy-fill on the big outline numerals (process steps, skills detail) */
+  if (!reduceMotion) {
+    var energyNums = document.querySelectorAll(".ldm-process-step .num, .ldm-service-detail-num");
+    var energyIndex = 0;
+    energyNums.forEach(function (el) {
+      el.classList.add("ldm-energy-num");
+      var fill = document.createElement("span");
+      fill.className = "ldm-energy-num-fill";
+      fill.setAttribute("aria-hidden", "true");
+      fill.textContent = el.textContent;
+      fill.style.transitionDelay = Math.min(energyIndex, 5) * 120 + "ms";
+      el.appendChild(fill);
+      energyIndex += 1;
     });
   }
 

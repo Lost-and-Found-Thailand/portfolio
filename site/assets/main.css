@@ -602,6 +602,70 @@ body.ldm.has-custom-cursor select {
 }
 .reveal.is-visible .card-image { clip-path: inset(0 0 0 0% round var(--radius-md)); }
 
+/* ---------- Energy-fill numbers (01-06 / 01-04 outline numerals) ---------- */
+.ldm-energy-num { position: relative; display: inline-block; }
+.ldm-energy-num-fill {
+  position: absolute;
+  inset: 0;
+  color: var(--color-accent);
+  -webkit-text-stroke: 0;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1100ms var(--ease-premium);
+  text-shadow: 0 0 18px rgba(200, 255, 0, 0.55), 0 0 40px rgba(200, 255, 0, 0.22);
+}
+.reveal.is-visible .ldm-energy-num-fill { clip-path: inset(0 0% 0 0); }
+
+/* ---------- Gradient shimmer on headline keywords ---------- */
+.ldm-word-shimmer {
+  background: linear-gradient(100deg, var(--color-white) 30%, var(--color-accent) 50%, var(--color-white) 70%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: ldm-shimmer 3.4s ease-in-out infinite;
+}
+@keyframes ldm-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -100% 0; }
+}
+
+/* ---------- Neon pulse on stat / result numbers ---------- */
+.ldm-metric .num .accent,
+.ldm-case-result {
+  animation: none;
+}
+.reveal.is-visible .ldm-metric .num .accent,
+.reveal.is-visible .ldm-case-result {
+  animation: ldm-neon-pulse 2.4s var(--ease-premium) 1;
+}
+@keyframes ldm-neon-pulse {
+  0% { text-shadow: 0 0 0 rgba(200, 255, 0, 0); }
+  35% { text-shadow: 0 0 24px rgba(200, 255, 0, 0.85), 0 0 60px rgba(200, 255, 0, 0.4); }
+  100% { text-shadow: 0 0 10px rgba(200, 255, 0, 0.3); }
+}
+
+/* ---------- Animated highlight marker under eyebrow labels ---------- */
+.ldm .eyebrow { position: relative; display: inline-block; }
+.ldm .eyebrow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0%;
+  background: var(--color-accent);
+}
+.reveal.is-visible .eyebrow::after {
+  width: 100%;
+  transition: width 900ms var(--ease-premium) 150ms;
+}
+.ldm-hero-content .eyebrow::after,
+.ldm-page-header .eyebrow::after {
+  animation: ldm-underline-grow 900ms var(--ease-premium) 520ms forwards;
+}
+@keyframes ldm-underline-grow { from { width: 0%; } to { width: 100%; } }
+
 @media (prefers-reduced-motion: reduce) {
   .ldm-word-inner { transition: none; transform: none; }
   .ldm-cursor-glow, .ldm-cursor-dot, .ldm-cursor-ring, .ldm-hover-label, .ldm-scroll-progress { display: none; }
@@ -609,4 +673,14 @@ body.ldm.has-custom-cursor select {
   .reveal .ldm-case-media, .reveal .card-image,
   .reveal.is-visible .ldm-case-media, .reveal.is-visible .card-image { clip-path: none; transition: none; }
   body.ldm.has-custom-cursor, body.ldm.has-custom-cursor * { cursor: auto; }
+  .ldm-energy-num-fill { clip-path: inset(0 0% 0 0); transition: none; }
+  .ldm-word-shimmer {
+    animation: none;
+    background: none;
+    color: var(--color-accent);
+    -webkit-text-fill-color: var(--color-accent);
+  }
+  .reveal.is-visible .ldm-metric .num .accent,
+  .reveal.is-visible .ldm-case-result { animation: none; }
+  .ldm-hero-content .eyebrow::after, .ldm-page-header .eyebrow::after { animation: none; width: 100%; }
 }
