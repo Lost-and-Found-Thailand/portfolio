@@ -29,19 +29,22 @@
     document.body.appendChild(mobileMenu);
   }
   if (burger && mobileMenu) {
-    burger.addEventListener("click", function () {
-      var open = burger.classList.toggle("is-open");
+    var setMenuOpen = function (open) {
+      burger.classList.toggle("is-open", open);
       mobileMenu.classList.toggle("is-open", open);
       burger.setAttribute("aria-expanded", open ? "true" : "false");
+      /* Lock scroll on both html and body — some in-app/WebView browsers
+         only honor the lock on one of the two. */
+      document.documentElement.style.overflow = open ? "hidden" : "";
       document.body.style.overflow = open ? "hidden" : "";
       if (nav) nav.classList.toggle("is-menu-open", open);
+    };
+    burger.addEventListener("click", function () {
+      setMenuOpen(!burger.classList.contains("is-open"));
     });
     mobileMenu.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
-        burger.classList.remove("is-open");
-        mobileMenu.classList.remove("is-open");
-        document.body.style.overflow = "";
-        if (nav) nav.classList.remove("is-menu-open");
+        setMenuOpen(false);
       });
     });
   }

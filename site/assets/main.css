@@ -81,12 +81,15 @@ img { max-width: 100%; display: block; }
   display: none;
   position: fixed;
   inset: 0;
-  top: 68px;
+  height: 100vh;
+  height: 100dvh;
   background: var(--color-black);
-  z-index: 90;
-  padding: 32px var(--space-mobile-x);
+  z-index: 95;
+  padding: 108px var(--space-mobile-x) 32px;
   flex-direction: column;
   gap: 28px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .ldm-mobile-menu.is-open { display: flex; }
 .ldm-mobile-menu a {
