@@ -359,6 +359,15 @@ img { max-width: 100%; display: block; }
 .ldm-footer-col a:hover { color: var(--color-white); }
 .ldm-footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-top: 1px solid var(--color-border); padding-top: 24px; color: var(--color-gray); font-size: var(--fs-label); }
 
+@media (max-width: 640px) {
+  .ldm-contact-links { flex-direction: column; align-items: center; gap: 16px; }
+  .ldm-footer-top { flex-direction: column; align-items: center; text-align: center; }
+  .ldm-footer-tag { margin-left: auto; margin-right: auto; }
+  .ldm-footer-cols { width: 100%; justify-content: center; text-align: center; gap: 40px; }
+  .ldm-footer-col ul { align-items: center; }
+  .ldm-footer-bottom { justify-content: center; text-align: center; }
+}
+
 /* ---------- Simple page header (subpages) ---------- */
 .ldm-page-header { padding-top: clamp(120px, 14vw, 180px); padding-bottom: 48px; }
 .ldm-page-header .eyebrow { margin-bottom: 20px; display: block; }
