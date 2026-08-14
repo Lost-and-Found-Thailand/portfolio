@@ -19,6 +19,15 @@
      behind the logo/close button, reading as visual clutter/overlap. */
   var burger = document.querySelector(".ldm-burger");
   var mobileMenu = document.querySelector(".ldm-mobile-menu");
+  if (mobileMenu && mobileMenu.parentElement !== document.body) {
+    /* Move the menu out from under the sticky header: some WebKit/Safari
+       versions mis-render a position:fixed element nested inside a
+       position:sticky ancestor, letting it scroll with the page instead
+       of staying pinned — which is exactly what caused it to overlap
+       page content when opened mid-scroll. As a direct body child there
+       is no ancestor stacking/containing-block ambiguity left. */
+    document.body.appendChild(mobileMenu);
+  }
   if (burger && mobileMenu) {
     burger.addEventListener("click", function () {
       var open = burger.classList.toggle("is-open");
