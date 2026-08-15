@@ -376,4 +376,334 @@
       el.addEventListener("pointerleave", function () { cursorRing.classList.remove("is-hovering"); });
     });
   }
+
+  /* ----------------------------------------------------------------
+     Concept network — the site's signature interaction: a small,
+     curated graph of marketing concepts (not a generic particle
+     field) that stays quiet until the visitor's cursor draws near,
+     then reveals the specific relationships between ideas. Positions
+     are scattered organically on purpose — the fixed edge list is
+     what makes the connections feel intentional rather than random,
+     since only real neighbors ever light up together.
+     ---------------------------------------------------------------- */
+  var networkCanvases = document.querySelectorAll("[data-network]");
+  networkCanvases.forEach(function (canvas) { initNetwork(canvas); });
+
+  function initNetwork(canvas) {
+    var preset = {
+      desktopNodes: ["Audience", "Insight", "Strategy", "Creative", "Campaign", "Engagement", "Conversion", "Growth"],
+      desktopEdges: [
+        ["Audience", "Insight"], ["Insight", "Strategy"],
+        ["Strategy", "Creative"], ["Strategy", "Campaign"], ["Creative", "Campaign"],
+        ["Campaign", "Engagement"], ["Campaign", "Conversion"], ["Engagement", "Conversion"],
+        ["Conversion", "Growth"]
+      ],
+      mobileNodes: ["Audience", "Strategy", "Campaign", "Growth"],
+      mobileEdges: [["Audience", "Strategy"], ["Strategy", "Campaign"], ["Campaign", "Growth"]]
+    };
+    var verbs = {
+      Audience: "understand", Insight: "understand", Strategy: "connect",
+      Creative: "create", Campaign: "activate", Engagement: "activate",
+      Conversion: "convert", Growth: "grow"
+    };
+
+    var container = canvas.parentElement;
+    var ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    var isMobile = window.matchMedia("(max-width: 640px)").matches || !pointerFine;
+    var names = isMobile ? preset.mobileNodes : preset.desktopNodes;
+    var edgeDefs = isMobile ? preset.mobileEdges : preset.desktopEdges;
+
+    var tooltip = document.createElement("div");
+    tooltip.className = "ldm-network-tip";
+    container.appendChild(tooltip);
+
+    var width = 0, height = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var nodes = [];
+    var edges = [];
+    var pointer = { x: -9999, y: -9999, active: false };
+    var hoveredNode = null;
+    var running = false;
+    var raf = null;
+    var startTime = null;
+
+    function pickPosition(w, h, safe, placed) {
+      var margin = 22;
+      var minDist = Math.max(40, Math.min(w, h) * 0.15);
+
+      /* Sample only from the horizontal bands strictly above/below the
+         text's bounding box — on narrow mobile widths that box spans
+         nearly the full canvas, so rejecting samples inside it (and
+         falling back to "closest miss" if none pass) can still land a
+         node on top of the headline. Bands guarantee every candidate,
+         including the min-distance fallback, is outside the text. */
+      var bands = [];
+      if (safe) {
+        var topH = safe.y0 - margin;
+        var bottomH = h - margin - safe.y1;
+        if (topH > 30) bands.push({ y0: margin, y1: safe.y0 - 6, weight: topH });
+        if (bottomH > 30) bands.push({ y0: safe.y1 + 6, y1: h - margin, weight: bottomH });
+      }
+      if (!bands.length) bands.push({ y0: margin, y1: Math.max(margin + 1, h - margin), weight: 1 });
+      var totalWeight = bands.reduce(function (sum, b) { return sum + b.weight; }, 0);
+
+      var best = null;
+      for (var attempt = 0; attempt < 30; attempt++) {
+        var r = Math.random() * totalWeight;
+        var band = bands[bands.length - 1];
+        for (var bi = 0; bi < bands.length; bi++) {
+          if (r < bands[bi].weight) { band = bands[bi]; break; }
+          r -= bands[bi].weight;
+        }
+        var x = margin + Math.random() * Math.max(1, w - margin * 2);
+        var y = band.y0 + Math.random() * Math.max(1, band.y1 - band.y0);
+        var okDist = true;
+        for (var i = 0; i < placed.length; i++) {
+          if (Math.hypot(placed[i].x - x, placed[i].y - y) < minDist) { okDist = false; break; }
+        }
+        if (okDist) return { x: x, y: y };
+        if (!best) best = { x: x, y: y };
+      }
+      return best || { x: margin, y: margin };
+    }
+
+    function layout() {
+      var rect = container.getBoundingClientRect();
+      width = Math.max(1, rect.width);
+      height = Math.max(1, rect.height);
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      canvas.style.width = width + "px";
+      canvas.style.height = height + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      var safe = null;
+      var contentEl = container.querySelector(".ldm-hero-content");
+      if (contentEl) {
+        var cRect = contentEl.getBoundingClientRect();
+        var pRect = container.getBoundingClientRect();
+        safe = {
+          x0: cRect.left - pRect.left - 20,
+          y0: cRect.top - pRect.top - 20,
+          x1: cRect.right - pRect.left + 20,
+          y1: cRect.bottom - pRect.top + 20
+        };
+      }
+
+      var prevByName = {};
+      nodes.forEach(function (n) { prevByName[n.name] = n; });
+
+      var placed = [];
+      nodes = names.map(function (name) {
+        var pos = pickPosition(width, height, safe, placed);
+        placed.push(pos);
+        var prev = prevByName[name];
+        return {
+          name: name,
+          baseX: pos.x,
+          baseY: pos.y,
+          x: pos.x,
+          y: pos.y,
+          r: isMobile ? 3 : 3.2,
+          phase: prev ? prev.phase : Math.random() * Math.PI * 2,
+          freq: prev ? prev.freq : 0.12 + Math.random() * 0.1,
+          ampX: 7 + Math.random() * 9,
+          ampY: 6 + Math.random() * 7,
+          energy: prev ? prev.energy : 0,
+          targetEnergy: 0
+        };
+      });
+
+      edges = edgeDefs.map(function (pair) {
+        var a = null, b = null;
+        for (var i = 0; i < nodes.length; i++) {
+          if (nodes[i].name === pair[0]) a = nodes[i];
+          if (nodes[i].name === pair[1]) b = nodes[i];
+        }
+        if (!a || !b) return null;
+        return { a: a, b: b, pulseOffset: Math.random() };
+      }).filter(Boolean);
+    }
+
+    function updateHover() {
+      var found = null;
+      for (var i = 0; i < nodes.length; i++) {
+        var n = nodes[i];
+        if (Math.hypot(n.x - pointer.x, n.y - pointer.y) < n.r + 12) { found = n; break; }
+      }
+      if (found !== hoveredNode) {
+        hoveredNode = found;
+        if (found) {
+          tooltip.innerHTML = found.name.toUpperCase() +
+            (verbs[found.name] ? '<span class="verb">' + verbs[found.name] + "</span>" : "");
+          tooltip.classList.add("is-visible");
+        } else {
+          tooltip.classList.remove("is-visible");
+        }
+      }
+      if (found) {
+        tooltip.style.left = found.x + "px";
+        tooltip.style.top = found.y + "px";
+      }
+    }
+
+    function render(t) {
+      if (startTime === null) startTime = t;
+      var elapsed = reduceMotion ? 0 : (t - startTime) / 1000;
+
+      nodes.forEach(function (n) {
+        if (reduceMotion) {
+          n.x = n.baseX;
+          n.y = n.baseY;
+        } else {
+          n.x = n.baseX + Math.sin(elapsed * n.freq + n.phase) * n.ampX;
+          n.y = n.baseY + Math.cos(elapsed * n.freq * 0.85 + n.phase) * n.ampY;
+        }
+        var target = 0;
+        if (pointer.active) {
+          var radius = isMobile ? Math.min(width, height) * 0.55 : 170;
+          var d = Math.hypot(n.x - pointer.x, n.y - pointer.y);
+          if (d < radius) target = 1 - d / radius;
+        }
+        n.targetEnergy = target;
+      });
+
+      /* One hop of propagation along real edges only — this is what
+         makes a cluster "light up together" instead of every node
+         reacting independently to the cursor. */
+      edges.forEach(function (e) {
+        var prop = Math.max(e.a.targetEnergy, e.b.targetEnergy) * 0.45;
+        e.a.targetEnergy = Math.max(e.a.targetEnergy, prop);
+        e.b.targetEnergy = Math.max(e.b.targetEnergy, prop);
+      });
+
+      var smoothing = reduceMotion ? 1 : 0.085;
+      nodes.forEach(function (n) { n.energy += (n.targetEnergy - n.energy) * smoothing; });
+
+      ctx.clearRect(0, 0, width, height);
+
+      edges.forEach(function (e) {
+        var strength = Math.min(e.a.energy, e.b.energy);
+        if (strength < 0.08) return;
+        var alpha = Math.min(strength * 0.55, 0.4);
+        ctx.strokeStyle = "rgba(245,245,245," + alpha + ")";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(e.a.x, e.a.y);
+        ctx.lineTo(e.b.x, e.b.y);
+        ctx.stroke();
+
+        if (!reduceMotion && strength > 0.22) {
+          var pulseT = (elapsed * 0.3 + e.pulseOffset) % 1;
+          var px = e.a.x + (e.b.x - e.a.x) * pulseT;
+          var py = e.a.y + (e.b.y - e.a.y) * pulseT;
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(200,255,0," + Math.min(strength, 0.85) + ")";
+          ctx.arc(px, py, 1.7, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+
+      nodes.forEach(function (n) {
+        var alpha = (isMobile ? 0.32 : 0.38) + n.energy * 0.5;
+        var radius = n.r + n.energy * 1.6;
+        ctx.beginPath();
+        if (n.energy > 0.45) {
+          ctx.fillStyle = "rgba(200,255,0," + Math.min(alpha, 1) + ")";
+        } else {
+          ctx.fillStyle = "rgba(245,245,245," + Math.min(alpha, 0.82) + ")";
+        }
+        ctx.arc(n.x, n.y, radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      updateHover();
+
+      if (running && !reduceMotion) raf = requestAnimationFrame(render);
+    }
+
+    function renderOnce() { render(performance.now()); }
+
+    function start() {
+      if (running) return;
+      running = true;
+      if (reduceMotion) {
+        renderOnce();
+      } else {
+        startTime = null;
+        raf = requestAnimationFrame(render);
+      }
+    }
+    function stop() {
+      running = false;
+      if (raf) cancelAnimationFrame(raf);
+      raf = null;
+    }
+
+    function onMove(clientX, clientY) {
+      var rect = container.getBoundingClientRect();
+      pointer.x = clientX - rect.left;
+      pointer.y = clientY - rect.top;
+      pointer.active = true;
+      if (reduceMotion) renderOnce();
+    }
+    function onLeave() {
+      pointer.active = false;
+      hoveredNode = null;
+      tooltip.classList.remove("is-visible");
+      if (reduceMotion) renderOnce();
+    }
+
+    if (pointerFine) {
+      container.addEventListener("pointermove", function (e) { onMove(e.clientX, e.clientY); });
+      container.addEventListener("pointerleave", onLeave);
+    } else {
+      /* Mobile: connections form from a tap/touch near a concept
+         rather than from mouse movement, and fade back out shortly
+         after the finger lifts instead of following a cursor. */
+      container.addEventListener("touchstart", function (e) {
+        var touch = e.touches[0];
+        if (touch) onMove(touch.clientX, touch.clientY);
+      }, { passive: true });
+      container.addEventListener("touchmove", function (e) {
+        var touch = e.touches[0];
+        if (touch) onMove(touch.clientX, touch.clientY);
+      }, { passive: true });
+      container.addEventListener("touchend", function () {
+        setTimeout(onLeave, 1100);
+      });
+    }
+
+    layout();
+    renderOnce();
+
+    if ("IntersectionObserver" in window) {
+      var vis = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) start(); else stop();
+        });
+      }, { threshold: 0.05 });
+      vis.observe(container);
+    } else {
+      start();
+    }
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) stop();
+      else {
+        var rect = container.getBoundingClientRect();
+        if (rect.bottom > 0 && rect.top < window.innerHeight) start();
+      }
+    });
+
+    var resizeTimer = null;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        layout();
+        renderOnce();
+      }, 150);
+    });
+  }
 })();
