@@ -67,7 +67,24 @@ $ldm_og_image         = get_template_directory_uri() . '/assets/brand-kit/logo/l
     </button>
   </div>
   <div class="ldm-mobile-menu" id="mobileMenu">
-    <?php ldm_render_mobile_nav_links(); ?>
+    <div class="ldm-mobile-menu-top">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="ldm-logo" aria-label="<?php esc_attr_e( 'Liam Digital Marketing home', 'liam-digital-marketing' ); ?>">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/brand-kit/logo/logo-lockup-white.svg' ); ?>" alt="Liam Digital Marketing" style="height:22px;">
+      </a>
+      <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="ldm-mobile-menu-cta"><?php esc_html_e( "Let's Talk", 'liam-digital-marketing' ); ?> <span class="arrow">&rarr;</span></a>
+      <button class="ldm-mobile-menu-close" type="button" aria-label="<?php esc_attr_e( 'Close menu', 'liam-digital-marketing' ); ?>"><span></span><span></span></button>
+    </div>
+    <div class="ldm-mobile-menu-utility">
+      <a href="<?php echo esc_url( home_url( '/case-study/' ) ); ?>"><?php esc_html_e( 'Case Study', 'liam-digital-marketing' ); ?> <span class="arrow">&rarr;</span></a>
+      <span class="ldm-status"><span class="status-dot"></span><?php esc_html_e( 'Available for select projects', 'liam-digital-marketing' ); ?></span>
+    </div>
+    <nav class="ldm-mobile-menu-links" aria-label="<?php esc_attr_e( 'Mobile primary', 'liam-digital-marketing' ); ?>">
+      <?php ldm_render_mobile_nav_links(); ?>
+    </nav>
+    <div class="ldm-mobile-menu-actions">
+      <a href="tel:<?php echo esc_attr( LDM_CONTACT_PHONE_TEL ); ?>" class="ldm-mobile-menu-pill"><?php echo ldm_contact_icon( 'phone' ); ?><?php echo esc_html( LDM_CONTACT_PHONE_DISPLAY ); ?></a>
+      <a href="<?php echo esc_url( LDM_CONTACT_WHATSAPP_URL ); ?>" rel="noopener" class="ldm-mobile-menu-pill ldm-mobile-menu-pill--accent"><?php echo ldm_contact_icon( 'whatsapp' ); ?><?php esc_html_e( 'Quick Chat via WhatsApp', 'liam-digital-marketing' ); ?></a>
+    </div>
   </div>
 </header>
 

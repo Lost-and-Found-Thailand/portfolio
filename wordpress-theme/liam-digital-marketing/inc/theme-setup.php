@@ -87,14 +87,23 @@ function ldm_render_nav_links() {
 	}
 }
 
-/** Mobile menu: flat <a> tags — main.js wraps these into place itself. */
+/** Mobile menu overlay's main link list — one row per link, with a trailing chevron. */
 function ldm_render_mobile_nav_links() {
+	$chevron = '<svg class="ldm-mobile-menu-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>';
 	foreach ( ldm_nav_links() as $link ) {
 		printf(
-			'<a href="%1$s"%2$s>%3$s</a>',
+			'<a href="%1$s"%2$s>%3$s%4$s</a>',
 			esc_url( $link['url'] ),
 			call_user_func( $link['current'] ) ? ' aria-current="page"' : '',
-			esc_html( $link['label'] )
+			esc_html( $link['label'] ),
+			$chevron // phpcs:ignore -- static markup, not user input.
 		);
+	}
+}
+
+/** Footer's "Explore" column — the same six links as the nav, in a two-column grid. */
+function ldm_render_footer_explore_links() {
+	foreach ( ldm_nav_links() as $link ) {
+		printf( '<li><a href="%1$s">%2$s</a></li>', esc_url( $link['url'] ), esc_html( $link['label'] ) );
 	}
 }

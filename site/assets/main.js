@@ -30,45 +30,11 @@
     document.body.appendChild(mobileMenu);
   }
   if (burger && mobileMenu) {
-    /* Give the overlay its own close button rather than relying on the
-       header's burger-turned-X staying visually on top of it — in at
-       least one in-app WebView browser the header did not reliably
-       stack above the full-screen menu, making that X effectively
-       disappear. A close control inside the overlay itself can't have
-       that problem, since the overlay is by definition the topmost
-       thing on screen while open. */
-    var closeBtn = document.createElement("button");
-    closeBtn.type = "button";
-    closeBtn.className = "ldm-mobile-menu-close";
-    closeBtn.setAttribute("aria-label", "Close menu");
-    closeBtn.innerHTML = "<span></span><span></span>";
-    mobileMenu.insertBefore(closeBtn, mobileMenu.firstChild);
-
-    /* Group the nav links so they can sit near the top of the overlay,
-       and mirror the footer's Connect links below them so the rest of
-       the screen has a purpose instead of sitting empty. */
-    var linksWrap = document.createElement("div");
-    linksWrap.className = "ldm-mobile-menu-links";
-    mobileMenu.querySelectorAll(":scope > a").forEach(function (a) {
-      linksWrap.appendChild(a);
-    });
-    mobileMenu.appendChild(linksWrap);
-
-    var connectCol = Array.prototype.find.call(
-      document.querySelectorAll(".ldm-footer-col"),
-      function (col) {
-        var h5 = col.querySelector("h5");
-        return h5 && h5.textContent.trim() === "Connect";
-      }
-    );
-    if (connectCol) {
-      var menuFooter = document.createElement("div");
-      menuFooter.className = "ldm-mobile-menu-footer";
-      connectCol.querySelectorAll("a").forEach(function (a) {
-        menuFooter.appendChild(a.cloneNode(true));
-      });
-      mobileMenu.appendChild(menuFooter);
-    }
+    /* The overlay's top bar, utility strip, link list and bottom action
+       pills are all hand-authored in the HTML now (see the .ldm-mobile-menu
+       markup in each page) rather than assembled here at runtime — this
+       just wires up the close button already inside that markup. */
+    var closeBtn = mobileMenu.querySelector(".ldm-mobile-menu-close");
 
     var setMenuOpen = function (open) {
       burger.classList.toggle("is-open", open);
@@ -83,9 +49,11 @@
     burger.addEventListener("click", function () {
       setMenuOpen(!burger.classList.contains("is-open"));
     });
-    closeBtn.addEventListener("click", function () {
-      setMenuOpen(false);
-    });
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function () {
+        setMenuOpen(false);
+      });
+    }
     mobileMenu.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
         setMenuOpen(false);
