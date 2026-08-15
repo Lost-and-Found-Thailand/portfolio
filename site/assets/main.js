@@ -289,7 +289,7 @@
 
   /* 3D tilt on cards */
   if (pointerFine && !reduceMotion) {
-    var tiltSelector = ".ldm-case, .ldm-service-detail, .ldm-service, .card";
+    var tiltSelector = ".ldm-case, .ldm-service-detail, .ldm-service, .card, .ldm-hero-photo";
     var tiltEls = Array.prototype.filter.call(
       document.querySelectorAll(tiltSelector),
       function (el) { return !el.querySelector("form"); }
