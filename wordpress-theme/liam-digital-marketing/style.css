@@ -1,0 +1,10 @@
+/*
+Theme Name: Liam Digital Marketing
+Theme URI: https://lost-and-found-thailand.github.io/portfolio/
+Author: Liam
+Description: Custom theme wrapping the Liam Digital Marketing static portfolio site (hero concept network, chat widget, story rail, growth rings and the rest of the interactive layer) almost untouched, so it can run on WordPress without losing any of it. All real styling lives in assets/main.css and assets/brand-kit/tokens.css, loaded via wp_enqueue_style() in inc/enqueue.php — this file only carries the theme header WordPress requires.
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 7.4
+Text Domain: liam-digital-marketing
+*/
