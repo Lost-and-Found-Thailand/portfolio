@@ -800,6 +800,82 @@
   }
 
   /* ----------------------------------------------------------------
+     Story rail — a persistent chapter map for the homepage. Chapters
+     are evenly spaced by index rather than by actual scroll-percent
+     of each section (which would need recalculating on every resize
+     as content reflows) — it's a stylized map of the narrative, not
+     a literal scrollbar. The active chapter is whichever section
+     currently occupies the vertical center band of the viewport.
+     ---------------------------------------------------------------- */
+  (function () {
+    var CHAPTERS = [
+      { id: "hero", label: "See" },
+      { id: "intro", label: "Understand" },
+      { id: "work", label: "Work" },
+      { id: "services", label: "Strategy" },
+      { id: "skills-tools", label: "Skills" },
+      { id: "results", label: "Grow" },
+      { id: "about-teaser", label: "About" },
+      { id: "process", label: "Process" },
+      { id: "contact-cta", label: "Connect" }
+    ];
+    var chapters = CHAPTERS
+      .map(function (c) { return { el: document.getElementById(c.id), label: c.label }; })
+      .filter(function (c) { return c.el; });
+    if (chapters.length < 2 || !window.matchMedia("(min-width: 1100px)").matches) return;
+
+    var rail = document.createElement("nav");
+    rail.className = "ldm-story-rail";
+    rail.setAttribute("aria-label", "Page sections");
+    var track = document.createElement("div");
+    track.className = "ldm-story-rail-track";
+    var fill = document.createElement("div");
+    fill.className = "ldm-story-rail-fill";
+    rail.appendChild(track);
+    rail.appendChild(fill);
+
+    var nodes = chapters.map(function (c) {
+      var node = document.createElement("button");
+      node.type = "button";
+      node.className = "ldm-story-node";
+      node.setAttribute("aria-label", c.label);
+      var dot = document.createElement("span");
+      dot.className = "ldm-story-node-dot";
+      var label = document.createElement("span");
+      label.className = "ldm-story-node-label";
+      label.textContent = c.label;
+      node.appendChild(dot);
+      node.appendChild(label);
+      node.addEventListener("click", function () {
+        c.el.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      });
+      rail.appendChild(node);
+      return node;
+    });
+    document.body.appendChild(rail);
+
+    var setActive = function (index) {
+      nodes.forEach(function (n, i) { n.classList.toggle("is-active", i === index); });
+      fill.style.height = (index / (nodes.length - 1)) * 100 + "%";
+    };
+    setActive(0);
+
+    if ("IntersectionObserver" in window) {
+      var chapterIO = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var idx = chapters.findIndex(function (c) { return c.el === entry.target; });
+            if (idx !== -1) setActive(idx);
+          });
+        },
+        { threshold: 0, rootMargin: "-45% 0px -45% 0px" }
+      );
+      chapters.forEach(function (c) { chapterIO.observe(c.el); });
+    }
+  })();
+
+  /* ----------------------------------------------------------------
      Chat widget — a small, honest FAQ assistant. It answers common
      questions from a fixed knowledge base (no external API, nothing
      to keep secret, nothing that can run up a bill), and hands off

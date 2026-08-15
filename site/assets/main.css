@@ -1093,6 +1093,102 @@ body.ldm.has-custom-cursor select {
   .ldm-hero-content .eyebrow::after, .ldm-page-header .eyebrow::after { animation: none; width: 100%; }
 }
 
+/* ---------- Story rail (scrollytelling nav) ----------
+   A persistent chapter map for the homepage: an evenly-spaced set of
+   waypoints (not a literal proportional scrollbar, which would need
+   fragile per-section pixel math) that fills in and connects as the
+   visitor moves through the page's narrative. Desktop only — a side
+   rail needs real horizontal margin to sit in without crowding
+   content, which wide tablets/phones don't have. */
+.ldm-story-rail {
+  position: fixed;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  max-height: 420px;
+}
+@media (max-width: 1099px) { .ldm-story-rail { display: none; } }
+.ldm-story-rail-track,
+.ldm-story-rail-fill {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.ldm-story-rail-track { height: 100%; background: var(--color-border); }
+.ldm-story-rail-fill {
+  height: 0%;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px rgba(200, 255, 0, 0.6);
+  transition: height 500ms var(--ease-premium);
+}
+.ldm-story-node {
+  position: relative;
+  flex: 1;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.ldm-story-node-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-border-strong);
+  transition: background-color 300ms var(--ease-premium), box-shadow 300ms var(--ease-premium), transform 300ms var(--ease-premium);
+}
+.ldm-story-node.is-active .ldm-story-node-dot {
+  background: var(--color-accent);
+  box-shadow: 0 0 10px 3px rgba(200, 255, 0, 0.7);
+  transform: scale(1.5);
+}
+.ldm-story-node-label {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  font-size: var(--fs-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-50%) translateX(6px);
+  transition: opacity 250ms var(--ease-premium), transform 250ms var(--ease-premium), color 250ms var(--ease-premium);
+  pointer-events: none;
+}
+.ldm-story-node.is-active .ldm-story-node-label { color: var(--color-white); opacity: 1; transform: translateY(-50%) translateX(0); }
+.ldm-story-node:hover .ldm-story-node-label { opacity: 1; transform: translateY(-50%) translateX(0); }
+
+/* Hero background grid drifts at a different rate than the page
+   scrolls past it, reading as depth rather than a flat backdrop.
+   Native scroll-driven animation — no scroll listener, no JS at
+   all — with a feature check for browsers that don't support it
+   yet, and switched off entirely under reduced motion. */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .ldm-hero-grid {
+      animation: ldm-grid-drift 40s linear infinite, ldm-grid-parallax linear;
+      animation-timeline: auto, scroll(root);
+      animation-range: normal, 0 100vh;
+    }
+    @keyframes ldm-grid-parallax {
+      from { transform: translateY(0); }
+      to { transform: translateY(70px); }
+    }
+  }
+}
+
 /* ---------- Chat widget ---------- */
 .ldm-chat { position: fixed; right: 20px; bottom: 20px; z-index: 140; }
 .ldm-chat-toggle {
