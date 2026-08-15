@@ -44,6 +44,32 @@
     closeBtn.innerHTML = "<span></span><span></span>";
     mobileMenu.insertBefore(closeBtn, mobileMenu.firstChild);
 
+    /* Group the nav links so they can sit near the top of the overlay,
+       and mirror the footer's Connect links below them so the rest of
+       the screen has a purpose instead of sitting empty. */
+    var linksWrap = document.createElement("div");
+    linksWrap.className = "ldm-mobile-menu-links";
+    mobileMenu.querySelectorAll(":scope > a").forEach(function (a) {
+      linksWrap.appendChild(a);
+    });
+    mobileMenu.appendChild(linksWrap);
+
+    var connectCol = Array.prototype.find.call(
+      document.querySelectorAll(".ldm-footer-col"),
+      function (col) {
+        var h5 = col.querySelector("h5");
+        return h5 && h5.textContent.trim() === "Connect";
+      }
+    );
+    if (connectCol) {
+      var menuFooter = document.createElement("div");
+      menuFooter.className = "ldm-mobile-menu-footer";
+      connectCol.querySelectorAll("a").forEach(function (a) {
+        menuFooter.appendChild(a.cloneNode(true));
+      });
+      mobileMenu.appendChild(menuFooter);
+    }
+
     var setMenuOpen = function (open) {
       burger.classList.toggle("is-open", open);
       mobileMenu.classList.toggle("is-open", open);
