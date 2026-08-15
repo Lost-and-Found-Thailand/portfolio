@@ -822,7 +822,7 @@
     var chapters = CHAPTERS
       .map(function (c) { return { el: document.getElementById(c.id), label: c.label }; })
       .filter(function (c) { return c.el; });
-    if (chapters.length < 2 || !window.matchMedia("(min-width: 1100px)").matches) return;
+    if (chapters.length < 2) return;
 
     var rail = document.createElement("nav");
     rail.className = "ldm-story-rail";
@@ -857,6 +857,10 @@
     var setActive = function (index) {
       nodes.forEach(function (n, i) { n.classList.toggle("is-active", i === index); });
       fill.style.height = (index / (nodes.length - 1)) * 100 + "%";
+      /* On the mobile/tablet collapsed pill, hide it entirely while
+         the hero chapter is active — the hero already shows plenty
+         of its own context, so the pill would be redundant there. */
+      rail.classList.toggle("is-past-hero", index > 0);
     };
     setActive(0);
 

@@ -1097,9 +1097,16 @@ body.ldm.has-custom-cursor select {
    A persistent chapter map for the homepage: an evenly-spaced set of
    waypoints (not a literal proportional scrollbar, which would need
    fragile per-section pixel math) that fills in and connects as the
-   visitor moves through the page's narrative. Desktop only — a side
-   rail needs real horizontal margin to sit in without crowding
-   content, which wide tablets/phones don't have. */
+   visitor moves through the page's narrative.
+
+   Desktop (>=1100px) gets the full vertical rail — a side rail needs
+   real horizontal margin to sit in without crowding content, which
+   narrower viewports don't have. Below that it doesn't disappear;
+   it collapses into a small "current chapter" pill fixed bottom-
+   left (mirrors the chat button's own bottom-right placement, so
+   the two never collide), matching the site's existing pattern of
+   simplifying rather than omitting on mobile (the lens, ripple and
+   hero network all do the same). */
 .ldm-story-rail {
   position: fixed;
   top: 50%;
@@ -1112,7 +1119,6 @@ body.ldm.has-custom-cursor select {
   height: 50vh;
   max-height: 420px;
 }
-@media (max-width: 1099px) { .ldm-story-rail { display: none; } }
 .ldm-story-rail-track,
 .ldm-story-rail-fill {
   position: absolute;
@@ -1169,6 +1175,52 @@ body.ldm.has-custom-cursor select {
 }
 .ldm-story-node.is-active .ldm-story-node-label { color: var(--color-white); opacity: 1; transform: translateY(-50%) translateX(0); }
 .ldm-story-node:hover .ldm-story-node-label { opacity: 1; transform: translateY(-50%) translateX(0); }
+
+/* Below 1100px the rail collapses into a small "current chapter"
+   pill fixed bottom-left (mirrors the chat button's own bottom-right
+   placement, so the two never collide), rather than disappearing —
+   matching the site's existing pattern of simplifying rather than
+   omitting on mobile (the lens, ripple and hero network all do the
+   same). Placed after the base rules above so it correctly wins the
+   cascade for elements (like .ldm-story-node) declared unconditionally
+   there — an earlier version of this same media query placed before
+   those rules lost to them despite equal specificity, since CSS
+   breaks same-specificity ties by source order, not by which query
+   currently matches. */
+@media (max-width: 1099px) {
+  .ldm-story-rail {
+    top: auto;
+    bottom: 20px;
+    right: auto;
+    left: 20px;
+    transform: none;
+    height: auto;
+    max-height: none;
+    flex-direction: row;
+    background: rgba(10, 10, 9, 0.85);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-pill);
+    padding: 10px 16px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 300ms var(--ease-premium), transform 300ms var(--ease-premium);
+    pointer-events: none;
+  }
+  .ldm-story-rail.is-past-hero { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .ldm-story-rail-track, .ldm-story-rail-fill { display: none; }
+  .ldm-story-node { display: none; flex: none; width: auto; }
+  .ldm-story-node.is-active { display: flex; gap: 9px; }
+  .ldm-story-node-dot { flex-shrink: 0; }
+  .ldm-story-node-label {
+    position: static;
+    opacity: 1;
+    transform: none;
+    color: var(--color-white);
+    pointer-events: none;
+  }
+}
 
 /* Hero background grid drifts at a different rate than the page
    scrolls past it, reading as depth rather than a flat backdrop.
