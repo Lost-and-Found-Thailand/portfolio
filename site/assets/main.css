@@ -175,6 +175,27 @@ img { max-width: 100%; display: block; }
   to { background-position: 128px 128px; }
 }
 .ldm-hero-content { position: relative; z-index: 1; }
+.ldm-hero-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: clamp(32px, 5vw, 72px);
+}
+.ldm-hero-photo {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  max-width: 380px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-dark-gray);
+  border: 1px solid var(--color-border);
+  justify-self: end;
+}
+.ldm-hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 900px) {
+  .ldm-hero-layout { grid-template-columns: 1fr; gap: 32px; }
+  .ldm-hero-photo { order: -1; max-width: 180px; justify-self: start; }
+}
 
 /* ---------- Concept network (signature hero interaction) ---------- */
 .ldm-network {
@@ -818,16 +839,17 @@ body.ldm.has-custom-cursor select {
 }
 
 /* ---------- Staged hero / page-header entrance ---------- */
-.ldm-hero-content > *:not(h1),
+.ldm-hero-text > *:not(h1),
+.ldm-hero-photo,
 .ldm-page-header > *:not(h1) {
   opacity: 0;
   transform: translateY(16px);
   animation: ldm-hero-in 700ms var(--ease-premium) forwards;
 }
-.ldm-hero-content > *:nth-child(1) { animation-delay: 40ms; }
-.ldm-hero-content > *:nth-child(2) { animation-delay: 160ms; }
-.ldm-hero-content > *:nth-child(4) { animation-delay: 760ms; }
-.ldm-hero-content > *:nth-child(5) { animation-delay: 880ms; }
+.ldm-hero-text > *:nth-child(1) { animation-delay: 40ms; }
+.ldm-hero-text > *:nth-child(4) { animation-delay: 760ms; }
+.ldm-hero-text > *:nth-child(5) { animation-delay: 880ms; }
+.ldm-hero-photo { animation-delay: 320ms; }
 .ldm-page-header > *:nth-child(1) { animation-delay: 40ms; }
 .ldm-page-header > *:nth-child(3) { animation-delay: 480ms; }
 @keyframes ldm-hero-in { to { opacity: 1; transform: translateY(0); } }
@@ -911,7 +933,7 @@ body.ldm.has-custom-cursor select {
 @media (prefers-reduced-motion: reduce) {
   .ldm-word-inner { transition: none; transform: none; }
   .ldm-cursor-glow, .ldm-cursor-dot, .ldm-cursor-ring, .ldm-scroll-progress { display: none; }
-  .ldm-hero-content > *, .ldm-page-header > * { opacity: 1; transform: none; animation: none; }
+  .ldm-hero-text > *, .ldm-hero-photo, .ldm-page-header > * { opacity: 1; transform: none; animation: none; }
   .reveal .ldm-case-media, .reveal .card-image,
   .reveal.is-visible .ldm-case-media, .reveal.is-visible .card-image { clip-path: none; transition: none; }
   body.ldm.has-custom-cursor, body.ldm.has-custom-cursor * { cursor: auto; }
