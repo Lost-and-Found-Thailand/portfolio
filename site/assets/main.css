@@ -175,18 +175,29 @@ img { max-width: 100%; display: block; }
   to { background-position: 128px 128px; }
 }
 .ldm-hero-content { position: relative; z-index: 1; }
-.ldm-hero-layout {
+
+/* Centered greeting + headline, photo grounded just beneath it,
+   flanked by the status pill (left) and lede/CTAs (right) — mirrors
+   the reference layout while keeping the site's existing copy. */
+.ldm-hero-center { max-width: 900px; margin: 0 auto; text-align: center; }
+.ldm-hero-center .eyebrow { display: inline-block; margin-bottom: 20px; }
+.ldm-hero-showcase {
   display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
-  align-items: end;
-  gap: clamp(24px, 4vw, 56px);
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: clamp(16px, 3vw, 40px);
+  margin-top: clamp(-64px, -7vw, -28px);
 }
+.ldm-hero-side { max-width: 260px; }
+.ldm-hero-side--left { justify-self: end; text-align: right; }
+.ldm-hero-side--left .ldm-status { white-space: nowrap; }
+.ldm-hero-side--right { justify-self: start; text-align: left; }
+.ldm-hero-side--right .lede { font-size: var(--fs-small); margin-bottom: 20px; }
+.ldm-hero-side--right .ldm-hero-ctas { justify-content: flex-start; }
 .ldm-hero-photo {
   position: relative;
-  max-width: 340px;
-  justify-self: end;
-  align-self: end;
-  margin-bottom: -32px;
+  max-width: 300px;
+  justify-self: center;
 }
 .ldm-hero-photo-glow {
   position: absolute;
@@ -207,9 +218,18 @@ img { max-width: 100%; display: block; }
      rectangular shadow behind a transparent PNG. */
   filter: grayscale(0.3) contrast(1.06) drop-shadow(0 30px 26px rgba(0, 0, 0, 0.55));
 }
-@media (max-width: 900px) {
-  .ldm-hero-layout { grid-template-columns: 1fr; gap: 8px; }
-  .ldm-hero-photo { order: -1; max-width: 220px; justify-self: center; margin-bottom: 0; }
+@media (max-width: 860px) {
+  .ldm-hero-showcase {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 8px;
+    gap: 20px;
+  }
+  .ldm-hero-photo { order: -1; max-width: 220px; }
+  .ldm-hero-side { max-width: none; }
+  .ldm-hero-side--left,
+  .ldm-hero-side--right { justify-self: center; text-align: center; }
+  .ldm-hero-side--right .ldm-hero-ctas { justify-content: center; }
 }
 
 /* ---------- Concept network (signature hero interaction) ---------- */
@@ -350,7 +370,7 @@ img { max-width: 100%; display: block; }
   color: var(--color-off-white);
   margin-bottom: 32px;
 }
-.ldm-hero h1 { max-width: 16ch; margin-bottom: 28px; }
+.ldm-hero h1 { max-width: 20ch; margin: 0 auto 28px; }
 .ldm-hero .lede { margin-bottom: 44px; }
 .ldm-hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; }
 
@@ -854,17 +874,18 @@ body.ldm.has-custom-cursor select {
 }
 
 /* ---------- Staged hero / page-header entrance ---------- */
-.ldm-hero-text > *:not(h1),
+.ldm-hero-center .eyebrow,
+.ldm-hero-side,
 .ldm-hero-photo,
 .ldm-page-header > *:not(h1) {
   opacity: 0;
   transform: translateY(16px);
   animation: ldm-hero-in 700ms var(--ease-premium) forwards;
 }
-.ldm-hero-text > *:nth-child(1) { animation-delay: 40ms; }
-.ldm-hero-text > *:nth-child(4) { animation-delay: 760ms; }
-.ldm-hero-text > *:nth-child(5) { animation-delay: 880ms; }
-.ldm-hero-photo { animation-delay: 320ms; }
+.ldm-hero-center .eyebrow { animation-delay: 40ms; }
+.ldm-hero-side--left { animation-delay: 200ms; }
+.ldm-hero-photo { animation-delay: 360ms; }
+.ldm-hero-side--right { animation-delay: 520ms; }
 .ldm-page-header > *:nth-child(1) { animation-delay: 40ms; }
 .ldm-page-header > *:nth-child(3) { animation-delay: 480ms; }
 @keyframes ldm-hero-in { to { opacity: 1; transform: translateY(0); } }
@@ -948,7 +969,7 @@ body.ldm.has-custom-cursor select {
 @media (prefers-reduced-motion: reduce) {
   .ldm-word-inner { transition: none; transform: none; }
   .ldm-cursor-glow, .ldm-cursor-dot, .ldm-cursor-ring, .ldm-scroll-progress { display: none; }
-  .ldm-hero-text > *, .ldm-hero-photo, .ldm-page-header > * { opacity: 1; transform: none; animation: none; }
+  .ldm-hero-center .eyebrow, .ldm-hero-side, .ldm-hero-photo, .ldm-page-header > * { opacity: 1; transform: none; animation: none; }
   .reveal .ldm-case-media, .reveal .card-image,
   .reveal.is-visible .ldm-case-media, .reveal.is-visible .card-image { clip-path: none; transition: none; }
   body.ldm.has-custom-cursor, body.ldm.has-custom-cursor * { cursor: auto; }
