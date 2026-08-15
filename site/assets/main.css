@@ -302,29 +302,6 @@ img { max-width: 100%; display: block; }
 .reveal.is-visible .ldm-thread-accent path { stroke-dashoffset: 0; }
 .reveal.is-visible .ldm-thread-accent circle { opacity: 1; }
 
-/* Growth structure — a small branching tree above the Results stats.
-   Tiers draw in sequence (trunk, then branches, then leaves) so the
-   structure reads as growing rather than simply appearing. */
-.ldm-thread-growth { max-width: 320px; margin-bottom: 26px; }
-.reveal.is-visible .ldm-thread-growth path.t1 { transition-delay: 320ms; }
-.reveal.is-visible .ldm-thread-growth circle.n0 { transition-delay: 120ms; }
-.reveal.is-visible .ldm-thread-growth circle.n1 { transition-delay: 420ms; }
-.reveal.is-visible .ldm-thread-growth circle.n2 { transition-delay: 680ms; }
-
-/* Branch variant for page headers, which animate in on load rather
-   than via .reveal/IntersectionObserver — driven by its own keyframes
-   instead of a class toggle. Targeted by class rather than nth-child
-   so it can't retime any other page-header's existing children. */
-.ldm-page-header .ldm-thread-branch { animation-delay: 640ms; }
-.ldm-thread-branch path {
-  animation: ldm-thread-draw 900ms var(--ease-premium) 1400ms forwards;
-}
-.ldm-thread-branch circle {
-  animation: ldm-thread-dot 400ms var(--ease-premium) 2150ms forwards;
-}
-@keyframes ldm-thread-draw { to { stroke-dashoffset: 0; } }
-@keyframes ldm-thread-dot { to { opacity: 1; } }
-
 /* ---------- Lens (SEE) — a soft circular field that sharpens faint
    scattered "signal" words as the cursor passes near. Static (blurred
    layer only) when no fine pointer is available or motion is reduced. ---------- */
