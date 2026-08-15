@@ -706,4 +706,212 @@
       }, 150);
     });
   }
+
+  /* ----------------------------------------------------------------
+     Chat widget — a small, honest FAQ assistant. It answers common
+     questions from a fixed knowledge base (no external API, nothing
+     to keep secret, nothing that can run up a bill), and hands off
+     to WhatsApp for anything it can't answer or whenever someone
+     asks for a real person.
+     ---------------------------------------------------------------- */
+  (function () {
+    var WHATSAPP_URL = "https://wa.me/66626160129";
+    var WHATSAPP_BTN =
+      '<a class="ldm-chat-whatsapp-btn" href="' + WHATSAPP_URL + '" target="_blank" rel="noopener">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 20l1-5.3A8.5 8.5 0 1 1 21 11.5z"></path>' +
+      '<path d="M8.7 10.6c.3 2.4 2.3 4.4 4.7 4.7"></path></svg>' +
+      "Message Liam on WhatsApp</a>";
+
+    var INTENTS = [
+      {
+        keywords: ["human", "person", "real person", "speak to", "call me", "agent", "someone", "liam himself"],
+        html: "Of course — Liam reads every WhatsApp message personally and usually replies fast." + WHATSAPP_BTN
+      },
+      {
+        keywords: ["price", "pricing", "cost", "budget", "rate", "quote", "fee", "expensive", "cheap"],
+        html: "Every project's scope is different, so there's no fixed price list here. Share a few details and Liam will get back to you with real numbers." + WHATSAPP_BTN
+      },
+      {
+        keywords: ["service", "offer", "help with", "what can you", "what do you do", "capabilities"],
+        html: "Liam works across <strong>Paid Media, Lead Generation, Conversion Tracking, Marketing Analytics, Conversion Optimization</strong> and <strong>Growth &amp; Digital Strategy</strong>. <a href=\"skills.html\">See the full skill set &rarr;</a>"
+      },
+      {
+        keywords: ["process", "how do you work", "approach", "methodology", "steps"],
+        html: "A simple, disciplined process: <strong>Discover</strong> the business and audience, <strong>Build</strong> the campaign and tracking, <strong>Optimize</strong> from real data, then <strong>Scale</strong> what works."
+      },
+      {
+        keywords: ["result", "roas", "proof", "portfolio", "case stud", "example", "client", "brand", "track record"],
+        html: "$10M+ in ad spend managed, 100+ brands scaled, 15x average ROAS and up to 300x on top campaigns. <a href=\"work.html\">See the case studies &rarr;</a>"
+      },
+      {
+        keywords: ["tool", "platform", "stack", "software", "technology", "tech"],
+        html: "Meta, Google, TikTok and LinkedIn Ads, GA4, Looker Studio, Google Tag Manager, HubSpot, WordPress and more. <a href=\"skills.html\">Full stack here &rarr;</a>"
+      },
+      {
+        keywords: ["experience", "background", "who is liam", "about you", "years", "about liam"],
+        html: "Liam's a Digital Marketing Manager with 6+ years managing multi-million-dollar budgets across hospitality, e-commerce and professional services. <a href=\"about.html\">More about Liam &rarr;</a>"
+      },
+      {
+        keywords: ["available", "hire", "new project", "work together", "new client", "capacity", "start a project"],
+        html: "Yes — currently available for select new projects. <a href=\"contact.html\">Start a conversation &rarr;</a> or" + WHATSAPP_BTN
+      },
+      {
+        keywords: ["thank", "thanks", "cheers", "appreciate"],
+        html: "Anytime! Anything else I can help with?"
+      },
+      {
+        keywords: ["bye", "goodbye", "see you", "later"],
+        html: "Take care! Liam's WhatsApp is always open if you want to keep talking." + WHATSAPP_BTN
+      },
+      {
+        keywords: ["hi", "hello", "hey", "yo", "sup", "hiya"],
+        html: "Hey! Ask me about services, process, results or tools — or jump straight to WhatsApp if you'd rather chat directly."
+      }
+    ];
+    var FALLBACK_HTML =
+      "I'm a simple assistant so I might not have that memorized — but Liam will. Want to message him directly?" + WHATSAPP_BTN;
+
+    function matchIntent(text) {
+      var lower = text.toLowerCase();
+      var best = null, bestScore = 0;
+      INTENTS.forEach(function (intent) {
+        var score = 0;
+        intent.keywords.forEach(function (kw) { if (lower.indexOf(kw) !== -1) score++; });
+        if (score > bestScore) { bestScore = score; best = intent; }
+      });
+      return best ? best.html : FALLBACK_HTML;
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    var root = document.createElement("div");
+    root.className = "ldm-chat";
+    root.innerHTML =
+      '<button type="button" class="ldm-chat-toggle" aria-label="Open chat" aria-expanded="false">' +
+      '<span class="ldm-chat-badge" aria-hidden="true"></span>' +
+      '<svg class="ldm-chat-icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 8.8 8.8 0 0 1-3.6-.8L3 20l1.1-3.9A8.3 8.3 0 0 1 3 11.5 8.5 8.5 0 0 1 11.5 3h.3A8.4 8.4 0 0 1 21 11.2z"></path></svg>' +
+      '<svg class="ldm-chat-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>' +
+      "</button>" +
+      '<div class="ldm-chat-panel" role="dialog" aria-label="Chat with Liam’s assistant" aria-hidden="true">' +
+      '<div class="ldm-chat-header">' +
+      "<div><strong>Liam's Assistant</strong><div class=\"ldm-chat-status\"><span class=\"status-dot\"></span>Usually replies instantly</div></div>" +
+      '<button type="button" class="ldm-chat-close" aria-label="Close chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>' +
+      "</div>" +
+      '<div class="ldm-chat-body" id="ldmChatBody"></div>' +
+      '<div class="ldm-chat-quick" id="ldmChatQuick"></div>' +
+      '<form class="ldm-chat-form" id="ldmChatForm">' +
+      '<input type="text" id="ldmChatInput" placeholder="Ask about services, process, results…" autocomplete="off" aria-label="Message">' +
+      '<button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>' +
+      "</form>" +
+      "</div>";
+    document.body.appendChild(root);
+
+    var toggle = root.querySelector(".ldm-chat-toggle");
+    var panel = root.querySelector(".ldm-chat-panel");
+    var closeBtn = root.querySelector(".ldm-chat-close");
+    var body = root.querySelector("#ldmChatBody");
+    var quick = root.querySelector("#ldmChatQuick");
+    var form = root.querySelector("#ldmChatForm");
+    var input = root.querySelector("#ldmChatInput");
+
+    function addMessage(role, html) {
+      var el = document.createElement("div");
+      el.className = "ldm-chat-msg " + role;
+      el.innerHTML = html;
+      body.appendChild(el);
+      body.scrollTop = body.scrollHeight;
+    }
+
+    function showTyping(callback) {
+      var typing = document.createElement("div");
+      typing.className = "ldm-chat-typing";
+      typing.innerHTML = "<span></span><span></span><span></span>";
+      body.appendChild(typing);
+      body.scrollTop = body.scrollHeight;
+      setTimeout(function () {
+        typing.remove();
+        callback();
+      }, reduceMotion ? 120 : 450 + Math.random() * 350);
+    }
+
+    function respond(text) {
+      var html = matchIntent(text);
+      showTyping(function () {
+        addMessage("bot", html);
+        body.scrollTop = body.scrollHeight;
+      });
+    }
+
+    var QUICK_REPLIES = ["Services", "Process", "Results", "Talk to a human"];
+    function renderQuick() {
+      quick.innerHTML = "";
+      QUICK_REPLIES.forEach(function (label) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.textContent = label;
+        btn.addEventListener("click", function () { sendUserMessage(label); });
+        quick.appendChild(btn);
+      });
+    }
+
+    function sendUserMessage(text) {
+      text = text.trim();
+      if (!text) return;
+      addMessage("user", escapeHtml(text));
+      input.value = "";
+      respond(text);
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      sendUserMessage(input.value);
+    });
+
+    var started = false;
+    function openChat() {
+      root.classList.add("is-open");
+      toggle.setAttribute("aria-expanded", "true");
+      panel.setAttribute("aria-hidden", "false");
+      if (!started) {
+        started = true;
+        addMessage(
+          "bot",
+          "Hey, I'm Liam's assistant — ask me about services, process, results or tools. Need Liam himself? I can hand you straight to WhatsApp."
+        );
+        renderQuick();
+      }
+      setTimeout(function () { input.focus(); }, 250);
+    }
+    function closeChat() {
+      root.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      panel.setAttribute("aria-hidden", "true");
+    }
+    toggle.addEventListener("click", function () {
+      if (root.classList.contains("is-open")) closeChat();
+      else openChat();
+    });
+    closeBtn.addEventListener("click", closeChat);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && root.classList.contains("is-open")) closeChat();
+    });
+
+    /* Give chat controls the same cursor-ring hover feedback as the
+       rest of the site's interactive elements, via delegation so it
+       still applies to buttons rendered later (quick replies, the
+       WhatsApp link inside a bot reply). */
+    if (typeof cursorRing !== "undefined" && cursorRing) {
+      root.addEventListener("pointerover", function (e) {
+        if (e.target.closest && e.target.closest("button, a")) cursorRing.classList.add("is-hovering");
+      });
+      root.addEventListener("pointerout", function (e) {
+        if (e.target.closest && e.target.closest("button, a")) cursorRing.classList.remove("is-hovering");
+      });
+    }
+  })();
 })();
