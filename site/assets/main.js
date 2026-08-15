@@ -343,6 +343,36 @@
   window.addEventListener("scroll", updateProgress, { passive: true });
   window.addEventListener("resize", updateProgress);
 
+  /* Skills page connecting spine — fills in with scroll progress
+     through the six numbered disciplines, desktop only (the layout
+     collapses to a single column below 900px, where the numbers no
+     longer sit at a fixed horizontal offset the line could track). */
+  var spineFill = document.querySelector(".ldm-service-spine-fill");
+  var spineList = document.querySelector(".ldm-service-detail-list");
+  if (spineFill && spineList) {
+    var spineTicking = false;
+    var updateSpine = function () {
+      spineTicking = false;
+      if (!window.matchMedia("(min-width: 901px)").matches) {
+        spineFill.style.height = "0%";
+        return;
+      }
+      var rect = spineList.getBoundingClientRect();
+      var focus = window.innerHeight * 0.7;
+      var progress = (focus - rect.top) / rect.height;
+      progress = Math.max(0, Math.min(1, progress));
+      spineFill.style.height = progress * 100 + "%";
+    };
+    var onSpineScroll = function () {
+      if (spineTicking) return;
+      spineTicking = true;
+      requestAnimationFrame(updateSpine);
+    };
+    updateSpine();
+    window.addEventListener("scroll", onSpineScroll, { passive: true });
+    window.addEventListener("resize", onSpineScroll);
+  }
+
   /* Custom cursor: dot follows exactly, ring lags for a trailing feel */
   if (pointerFine && !reduceMotion) {
     document.body.classList.add("has-custom-cursor");

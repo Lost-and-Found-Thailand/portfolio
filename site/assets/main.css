@@ -513,8 +513,30 @@ img { max-width: 100%; display: block; }
 /* ---------- Process ---------- */
 .ldm-process { display: grid; gap: var(--gap-lg); }
 @media (min-width: 768px) { .ldm-process { grid-template-columns: repeat(4, 1fr); } }
-.ldm-process-step { border-top: 1px solid var(--color-border); padding-top: 24px; }
-.ldm-process-step .num { font-family: var(--font-display); font-weight: 800; font-size: var(--fs-h2); color: var(--color-dark-gray); -webkit-text-stroke: 1px var(--color-gray); }
+/* Each step's top border lights up in sequence as the group reveals,
+   so the four stages read as one flowing process rather than four
+   unrelated cards — a direct visual of "Discover -> Build ->
+   Optimize -> Scale" instead of stating it. */
+.ldm-process-step { position: relative; border-top: 1px solid var(--color-border); padding-top: 24px; }
+.ldm-process-step::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px rgba(200, 255, 0, 0.6);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 650ms var(--ease-premium);
+}
+.reveal.is-visible .ldm-process-step::before { transform: scaleX(1); }
+.ldm-process-step:nth-child(1)::before { transition-delay: 0ms; }
+.ldm-process-step:nth-child(2)::before { transition-delay: 220ms; }
+.ldm-process-step:nth-child(3)::before { transition-delay: 440ms; }
+.ldm-process-step:nth-child(4)::before { transition-delay: 660ms; }
+.ldm-process-step .num { position: relative; font-family: var(--font-display); font-weight: 800; font-size: var(--fs-h2); color: var(--color-dark-gray); -webkit-text-stroke: 1px var(--color-gray); }
 .ldm-process-step h4 { margin: 16px 0 8px; }
 .ldm-process-step p { color: var(--color-gray); margin: 0; }
 
@@ -667,8 +689,28 @@ img { max-width: 100%; display: block; }
 .ldm-metrics.cols-3 { grid-template-columns: 1fr; }
 @media (min-width: 768px) { .ldm-metrics.cols-3 { grid-template-columns: repeat(3, 1fr); } }
 
-/* ---------- Services detail rows (services.html) ---------- */
-.ldm-service-detail-list { display: flex; flex-direction: column; }
+/* ---------- Services detail rows (services.html) ----------
+   A connecting spine threads the 6 numbered disciplines together —
+   a literal reading of the page's own "six connected disciplines...
+   working as one system" copy. The track is static; the accent fill
+   tracks scroll progress (added by JS, desktop only — the layout
+   collapses to a single column on mobile where a fixed-offset
+   vertical line would no longer line up with the numbers). */
+.ldm-service-detail-list { display: flex; flex-direction: column; position: relative; }
+.ldm-service-spine-track,
+.ldm-service-spine-fill {
+  position: absolute;
+  top: 0;
+  left: 109px;
+  width: 2px;
+  border-radius: 2px;
+}
+.ldm-service-spine-track { height: 100%; background: var(--color-border); }
+.ldm-service-spine-fill {
+  height: 0%;
+  background: var(--color-accent);
+  box-shadow: 0 0 10px rgba(200, 255, 0, 0.55);
+}
 .ldm-service-detail {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -677,7 +719,27 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid var(--color-border);
 }
 .ldm-service-detail:last-child { border-bottom: 1px solid var(--color-border); }
-@media (max-width: 900px) { .ldm-service-detail { grid-template-columns: 1fr; } }
+.ldm-service-detail-num { position: relative; }
+.ldm-service-detail-num::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 116px;
+  width: 9px;
+  height: 9px;
+  margin-top: -4.5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 10px 3px rgba(200, 255, 0, 0.6);
+  opacity: 0;
+  transform: scale(0.4);
+  transition: opacity 400ms var(--ease-premium), transform 400ms var(--ease-premium);
+}
+.ldm-service-detail.is-visible .ldm-service-detail-num::after { opacity: 1; transform: scale(1); }
+@media (max-width: 900px) {
+  .ldm-service-detail { grid-template-columns: 1fr; }
+  .ldm-service-spine-track, .ldm-service-spine-fill, .ldm-service-detail-num::after { display: none; }
+}
 .ldm-service-detail-num {
   font-family: var(--font-display);
   font-weight: 800;
