@@ -1086,4 +1086,45 @@
       });
     }
   })();
+
+  /* ----------------------------------------------------------------
+     Cookie notice — site-wide, all pages. Nothing here is currently
+     gated behind the choice (the site doesn't set any cookies of its
+     own yet), but it's recorded in localStorage so the banner
+     doesn't reappear, and so any analytics/tracking added later has
+     a real value to check before firing.
+     ---------------------------------------------------------------- */
+  (function () {
+    if (localStorage.getItem("ldm-cookie-consent")) return;
+
+    var bar = document.createElement("div");
+    bar.className = "ldm-cookie-bar";
+    bar.setAttribute("role", "region");
+    bar.setAttribute("aria-label", "Cookie notice");
+    bar.innerHTML =
+      "<p>This site uses cookies to improve your browsing experience. By continuing, you agree to their use.</p>" +
+      '<div class="ldm-cookie-actions">' +
+      '<button type="button" class="ldm-cookie-decline">Decline</button>' +
+      '<button type="button" class="ldm-cookie-accept">Accept</button>' +
+      "</div>";
+    document.body.appendChild(bar);
+    document.body.classList.add("has-cookie-banner");
+
+    var dismiss = function (choice) {
+      localStorage.setItem("ldm-cookie-consent", choice);
+      bar.classList.remove("is-visible");
+      document.body.classList.remove("has-cookie-banner");
+      setTimeout(function () { if (bar.parentNode) bar.remove(); }, 450);
+    };
+    bar.querySelector(".ldm-cookie-accept").addEventListener("click", function () { dismiss("accepted"); });
+    bar.querySelector(".ldm-cookie-decline").addEventListener("click", function () { dismiss("declined"); });
+
+    requestAnimationFrame(function () {
+      /* Measured, not guessed — the bar can wrap to a taller two-line
+         layout on narrow phones, and a fixed offset would either
+         leave a gap or, worse, still overlap the chat button. */
+      document.documentElement.style.setProperty("--cookie-bar-height", bar.getBoundingClientRect().height + "px");
+      requestAnimationFrame(function () { bar.classList.add("is-visible"); });
+    });
+  })();
 })();

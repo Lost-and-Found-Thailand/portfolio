@@ -1205,7 +1205,7 @@ body.ldm.has-custom-cursor select {
     padding: 10px 16px;
     opacity: 0;
     transform: translateY(8px);
-    transition: opacity 300ms var(--ease-premium), transform 300ms var(--ease-premium);
+    transition: opacity 300ms var(--ease-premium), transform 300ms var(--ease-premium), bottom 400ms var(--ease-premium);
     pointer-events: none;
   }
   .ldm-story-rail.is-past-hero { opacity: 1; transform: translateY(0); pointer-events: auto; }
@@ -1242,7 +1242,7 @@ body.ldm.has-custom-cursor select {
 }
 
 /* ---------- Chat widget ---------- */
-.ldm-chat { position: fixed; right: 20px; bottom: 20px; z-index: 140; }
+.ldm-chat { position: fixed; right: 20px; bottom: 20px; z-index: 140; transition: bottom 400ms var(--ease-premium); }
 .ldm-chat-toggle {
   position: relative;
   width: 58px;
@@ -1412,4 +1412,55 @@ body.ldm.has-custom-cursor select {
 @media (max-width: 640px) {
   .ldm-chat { right: 14px; bottom: 14px; }
   .ldm-chat-panel { width: calc(100vw - 28px); height: min(72vh, 560px); bottom: 72px; }
+}
+
+/* ---------- Cookie notice ----------
+   Simple and honest: nothing on the site currently sets a cookie of
+   its own, so there's nothing to actually gate behind "decline" yet.
+   The choice is still recorded (localStorage) so it doesn't reappear,
+   and so any analytics added later has something to check before
+   firing. While visible, bottom-anchored floating UI (chat button,
+   and the story rail's mobile pill) is pushed up above it via a CSS
+   variable set from its measured height, rather than a fixed guess
+   that could be wrong if the text wraps to another line. */
+.ldm-cookie-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 145;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px var(--space-mobile-x);
+  background: rgba(10, 10, 9, 0.94);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--color-border-strong);
+  transform: translateY(100%);
+  transition: transform 400ms var(--ease-premium);
+}
+@media (min-width: 768px) { .ldm-cookie-bar { padding: 18px var(--space-desktop-x); } }
+.ldm-cookie-bar.is-visible { transform: translateY(0); }
+.ldm-cookie-bar p { margin: 0; color: var(--color-off-white); font-size: var(--fs-small); max-width: 640px; }
+.ldm-cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.ldm-cookie-actions button {
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-premium), background-color var(--dur-fast) var(--ease-premium), color var(--dur-fast) var(--ease-premium), border-color var(--dur-fast) var(--ease-premium);
+}
+.ldm-cookie-decline { background: none; border: 1px solid var(--color-border-strong); color: var(--color-white); }
+.ldm-cookie-decline:hover { border-color: var(--color-white); }
+.ldm-cookie-accept { background: var(--color-white); border: 1px solid var(--color-white); color: var(--color-black); }
+.ldm-cookie-accept:hover { background: var(--color-accent); border-color: var(--color-accent); transform: translateY(-2px); }
+
+body.has-cookie-banner .ldm-chat { bottom: calc(20px + var(--cookie-bar-height, 90px)); }
+@media (max-width: 1099px) {
+  body.has-cookie-banner .ldm-story-rail { bottom: calc(20px + var(--cookie-bar-height, 90px)); }
 }
