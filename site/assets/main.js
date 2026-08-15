@@ -121,7 +121,12 @@
     }
   }
 
-  /* Number counters */
+  /* Number counters — each one also flips its parent .ldm-metric to
+     .is-counting at the exact same moment it starts ticking up, which
+     is what drives that metric's radial progress ring (see
+     .ldm-metric-ring in main.css). Ring and count-up share one
+     trigger and one timeline instead of two things animating
+     independently and hoping they read as connected. */
   var counters = document.querySelectorAll("[data-counter]");
   if (counters.length && !reduceMotion && "IntersectionObserver" in window) {
     var counterIO = new IntersectionObserver(
@@ -130,6 +135,8 @@
           if (!entry.isIntersecting) return;
           counterIO.unobserve(entry.target);
           var el = entry.target;
+          var metric = el.closest(".ldm-metric");
+          if (metric) metric.classList.add("is-counting");
           var target = parseFloat(el.getAttribute("data-counter"));
           var suffix = el.getAttribute("data-suffix") || "";
           var prefix = el.getAttribute("data-prefix") || "";
@@ -151,36 +158,13 @@
     counters.forEach(function (el) { counterIO.observe(el); });
   } else {
     counters.forEach(function (el) {
+      var metric = el.closest(".ldm-metric");
+      if (metric) metric.classList.add("is-counting");
       var target = parseFloat(el.getAttribute("data-counter"));
       var suffix = el.getAttribute("data-suffix") || "";
       var prefix = el.getAttribute("data-prefix") || "";
       el.textContent = prefix + target + suffix;
     });
-  }
-
-  /* Growth chart bars — deliberately NOT tied to the general .reveal
-     threshold (0.15), which fires as soon as 15% of the section is
-     on screen. On a normal scroll the bars were finishing their grow
-     animation before the section was actually being read. Trigger
-     at the same threshold as the number counters (0.5) instead, so
-     both animate together once the stats are meaningfully in view. */
-  var growthChart = document.querySelector(".ldm-growth-chart");
-  if (growthChart) {
-    if (!reduceMotion && "IntersectionObserver" in window) {
-      var growthIO = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-            growthChart.classList.add("is-grown");
-            growthIO.unobserve(entry.target);
-          });
-        },
-        { threshold: 0.5 }
-      );
-      growthIO.observe(growthChart);
-    } else {
-      growthChart.classList.add("is-grown");
-    }
   }
 
   /* Split-word heading reveal */

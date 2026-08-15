@@ -244,26 +244,44 @@
   <!-- 06 TRUST / METRICS (Results) -->
   <section class="ldm-section container" id="results">
     <div class="ldm-metrics reveal">
-      <div class="ldm-growth-chart" aria-hidden="true">
-        <span class="ldm-growth-bar" style="--h:28%"></span>
-        <span class="ldm-growth-bar" style="--h:52%"></span>
-        <span class="ldm-growth-bar" style="--h:76%"></span>
-        <span class="ldm-growth-bar" style="--h:100%"></span>
-      </div>
       <div class="ldm-metric">
-        <div class="num"><span data-counter="10" data-prefix="$" data-suffix="M+" class="accent">$0M+</span></div>
+        <div class="ldm-metric-ring">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="ring-track" cx="60" cy="60" r="52"></circle>
+            <circle class="ring-progress" cx="60" cy="60" r="52" pathLength="100"></circle>
+          </svg>
+          <div class="num"><span data-counter="10" data-prefix="$" data-suffix="M+" class="accent">$0M+</span></div>
+        </div>
         <div class="label">Ad spend managed</div>
       </div>
       <div class="ldm-metric">
-        <div class="num"><span data-counter="100" data-suffix="+" class="accent">0</span></div>
+        <div class="ldm-metric-ring">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="ring-track" cx="60" cy="60" r="52"></circle>
+            <circle class="ring-progress" cx="60" cy="60" r="52" pathLength="100"></circle>
+          </svg>
+          <div class="num"><span data-counter="100" data-suffix="+" class="accent">0</span></div>
+        </div>
         <div class="label">Brands scaled</div>
       </div>
       <div class="ldm-metric">
-        <div class="num"><span data-counter="15" data-suffix="x" class="accent">0x</span></div>
+        <div class="ldm-metric-ring">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="ring-track" cx="60" cy="60" r="52"></circle>
+            <circle class="ring-progress" cx="60" cy="60" r="52" pathLength="100"></circle>
+          </svg>
+          <div class="num"><span data-counter="15" data-suffix="x" class="accent">0x</span></div>
+        </div>
         <div class="label">Average ROAS</div>
       </div>
       <div class="ldm-metric">
-        <div class="num"><span data-counter="300" data-suffix="x" class="accent">0x</span></div>
+        <div class="ldm-metric-ring">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="ring-track" cx="60" cy="60" r="52"></circle>
+            <circle class="ring-progress" cx="60" cy="60" r="52" pathLength="100"></circle>
+          </svg>
+          <div class="num"><span data-counter="300" data-suffix="x" class="accent">0x</span></div>
+        </div>
         <div class="label">Peak ROAS on top campaigns</div>
       </div>
     </div>
