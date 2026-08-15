@@ -181,12 +181,20 @@ img { max-width: 100%; display: block; }
    the reference layout while keeping the site's existing copy. */
 .ldm-hero-center { max-width: 900px; margin: 0 auto; text-align: center; }
 .ldm-hero-center .eyebrow { display: inline-block; margin-bottom: 20px; }
+.ldm-hero-role {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.75rem);
+  color: var(--color-gray);
+  margin: 0;
+}
 .ldm-hero-showcase {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: clamp(16px, 3vw, 40px);
-  margin-top: clamp(-64px, -7vw, -28px);
+  margin-top: clamp(-32px, -3vw, -8px);
 }
 .ldm-hero-side { max-width: 260px; }
 .ldm-hero-side--left { justify-self: end; text-align: right; }
@@ -875,6 +883,7 @@ body.ldm.has-custom-cursor select {
 
 /* ---------- Staged hero / page-header entrance ---------- */
 .ldm-hero-center .eyebrow,
+.ldm-hero-role,
 .ldm-hero-side,
 .ldm-hero-photo,
 .ldm-page-header > *:not(h1) {
@@ -883,6 +892,7 @@ body.ldm.has-custom-cursor select {
   animation: ldm-hero-in 700ms var(--ease-premium) forwards;
 }
 .ldm-hero-center .eyebrow { animation-delay: 40ms; }
+.ldm-hero-role { animation-delay: 640ms; }
 .ldm-hero-side--left { animation-delay: 200ms; }
 .ldm-hero-photo { animation-delay: 360ms; }
 .ldm-hero-side--right { animation-delay: 520ms; }
@@ -969,7 +979,7 @@ body.ldm.has-custom-cursor select {
 @media (prefers-reduced-motion: reduce) {
   .ldm-word-inner { transition: none; transform: none; }
   .ldm-cursor-glow, .ldm-cursor-dot, .ldm-cursor-ring, .ldm-scroll-progress { display: none; }
-  .ldm-hero-center .eyebrow, .ldm-hero-side, .ldm-hero-photo, .ldm-page-header > * { opacity: 1; transform: none; animation: none; }
+  .ldm-hero-center .eyebrow, .ldm-hero-role, .ldm-hero-side, .ldm-hero-photo, .ldm-page-header > * { opacity: 1; transform: none; animation: none; }
   .reveal .ldm-case-media, .reveal .card-image,
   .reveal.is-visible .ldm-case-media, .reveal.is-visible .card-image { clip-path: none; transition: none; }
   body.ldm.has-custom-cursor, body.ldm.has-custom-cursor * { cursor: auto; }
