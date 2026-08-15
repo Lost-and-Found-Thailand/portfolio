@@ -708,6 +708,59 @@
   }
 
   /* ----------------------------------------------------------------
+     Lens (SEE) — "I look deeper before I act." A soft circular field
+     that sharpens a faint duplicate of scattered signal words as the
+     cursor passes near. With no fine pointer, or under reduced
+     motion, only the permanently-faint layer shows — a quiet texture
+     rather than a broken interaction.
+     ---------------------------------------------------------------- */
+  document.querySelectorAll(".ldm-lens-host").forEach(function (host) {
+    var field = host.querySelector(".ldm-lens-field");
+    var blurred = host.querySelector(".ldm-lens-blurred");
+    if (!field || !blurred) return;
+
+    var sharp = blurred.cloneNode(true);
+    sharp.classList.remove("ldm-lens-blurred");
+    sharp.classList.add("ldm-lens-sharp");
+    sharp.setAttribute("aria-hidden", "true");
+    field.appendChild(sharp);
+
+    if (!pointerFine || reduceMotion) return;
+
+    host.addEventListener("pointermove", function (e) {
+      var r = host.getBoundingClientRect();
+      var x = e.clientX - r.left;
+      var y = e.clientY - r.top;
+      sharp.style.clipPath = "circle(130px at " + x + "px " + y + "px)";
+    });
+    host.addEventListener("pointerleave", function () {
+      sharp.style.clipPath = "circle(0px at 50% 50%)";
+    });
+  });
+
+  /* ----------------------------------------------------------------
+     Ripple (ACTIVATE) — "one meaningful idea creates a chain
+     reaction." A single expanding signal ring from wherever the
+     cursor enters a project's media — a one-shot pulse, not a loop —
+     contained by the media element's own overflow:hidden + radius.
+     ---------------------------------------------------------------- */
+  if (!reduceMotion) {
+    document.querySelectorAll(".ldm-case-media").forEach(function (host) {
+      host.addEventListener("pointerenter", function (e) {
+        var r = host.getBoundingClientRect();
+        var ripple = document.createElement("span");
+        ripple.className = "ldm-ripple";
+        ripple.style.left = (e.clientX - r.left) + "px";
+        ripple.style.top = (e.clientY - r.top) + "px";
+        host.appendChild(ripple);
+        var cleanup = function () { if (ripple.parentNode) ripple.remove(); };
+        ripple.addEventListener("animationend", cleanup);
+        setTimeout(cleanup, 1200);
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------------
      Chat widget — a small, honest FAQ assistant. It answers common
      questions from a fixed knowledge base (no external API, nothing
      to keep secret, nothing that can run up a bill), and hands off
