@@ -20,19 +20,11 @@ defined( 'ABSPATH' ) || exit;
           <a href="<?php echo esc_url( LDM_CONTACT_LINKEDIN_URL ); ?>" rel="noopener" aria-label="LinkedIn"><?php echo ldm_contact_icon( 'linkedin' ); ?></a>
         </div>
       </div>
-      <div class="ldm-footer-cols">
-        <div class="ldm-footer-col">
-          <h5><?php esc_html_e( 'Explore', 'liam-digital-marketing' ); ?></h5>
-          <ul class="ldm-footer-explore-list">
-            <?php ldm_render_footer_explore_links(); ?>
-          </ul>
-        </div>
-        <div class="ldm-footer-col">
-          <h5><?php esc_html_e( 'Contact', 'liam-digital-marketing' ); ?></h5>
-          <ul>
-            <?php ldm_render_footer_connect_links(); ?>
-          </ul>
-        </div>
+      <div class="ldm-footer-col">
+        <h5><?php esc_html_e( 'Contact', 'liam-digital-marketing' ); ?></h5>
+        <ul>
+          <?php ldm_render_footer_connect_links(); ?>
+        </ul>
       </div>
     </div>
     <div class="ldm-footer-bottom">

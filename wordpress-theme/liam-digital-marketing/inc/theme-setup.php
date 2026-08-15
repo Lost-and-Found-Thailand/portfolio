@@ -100,10 +100,3 @@ function ldm_render_mobile_nav_links() {
 		);
 	}
 }
-
-/** Footer's "Explore" column — the same six links as the nav, in a two-column grid. */
-function ldm_render_footer_explore_links() {
-	foreach ( ldm_nav_links() as $link ) {
-		printf( '<li><a href="%1$s">%2$s</a></li>', esc_url( $link['url'] ), esc_html( $link['label'] ) );
-	}
-}

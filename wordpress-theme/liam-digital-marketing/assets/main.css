@@ -91,7 +91,9 @@ img { max-width: 100%; display: block; }
 }
 .ldm-mobile-menu.is-open { display: flex; }
 
-/* Top bar: logo, a CTA reachable without closing the menu first, close button */
+/* Top bar: logo + close button only — no CTA, no utility strip below it
+   (both removed per feedback: the menu should get straight to the page
+   list rather than repeating things the hero/status pill already show). */
 .ldm-mobile-menu-top {
   display: flex;
   align-items: center;
@@ -102,21 +104,6 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 .ldm-mobile-menu-top .ldm-logo img { height: 22px; }
-.ldm-mobile-menu-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--color-white);
-  color: var(--color-black);
-  font-size: var(--fs-label);
-  font-weight: 700;
-  padding: 10px 18px;
-  border-radius: var(--radius-pill);
-  text-decoration: none;
-  white-space: nowrap;
-}
-.ldm-mobile-menu-cta .arrow { transition: transform var(--dur-fast) var(--ease-premium); }
-.ldm-mobile-menu-cta:active .arrow { transform: translateX(3px); }
 .ldm-mobile-menu-close {
   position: relative;
   width: 32px;
@@ -137,33 +124,6 @@ img { max-width: 100%; display: block; }
 }
 .ldm-mobile-menu-close span:nth-child(1) { transform: translate(-50%, -50%) rotate(45deg); }
 .ldm-mobile-menu-close span:nth-child(2) { transform: translate(-50%, -50%) rotate(-45deg); }
-
-/* Utility strip: a page not in the main list, plus current availability */
-.ldm-mobile-menu-utility {
-  display: flex;
-  align-items: stretch;
-  border-bottom: 1px solid var(--color-border-strong);
-  flex-shrink: 0;
-}
-.ldm-mobile-menu-utility > a,
-.ldm-mobile-menu-utility > span {
-  flex: 1 1 50%;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px var(--space-mobile-x);
-  font-size: var(--fs-label);
-  font-weight: 600;
-  color: var(--color-off-white);
-}
-.ldm-mobile-menu-utility > a {
-  border-right: 1px solid var(--color-border-strong);
-  text-decoration: none;
-  transition: color var(--dur-fast) var(--ease-premium);
-}
-.ldm-mobile-menu-utility > a:hover { color: var(--color-accent); }
-.ldm-mobile-menu-utility > a .arrow { margin-left: auto; }
-.ldm-mobile-menu-utility .ldm-status { margin-bottom: 0; border: none; padding: 0; }
 
 /* Main link list: full-width rows with a chevron, like a mobile settings list */
 .ldm-mobile-menu-links {
@@ -716,20 +676,8 @@ img { max-width: 100%; display: block; }
 }
 .ldm-footer-social a svg { width: 16px; height: 16px; }
 .ldm-footer-social a:hover { color: var(--color-accent); border-color: var(--color-accent); }
-.ldm-footer-cols { display: flex; gap: 64px; flex-wrap: wrap; }
 .ldm-footer-col h5 { font-size: var(--fs-label); text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gray); margin: 0 0 16px; font-weight: 600; }
 .ldm-footer-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
-/* Qualified with the element + parent class (matching .ldm-footer-col ul's own
-   specificity of 0,1,1 plus one) so this grid actually wins over that flex
-   rule instead of losing to it — a plain .ldm-footer-explore-list class
-   selector alone is lower-specificity than ".ldm-footer-col ul" and gets
-   silently overridden regardless of which rule comes later in the file. */
-.ldm-footer-col ul.ldm-footer-explore-list {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(3, auto);
-  column-gap: 40px;
-}
 .ldm-footer-col a {
   display: inline-flex;
   align-items: center;
@@ -746,13 +694,10 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 640px) {
   .ldm-contact-links { flex-direction: column; align-items: center; gap: 16px; }
-  .ldm-footer-top { flex-direction: column; align-items: center; text-align: center; }
+  /* Left-aligned, stacked — not centered into the middle of the screen. */
+  .ldm-footer-top { flex-direction: column; align-items: flex-start; text-align: left; }
   .ldm-footer-brand { max-width: none; }
-  .ldm-footer-tag { margin-left: auto; margin-right: auto; max-width: 30ch; }
-  .ldm-footer-social { justify-content: center; }
-  .ldm-footer-cols { width: 100%; justify-content: center; text-align: center; gap: 40px; }
-  .ldm-footer-explore-list { grid-auto-flow: row; grid-template-rows: none; justify-items: center; }
-  .ldm-footer-col ul { align-items: center; }
+  .ldm-footer-tag { max-width: 30ch; }
   .ldm-footer-bottom { justify-content: center; text-align: center; }
 }
 
