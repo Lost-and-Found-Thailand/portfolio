@@ -158,6 +158,31 @@
     });
   }
 
+  /* Growth chart bars — deliberately NOT tied to the general .reveal
+     threshold (0.15), which fires as soon as 15% of the section is
+     on screen. On a normal scroll the bars were finishing their grow
+     animation before the section was actually being read. Trigger
+     at the same threshold as the number counters (0.5) instead, so
+     both animate together once the stats are meaningfully in view. */
+  var growthChart = document.querySelector(".ldm-growth-chart");
+  if (growthChart) {
+    if (!reduceMotion && "IntersectionObserver" in window) {
+      var growthIO = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            growthChart.classList.add("is-grown");
+            growthIO.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.5 }
+      );
+      growthIO.observe(growthChart);
+    } else {
+      growthChart.classList.add("is-grown");
+    }
+  }
+
   /* Split-word heading reveal */
   if (!reduceMotion) {
     var headings = document.querySelectorAll(".ldm-hero h1.fs-hero, .ldm-page-header h1");
