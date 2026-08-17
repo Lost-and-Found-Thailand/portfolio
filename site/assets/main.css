@@ -359,22 +359,24 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
   gap: 56px;
 }
-.ldm-trustbar-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 176px;
-  height: 92px;
-}
-.ldm-trustbar-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
+/* Height-based, not a fixed box: these 4 logos are genuinely different
+   shapes (Carpe Diem's lockup is tall/portrait — icon stacked above the
+   wordmark; the other three are wide/landscape). A shared width+height
+   box with object-fit: contain forces every logo to fit the SAME frame,
+   which shrinks the portrait one down to a sliver while the landscape
+   ones nearly fill it — same box, wildly different apparent size. Instead
+   each gets its own height so their rendered *areas* land close together
+   (verified by eye against a render, not just computed) — see the
+   ldm-trustbar-logo--tall/--md modifiers on the taller/more-square marks. */
+.ldm-trustbar-logo { display: flex; align-items: center; justify-content: center; height: 72px; }
+.ldm-trustbar-logo img { height: 100%; width: auto; object-fit: contain; display: block; }
+.ldm-trustbar-logo--tall { height: 104px; }
+.ldm-trustbar-logo--md { height: 84px; }
 @media (max-width: 640px) {
   .ldm-trustbar-row { gap: 32px; }
-  .ldm-trustbar-logo { width: 132px; height: 70px; }
+  .ldm-trustbar-logo { height: 50px; }
+  .ldm-trustbar-logo--tall { height: 73px; }
+  .ldm-trustbar-logo--md { height: 59px; }
 }
 
 /* ---------- Lens (SEE) — a soft circular field that sharpens faint
