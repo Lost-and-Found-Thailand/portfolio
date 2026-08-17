@@ -336,8 +336,13 @@ img { max-width: 100%; display: block; }
 .reveal.is-visible .ldm-thread-accent path { stroke-dashoffset: 0; }
 .reveal.is-visible .ldm-thread-accent circle { opacity: 1; }
 
-/* ---------- Trusted-by logo marquee ---------- */
-.ldm-trustbar { padding: 8px 0 var(--space-section); overflow: hidden; }
+/* ---------- Trusted-by logos ----------
+   A plain static row rather than a scrolling marquee — with only a
+   handful of logos at real, individually-sourced resolution (not cropped
+   from a composite screenshot), a marquee had too little content to loop
+   convincingly. Shown bigger instead, since these have the pixel detail
+   to support it. */
+.ldm-trustbar { padding: 8px 0 var(--space-section); }
 .ldm-trustbar-label {
   text-align: center;
   color: var(--color-gray);
@@ -347,53 +352,29 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   margin: 0 0 32px;
 }
-.ldm-trustbar-viewport {
-  overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-}
-.ldm-trustbar-track {
-  display: flex;
-  width: max-content;
-  animation: ldm-trustbar-scroll 60s linear infinite;
-}
-.ldm-trustbar:hover .ldm-trustbar-track { animation-play-state: paused; }
-.ldm-trustbar-set { display: flex; align-items: center; gap: 12px; flex-shrink: 0; padding-right: 12px; }
-/* No card/background — every logo is a plain white mark on the section's own
-   dark background now. Fixed tile size (not just fixed height) so every
-   logo occupies the same footprint regardless of its own aspect ratio;
-   object-fit: contain scales each one to fit inside it without distortion. */
-/* Box size chosen against the source logos' real pixel dimensions (most
-   are natively 90-230px wide after trimming) so object-fit: contain is
-   downscaling nearly every logo, not upscaling it — upscaling is what
-   made these look soft/pixelated before. */
-.ldm-trustbar-logo {
-  flex-shrink: 0;
+.ldm-trustbar-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 56px;
+  flex-wrap: wrap;
+  gap: 56px;
+}
+.ldm-trustbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 176px;
+  height: 92px;
 }
 .ldm-trustbar-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
-  image-rendering: -webkit-optimize-contrast;
-}
-@keyframes ldm-trustbar-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
 }
 @media (max-width: 640px) {
-  .ldm-trustbar-logo { width: 100px; height: 46px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .ldm-trustbar-track { animation: none; width: 100%; }
-  .ldm-trustbar-set { flex-wrap: wrap; justify-content: center; row-gap: 16px; padding-right: 0; }
-  .ldm-trustbar-set:nth-of-type(2) { display: none; }
-  .ldm-trustbar-viewport { mask-image: none; -webkit-mask-image: none; }
+  .ldm-trustbar-row { gap: 32px; }
+  .ldm-trustbar-logo { width: 132px; height: 70px; }
 }
 
 /* ---------- Lens (SEE) — a soft circular field that sharpens faint
