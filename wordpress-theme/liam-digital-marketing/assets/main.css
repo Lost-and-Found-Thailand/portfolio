@@ -336,6 +336,55 @@ img { max-width: 100%; display: block; }
 .reveal.is-visible .ldm-thread-accent path { stroke-dashoffset: 0; }
 .reveal.is-visible .ldm-thread-accent circle { opacity: 1; }
 
+/* ---------- Trusted-by logo marquee ---------- */
+.ldm-trustbar { padding: 8px 0 var(--space-section); overflow: hidden; }
+.ldm-trustbar-label {
+  text-align: center;
+  color: var(--color-gray);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 32px;
+}
+.ldm-trustbar-viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+.ldm-trustbar-track {
+  display: flex;
+  width: max-content;
+  animation: ldm-trustbar-scroll 60s linear infinite;
+}
+.ldm-trustbar:hover .ldm-trustbar-track { animation-play-state: paused; }
+.ldm-trustbar-set { display: flex; align-items: center; gap: 20px; flex-shrink: 0; padding-right: 20px; }
+.ldm-trustbar-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 24px;
+  background: var(--color-off-white);
+  border-radius: var(--radius-md);
+}
+.ldm-trustbar-logo img { height: 22px; width: auto; display: block; }
+@keyframes ldm-trustbar-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (max-width: 640px) {
+  .ldm-trustbar-logo { height: 48px; padding: 0 18px; }
+  .ldm-trustbar-logo img { height: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ldm-trustbar-track { animation: none; width: 100%; }
+  .ldm-trustbar-set { flex-wrap: wrap; justify-content: center; row-gap: 16px; padding-right: 0; }
+  .ldm-trustbar-set:nth-of-type(2) { display: none; }
+  .ldm-trustbar-viewport { mask-image: none; -webkit-mask-image: none; }
+}
+
 /* ---------- Lens (SEE) — a soft circular field that sharpens faint
    scattered "signal" words as the cursor passes near. Static (blurred
    layer only) when no fine pointer is available or motion is reduced. ---------- */

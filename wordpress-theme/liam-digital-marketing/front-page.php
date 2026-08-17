@@ -46,6 +46,77 @@ $ldm_img = get_template_directory_uri();
     </div>
   </section>
 
+  <!-- TRUSTED BY -->
+  <section class="ldm-trustbar" id="trusted-by">
+    <div class="container">
+      <p class="ldm-trustbar-label"><?php esc_html_e( 'Trusted by teams at 100+ brands across hospitality, retail, finance and beyond', 'liam-digital-marketing' ); ?></p>
+    </div>
+    <div class="ldm-trustbar-viewport">
+      <div class="ldm-trustbar-track">
+          <div class="ldm-trustbar-set">
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/hakkasan.png' ); ?>" alt="<?php esc_attr_e( 'Hakkasan', 'liam-digital-marketing' ); ?>" width="381" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/savaya.png' ); ?>" alt="<?php esc_attr_e( 'Savaya', 'liam-digital-marketing' ); ?>" width="280" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/yona-beach-club.png' ); ?>" alt="<?php esc_attr_e( 'Yona Beach Club', 'liam-digital-marketing' ); ?>" width="400" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/bmw.png' ); ?>" alt="<?php esc_attr_e( 'BMW', 'liam-digital-marketing' ); ?>" width="200" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/hp.png' ); ?>" alt="<?php esc_attr_e( 'HP', 'liam-digital-marketing' ); ?>" width="200" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/northstar-brokers.png' ); ?>" alt="<?php esc_attr_e( 'Northstar Brokers', 'liam-digital-marketing' ); ?>" width="917" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/tabu-supper-club.png' ); ?>" alt="<?php esc_attr_e( 'Tabu Supper Club', 'liam-digital-marketing' ); ?>" width="567" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/papas-deli.png' ); ?>" alt="<?php esc_attr_e( 'Papa\'s Deli', 'liam-digital-marketing' ); ?>" width="738" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/beach-house-by-ours.png' ); ?>" alt="<?php esc_attr_e( 'The Beach House by Ours', 'liam-digital-marketing' ); ?>" width="288" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/ours.png' ); ?>" alt="<?php esc_attr_e( 'Ours', 'liam-digital-marketing' ); ?>" width="1015" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/bollywood-phuket.png' ); ?>" alt="<?php esc_attr_e( 'Bollywood Phuket', 'liam-digital-marketing' ); ?>" width="408" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/ama.png' ); ?>" alt="<?php esc_attr_e( 'AMA', 'liam-digital-marketing' ); ?>" width="461" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/british-american-tobacco.png' ); ?>" alt="<?php esc_attr_e( 'British American Tobacco', 'liam-digital-marketing' ); ?>" width="377" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/hype-boat-club.png' ); ?>" alt="<?php esc_attr_e( 'HYPE Boat Club', 'liam-digital-marketing' ); ?>" width="524" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/simba-sea-trips.png' ); ?>" alt="<?php esc_attr_e( 'Simba Sea Trips', 'liam-digital-marketing' ); ?>" width="261" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/air-canada.png' ); ?>" alt="<?php esc_attr_e( 'Air Canada', 'liam-digital-marketing' ); ?>" width="452" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/omnia-nightclub.png' ); ?>" alt="<?php esc_attr_e( 'Omnia Nightclub', 'liam-digital-marketing' ); ?>" width="561" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/idt.png' ); ?>" alt="<?php esc_attr_e( 'ID&T', 'liam-digital-marketing' ); ?>" width="286" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/the-barrel-wine-merchant.png' ); ?>" alt="<?php esc_attr_e( 'The Barrel Wine Merchant', 'liam-digital-marketing' ); ?>" width="197" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/nh-boat-lagoon.png' ); ?>" alt="<?php esc_attr_e( 'NH Boat Lagoon Phuket Resort', 'liam-digital-marketing' ); ?>" width="296" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/chalong-bay.png' ); ?>" alt="<?php esc_attr_e( 'Chalong Bay', 'liam-digital-marketing' ); ?>" width="277" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/bennys.png' ); ?>" alt="<?php esc_attr_e( 'Benny\'s Cocktails & Grill', 'liam-digital-marketing' ); ?>" width="397" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/cashdepot.png' ); ?>" alt="<?php esc_attr_e( 'CashDepot', 'liam-digital-marketing' ); ?>" width="1408" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/sake-no-hana.png' ); ?>" alt="<?php esc_attr_e( 'Sake no Hana', 'liam-digital-marketing' ); ?>" width="712" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/carpe-diem-beach-club.png' ); ?>" alt="<?php esc_attr_e( 'Carpe Diem Beach Club', 'liam-digital-marketing' ); ?>" width="156" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/o-ours.png' ); ?>" alt="<?php esc_attr_e( 'O. Ours', 'liam-digital-marketing' ); ?>" width="351" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/rockfish-uluwatu.png' ); ?>" alt="<?php esc_attr_e( 'Rockfish The Uluwatu', 'liam-digital-marketing' ); ?>" width="378" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/muang-samui.png' ); ?>" alt="<?php esc_attr_e( 'Muang Samui Holistic Wellness Riviera', 'liam-digital-marketing' ); ?>" width="250" height="200" loading="lazy"></span>
+          </div>
+          <div class="ldm-trustbar-set" aria-hidden="true">
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/hakkasan.png' ); ?>" alt="<?php esc_attr_e( 'Hakkasan', 'liam-digital-marketing' ); ?>" width="381" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/savaya.png' ); ?>" alt="<?php esc_attr_e( 'Savaya', 'liam-digital-marketing' ); ?>" width="280" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/yona-beach-club.png' ); ?>" alt="<?php esc_attr_e( 'Yona Beach Club', 'liam-digital-marketing' ); ?>" width="400" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/bmw.png' ); ?>" alt="<?php esc_attr_e( 'BMW', 'liam-digital-marketing' ); ?>" width="200" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/hp.png' ); ?>" alt="<?php esc_attr_e( 'HP', 'liam-digital-marketing' ); ?>" width="200" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/northstar-brokers.png' ); ?>" alt="<?php esc_attr_e( 'Northstar Brokers', 'liam-digital-marketing' ); ?>" width="917" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/tabu-supper-club.png' ); ?>" alt="<?php esc_attr_e( 'Tabu Supper Club', 'liam-digital-marketing' ); ?>" width="567" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/papas-deli.png' ); ?>" alt="<?php esc_attr_e( 'Papa\'s Deli', 'liam-digital-marketing' ); ?>" width="738" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/beach-house-by-ours.png' ); ?>" alt="<?php esc_attr_e( 'The Beach House by Ours', 'liam-digital-marketing' ); ?>" width="288" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/ours.png' ); ?>" alt="<?php esc_attr_e( 'Ours', 'liam-digital-marketing' ); ?>" width="1015" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/bollywood-phuket.png' ); ?>" alt="<?php esc_attr_e( 'Bollywood Phuket', 'liam-digital-marketing' ); ?>" width="408" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/ama.png' ); ?>" alt="<?php esc_attr_e( 'AMA', 'liam-digital-marketing' ); ?>" width="461" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/british-american-tobacco.png' ); ?>" alt="<?php esc_attr_e( 'British American Tobacco', 'liam-digital-marketing' ); ?>" width="377" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/hype-boat-club.png' ); ?>" alt="<?php esc_attr_e( 'HYPE Boat Club', 'liam-digital-marketing' ); ?>" width="524" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/simba-sea-trips.png' ); ?>" alt="<?php esc_attr_e( 'Simba Sea Trips', 'liam-digital-marketing' ); ?>" width="261" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/air-canada.png' ); ?>" alt="<?php esc_attr_e( 'Air Canada', 'liam-digital-marketing' ); ?>" width="452" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/omnia-nightclub.png' ); ?>" alt="<?php esc_attr_e( 'Omnia Nightclub', 'liam-digital-marketing' ); ?>" width="561" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/idt.png' ); ?>" alt="<?php esc_attr_e( 'ID&T', 'liam-digital-marketing' ); ?>" width="286" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/the-barrel-wine-merchant.png' ); ?>" alt="<?php esc_attr_e( 'The Barrel Wine Merchant', 'liam-digital-marketing' ); ?>" width="197" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/nh-boat-lagoon.png' ); ?>" alt="<?php esc_attr_e( 'NH Boat Lagoon Phuket Resort', 'liam-digital-marketing' ); ?>" width="296" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/chalong-bay.png' ); ?>" alt="<?php esc_attr_e( 'Chalong Bay', 'liam-digital-marketing' ); ?>" width="277" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/bennys.png' ); ?>" alt="<?php esc_attr_e( 'Benny\'s Cocktails & Grill', 'liam-digital-marketing' ); ?>" width="397" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/cashdepot.png' ); ?>" alt="<?php esc_attr_e( 'CashDepot', 'liam-digital-marketing' ); ?>" width="1408" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/sake-no-hana.png' ); ?>" alt="<?php esc_attr_e( 'Sake no Hana', 'liam-digital-marketing' ); ?>" width="712" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/carpe-diem-beach-club.png' ); ?>" alt="<?php esc_attr_e( 'Carpe Diem Beach Club', 'liam-digital-marketing' ); ?>" width="156" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/o-ours.png' ); ?>" alt="<?php esc_attr_e( 'O. Ours', 'liam-digital-marketing' ); ?>" width="351" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/rockfish-uluwatu.png' ); ?>" alt="<?php esc_attr_e( 'Rockfish The Uluwatu', 'liam-digital-marketing' ); ?>" width="378" height="200" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/muang-samui.png' ); ?>" alt="<?php esc_attr_e( 'Muang Samui Holistic Wellness Riviera', 'liam-digital-marketing' ); ?>" width="250" height="200" loading="lazy"></span>
+          </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 02 INTRODUCTION -->
   <section class="ldm-lens-host" id="intro" style="padding-top: var(--space-section);">
     <div class="ldm-lens-field container" aria-hidden="true">

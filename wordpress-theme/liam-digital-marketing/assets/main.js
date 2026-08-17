@@ -778,6 +778,7 @@
   (function () {
     var CHAPTERS = [
       { id: "hero", label: "See" },
+      { id: "trusted-by", label: "Trusted" },
       { id: "intro", label: "Understand" },
       { id: "work", label: "Work" },
       { id: "services", label: "Strategy" },
