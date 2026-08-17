@@ -363,26 +363,31 @@ img { max-width: 100%; display: block; }
    dark background now. Fixed tile size (not just fixed height) so every
    logo occupies the same footprint regardless of its own aspect ratio;
    object-fit: contain scales each one to fit inside it without distortion. */
+/* Box size chosen against the source logos' real pixel dimensions (most
+   are natively 90-230px wide after trimming) so object-fit: contain is
+   downscaling nearly every logo, not upscaling it — upscaling is what
+   made these look soft/pixelated before. */
 .ldm-trustbar-logo {
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 128px;
-  height: 64px;
+  width: 120px;
+  height: 56px;
 }
 .ldm-trustbar-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
 }
 @keyframes ldm-trustbar-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 @media (max-width: 640px) {
-  .ldm-trustbar-logo { width: 104px; height: 52px; }
+  .ldm-trustbar-logo { width: 100px; height: 46px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .ldm-trustbar-track { animation: none; width: 100%; }
