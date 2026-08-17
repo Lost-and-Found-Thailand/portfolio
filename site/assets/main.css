@@ -372,6 +372,7 @@ img { max-width: 100%; display: block; }
    just eyeballing it. */
 .ldm-trustbar-logo { display: flex; align-items: center; justify-content: center; height: 72px; }
 .ldm-trustbar-logo img { height: 100%; width: auto; object-fit: contain; display: block; }
+.ldm-trustbar-logo--xxs { height: 32px; }
 .ldm-trustbar-logo--xs { height: 40px; }
 .ldm-trustbar-logo--sm { height: 58px; }
 .ldm-trustbar-logo--md { height: 84px; }
@@ -380,6 +381,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 640px) {
   .ldm-trustbar-row { gap: 28px; row-gap: 24px; }
   .ldm-trustbar-logo { height: 50px; }
+  .ldm-trustbar-logo--xxs { height: 22px; }
   .ldm-trustbar-logo--xs { height: 28px; }
   .ldm-trustbar-logo--sm { height: 40px; }
   .ldm-trustbar-logo--md { height: 59px; }
