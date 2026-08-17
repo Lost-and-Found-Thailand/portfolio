@@ -358,25 +358,31 @@ img { max-width: 100%; display: block; }
   animation: ldm-trustbar-scroll 60s linear infinite;
 }
 .ldm-trustbar:hover .ldm-trustbar-track { animation-play-state: paused; }
-.ldm-trustbar-set { display: flex; align-items: center; gap: 20px; flex-shrink: 0; padding-right: 20px; }
+.ldm-trustbar-set { display: flex; align-items: center; gap: 12px; flex-shrink: 0; padding-right: 12px; }
+/* No card/background — every logo is a plain white mark on the section's own
+   dark background now. Fixed tile size (not just fixed height) so every
+   logo occupies the same footprint regardless of its own aspect ratio;
+   object-fit: contain scales each one to fit inside it without distortion. */
 .ldm-trustbar-logo {
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
-  padding: 0 24px;
-  background: var(--color-off-white);
-  border-radius: var(--radius-md);
+  width: 128px;
+  height: 64px;
 }
-.ldm-trustbar-logo img { height: 22px; width: auto; display: block; }
+.ldm-trustbar-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 @keyframes ldm-trustbar-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 @media (max-width: 640px) {
-  .ldm-trustbar-logo { height: 48px; padding: 0 18px; }
-  .ldm-trustbar-logo img { height: 18px; }
+  .ldm-trustbar-logo { width: 104px; height: 52px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .ldm-trustbar-track { animation: none; width: 100%; }
