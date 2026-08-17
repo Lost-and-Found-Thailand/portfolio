@@ -51,6 +51,7 @@ $ldm_img = get_template_directory_uri();
     <div class="container">
       <p class="ldm-trustbar-label"><?php esc_html_e( "A few of the brands I've worked with", 'liam-digital-marketing' ); ?></p>
       <div class="ldm-trustbar-row reveal">
+        <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/carpe-diem-beach-club.png' ); ?>" alt="<?php esc_attr_e( 'Carpe Diem Beach Club', 'liam-digital-marketing' ); ?>" width="971" height="1280" loading="lazy"></span>
         <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/o-ours.png' ); ?>" alt="<?php esc_attr_e( 'O. Ours', 'liam-digital-marketing' ); ?>" width="337" height="193" loading="lazy"></span>
         <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/rockfish-uluwatu.png' ); ?>" alt="<?php esc_attr_e( 'Rockfish The Uluwatu', 'liam-digital-marketing' ); ?>" width="362" height="192" loading="lazy"></span>
         <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/muang-samui.png' ); ?>" alt="<?php esc_attr_e( 'Muang Samui Holistic Wellness Riviera', 'liam-digital-marketing' ); ?>" width="280" height="224" loading="lazy"></span>
