@@ -75,7 +75,7 @@ body.ldm {
 .ldm .h1, .ldm .h2, .ldm .h3 {
   font-family: var(--font-display);
   font-weight: 800;
-  line-height: 1.02;
+  line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0;
 }
