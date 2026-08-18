@@ -73,7 +73,7 @@ $ldm_img = get_template_directory_uri();
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm2"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/bbb.png' ); ?>" alt="<?php esc_attr_e( 'BB&amp;B', 'liam-digital-marketing' ); ?>" width="802" height="377" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/ama.png' ); ?>" alt="<?php esc_attr_e( 'AMA', 'liam-digital-marketing' ); ?>" width="2000" height="698" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/arna.png' ); ?>" alt="<?php esc_attr_e( 'ARNA Oceanic Wellness Spa', 'liam-digital-marketing' ); ?>" width="711" height="240" loading="lazy"></span>
-            <span class="ldm-trustbar-logo ldm-trustbar-logo--lg"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/united-pharma.png' ); ?>" alt="<?php esc_attr_e( 'United Pharma', 'liam-digital-marketing' ); ?>" width="1074" height="1075" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--tall"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/united-pharma.png' ); ?>" alt="<?php esc_attr_e( 'United Pharma', 'liam-digital-marketing' ); ?>" width="670" height="908" loading="lazy"></span>
           </div>
           <div class="ldm-trustbar-set" aria-hidden="true">
             <span class="ldm-trustbar-logo ldm-trustbar-logo--tall"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/carpe-diem-beach-club.png' ); ?>" alt="<?php esc_attr_e( 'Carpe Diem Beach Club', 'liam-digital-marketing' ); ?>" width="971" height="1280" loading="lazy"></span>
@@ -95,7 +95,7 @@ $ldm_img = get_template_directory_uri();
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm2"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/bbb.png' ); ?>" alt="<?php esc_attr_e( 'BB&amp;B', 'liam-digital-marketing' ); ?>" width="802" height="377" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/ama.png' ); ?>" alt="<?php esc_attr_e( 'AMA', 'liam-digital-marketing' ); ?>" width="2000" height="698" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/arna.png' ); ?>" alt="<?php esc_attr_e( 'ARNA Oceanic Wellness Spa', 'liam-digital-marketing' ); ?>" width="711" height="240" loading="lazy"></span>
-            <span class="ldm-trustbar-logo ldm-trustbar-logo--lg"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/united-pharma.png' ); ?>" alt="<?php esc_attr_e( 'United Pharma', 'liam-digital-marketing' ); ?>" width="1074" height="1075" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--tall"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/united-pharma.png' ); ?>" alt="<?php esc_attr_e( 'United Pharma', 'liam-digital-marketing' ); ?>" width="670" height="908" loading="lazy"></span>
           </div>
       </div>
     </div>
