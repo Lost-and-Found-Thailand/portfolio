@@ -42,6 +42,10 @@ jobs:
           find dist/site -name "*.html" -print0 | xargs -0 sed -i \
             -e "s|assets/main.css\"|assets/main.css?v=${SHORT_SHA}\"|g" \
             -e "s|assets/main.js\"|assets/main.js?v=${SHORT_SHA}\"|g"
+          # main.css itself @imports brand-kit/tokens.css by a fixed URL, so a
+          # browser that already cached that response keeps using it forever --
+          # the ?v= above only forces a refetch of main.css, not its @import.
+          sed -i "s|brand-kit/tokens.css\")|brand-kit/tokens.css?v=${SHORT_SHA}\")|g" dist/site/assets/main.css
 
       - uses: actions/configure-pages@v5
         with:
