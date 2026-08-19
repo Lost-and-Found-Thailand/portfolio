@@ -106,7 +106,7 @@ $ldm_img = get_template_directory_uri();
             <span class="ldm-trustbar-logo ldm-trustbar-logo--xs2"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/tribal-fitness.png' ); ?>" alt="<?php esc_attr_e( 'Tribal Fitness', 'liam-digital-marketing' ); ?>" width="3129" height="763" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm2"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/tempo.png' ); ?>" alt="<?php esc_attr_e( 'Tempo Restaurant Lounge KTV', 'liam-digital-marketing' ); ?>" width="968" height="501" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/the-distillery-phuket.png' ); ?>" alt="<?php esc_attr_e( 'The Distillery Phuket', 'liam-digital-marketing' ); ?>" width="928" height="353" loading="lazy"></span>
-            <span class="ldm-trustbar-logo ldm-trustbar-logo--md"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/the-dreamer-phuket.png' ); ?>" alt="<?php esc_attr_e( 'The Dreamer Phuket', 'liam-digital-marketing' ); ?>" width="1108" height="887" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/the-dreamer-phuket.png' ); ?>" alt="<?php esc_attr_e( 'The Dreamer Phuket', 'liam-digital-marketing' ); ?>" width="1069" height="663" loading="lazy"></span>
           </div>
           <div class="ldm-trustbar-set" aria-hidden="true">
             <span class="ldm-trustbar-logo ldm-trustbar-logo--tall"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/carpe-diem-beach-club.png' ); ?>" alt="<?php esc_attr_e( 'Carpe Diem Beach Club', 'liam-digital-marketing' ); ?>" width="839" height="986" loading="lazy"></span>
@@ -161,7 +161,7 @@ $ldm_img = get_template_directory_uri();
             <span class="ldm-trustbar-logo ldm-trustbar-logo--xs2"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/tribal-fitness.png' ); ?>" alt="<?php esc_attr_e( 'Tribal Fitness', 'liam-digital-marketing' ); ?>" width="3129" height="763" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm2"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/tempo.png' ); ?>" alt="<?php esc_attr_e( 'Tempo Restaurant Lounge KTV', 'liam-digital-marketing' ); ?>" width="968" height="501" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/the-distillery-phuket.png' ); ?>" alt="<?php esc_attr_e( 'The Distillery Phuket', 'liam-digital-marketing' ); ?>" width="928" height="353" loading="lazy"></span>
-            <span class="ldm-trustbar-logo ldm-trustbar-logo--md"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/the-dreamer-phuket.png' ); ?>" alt="<?php esc_attr_e( 'The Dreamer Phuket', 'liam-digital-marketing' ); ?>" width="1108" height="887" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/the-dreamer-phuket.png' ); ?>" alt="<?php esc_attr_e( 'The Dreamer Phuket', 'liam-digital-marketing' ); ?>" width="1069" height="663" loading="lazy"></span>
           </div>
       </div>
     </div>
