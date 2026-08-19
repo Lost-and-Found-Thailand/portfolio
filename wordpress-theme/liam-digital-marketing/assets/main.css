@@ -376,8 +376,10 @@ img { max-width: 100%; display: block; }
 .ldm-trustbar-logo { display: flex; align-items: center; justify-content: center; height: 72px; flex-shrink: 0; }
 .ldm-trustbar-logo img { height: 100%; width: auto; object-fit: contain; display: block; }
 .ldm-trustbar-logo--xxs { height: 32px; }
+.ldm-trustbar-logo--xxs2 { height: 34px; }
 .ldm-trustbar-logo--xs { height: 40px; }
 .ldm-trustbar-logo--xs2 { height: 45px; }
+.ldm-trustbar-logo--xs3 { height: 48px; }
 .ldm-trustbar-logo--sm { height: 58px; }
 .ldm-trustbar-logo--sm2 { height: 67px; }
 .ldm-trustbar-logo--md { height: 84px; }
@@ -391,8 +393,10 @@ img { max-width: 100%; display: block; }
   .ldm-trustbar-set { gap: 28px; padding-right: 28px; }
   .ldm-trustbar-logo { height: 50px; }
   .ldm-trustbar-logo--xxs { height: 22px; }
+  .ldm-trustbar-logo--xxs2 { height: 23px; }
   .ldm-trustbar-logo--xs { height: 28px; }
   .ldm-trustbar-logo--xs2 { height: 31px; }
+  .ldm-trustbar-logo--xs3 { height: 33px; }
   .ldm-trustbar-logo--sm { height: 40px; }
   .ldm-trustbar-logo--sm2 { height: 47px; }
   .ldm-trustbar-logo--md { height: 59px; }

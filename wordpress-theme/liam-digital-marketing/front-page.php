@@ -89,6 +89,10 @@ $ldm_img = get_template_directory_uri();
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/mood-by-ours.png' ); ?>" alt="<?php esc_attr_e( 'Mood by Ours', 'liam-digital-marketing' ); ?>" width="275" height="107" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--tall"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/mel-francis-villas.png' ); ?>" alt="<?php esc_attr_e( 'Mel Francis Villas', 'liam-digital-marketing' ); ?>" width="629" height="748" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/raw-ubud.png' ); ?>" alt="<?php esc_attr_e( 'RAW Ubud', 'liam-digital-marketing' ); ?>" width="288" height="116" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--xs3"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/chalong-bay.png' ); ?>" alt="<?php esc_attr_e( 'Chalong Bay', 'liam-digital-marketing' ); ?>" width="2016" height="546" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/athlean.png' ); ?>" alt="<?php esc_attr_e( 'Athlean', 'liam-digital-marketing' ); ?>" width="655" height="363" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--xxs2"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/cash-depot.png' ); ?>" alt="<?php esc_attr_e( 'Cash-Depot', 'liam-digital-marketing' ); ?>" width="745" height="98" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/simple-pret.png' ); ?>" alt="<?php esc_attr_e( 'Simple Prêt', 'liam-digital-marketing' ); ?>" width="748" height="427" loading="lazy"></span>
           </div>
           <div class="ldm-trustbar-set" aria-hidden="true">
             <span class="ldm-trustbar-logo ldm-trustbar-logo--tall"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/carpe-diem-beach-club.png' ); ?>" alt="<?php esc_attr_e( 'Carpe Diem Beach Club', 'liam-digital-marketing' ); ?>" width="839" height="986" loading="lazy"></span>
@@ -126,6 +130,10 @@ $ldm_img = get_template_directory_uri();
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/mood-by-ours.png' ); ?>" alt="<?php esc_attr_e( 'Mood by Ours', 'liam-digital-marketing' ); ?>" width="275" height="107" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--tall"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/mel-francis-villas.png' ); ?>" alt="<?php esc_attr_e( 'Mel Francis Villas', 'liam-digital-marketing' ); ?>" width="629" height="748" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/raw-ubud.png' ); ?>" alt="<?php esc_attr_e( 'RAW Ubud', 'liam-digital-marketing' ); ?>" width="288" height="116" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--xs3"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/chalong-bay.png' ); ?>" alt="<?php esc_attr_e( 'Chalong Bay', 'liam-digital-marketing' ); ?>" width="2016" height="546" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/athlean.png' ); ?>" alt="<?php esc_attr_e( 'Athlean', 'liam-digital-marketing' ); ?>" width="655" height="363" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--xxs2"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/cash-depot.png' ); ?>" alt="<?php esc_attr_e( 'Cash-Depot', 'liam-digital-marketing' ); ?>" width="745" height="98" loading="lazy"></span>
+            <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/simple-pret.png' ); ?>" alt="<?php esc_attr_e( 'Simple Prêt', 'liam-digital-marketing' ); ?>" width="748" height="427" loading="lazy"></span>
           </div>
       </div>
     </div>
