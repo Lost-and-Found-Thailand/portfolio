@@ -93,6 +93,10 @@ $ldm_img = get_template_directory_uri();
             <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/athlean.png' ); ?>" alt="<?php esc_attr_e( 'Athlean', 'liam-digital-marketing' ); ?>" width="655" height="363" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--xxs2"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/cash-depot.png' ); ?>" alt="<?php esc_attr_e( 'Cash-Depot', 'liam-digital-marketing' ); ?>" width="745" height="98" loading="lazy"></span>
             <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/simple-pret.png' ); ?>" alt="<?php esc_attr_e( 'Simple Prêt', 'liam-digital-marketing' ); ?>" width="748" height="427" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/nuhuman-raw.png' ); ?>" alt="<?php esc_attr_e( 'nüHuman RAW', 'liam-digital-marketing' ); ?>" width="366" height="144" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--xs3"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/shaz.png' ); ?>" alt="<?php esc_attr_e( 'Shaz Aesthetic & Medi Spa', 'liam-digital-marketing' ); ?>" width="751" height="221" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--lg"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/simba-sea-trips.png' ); ?>" alt="<?php esc_attr_e( 'Simba Sea Trips Phuket', 'liam-digital-marketing' ); ?>" width="1085" height="1108" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--lg"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/soho-pool-club.png' ); ?>" alt="<?php esc_attr_e( 'Soho Pool Club Phuket', 'liam-digital-marketing' ); ?>" width="2858" height="2858" loading="lazy"></span>
           </div>
           <div class="ldm-trustbar-set" aria-hidden="true">
             <span class="ldm-trustbar-logo ldm-trustbar-logo--tall"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/carpe-diem-beach-club.png' ); ?>" alt="<?php esc_attr_e( 'Carpe Diem Beach Club', 'liam-digital-marketing' ); ?>" width="839" height="986" loading="lazy"></span>
@@ -134,6 +138,10 @@ $ldm_img = get_template_directory_uri();
             <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/athlean.png' ); ?>" alt="<?php esc_attr_e( 'Athlean', 'liam-digital-marketing' ); ?>" width="655" height="363" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--xxs2"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/cash-depot.png' ); ?>" alt="<?php esc_attr_e( 'Cash-Depot', 'liam-digital-marketing' ); ?>" width="745" height="98" loading="lazy"></span>
             <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/simple-pret.png' ); ?>" alt="<?php esc_attr_e( 'Simple Prêt', 'liam-digital-marketing' ); ?>" width="748" height="427" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/nuhuman-raw.png' ); ?>" alt="<?php esc_attr_e( 'nüHuman RAW', 'liam-digital-marketing' ); ?>" width="366" height="144" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--xs3"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/shaz.png' ); ?>" alt="<?php esc_attr_e( 'Shaz Aesthetic & Medi Spa', 'liam-digital-marketing' ); ?>" width="751" height="221" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--lg"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/simba-sea-trips.png' ); ?>" alt="<?php esc_attr_e( 'Simba Sea Trips Phuket', 'liam-digital-marketing' ); ?>" width="1085" height="1108" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--lg"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/soho-pool-club.png' ); ?>" alt="<?php esc_attr_e( 'Soho Pool Club Phuket', 'liam-digital-marketing' ); ?>" width="2858" height="2858" loading="lazy"></span>
           </div>
       </div>
     </div>
