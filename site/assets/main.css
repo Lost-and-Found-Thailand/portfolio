@@ -1147,37 +1147,24 @@ body.ldm.has-custom-cursor select {
 }
 .reveal.is-visible .ldm-energy-num-fill { clip-path: inset(0 0% 0 0); }
 
-/* ---------- Gradient shimmer on headline keywords ----------
-   `background-clip: text` can leave faint anti-aliasing seams at
-   self-overlapping glyph strokes (the bowl-to-descender join in "g" is
-   the classic case) where the rasterizer's coverage mask doesn't fill
-   solidly, showing the page background through as a notch. The base
-   text here is always a solid, un-clipped accent fill; the animated
-   gradient is a separate ::after layer stacked on top via the same
-   glyph shapes (duplicated through data-word), so any seam in that
-   layer reveals the solid color underneath instead of the page
-   background. */
+/* ---------- Color pulse on headline keywords ----------
+   This used to be a `background-clip: text` gradient sweep, and later
+   a two-layer version stacking that gradient over a solid fallback.
+   Both relied on clipping the fill to individual glyph outlines, which
+   turned out to be genuinely unreliable across engines at self-
+   overlapping strokes (the bowl-to-descender join in "g"/"p"): one
+   version left a seam that showed the page background through, the
+   other misaligned its duplicate layer and left a static patch of the
+   wrong color. Animating the plain `color` property has no clipping
+   or duplicate-layer involved, so neither failure mode can occur --
+   every pixel of every glyph is always painted as a single solid
+   color, just one that shifts over time. */
 .ldm-word-shimmer {
-  position: relative;
-  color: var(--color-accent);
-  -webkit-text-fill-color: var(--color-accent);
+  animation: ldm-color-pulse 3.4s ease-in-out infinite;
 }
-.ldm-word-shimmer::after {
-  content: attr(data-word);
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(100deg, var(--color-white) 30%, var(--color-accent) 50%, var(--color-white) 70%);
-  background-size: 220% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: ldm-shimmer 3.4s ease-in-out infinite;
-  pointer-events: none;
-}
-@keyframes ldm-shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -100% 0; }
+@keyframes ldm-color-pulse {
+  0%, 100% { color: var(--color-white); -webkit-text-fill-color: var(--color-white); }
+  50% { color: var(--color-accent); -webkit-text-fill-color: var(--color-accent); }
 }
 
 /* ---------- Neon pulse on stat / result numbers ---------- */
@@ -1224,7 +1211,7 @@ body.ldm.has-custom-cursor select {
   .reveal.is-visible .ldm-case-media, .reveal.is-visible .card-image { clip-path: none; transition: none; }
   body.ldm.has-custom-cursor, body.ldm.has-custom-cursor * { cursor: auto; }
   .ldm-energy-num-fill { clip-path: inset(0 0% 0 0); transition: none; }
-  .ldm-word-shimmer::after { animation: none; content: none; }
+  .ldm-word-shimmer { animation: none; color: var(--color-accent); -webkit-text-fill-color: var(--color-accent); }
   .ldm-metric.is-counting .num .accent,
   .reveal.is-visible .ldm-case-result { animation: none; }
   .ldm-metric-ring::after { animation: none; }

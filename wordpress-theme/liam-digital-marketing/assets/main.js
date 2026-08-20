@@ -162,11 +162,7 @@
         wordIndex += 1;
       });
       var innerWords = el.querySelectorAll(".ldm-word-inner");
-      if (innerWords.length) {
-        var shimmerWord = innerWords[innerWords.length - 1];
-        shimmerWord.classList.add("ldm-word-shimmer");
-        shimmerWord.setAttribute("data-word", shimmerWord.textContent);
-      }
+      if (innerWords.length) innerWords[innerWords.length - 1].classList.add("ldm-word-shimmer");
       requestAnimationFrame(function () {
         requestAnimationFrame(function () { el.classList.add("is-split-visible"); });
       });
@@ -189,7 +185,6 @@
       var span = document.createElement("span");
       span.className = "ldm-word-shimmer";
       span.textContent = lastWord;
-      span.setAttribute("data-word", lastWord);
       el.appendChild(span);
     });
   }
