@@ -109,6 +109,7 @@ $ldm_img = get_template_directory_uri();
             <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/the-dreamer-phuket.png' ); ?>" alt="<?php esc_attr_e( 'The Dreamer Phuket', 'liam-digital-marketing' ); ?>" width="1069" height="663" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--lg"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/south-east-asia-development.png' ); ?>" alt="<?php esc_attr_e( 'South East Asia Development Co., Ltd.', 'liam-digital-marketing' ); ?>" width="400" height="400" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/the-9th-degree.png' ); ?>" alt="<?php esc_attr_e( 'The 9th Degree', 'liam-digital-marketing' ); ?>" width="1889" height="601" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--lg"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/muang-samui-group.png' ); ?>" alt="<?php esc_attr_e( 'Muang Samui Group', 'liam-digital-marketing' ); ?>" width="978" height="978" loading="lazy"></span>
           </div>
           <div class="ldm-trustbar-set" aria-hidden="true">
             <span class="ldm-trustbar-logo ldm-trustbar-logo--tall"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/carpe-diem-beach-club.png' ); ?>" alt="<?php esc_attr_e( 'Carpe Diem Beach Club', 'liam-digital-marketing' ); ?>" width="839" height="986" loading="lazy"></span>
@@ -166,6 +167,7 @@ $ldm_img = get_template_directory_uri();
             <span class="ldm-trustbar-logo"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/the-dreamer-phuket.png' ); ?>" alt="<?php esc_attr_e( 'The Dreamer Phuket', 'liam-digital-marketing' ); ?>" width="1069" height="663" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--lg"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/south-east-asia-development.png' ); ?>" alt="<?php esc_attr_e( 'South East Asia Development Co., Ltd.', 'liam-digital-marketing' ); ?>" width="400" height="400" loading="lazy"></span>
             <span class="ldm-trustbar-logo ldm-trustbar-logo--sm"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/the-9th-degree.png' ); ?>" alt="<?php esc_attr_e( 'The 9th Degree', 'liam-digital-marketing' ); ?>" width="1889" height="601" loading="lazy"></span>
+            <span class="ldm-trustbar-logo ldm-trustbar-logo--lg"><img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/muang-samui-group.png' ); ?>" alt="<?php esc_attr_e( 'Muang Samui Group', 'liam-digital-marketing' ); ?>" width="978" height="978" loading="lazy"></span>
           </div>
       </div>
     </div>
