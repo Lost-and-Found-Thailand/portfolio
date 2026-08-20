@@ -1147,24 +1147,20 @@ body.ldm.has-custom-cursor select {
 }
 .reveal.is-visible .ldm-energy-num-fill { clip-path: inset(0 0% 0 0); }
 
-/* ---------- Color pulse on headline keywords ----------
-   This used to be a `background-clip: text` gradient sweep, and later
-   a two-layer version stacking that gradient over a solid fallback.
-   Both relied on clipping the fill to individual glyph outlines, which
-   turned out to be genuinely unreliable across engines at self-
-   overlapping strokes (the bowl-to-descender join in "g"/"p"): one
-   version left a seam that showed the page background through, the
-   other misaligned its duplicate layer and left a static patch of the
-   wrong color. Animating the plain `color` property has no clipping
-   or duplicate-layer involved, so neither failure mode can occur --
-   every pixel of every glyph is always painted as a single solid
-   color, just one that shifts over time. */
+/* ---------- Gradient on headline keywords ----------
+   Two earlier attempts animated this gradient (`background-position`
+   sweeping across the text, or a moving duplicate layer). Both showed
+   rendering artifacts at the "g"/"p" descender join on real devices.
+   That points at the animation/repaint step, not the gradient-clip
+   technique itself -- a static clip-text gradient is common and
+   generally reliable; it's animating it that was triggering the
+   glitch. Keeping the same gradient look but holding it still. */
 .ldm-word-shimmer {
-  animation: ldm-color-pulse 3.4s ease-in-out infinite;
-}
-@keyframes ldm-color-pulse {
-  0%, 100% { color: var(--color-white); -webkit-text-fill-color: var(--color-white); }
-  50% { color: var(--color-accent); -webkit-text-fill-color: var(--color-accent); }
+  background: linear-gradient(100deg, var(--color-white) 25%, var(--color-accent) 50%, var(--color-white) 75%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ---------- Neon pulse on stat / result numbers ---------- */
