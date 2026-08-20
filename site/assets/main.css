@@ -987,8 +987,11 @@ img { max-width: 100%; display: block; }
 }
 .ldm .reveal.is-visible { filter: blur(0); }
 
-/* ---------- Split-word heading reveal ---------- */
-.ldm-word { display: inline-block; overflow: hidden; vertical-align: top; }
+/* ---------- Split-word heading reveal ----------
+   padding-bottom/margin-bottom give the overflow:hidden mask room for
+   descenders (g, p, y) so it doesn't clip them -- without this, tight
+   heading line-heights meant the bottom of a "g" could get cut off. */
+.ldm-word { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.22em; margin-bottom: -0.22em; }
 .ldm-word-inner {
   display: inline-block;
   transform: translateY(110%);
@@ -1144,15 +1147,19 @@ body.ldm.has-custom-cursor select {
 }
 .reveal.is-visible .ldm-energy-num-fill { clip-path: inset(0 0% 0 0); }
 
-/* ---------- Accent color on headline keywords ----------
-   Previously an animated `background-clip: text` gradient sweep. That
-   combined with the split-word reveal's `overflow: hidden` + `transform`
-   ancestor to trigger a WebKit repaint bug on descenders (the "g" in
-   "campaigns"/"marketing" appeared to double/overlap the line below on
-   iOS Safari). A solid accent color has no such failure mode. */
+/* ---------- Gradient shimmer on headline keywords ---------- */
 .ldm-word-shimmer {
-  color: var(--color-accent);
-  -webkit-text-fill-color: var(--color-accent);
+  background: linear-gradient(100deg, var(--color-white) 30%, var(--color-accent) 50%, var(--color-white) 70%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: ldm-shimmer 3.4s ease-in-out infinite;
+}
+@keyframes ldm-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -100% 0; }
 }
 
 /* ---------- Neon pulse on stat / result numbers ---------- */
@@ -1199,6 +1206,12 @@ body.ldm.has-custom-cursor select {
   .reveal.is-visible .ldm-case-media, .reveal.is-visible .card-image { clip-path: none; transition: none; }
   body.ldm.has-custom-cursor, body.ldm.has-custom-cursor * { cursor: auto; }
   .ldm-energy-num-fill { clip-path: inset(0 0% 0 0); transition: none; }
+  .ldm-word-shimmer {
+    animation: none;
+    background: none;
+    color: var(--color-accent);
+    -webkit-text-fill-color: var(--color-accent);
+  }
   .ldm-metric.is-counting .num .accent,
   .reveal.is-visible .ldm-case-result { animation: none; }
   .ldm-metric-ring::after { animation: none; }
