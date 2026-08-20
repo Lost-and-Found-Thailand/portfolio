@@ -778,7 +778,7 @@ img { max-width: 100%; display: block; }
 /* ---------- Simple page header (subpages) ---------- */
 .ldm-page-header { padding-top: clamp(120px, 14vw, 180px); padding-bottom: 48px; }
 .ldm-page-header .eyebrow { margin-bottom: 20px; display: block; }
-.ldm-page-header h1 { max-width: 20ch; }
+.ldm-page-header h1 { max-width: 20ch; margin-bottom: 24px; }
 .ldm-discipline-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 .ldm-discipline-pill {
   display: inline-block;
