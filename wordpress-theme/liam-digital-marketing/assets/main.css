@@ -1144,19 +1144,15 @@ body.ldm.has-custom-cursor select {
 }
 .reveal.is-visible .ldm-energy-num-fill { clip-path: inset(0 0% 0 0); }
 
-/* ---------- Gradient shimmer on headline keywords ---------- */
+/* ---------- Accent color on headline keywords ----------
+   Previously an animated `background-clip: text` gradient sweep. That
+   combined with the split-word reveal's `overflow: hidden` + `transform`
+   ancestor to trigger a WebKit repaint bug on descenders (the "g" in
+   "campaigns"/"marketing" appeared to double/overlap the line below on
+   iOS Safari). A solid accent color has no such failure mode. */
 .ldm-word-shimmer {
-  background: linear-gradient(100deg, var(--color-white) 30%, var(--color-accent) 50%, var(--color-white) 70%);
-  background-size: 220% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: ldm-shimmer 3.4s ease-in-out infinite;
-}
-@keyframes ldm-shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -100% 0; }
+  color: var(--color-accent);
+  -webkit-text-fill-color: var(--color-accent);
 }
 
 /* ---------- Neon pulse on stat / result numbers ---------- */
@@ -1203,12 +1199,6 @@ body.ldm.has-custom-cursor select {
   .reveal.is-visible .ldm-case-media, .reveal.is-visible .card-image { clip-path: none; transition: none; }
   body.ldm.has-custom-cursor, body.ldm.has-custom-cursor * { cursor: auto; }
   .ldm-energy-num-fill { clip-path: inset(0 0% 0 0); transition: none; }
-  .ldm-word-shimmer {
-    animation: none;
-    background: none;
-    color: var(--color-accent);
-    -webkit-text-fill-color: var(--color-accent);
-  }
   .ldm-metric.is-counting .num .accent,
   .reveal.is-visible .ldm-case-result { animation: none; }
   .ldm-metric-ring::after { animation: none; }
