@@ -128,3 +128,16 @@ See `brand-kit/tokens.css` for the full source of truth (colors, type scale, spa
 - Color contrast: body copy uses Soft White/Neutral Gray on Obsidian Black, meeting WCAG AA for normal text; the lime accent is used only for large numerals/labels, not body copy, to avoid contrast issues.
 - Motion is disabled site-wide under `prefers-reduced-motion: reduce`.
 - No JS frameworks — the prototype is vanilla HTML/CSS/JS to keep payload minimal; Elementor's own runtime handles this on the WordPress build.
+
+## 5. `react-app/` — React/Tailwind/shadcn component sandbox
+
+A separate, self-contained Vite + React + TypeScript + Tailwind v4 + shadcn project, isolated from the static site above. It exists to host React-only components (like the Spline 3D scene demo currently in it) that can't be ported into `site/`'s vanilla JS. It is **not** built or deployed by `.github/workflows/pages.yml` — it's a standalone project you run separately:
+
+```bash
+cd react-app
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # type-checks with tsc -b, then bundles with vite
+```
+
+Components live in `react-app/src/components/ui/` (the shadcn default path — confirmed via `components.json`'s `aliases.ui`). Add more shadcn primitives with `npx shadcn@latest add <component>` from inside `react-app/`.
