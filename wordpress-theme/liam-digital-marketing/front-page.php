@@ -19,6 +19,7 @@ $ldm_img = get_template_directory_uri();
 
   <!-- 01 HERO -->
   <section class="ldm-hero" id="hero">
+    <canvas class="ldm-shader-bg" data-shader-bg aria-hidden="true"></canvas>
     <div class="ldm-hero-grid" aria-hidden="true"></div>
     <canvas class="ldm-network" data-network="hero" aria-hidden="true"></canvas>
     <div class="container ldm-hero-content">
