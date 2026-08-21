@@ -382,6 +382,7 @@ img { max-width: 100%; display: block; }
 .ldm-trustbar-logo--xs3 { height: 50px; }
 .ldm-trustbar-logo--sm { height: 58px; }
 .ldm-trustbar-logo--sm2 { height: 67px; }
+.ldm-trustbar-logo--sm3 { height: 76px; }
 .ldm-trustbar-logo--md { height: 84px; }
 .ldm-trustbar-logo--lg { height: 96px; }
 .ldm-trustbar-logo--tall { height: 104px; }
@@ -399,6 +400,7 @@ img { max-width: 100%; display: block; }
   .ldm-trustbar-logo--xs3 { height: 35px; }
   .ldm-trustbar-logo--sm { height: 40px; }
   .ldm-trustbar-logo--sm2 { height: 47px; }
+  .ldm-trustbar-logo--sm3 { height: 53px; }
   .ldm-trustbar-logo--md { height: 59px; }
   .ldm-trustbar-logo--lg { height: 67px; }
   .ldm-trustbar-logo--tall { height: 73px; }
