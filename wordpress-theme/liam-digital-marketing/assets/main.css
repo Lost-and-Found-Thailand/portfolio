@@ -194,16 +194,6 @@ img { max-width: 100%; display: block; }
   padding-bottom: clamp(72px, 10vw, 120px);
   overflow: hidden;
 }
-.ldm-shader-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.22;
-}
 .ldm-hero-grid {
   position: absolute;
   inset: 0;
