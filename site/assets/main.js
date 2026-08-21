@@ -1096,4 +1096,70 @@
       requestAnimationFrame(function () { bar.classList.add("is-visible"); });
     });
   })();
+
+  /* ----------------------------------------------------------------
+     3D scene (Spline) — loaded through @splinetool/runtime's
+     "standalone" build (a single self-contained bundle meant for
+     exactly this non-bundler use case, as opposed to its default
+     build which code-splits into dozens of chunk files that expect
+     to be self-hosted alongside a bundler). Pinned to the version
+     this site was built and tested against, from unpkg's CDN, since
+     self-hosting that many chunk files isn't practical here and this
+     is the same CDN-based approach Spline's own docs recommend for
+     non-React sites.
+
+     Skipped entirely under reduced motion (same rule as every other
+     animated effect on this page), lazy-loaded only once the section
+     scrolls near-into-view, and given a hard timeout: if the load
+     hasn't resolved (or failed) by then, the card is marked
+     .is-failed so it never sits there indefinitely mid-spin — it
+     just quietly stays a plain dark card.
+     ---------------------------------------------------------------- */
+  if (!reduceMotion) {
+    var splineCanvas = document.querySelector("[data-spline-scene]");
+    if (splineCanvas && "IntersectionObserver" in window) {
+      var splineIO = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            splineIO.disconnect();
+            initSplineScene(splineCanvas);
+          });
+        },
+        { rootMargin: "200px" }
+      );
+      splineIO.observe(splineCanvas);
+    }
+  }
+
+  function initSplineScene(canvas) {
+    var card = canvas.closest(".ldm-spline-card");
+    var sceneUrl = canvas.getAttribute("data-spline-scene");
+    var settled = false;
+
+    var timeoutId = setTimeout(function () {
+      if (settled) return;
+      settled = true;
+      if (card) card.classList.add("is-failed");
+    }, 12000);
+
+    import("https://unpkg.com/@splinetool/runtime@2.0.2/build/runtime.standalone.webgl.js")
+      .then(function (mod) {
+        if (settled) return null;
+        var app = new mod.Application(canvas);
+        return app.load(sceneUrl);
+      })
+      .then(function () {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timeoutId);
+        if (card) card.classList.add("is-loaded");
+      })
+      .catch(function () {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timeoutId);
+        if (card) card.classList.add("is-failed");
+      });
+  }
 })();

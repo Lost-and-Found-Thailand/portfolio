@@ -494,6 +494,56 @@ img { max-width: 100%; display: block; }
   .ldm-marquee-track, .ldm-hero-grid { animation: none; }
 }
 
+/* ---------- 3D scene (Spline) ----------
+   Loaded via @splinetool/runtime's vanilla build (see initSplineScene in
+   main.js) rather than the React wrapper -- this site has no React/build
+   step, so the framework-agnostic Application API is the natural fit.
+   The card has an explicit dark background so it never shows as a blank
+   white box while the scene loads, fails to load, or under reduced
+   motion (where it's skipped entirely). */
+.ldm-spline-card {
+  position: relative;
+  margin-top: 40px;
+  height: clamp(320px, 48vw, 520px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-black);
+  overflow: hidden;
+}
+.ldm-spline-card canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  transition: opacity 500ms var(--ease-premium);
+}
+.ldm-spline-card.is-loaded canvas { opacity: 1; }
+.ldm-spline-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 300ms var(--ease-premium);
+}
+.ldm-spline-card.is-loaded .ldm-spline-loader,
+.ldm-spline-card.is-failed .ldm-spline-loader { opacity: 0; pointer-events: none; }
+.loader {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--color-border-strong);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: ldm-loader-spin 0.8s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .loader { animation: none; }
+}
+@keyframes ldm-loader-spin { to { transform: rotate(360deg); } }
+
 /* ---------- Metrics strip: animated radial progress rings ----------
    Each ring fills in lockstep with its own number counting up (same
    trigger, same duration — .is-counting is added by the counter's

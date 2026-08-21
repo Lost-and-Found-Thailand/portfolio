@@ -203,6 +203,19 @@ $ldm_img = get_template_directory_uri();
     </div>
   </div>
 
+  <!-- 3D SCENE -->
+  <section class="ldm-section container" id="scene">
+    <div class="reveal">
+      <span class="eyebrow">Explore</span>
+      <h2 class="fs-h2" style="margin:16px 0 24px;">A closer look, in motion.</h2>
+      <p class="lede" style="max-width:none;">A small interactive moment — drag, hover, explore.</p>
+    </div>
+    <div class="ldm-spline-card reveal">
+      <canvas id="ldm-spline-canvas" data-spline-scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" aria-hidden="true"></canvas>
+      <div class="ldm-spline-loader" aria-hidden="true"><span class="loader"></span></div>
+    </div>
+  </section>
+
   <!-- 03 SELECTED WORK -->
   <section class="ldm-section container" id="work">
     <div class="ldm-section-head reveal">
