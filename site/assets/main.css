@@ -1147,20 +1147,19 @@ body.ldm.has-custom-cursor select {
 }
 .reveal.is-visible .ldm-energy-num-fill { clip-path: inset(0 0% 0 0); }
 
-/* ---------- Gradient on headline keywords ----------
-   Two earlier attempts animated this gradient (`background-position`
-   sweeping across the text, or a moving duplicate layer). Both showed
-   rendering artifacts at the "g"/"p" descender join on real devices.
-   That points at the animation/repaint step, not the gradient-clip
-   technique itself -- a static clip-text gradient is common and
-   generally reliable; it's animating it that was triggering the
-   glitch. Keeping the same gradient look but holding it still. */
+/* ---------- Gradient shimmer on headline keywords ---------- */
 .ldm-word-shimmer {
-  background: linear-gradient(100deg, var(--color-white) 25%, var(--color-accent) 50%, var(--color-white) 75%);
+  background: linear-gradient(100deg, var(--color-white) 30%, var(--color-accent) 50%, var(--color-white) 70%);
+  background-size: 220% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
+  animation: ldm-shimmer 3.4s ease-in-out infinite;
+}
+@keyframes ldm-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -100% 0; }
 }
 
 /* ---------- Neon pulse on stat / result numbers ---------- */
@@ -1207,7 +1206,12 @@ body.ldm.has-custom-cursor select {
   .reveal.is-visible .ldm-case-media, .reveal.is-visible .card-image { clip-path: none; transition: none; }
   body.ldm.has-custom-cursor, body.ldm.has-custom-cursor * { cursor: auto; }
   .ldm-energy-num-fill { clip-path: inset(0 0% 0 0); transition: none; }
-  .ldm-word-shimmer { animation: none; color: var(--color-accent); -webkit-text-fill-color: var(--color-accent); }
+  .ldm-word-shimmer {
+    animation: none;
+    background: none;
+    color: var(--color-accent);
+    -webkit-text-fill-color: var(--color-accent);
+  }
   .ldm-metric.is-counting .num .accent,
   .reveal.is-visible .ldm-case-result { animation: none; }
   .ldm-metric-ring::after { animation: none; }
