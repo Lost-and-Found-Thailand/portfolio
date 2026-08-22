@@ -1171,7 +1171,7 @@
     };
 
     setStatus("checking runtime file…");
-    fetch("./vendor/spline/runtime.standalone.webgl.js", { method: "GET" })
+    fetch("./vendor/spline/runtime.js", { method: "GET" })
       .then(function (res) {
         setStatus(
           "fetch ok, status=" + res.status +
@@ -1182,7 +1182,7 @@
       })
       .then(function (text) {
         setStatus("fetched " + text.length + " chars, importing…");
-        return import("./vendor/spline/runtime.standalone.webgl.js");
+        return import("./vendor/spline/runtime.js");
       })
       .then(function (mod) {
         setStatus("runtime imported, creating Application…");
