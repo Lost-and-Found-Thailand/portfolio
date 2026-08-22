@@ -1133,34 +1133,45 @@
   }
 
   function initSplineScene(canvas) {
-    console.log("SPLINE_DEBUG: initSplineScene called");
     var card = canvas.closest(".ldm-spline-card");
     var sceneUrl = canvas.getAttribute("data-spline-scene");
     var settled = false;
 
+    var status = document.createElement("div");
+    status.className = "ldm-spline-status";
+    if (card) card.appendChild(status);
+    var setStatus = function (text) {
+      console.log("SPLINE_DEBUG: " + text);
+      if (status) status.textContent = text;
+    };
+
+    setStatus("init called");
+
     var timeoutId = setTimeout(function () {
       if (settled) return;
       settled = true;
+      setStatus("timed out after 12s");
       if (card) card.classList.add("is-failed");
     }, 12000);
 
-    console.log("SPLINE_DEBUG: about to import runtime");
+    setStatus("importing runtime…");
     import("https://unpkg.com/@splinetool/runtime@2.0.2/build/runtime.standalone.webgl.js")
       .then(function (mod) {
-        console.log("SPLINE_DEBUG: runtime imported", mod);
+        setStatus("runtime imported, creating Application…");
         if (settled) return null;
         var app = new mod.Application(canvas);
-        console.log("SPLINE_DEBUG: Application created, loading scene", sceneUrl);
+        setStatus("Application created, loading scene…");
         return app.load(sceneUrl);
       })
       .then(function () {
         if (settled) return;
         settled = true;
         clearTimeout(timeoutId);
+        setStatus("loaded");
         if (card) card.classList.add("is-loaded");
       })
       .catch(function (err) {
-        console.log("SPLINE_DEBUG: caught error", err);
+        setStatus("error: " + (err && err.message ? err.message : String(err)));
         if (settled) return;
         settled = true;
         clearTimeout(timeoutId);
