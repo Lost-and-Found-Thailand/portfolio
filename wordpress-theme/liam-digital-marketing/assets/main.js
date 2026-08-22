@@ -1161,8 +1161,29 @@
       if (card) card.classList.add("is-failed");
     }, 12000);
 
-    setStatus("importing runtime…");
-    import("assets/vendor/spline/runtime.standalone.webgl.js")
+    var describeError = function (err) {
+      if (!err) return "unknown error";
+      var parts = [];
+      if (err.name) parts.push(err.name);
+      if (err.message) parts.push(err.message);
+      if (!parts.length) parts.push(String(err));
+      return parts.join(": ");
+    };
+
+    setStatus("checking runtime file…");
+    fetch("./vendor/spline/runtime.standalone.webgl.js", { method: "GET" })
+      .then(function (res) {
+        setStatus(
+          "fetch ok, status=" + res.status +
+          ", type=" + res.headers.get("content-type") +
+          ", len=" + res.headers.get("content-length")
+        );
+        return res.text();
+      })
+      .then(function (text) {
+        setStatus("fetched " + text.length + " chars, importing…");
+        return import("./vendor/spline/runtime.standalone.webgl.js");
+      })
       .then(function (mod) {
         setStatus("runtime imported, creating Application…");
         if (settled) return null;
@@ -1178,7 +1199,7 @@
         if (card) card.classList.add("is-loaded");
       })
       .catch(function (err) {
-        setStatus("error: " + (err && err.message ? err.message : String(err)));
+        setStatus("error: " + describeError(err));
         if (settled) return;
         settled = true;
         clearTimeout(timeoutId);
