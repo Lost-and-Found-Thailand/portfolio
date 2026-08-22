@@ -1102,11 +1102,18 @@
      "standalone" build (a single self-contained bundle meant for
      exactly this non-bundler use case, as opposed to its default
      build which code-splits into dozens of chunk files that expect
-     to be self-hosted alongside a bundler). Pinned to the version
-     this site was built and tested against, from unpkg's CDN, since
-     self-hosting that many chunk files isn't practical here and this
-     is the same CDN-based approach Spline's own docs recommend for
-     non-React sites.
+     to be self-hosted alongside a bundler).
+
+     Self-hosted, along with its WASM companion files (physics.js/
+     .wasm, hana-ui.js/.wasm) under assets/vendor/spline/, with
+     `wasmPath` pointing there explicitly. The first attempt loaded
+     the standalone JS from unpkg but left wasmPath unset, so the
+     runtime fell back to fetching those companion files from
+     cdn.spline.design at request time -- which failed for at least
+     one real visitor (WebAssembly.compile() got non-wasm bytes back,
+     "doesn't start with '\0asm'", implying that fetch returned an
+     error page rather than the binary). Self-hosting removes every
+     third-party runtime dependency, not just the main script.
 
      Skipped entirely under reduced motion (same rule as every other
      animated effect on this page), lazy-loaded only once the section
@@ -1155,11 +1162,11 @@
     }, 12000);
 
     setStatus("importing runtime…");
-    import("https://unpkg.com/@splinetool/runtime@2.0.2/build/runtime.standalone.webgl.js")
+    import("assets/vendor/spline/runtime.standalone.webgl.js")
       .then(function (mod) {
         setStatus("runtime imported, creating Application…");
         if (settled) return null;
-        var app = new mod.Application(canvas);
+        var app = new mod.Application(canvas, { wasmPath: "assets/vendor/spline" });
         setStatus("Application created, loading scene…");
         return app.load(sceneUrl);
       })
