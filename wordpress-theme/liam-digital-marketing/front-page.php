@@ -191,10 +191,6 @@ $ldm_img = get_template_directory_uri();
         <span class="eyebrow">Introduction</span>
         <h2 class="fs-h2" style="margin:16px 0 24px;">Digital marketing, built around data.</h2>
         <p class="lede" style="max-width:none;">I'm a digital marketer who works across paid media, analytics, tracking and conversion optimization. I enjoy turning complex marketing data into clear strategies that produce measurable results — from 15x average ROAS to as high as 300x on top-performing campaigns.</p>
-        <div class="ldm-about-stats ldm-about-stats--compact">
-          <div><div class="num"><span data-counter="6" data-suffix="+">0+</span></div><div class="label">Years in performance marketing</div></div>
-          <div><div class="num"><span data-counter="100" data-suffix="+">0+</span></div><div class="label">Brands scaled</div></div>
-        </div>
       </div>
     </div>
   </section>
@@ -211,11 +207,11 @@ $ldm_img = get_template_directory_uri();
   <section class="ldm-section container" id="scene">
     <div class="reveal">
       <span class="eyebrow">The AI Shift</span>
-      <h2 class="fs-h2" style="margin:16px 0 24px;">Marketing is getting smarter. The tools behind it should too.</h2>
-      <p class="lede" style="max-width:none;">A small glimpse of what that shift looks like in motion.</p>
+      <h2 class="fs-h2" style="margin:16px 0 24px;">The industry is getting smarter. So is everything built for it.</h2>
+      <p class="lede" style="max-width:none;">A small, moving glimpse of that shift.</p>
     </div>
     <div class="ldm-spline-card reveal">
-      <canvas id="ldm-spline-canvas" data-spline-scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" aria-hidden="true"></canvas>
+      <canvas id="ldm-spline-canvas" data-spline-scene="<?php echo esc_url( get_template_directory_uri() . '/assets/vendor/spline/scene.splinecode' ); ?>" aria-hidden="true"></canvas>
     </div>
   </section>
 

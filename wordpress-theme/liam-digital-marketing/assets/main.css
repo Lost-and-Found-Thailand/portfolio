@@ -694,17 +694,6 @@ img { max-width: 100%; display: block; }
 .ldm-about-stats { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--gap-md); margin-top: var(--gap-lg); }
 .ldm-about-stats .num { font-family: var(--font-display); font-weight: 800; font-size: var(--fs-h3); }
 .ldm-about-stats .label { color: var(--color-gray); font-size: var(--fs-small); }
-/* Compact inline variant — same numbers, lighter footprint, for
-   sitting inside a paragraph-led section rather than owning its own
-   grid row (e.g. the homepage intro). */
-.ldm-about-stats--compact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gap-lg);
-  margin-top: var(--gap-lg);
-  grid-template-columns: none;
-}
-.ldm-about-stats--compact .num { font-size: var(--fs-h4); }
 
 /* ---------- Tech list ---------- */
 .ldm-tech-grid { display: grid; gap: var(--gap-lg); }

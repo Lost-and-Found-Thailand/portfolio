@@ -1118,10 +1118,12 @@
      code-split build — the same shape every bundler-based Spline site
      already serves in production — worked.
 
-     Self-hosted entirely, including its WASM companions (physics.js/
-     .wasm, hana-ui.js/.wasm) under assets/vendor/spline/, with
-     `wasmPath` pointing there explicitly so nothing at runtime
-     depends on a third-party CDN.
+     Self-hosted entirely — the runtime, its WASM companions
+     (physics.js/.wasm, hana-ui.js/.wasm), and the scene file itself
+     (scene.splinecode) all live under assets/vendor/spline/, with
+     `wasmPath` pointing there explicitly — so nothing at runtime
+     depends on prod.spline.design or any other third-party CDN; the
+     scene loads exactly as fast as any other same-origin asset.
 
      Skipped entirely under reduced motion (same rule as every other
      animated effect on this page). Starts loading immediately on
