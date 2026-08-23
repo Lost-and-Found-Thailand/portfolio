@@ -1153,6 +1153,8 @@
       if (card) card.classList.add("is-failed");
     }, 30000);
 
+    var app;
+
     import("./vendor/spline/runtime.js")
       .then(function (mod) {
         if (settled) return null;
@@ -1162,7 +1164,7 @@
            GPU-adapter negotiation on top of the WebGL renderer it
            still needs anyway -- pure added weight for a simple scene
            that doesn't use anything WebGPU-only. */
-        var app = new mod.Application(canvas, { wasmPath: "assets/vendor/spline", renderer: "webgl" });
+        app = new mod.Application(canvas, { wasmPath: "assets/vendor/spline", renderer: "webgl" });
         return app.load(sceneUrl);
       })
       .then(function () {
@@ -1170,6 +1172,27 @@
         settled = true;
         clearTimeout(timeoutId);
         if (card) card.classList.add("is-loaded");
+        /* The render loop otherwise keeps running continuously even
+           while this card is scrolled well out of view, competing
+           with the rest of the page for GPU/main-thread time during
+           scroll for no visible benefit. Application exposes stop()/
+           play() specifically for this (stop() calls the renderer's
+           setAnimationLoop(null) -- a real halt, not just a visual
+           pause), so pause it outside the viewport and resume it once
+           it's back, the same pattern the hero's canvas network uses. */
+        if ("IntersectionObserver" in window) {
+          var visIO = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!app) return;
+                if (entry.isIntersecting) app.play();
+                else app.stop();
+              });
+            },
+            { rootMargin: "200px" }
+          );
+          visIO.observe(canvas);
+        }
       })
       .catch(function () {
         if (settled) return;
