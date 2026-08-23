@@ -40,5 +40,15 @@ function ldm_enqueue_assets() {
 		$version,
 		true
 	);
+
+	// main.js is shared byte-for-byte with the static site and can't
+	// hardcode either mirror's path to sw.js, so tell it the theme's
+	// actual URL here -- guaranteed by wp_add_inline_script to run
+	// immediately before ldm-main, regardless of where WP places it.
+	wp_add_inline_script(
+		'ldm-main',
+		'window.LDM_SW_URL = ' . wp_json_encode( get_template_directory_uri() . '/sw.js' ) . ';',
+		'before'
+	);
 }
 add_action( 'wp_enqueue_scripts', 'ldm_enqueue_assets' );

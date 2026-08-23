@@ -1109,6 +1109,21 @@
   })();
 
   /* ----------------------------------------------------------------
+     Service worker: caches the self-hosted Spline runtime/scene files
+     (sw.js) so a refresh or return visit serves them from local cache
+     instead of depending on network conditions each time. Only worth
+     installing at all if the Spline feature itself will run.
+
+     window.LDM_SW_URL lets the WordPress mirror point this at the
+     theme's own URL (set inline, before this file runs, since main.js
+     is shared byte-for-byte between both and can't hardcode either
+     path) -- the static site's pages are all flat siblings of sw.js,
+     so the plain relative default already resolves correctly there. */
+  if (!reduceMotion && "serviceWorker" in navigator) {
+    navigator.serviceWorker.register(window.LDM_SW_URL || "sw.js").catch(function () {});
+  }
+
+  /* ----------------------------------------------------------------
      3D scene (Spline) — loaded through @splinetool/runtime's
      code-split "runtime.js" build (dozens of small chunk files
      fetched on demand), not its single-file "standalone" bundle —
