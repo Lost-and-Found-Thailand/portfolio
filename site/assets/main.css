@@ -530,24 +530,6 @@ img { max-width: 100%; display: block; }
 }
 .ldm-spline-card.is-loaded .ldm-spline-loader,
 .ldm-spline-card.is-failed .ldm-spline-loader { opacity: 0; pointer-events: none; }
-/* Temporary — visible load-status readout for debugging on devices
-   without easy devtools access. Remove once the load issue is found. */
-.ldm-spline-status {
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 40%;
-  font-family: var(--font-body);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--color-accent);
-  background: rgba(0, 0, 0, 0.6);
-  padding: 8px 12px;
-  border-radius: var(--radius-md);
-  text-align: center;
-  word-break: break-word;
-}
-.ldm-spline-card.is-loaded .ldm-spline-status { display: none; }
 .loader {
   display: inline-block;
   width: 32px;

@@ -1099,28 +1099,27 @@
 
   /* ----------------------------------------------------------------
      3D scene (Spline) — loaded through @splinetool/runtime's
-     "standalone" build (a single self-contained bundle meant for
-     exactly this non-bundler use case, as opposed to its default
-     build which code-splits into dozens of chunk files that expect
-     to be self-hosted alongside a bundler).
+     code-split "runtime.js" build (dozens of small chunk files
+     fetched on demand), not its single-file "standalone" bundle —
+     that large monolithic file consistently failed to import on at
+     least one real device ("Importing a module script failed",
+     Safari's generic wrapper for any module-load failure), where the
+     code-split build — the same shape every bundler-based Spline site
+     already serves in production — worked.
 
-     Self-hosted, along with its WASM companion files (physics.js/
+     Self-hosted entirely, including its WASM companions (physics.js/
      .wasm, hana-ui.js/.wasm) under assets/vendor/spline/, with
-     `wasmPath` pointing there explicitly. The first attempt loaded
-     the standalone JS from unpkg but left wasmPath unset, so the
-     runtime fell back to fetching those companion files from
-     cdn.spline.design at request time -- which failed for at least
-     one real visitor (WebAssembly.compile() got non-wasm bytes back,
-     "doesn't start with '\0asm'", implying that fetch returned an
-     error page rather than the binary). Self-hosting removes every
-     third-party runtime dependency, not just the main script.
+     `wasmPath` pointing there explicitly so nothing at runtime
+     depends on a third-party CDN.
 
      Skipped entirely under reduced motion (same rule as every other
-     animated effect on this page), lazy-loaded only once the section
-     scrolls near-into-view, and given a hard timeout: if the load
-     hasn't resolved (or failed) by then, the card is marked
-     .is-failed so it never sits there indefinitely mid-spin — it
-     just quietly stays a plain dark card.
+     animated effect on this page). Starts loading well before the
+     section is actually on screen (rootMargin below) since the
+     runtime + scene assets are sizeable and mobile connections need
+     the lead time; given a generous timeout so a slow-but-succeeding
+     load on mobile isn't mistaken for a failure. If it genuinely
+     hasn't resolved by then, the card is marked .is-failed so it
+     never sits there indefinitely mid-spin.
      ---------------------------------------------------------------- */
   if (!reduceMotion) {
     var splineCanvas = document.querySelector("[data-spline-scene]");
@@ -1133,7 +1132,7 @@
             initSplineScene(splineCanvas);
           });
         },
-        { rootMargin: "200px" }
+        { rootMargin: "800px" }
       );
       splineIO.observe(splineCanvas);
     }
@@ -1144,62 +1143,25 @@
     var sceneUrl = canvas.getAttribute("data-spline-scene");
     var settled = false;
 
-    var status = document.createElement("div");
-    status.className = "ldm-spline-status";
-    if (card) card.appendChild(status);
-    var setStatus = function (text) {
-      console.log("SPLINE_DEBUG: " + text);
-      if (status) status.textContent = text;
-    };
-
-    setStatus("init called");
-
     var timeoutId = setTimeout(function () {
       if (settled) return;
       settled = true;
-      setStatus("timed out after 12s");
       if (card) card.classList.add("is-failed");
-    }, 12000);
+    }, 30000);
 
-    var describeError = function (err) {
-      if (!err) return "unknown error";
-      var parts = [];
-      if (err.name) parts.push(err.name);
-      if (err.message) parts.push(err.message);
-      if (!parts.length) parts.push(String(err));
-      return parts.join(": ");
-    };
-
-    setStatus("checking runtime file…");
-    fetch("./vendor/spline/runtime.js", { method: "GET" })
-      .then(function (res) {
-        setStatus(
-          "fetch ok, status=" + res.status +
-          ", type=" + res.headers.get("content-type") +
-          ", len=" + res.headers.get("content-length")
-        );
-        return res.text();
-      })
-      .then(function (text) {
-        setStatus("fetched " + text.length + " chars, importing…");
-        return import("./vendor/spline/runtime.js");
-      })
+    import("./vendor/spline/runtime.js")
       .then(function (mod) {
-        setStatus("runtime imported, creating Application…");
         if (settled) return null;
         var app = new mod.Application(canvas, { wasmPath: "assets/vendor/spline" });
-        setStatus("Application created, loading scene…");
         return app.load(sceneUrl);
       })
       .then(function () {
         if (settled) return;
         settled = true;
         clearTimeout(timeoutId);
-        setStatus("loaded");
         if (card) card.classList.add("is-loaded");
       })
-      .catch(function (err) {
-        setStatus("error: " + describeError(err));
+      .catch(function () {
         if (settled) return;
         settled = true;
         clearTimeout(timeoutId);
