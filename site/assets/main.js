@@ -1179,14 +1179,32 @@
            play() specifically for this (stop() calls the renderer's
            setAnimationLoop(null) -- a real halt, not just a visual
            pause), so pause it outside the viewport and resume it once
-           it's back, the same pattern the hero's canvas network uses. */
+           it's back, the same pattern the hero's canvas network uses.
+
+           Critical: don't stop() before the scene has been shown at
+           least once. The scene loads eagerly on page load, well
+           before the visitor has scrolled down to it -- if the very
+           first IntersectionObserver callback (reporting "not
+           intersecting yet") stopped the render loop immediately,
+           the GPU's one-time shader-compile cost would get deferred
+           until the exact moment it's scrolled into view and play()
+           resumes it, turning an invisible background warm-up into a
+           visible stall on first visit (confirmed: exactly this,
+           gone on refresh once the driver's shader cache is warm).
+           Letting it keep running until first shown preserves that
+           quiet warm-up; only scroll-*away* afterwards pauses it. */
         if ("IntersectionObserver" in window) {
+          var everShown = false;
           var visIO = new IntersectionObserver(
             function (entries) {
               entries.forEach(function (entry) {
                 if (!app) return;
-                if (entry.isIntersecting) app.play();
-                else app.stop();
+                if (entry.isIntersecting) {
+                  everShown = true;
+                  app.play();
+                } else if (everShown) {
+                  app.stop();
+                }
               });
             },
             { rootMargin: "200px" }
