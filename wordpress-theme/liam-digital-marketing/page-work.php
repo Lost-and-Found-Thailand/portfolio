@@ -156,7 +156,7 @@ $ldm_client_groups = array(
             <img src="<?php echo esc_url( $case['img'] ); ?>" alt="<?php echo esc_attr( $case['alt'] ); ?>" loading="lazy" width="1200" height="900">
           </div>
           <div class="ldm-case-body">
-            <div class="ldm-case-title"><?php echo esc_html( $case['title'] ); ?> <span class="arrow">&rarr;</span></div>
+            <div class="ldm-case-title"><span class="title-text"><?php echo esc_html( $case['title'] ); ?></span> <span class="arrow">&rarr;</span></div>
             <div class="ldm-case-industry"><?php echo wp_kses( $case['industry'], array( 'middot' => array() ) ); ?></div>
             <p class="ldm-case-desc"><?php echo esc_html( $case['desc'] ); ?></p>
             <div class="ldm-case-result">+XX% <span class="label"><?php echo esc_html( $case['result'] ); ?></span></div>

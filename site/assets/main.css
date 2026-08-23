@@ -645,6 +645,18 @@ img { max-width: 100%; display: block; }
 .ldm-case:hover .ldm-case-title { transform: translateX(6px); }
 .ldm-case-title .arrow { opacity: 0; transform: translateX(-8px); transition: all var(--dur-fast) var(--ease-premium); }
 .ldm-case:hover .ldm-case-title .arrow { opacity: 1; transform: translateX(0); }
+.ldm-case-title .title-text { position: relative; }
+.ldm-case-title .title-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width var(--dur-fast) var(--ease-premium);
+}
+.ldm-case:hover .ldm-case-title .title-text::after { width: 100%; }
 .ldm-case-industry { color: var(--color-gray); font-size: var(--fs-small); margin: 10px 0 16px; }
 .ldm-case-desc { color: var(--color-off-white); margin-bottom: 20px; max-width: 46ch; }
 .ldm-case-result {
