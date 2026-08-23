@@ -216,7 +216,6 @@ $ldm_img = get_template_directory_uri();
     </div>
     <div class="ldm-spline-card reveal">
       <canvas id="ldm-spline-canvas" data-spline-scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" aria-hidden="true"></canvas>
-      <div class="ldm-spline-loader" aria-hidden="true"><span class="loader"></span></div>
     </div>
   </section>
 
