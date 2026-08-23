@@ -684,6 +684,11 @@ img { max-width: 100%; display: block; }
 /* ---------- Process ---------- */
 .ldm-process { display: grid; gap: var(--gap-lg); }
 @media (min-width: 768px) { .ldm-process { grid-template-columns: repeat(4, 1fr); } }
+/* 5-step variant (case study "Strategy" sections describing a
+   connected, sequential system rather than 4 discrete stages) --
+   same numbered/staggered-reveal component, different column count. */
+@media (min-width: 768px) { .ldm-process.cols-5 { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1100px) { .ldm-process.cols-5 { grid-template-columns: repeat(5, 1fr); } }
 /* Each step's top border lights up in sequence as the group reveals,
    so the four stages read as one flowing process rather than four
    unrelated cards — a direct visual of "Discover -> Build ->
@@ -707,6 +712,7 @@ img { max-width: 100%; display: block; }
 .ldm-process-step:nth-child(2)::before { transition-delay: 220ms; }
 .ldm-process-step:nth-child(3)::before { transition-delay: 440ms; }
 .ldm-process-step:nth-child(4)::before { transition-delay: 660ms; }
+.ldm-process-step:nth-child(5)::before { transition-delay: 880ms; }
 .ldm-process-step .num { position: relative; font-family: var(--font-display); font-weight: 800; font-size: var(--fs-h2); color: var(--color-dark-gray); -webkit-text-stroke: 1px var(--color-gray); }
 .ldm-process-step h4 { margin: 16px 0 8px; }
 .ldm-process-step p { color: var(--color-gray); margin: 0; }

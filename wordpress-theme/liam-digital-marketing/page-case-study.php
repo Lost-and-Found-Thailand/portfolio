@@ -50,26 +50,31 @@ get_header();
       <h2 class="fs-h2">A full-funnel system, not a single campaign.</h2>
       <p class="lede">Five connected workstreams built to attract, qualify and track high-intent enquiries end to end.</p>
     </div>
-    <div class="grid grid-3 reveal">
-      <div class="card">
+    <div class="ldm-process cols-5 reveal">
+      <div class="ldm-process-step">
+        <div class="num">01</div>
         <h4>Meta Ads</h4>
-        <p class="text-gray">Creative and audience testing built around real wedding aesthetics, not stock imagery.</p>
+        <p>Creative and audience testing built around real wedding aesthetics, not stock imagery.</p>
       </div>
-      <div class="card">
+      <div class="ldm-process-step">
+        <div class="num">02</div>
         <h4>Google Ads</h4>
-        <p class="text-gray">Search campaigns capturing high-intent, planning-stage queries from international couples.</p>
+        <p>Search campaigns capturing high-intent, planning-stage queries from international couples.</p>
       </div>
-      <div class="card">
+      <div class="ldm-process-step">
+        <div class="num">03</div>
         <h4>Conversion Tracking</h4>
-        <p class="text-gray">Server-side and pixel-based tracking connecting every enquiry back to its source campaign.</p>
+        <p>Server-side and pixel-based tracking connecting every enquiry back to its source campaign.</p>
       </div>
-      <div class="card">
+      <div class="ldm-process-step">
+        <div class="num">04</div>
         <h4>Audience Testing</h4>
-        <p class="text-gray">Structured testing across interest, lookalike and geographic segments to isolate what qualified leads.</p>
+        <p>Structured testing across interest, lookalike and geographic segments to isolate what qualified leads.</p>
       </div>
-      <div class="card">
+      <div class="ldm-process-step">
+        <div class="num">05</div>
         <h4>Landing Page Optimization</h4>
-        <p class="text-gray">A dedicated enquiry flow designed to filter for budget and intent before the form was ever submitted.</p>
+        <p>A dedicated enquiry flow designed to filter for budget and intent before the form was ever submitted.</p>
       </div>
     </div>
   </section>
