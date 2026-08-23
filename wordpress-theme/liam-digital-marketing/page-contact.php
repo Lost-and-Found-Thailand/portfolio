@@ -77,7 +77,7 @@ $ldm_contact_status = isset( $_GET['ldm_contact'] ) ? sanitize_key( wp_unslash( 
       <div>
         <span class="eyebrow">Direct</span>
         <h3 class="fs-h4" style="margin:16px 0 20px;">Prefer to reach out directly?</h3>
-        <p class="text-gray" style="margin-bottom:32px;max-width:40ch;">I typically reply within one to two business days.</p>
+        <p class="text-gray" style="margin-bottom:32px;max-width:40ch;display:flex;align-items:center;gap:10px;"><span class="status-dot" aria-hidden="true"></span>I typically reply within one to two business days.</p>
         <div class="ldm-contact-links" style="justify-content:flex-start;flex-direction:column;align-items:flex-start;gap:16px;">
           <?php ldm_render_contact_links(); ?>
         </div>

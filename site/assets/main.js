@@ -297,48 +297,59 @@
     });
   }
 
-  /* Scroll progress bar */
-  var progressBar = document.createElement("div");
-  progressBar.className = "ldm-scroll-progress";
-  document.body.appendChild(progressBar);
-  var updateProgress = function () {
-    var h = document.documentElement;
-    var scrollable = h.scrollHeight - h.clientHeight;
-    var pct = scrollable > 0 ? (h.scrollTop / scrollable) * 100 : 0;
-    progressBar.style.width = pct + "%";
-  };
-  updateProgress();
-  window.addEventListener("scroll", updateProgress, { passive: true });
-  window.addEventListener("resize", updateProgress);
+  /* Scroll progress bar — already hidden under reduced motion via CSS
+     (.ldm-scroll-progress is display:none in that media query), but the
+     listener was still running and writing to the DOM every scroll tick
+     for no visible benefit; skip setup entirely, matching how every other
+     decorative-only feature in this file is gated. */
+  if (!reduceMotion) {
+    var progressBar = document.createElement("div");
+    progressBar.className = "ldm-scroll-progress";
+    document.body.appendChild(progressBar);
+    var updateProgress = function () {
+      var h = document.documentElement;
+      var scrollable = h.scrollHeight - h.clientHeight;
+      var pct = scrollable > 0 ? (h.scrollTop / scrollable) * 100 : 0;
+      progressBar.style.width = pct + "%";
+    };
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
+  }
 
   /* Skills page connecting spine — fills in with scroll progress
      through the six numbered disciplines, desktop only (the layout
      collapses to a single column below 900px, where the numbers no
-     longer sit at a fixed horizontal offset the line could track). */
-  var spineFill = document.querySelector(".ldm-service-spine-fill");
-  var spineList = document.querySelector(".ldm-service-detail-list");
-  if (spineFill && spineList) {
-    var spineTicking = false;
-    var updateSpine = function () {
-      spineTicking = false;
-      if (!window.matchMedia("(min-width: 901px)").matches) {
-        spineFill.style.height = "0%";
-        return;
-      }
-      var rect = spineList.getBoundingClientRect();
-      var focus = window.innerHeight * 0.7;
-      var progress = (focus - rect.top) / rect.height;
-      progress = Math.max(0, Math.min(1, progress));
-      spineFill.style.height = progress * 100 + "%";
-    };
-    var onSpineScroll = function () {
-      if (spineTicking) return;
-      spineTicking = true;
-      requestAnimationFrame(updateSpine);
-    };
-    updateSpine();
-    window.addEventListener("scroll", onSpineScroll, { passive: true });
-    window.addEventListener("resize", onSpineScroll);
+     longer sit at a fixed horizontal offset the line could track).
+     Skipped under reduced motion, same reasoning as the progress bar
+     above; the fill's default 0% height is already the right static
+     state, so no CSS change is needed for that case. */
+  if (!reduceMotion) {
+    var spineFill = document.querySelector(".ldm-service-spine-fill");
+    var spineList = document.querySelector(".ldm-service-detail-list");
+    if (spineFill && spineList) {
+      var spineTicking = false;
+      var updateSpine = function () {
+        spineTicking = false;
+        if (!window.matchMedia("(min-width: 901px)").matches) {
+          spineFill.style.height = "0%";
+          return;
+        }
+        var rect = spineList.getBoundingClientRect();
+        var focus = window.innerHeight * 0.7;
+        var progress = (focus - rect.top) / rect.height;
+        progress = Math.max(0, Math.min(1, progress));
+        spineFill.style.height = progress * 100 + "%";
+      };
+      var onSpineScroll = function () {
+        if (spineTicking) return;
+        spineTicking = true;
+        requestAnimationFrame(updateSpine);
+      };
+      updateSpine();
+      window.addEventListener("scroll", onSpineScroll, { passive: true });
+      window.addEventListener("resize", onSpineScroll);
+    }
   }
 
   /* Custom cursor: dot follows exactly, ring lags for a trailing feel */

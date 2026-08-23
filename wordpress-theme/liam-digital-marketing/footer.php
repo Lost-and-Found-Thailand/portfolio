@@ -30,6 +30,7 @@ defined( 'ABSPATH' ) || exit;
     <div class="ldm-footer-bottom">
       <span>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> Liam Digital Marketing. All rights reserved.</span>
       <span><?php esc_html_e( 'Built with strategy, media and data.', 'liam-digital-marketing' ); ?></span>
+      <a href="#" class="ldm-back-to-top" aria-label="<?php esc_attr_e( 'Back to top', 'liam-digital-marketing' ); ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
     </div>
   </div>
 </footer>

@@ -48,7 +48,12 @@ img { max-width: 100%; display: block; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 8px 12px;
+  margin: -8px -12px;
+  border-radius: var(--radius-md);
+  transition: background-color var(--dur-fast) var(--ease-premium);
 }
+.ldm-nav-cta:hover { background: var(--surface-2); }
 .ldm-nav-cta .arrow { transition: transform var(--dur-fast) var(--ease-premium); }
 .ldm-nav-cta:hover .arrow { transform: translateX(4px); }
 
@@ -244,10 +249,15 @@ img { max-width: 100%; display: block; }
 .ldm-hero-photo-glow {
   position: absolute;
   inset: -15%;
-  background: radial-gradient(closest-side, rgba(200, 255, 0, 0.22), rgba(200, 255, 0, 0.06) 55%, transparent 75%);
+  background: radial-gradient(closest-side, var(--color-accent-glow-soft), rgba(200, 255, 0, 0.06) 55%, transparent 75%);
   filter: blur(6px);
   z-index: 0;
   pointer-events: none;
+  animation: ldm-hero-glow-breathe 12s ease-in-out infinite alternate;
+}
+@keyframes ldm-hero-glow-breathe {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
 }
 .ldm-hero-photo img {
   position: relative;
@@ -260,7 +270,7 @@ img { max-width: 100%; display: block; }
      rectangular shadow behind a transparent PNG. */
   filter: grayscale(0.3) contrast(1.06) drop-shadow(0 30px 26px rgba(0, 0, 0, 0.55));
 }
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .ldm-hero-showcase {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -568,7 +578,7 @@ img { max-width: 100%; display: block; }
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
   transition: stroke-dashoffset 1200ms var(--ease-premium);
-  filter: drop-shadow(0 0 6px rgba(200, 255, 0, 0.55));
+  filter: drop-shadow(0 0 6px var(--color-accent-glow-strong));
 }
 .ldm-metric.is-counting .ring-progress { stroke-dashoffset: 0; }
 /* A one-shot ring of light that expands outward the moment counting
@@ -623,7 +633,8 @@ img { max-width: 100%; display: block; }
   aspect-ratio: 4/3;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: var(--color-dark-gray);
+  background: var(--surface-1);
+  box-shadow: var(--shadow-elev-1);
 }
 .ldm-case-media img {
   width: 100%; height: 100%; object-fit: cover;
@@ -686,7 +697,7 @@ img { max-width: 100%; display: block; }
   width: 100%;
   height: 2px;
   background: var(--color-accent);
-  box-shadow: 0 0 8px rgba(200, 255, 0, 0.6);
+  box-shadow: 0 0 8px var(--color-accent-glow-strong);
   transform-origin: left;
   transform: scaleX(0);
   transition: transform 650ms var(--ease-premium);
@@ -706,14 +717,29 @@ img { max-width: 100%; display: block; }
 .ldm-about-stats { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--gap-md); margin-top: var(--gap-lg); }
 .ldm-about-stats .num { font-family: var(--font-display); font-weight: 800; font-size: var(--fs-h3); }
 .ldm-about-stats .label { color: var(--color-gray); font-size: var(--fs-small); }
+/* Compact inline variant — same numbers, lighter footprint, for
+   sitting inside a paragraph-led section rather than owning its own
+   grid row (e.g. the homepage intro). */
+.ldm-about-stats--compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-lg);
+  margin-top: var(--gap-lg);
+  grid-template-columns: none;
+}
+.ldm-about-stats--compact .num { font-size: var(--fs-h4); }
 
 /* ---------- Tech list ---------- */
 .ldm-tech-grid { display: grid; gap: var(--gap-lg); }
 @media (min-width: 768px) { .ldm-tech-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1100px) { .ldm-tech-grid { grid-template-columns: repeat(5, 1fr); } }
 .ldm-tech-cat h4 { margin-bottom: 16px; color: var(--color-gray); font-size: var(--fs-label); text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-body); font-weight: 600; }
-.ldm-tech-cat ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
-.ldm-tech-cat li { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-body-lg); border-bottom: 1px solid var(--color-border); padding-bottom: 10px; }
+.ldm-tech-pills { display: flex; flex-wrap: wrap; gap: var(--gap-xs); }
+.ldm-tech-pills .tag {
+  font-family: var(--font-display);
+  transition: border-color var(--dur-fast) var(--ease-premium), color var(--dur-fast) var(--ease-premium);
+}
+.ldm-tech-pills .tag:hover { border-color: var(--color-accent); color: var(--color-white); }
 
 /* ---------- Selected clients ---------- */
 .ldm-client-group {
@@ -736,7 +762,7 @@ img { max-width: 100%; display: block; }
   gap: var(--gap-md);
   grid-template-columns: repeat(2, 1fr);
 }
-@media (min-width: 700px) { .ldm-client-photo-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 640px) { .ldm-client-photo-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1100px) { .ldm-client-photo-grid { grid-template-columns: repeat(4, 1fr); } }
 .ldm-client-card .card-image img { transition: transform var(--dur-slow) var(--ease-premium); }
 .ldm-client-card:hover .card-image img { transform: scale(1.05); }
@@ -785,7 +811,7 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Footer ---------- */
 .ldm-footer { border-top: 1px solid var(--color-border); padding: 64px 0 32px; }
-.ldm-footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 48px; }
+.ldm-footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--gap-xl); margin-bottom: 48px; }
 .ldm-footer-brand { max-width: 30ch; }
 .ldm-footer-tag { color: var(--color-gray); margin-top: 12px; }
 .ldm-footer-social { display: flex; gap: 10px; margin-top: 20px; }
@@ -816,7 +842,22 @@ img { max-width: 100%; display: block; }
 .ldm-footer-col a:hover { color: var(--color-white); }
 .ldm-footer-col a .ldm-contact-icon { width: 15px; height: 15px; flex-shrink: 0; opacity: 0.85; color: var(--color-gray); }
 .ldm-footer-col a:hover .ldm-contact-icon { opacity: 1; color: var(--color-accent); }
-.ldm-footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; border-top: 1px solid var(--color-border); padding-top: 24px; color: var(--color-gray); font-size: var(--fs-label); }
+.ldm-footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border-top: 1px solid var(--color-border); padding-top: 24px; color: var(--color-gray); font-size: var(--fs-label); }
+.ldm-back-to-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-white);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: border-color var(--dur-fast) var(--ease-premium), transform var(--dur-fast) var(--ease-premium);
+}
+.ldm-back-to-top:hover { border-color: var(--color-white); transform: translateY(-2px); }
+.ldm-back-to-top svg { width: 16px; height: 16px; }
 
 @media (max-width: 640px) {
   .ldm-contact-links { flex-direction: column; align-items: center; gap: 16px; }
@@ -870,12 +911,22 @@ img { max-width: 100%; display: block; }
    tracks scroll progress (added by JS, desktop only — the layout
    collapses to a single column on mobile where a fixed-offset
    vertical line would no longer line up with the numbers). */
-.ldm-service-detail-list { display: flex; flex-direction: column; position: relative; }
+.ldm-service-detail-list {
+  /* Single source of truth for the spine's horizontal position —
+     tuned to sit ~half-way across the numeral column below, so it
+     reads as centered on the number's optical weight. If
+     .ldm-service-detail's 220px first column ever changes, update
+     this to match (roughly half the new column width). */
+  --spine-x: 109px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 .ldm-service-spine-track,
 .ldm-service-spine-fill {
   position: absolute;
   top: 0;
-  left: 109px;
+  left: var(--spine-x);
   width: 2px;
   border-radius: 2px;
 }
@@ -883,7 +934,7 @@ img { max-width: 100%; display: block; }
 .ldm-service-spine-fill {
   height: 0%;
   background: var(--color-accent);
-  box-shadow: 0 0 10px rgba(200, 255, 0, 0.55);
+  box-shadow: 0 0 10px var(--color-accent-glow-strong);
 }
 .ldm-service-detail {
   display: grid;
@@ -898,13 +949,13 @@ img { max-width: 100%; display: block; }
   content: "";
   position: absolute;
   top: 50%;
-  left: 116px;
+  left: calc(var(--spine-x) + 7px);
   width: 9px;
   height: 9px;
   margin-top: -4.5px;
   border-radius: 50%;
   background: var(--color-accent);
-  box-shadow: 0 0 10px 3px rgba(200, 255, 0, 0.6);
+  box-shadow: 0 0 10px 3px var(--color-accent-glow-strong);
   opacity: 0;
   transform: scale(0.4);
   transition: opacity 400ms var(--ease-premium), transform 400ms var(--ease-premium);
@@ -922,7 +973,15 @@ img { max-width: 100%; display: block; }
   -webkit-text-stroke: 1px var(--color-gray);
 }
 .ldm-service-detail h3 { margin: 8px 0 0; font-size: var(--fs-h3); }
-.ldm-service-detail-desc { color: var(--color-off-white); max-width: 60ch; margin: 16px 0 20px; }
+.ldm-service-detail-desc {
+  color: var(--color-off-white);
+  max-width: 60ch;
+  margin: 16px 0 20px;
+  transform: translateX(-8px);
+  opacity: 0;
+  transition: transform 500ms var(--ease-premium) 120ms, opacity 500ms var(--ease-premium) 120ms;
+}
+.ldm-service-detail.is-visible .ldm-service-detail-desc { transform: translateX(0); opacity: 1; }
 .ldm-service-detail-list-items {
   list-style: none;
   margin: 0;
@@ -931,7 +990,7 @@ img { max-width: 100%; display: block; }
   gap: 10px 24px;
   grid-template-columns: repeat(2, 1fr);
 }
-@media (max-width: 600px) { .ldm-service-detail-list-items { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .ldm-service-detail-list-items { grid-template-columns: 1fr; } }
 .ldm-service-detail-list-items li {
   color: var(--color-gray);
   font-size: var(--fs-small);
@@ -1000,7 +1059,7 @@ img { max-width: 100%; display: block; }
   z-index: 100;
   padding: 22px 0;
   background: rgba(2, 2, 1, 0);
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.04);
   transition: background-color 500ms var(--ease-premium),
               border-color 500ms var(--ease-premium),
               backdrop-filter 500ms var(--ease-premium);
@@ -1195,7 +1254,7 @@ body.ldm.has-custom-cursor select {
   -webkit-text-stroke: 0;
   clip-path: inset(0 100% 0 0);
   transition: clip-path 1100ms var(--ease-premium);
-  text-shadow: 0 0 18px rgba(200, 255, 0, 0.55), 0 0 40px rgba(200, 255, 0, 0.22);
+  text-shadow: 0 0 18px var(--color-accent-glow-strong), 0 0 40px var(--color-accent-glow-soft);
 }
 .reveal.is-visible .ldm-energy-num-fill { clip-path: inset(0 0% 0 0); }
 
@@ -1309,7 +1368,7 @@ body.ldm.has-custom-cursor select {
 .ldm-story-rail-fill {
   height: 0%;
   background: var(--color-accent);
-  box-shadow: 0 0 8px rgba(200, 255, 0, 0.6);
+  box-shadow: 0 0 8px var(--color-accent-glow-strong);
   transition: height 500ms var(--ease-premium);
 }
 .ldm-story-node {

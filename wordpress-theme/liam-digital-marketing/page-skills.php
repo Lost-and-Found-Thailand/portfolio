@@ -144,23 +144,23 @@ get_header();
     <div class="ldm-tech-grid reveal">
       <div class="ldm-tech-cat">
         <h4>Advertising</h4>
-        <ul><li>Meta Ads</li><li>Google Ads</li><li>Performance Max</li><li>Google Search</li></ul>
+        <div class="ldm-tech-pills"><span class="tag">Meta Ads</span><span class="tag">Google Ads</span><span class="tag">Performance Max</span><span class="tag">Google Search</span></div>
       </div>
       <div class="ldm-tech-cat">
         <h4>Analytics</h4>
-        <ul><li>GA4</li><li>Looker Studio</li><li>Google Analytics</li></ul>
+        <div class="ldm-tech-pills"><span class="tag">GA4</span><span class="tag">Looker Studio</span><span class="tag">Google Analytics</span></div>
       </div>
       <div class="ldm-tech-cat">
         <h4>Tracking</h4>
-        <ul><li>Google Tag Manager</li><li>Meta Pixel</li><li>Conversion Tracking</li><li>Server-Side Tracking</li></ul>
+        <div class="ldm-tech-pills"><span class="tag">Google Tag Manager</span><span class="tag">Meta Pixel</span><span class="tag">Conversion Tracking</span><span class="tag">Server-Side Tracking</span></div>
       </div>
       <div class="ldm-tech-cat">
         <h4>CRM &amp; Automation</h4>
-        <ul><li>HubSpot</li><li>Marketing Automation</li><li>Lead Management</li></ul>
+        <div class="ldm-tech-pills"><span class="tag">HubSpot</span><span class="tag">Marketing Automation</span><span class="tag">Lead Management</span></div>
       </div>
       <div class="ldm-tech-cat">
         <h4>Web</h4>
-        <ul><li>WordPress</li><li>Landing Pages</li><li>Forms</li><li>Conversion Optimization</li></ul>
+        <div class="ldm-tech-pills"><span class="tag">WordPress</span><span class="tag">Landing Pages</span><span class="tag">Forms</span><span class="tag">Conversion Optimization</span></div>
       </div>
     </div>
   </section>
