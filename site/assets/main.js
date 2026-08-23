@@ -1124,28 +1124,19 @@
      depends on a third-party CDN.
 
      Skipped entirely under reduced motion (same rule as every other
-     animated effect on this page). Starts loading well before the
-     section is actually on screen (rootMargin below) since the
-     runtime + scene assets are sizeable and mobile connections need
-     the lead time; given a generous timeout so a slow-but-succeeding
-     load on mobile isn't mistaken for a failure. If it genuinely
-     hasn't resolved by then, the card is marked .is-failed so it
-     never sits there indefinitely mid-spin.
+     animated effect on this page). Starts loading immediately on
+     page load — not gated on scroll proximity — since the runtime
+     and scene assets are sizeable and the goal is for the scene to
+     already be ready by the time a visitor scrolls down to it,
+     rather than starting the fetch only once they're near it. Given
+     a generous timeout so a slow-but-succeeding load isn't mistaken
+     for a failure; if it genuinely hasn't resolved by then, the card
+     is marked .is-failed so it never sits there indefinitely mid-spin.
      ---------------------------------------------------------------- */
   if (!reduceMotion) {
     var splineCanvas = document.querySelector("[data-spline-scene]");
-    if (splineCanvas && "IntersectionObserver" in window) {
-      var splineIO = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-            splineIO.disconnect();
-            initSplineScene(splineCanvas);
-          });
-        },
-        { rootMargin: "800px" }
-      );
-      splineIO.observe(splineCanvas);
+    if (splineCanvas) {
+      initSplineScene(splineCanvas);
     }
   }
 
