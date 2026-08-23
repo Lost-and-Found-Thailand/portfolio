@@ -508,16 +508,21 @@ img { max-width: 100%; display: block; }
    Loaded via @splinetool/runtime's vanilla build (see initSplineScene in
    main.js) rather than the React wrapper -- this site has no React/build
    step, so the framework-agnostic Application API is the natural fit.
-   The card has an explicit dark background so it never shows as a blank
-   white box while the scene loads, fails to load, or under reduced
-   motion (where it's skipped entirely). */
+   The scene itself is a real, sizeable asset (well over a megabyte even
+   compressed) with no way to shrink it further from the loading code, so
+   the card shows an actual still frame of the loaded scene immediately
+   -- not a flat color, not a spinner -- so there's something real to
+   look at from the first instant rather than empty space while it
+   loads. The live canvas fades in on top of it via its own opacity
+   transition once ready; if loading ever fails, the still frame simply
+   stays put instead of leaving a blank box. */
 .ldm-spline-card {
   position: relative;
   margin-top: 40px;
   height: clamp(320px, 48vw, 520px);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background: var(--color-black);
+  background: var(--color-black) url("img/spline-scene-poster.jpg") center / cover no-repeat;
   overflow: hidden;
 }
 .ldm-spline-card canvas {
@@ -530,6 +535,12 @@ img { max-width: 100%; display: block; }
   transition: opacity 500ms var(--ease-premium);
 }
 .ldm-spline-card.is-loaded canvas { opacity: 1; }
+/* The runtime's WebGL context is alpha:true, so once the real scene
+   is confirmed loaded the still-frame poster must be dropped
+   entirely -- otherwise it keeps showing through the canvas's
+   transparent background indefinitely, doubling up with the live
+   render instead of just bridging the brief moment before it. */
+.ldm-spline-card.is-loaded { background-image: none; }
 
 /* ---------- Metrics strip: animated radial progress rings ----------
    Each ring fills in lockstep with its own number counting up (same
