@@ -1156,7 +1156,13 @@
     import("./vendor/spline/runtime.js")
       .then(function (mod) {
         if (settled) return null;
-        var app = new mod.Application(canvas, { wasmPath: "assets/vendor/spline" });
+        /* Force the classic WebGL renderer explicitly. Left unset, the
+           runtime auto-detects WebGPU support and, on a browser that
+           has it, fetches an extra ~426KB WebGPU renderer chunk plus
+           GPU-adapter negotiation on top of the WebGL renderer it
+           still needs anyway -- pure added weight for a simple scene
+           that doesn't use anything WebGPU-only. */
+        var app = new mod.Application(canvas, { wasmPath: "assets/vendor/spline", renderer: "webgl" });
         return app.load(sceneUrl);
       })
       .then(function () {
