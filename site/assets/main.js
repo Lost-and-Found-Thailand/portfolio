@@ -1143,41 +1143,28 @@
     var sceneUrl = canvas.getAttribute("data-spline-scene");
     var settled = false;
 
-    /* Temporary — visible readout of load progress so a phone screenshot
-       (no devtools access) shows exactly where a mobile load stalls.
-       Remove once diagnosed. */
-    var status = document.createElement("div");
-    status.className = "ldm-spline-status";
-    status.textContent = "loading runtime…";
-    if (card) card.appendChild(status);
-
     var timeoutId = setTimeout(function () {
       if (settled) return;
       settled = true;
-      status.textContent = "timed out after 30s";
       if (card) card.classList.add("is-failed");
     }, 30000);
 
     import("./vendor/spline/runtime.js")
       .then(function (mod) {
         if (settled) return null;
-        status.textContent = "runtime loaded, creating app…";
         var app = new mod.Application(canvas, { wasmPath: "assets/vendor/spline" });
-        status.textContent = "loading scene…";
         return app.load(sceneUrl);
       })
       .then(function () {
         if (settled) return;
         settled = true;
         clearTimeout(timeoutId);
-        status.textContent = "loaded";
         if (card) card.classList.add("is-loaded");
       })
-      .catch(function (err) {
+      .catch(function () {
         if (settled) return;
         settled = true;
         clearTimeout(timeoutId);
-        status.textContent = "error: " + (err && err.message ? err.message : String(err));
         if (card) card.classList.add("is-failed");
       });
   }
