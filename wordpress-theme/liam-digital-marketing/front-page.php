@@ -212,7 +212,7 @@ $ldm_img = get_template_directory_uri();
     <div class="reveal">
       <span class="eyebrow">The AI Shift</span>
       <h2 class="fs-h2" style="margin:16px 0 24px;">Marketing is getting smarter. The tools behind it should too.</h2>
-      <p class="lede" style="max-width:none;">A small interactive nod to where the industry's headed — drag, hover, explore.</p>
+      <p class="lede" style="max-width:none;">A small glimpse of what that shift looks like in motion.</p>
     </div>
     <div class="ldm-spline-card reveal">
       <canvas id="ldm-spline-canvas" data-spline-scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" aria-hidden="true"></canvas>
