@@ -33,8 +33,8 @@ $ldm_og_image         = get_template_directory_uri() . '/assets/brand-kit/logo/l
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() . '/assets/brand-kit/logo/favicon.svg' ); ?>" type="image/svg+xml">
 <?php if ( is_front_page() ) : ?>
-<link rel="modulepreload" href="<?php echo esc_url( get_template_directory_uri() . '/assets/vendor/spline/runtime.js' ); ?>" fetchpriority="low">
-<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/assets/vendor/spline/scene.splinecode' ); ?>" as="fetch" crossorigin fetchpriority="low">
+<link rel="modulepreload" href="<?php echo esc_url( get_template_directory_uri() . '/assets/vendor/spline/runtime.js' ); ?>">
+<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/assets/vendor/spline/scene.splinecode' ); ?>" as="fetch" crossorigin>
 <?php endif; ?>
 <?php if ( is_front_page() ) : ?>
 <script type="application/ld+json">

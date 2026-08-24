@@ -1160,78 +1160,102 @@
   function initSplineScene(canvas) {
     var card = canvas.closest(".ldm-spline-card");
     var sceneUrl = canvas.getAttribute("data-spline-scene");
-    var settled = false;
 
-    var timeoutId = setTimeout(function () {
-      if (settled) return;
-      settled = true;
-      if (card) card.classList.add("is-failed");
-    }, 30000);
+    /* The card shows a real still frame of the scene the whole time
+       it's loading (see .ldm-spline-card's background-image in
+       main.css) -- but that frame keeps showing indefinitely if the
+       load ultimately fails, since only .is-loaded clears it. A
+       transient network blip on a real mobile connection shouldn't
+       permanently freeze the section on that still frame looking
+       like it's supposed to be live and isn't responding, so retry
+       once from scratch (a fresh Application/fetch, not reusing
+       anything from the failed attempt) before actually giving up. */
+    attempt(2);
 
-    var app;
+    function attempt(attemptsLeft) {
+      var settled = false;
+      var app;
 
-    import("./vendor/spline/runtime.js")
-      .then(function (mod) {
-        if (settled) return null;
-        /* Force the classic WebGL renderer explicitly. Left unset, the
-           runtime auto-detects WebGPU support and, on a browser that
-           has it, fetches an extra ~426KB WebGPU renderer chunk plus
-           GPU-adapter negotiation on top of the WebGL renderer it
-           still needs anyway -- pure added weight for a simple scene
-           that doesn't use anything WebGPU-only. */
-        app = new mod.Application(canvas, { wasmPath: "assets/vendor/spline", renderer: "webgl" });
-        return app.load(sceneUrl);
-      })
-      .then(function () {
+      var timeoutId = setTimeout(function () {
         if (settled) return;
         settled = true;
-        clearTimeout(timeoutId);
-        if (card) card.classList.add("is-loaded");
-        /* The render loop otherwise keeps running continuously even
-           while this card is scrolled well out of view, competing
-           with the rest of the page for GPU/main-thread time during
-           scroll for no visible benefit. Application exposes stop()/
-           play() specifically for this (stop() calls the renderer's
-           setAnimationLoop(null) -- a real halt, not just a visual
-           pause), so pause it outside the viewport and resume it once
-           it's back, the same pattern the hero's canvas network uses.
+        onAttemptFailed();
+      }, 30000);
 
-           Critical: don't stop() before the scene has been shown at
-           least once. The scene loads eagerly on page load, well
-           before the visitor has scrolled down to it -- if the very
-           first IntersectionObserver callback (reporting "not
-           intersecting yet") stopped the render loop immediately,
-           the GPU's one-time shader-compile cost would get deferred
-           until the exact moment it's scrolled into view and play()
-           resumes it, turning an invisible background warm-up into a
-           visible stall on first visit (confirmed: exactly this,
-           gone on refresh once the driver's shader cache is warm).
-           Letting it keep running until first shown preserves that
-           quiet warm-up; only scroll-*away* afterwards pauses it. */
-        if ("IntersectionObserver" in window) {
-          var everShown = false;
-          var visIO = new IntersectionObserver(
-            function (entries) {
-              entries.forEach(function (entry) {
-                if (!app) return;
-                if (entry.isIntersecting) {
-                  everShown = true;
-                  app.play();
-                } else if (everShown) {
-                  app.stop();
-                }
-              });
-            },
-            { rootMargin: "200px" }
-          );
-          visIO.observe(canvas);
+      import("./vendor/spline/runtime.js")
+        .then(function (mod) {
+          if (settled) return null;
+          /* Force the classic WebGL renderer explicitly. Left unset,
+             the runtime auto-detects WebGPU support and, on a browser
+             that has it, fetches an extra ~426KB WebGPU renderer
+             chunk plus GPU-adapter negotiation on top of the WebGL
+             renderer it still needs anyway -- pure added weight for a
+             simple scene that doesn't use anything WebGPU-only. */
+          app = new mod.Application(canvas, { wasmPath: "assets/vendor/spline", renderer: "webgl" });
+          return app.load(sceneUrl);
+        })
+        .then(function () {
+          if (settled) return;
+          settled = true;
+          clearTimeout(timeoutId);
+          if (card) card.classList.add("is-loaded");
+          setupVisibilityPause(app);
+        })
+        .catch(function () {
+          if (settled) return;
+          settled = true;
+          clearTimeout(timeoutId);
+          onAttemptFailed();
+        });
+
+      function onAttemptFailed() {
+        if (attemptsLeft > 1) {
+          attempt(attemptsLeft - 1);
+        } else if (card) {
+          card.classList.add("is-failed");
         }
-      })
-      .catch(function () {
-        if (settled) return;
-        settled = true;
-        clearTimeout(timeoutId);
-        if (card) card.classList.add("is-failed");
-      });
+      }
+    }
+
+    /* The render loop otherwise keeps running continuously even while
+       this card is scrolled well out of view, competing with the
+       rest of the page for GPU/main-thread time during scroll for no
+       visible benefit. Application exposes stop()/play() specifically
+       for this (stop() calls the renderer's setAnimationLoop(null) --
+       a real halt, not just a visual pause), so pause it outside the
+       viewport and resume it once it's back, the same pattern the
+       hero's canvas network uses.
+
+       Critical: don't stop() before the scene has been shown at
+       least once. The scene loads eagerly on page load, well before
+       the visitor has scrolled down to it -- if the very first
+       IntersectionObserver callback (reporting "not intersecting
+       yet") stopped the render loop immediately, the GPU's one-time
+       shader-compile cost would get deferred until the exact moment
+       it's scrolled into view and play() resumes it, turning an
+       invisible background warm-up into a visible stall on first
+       visit (confirmed: exactly this, gone on refresh once the
+       driver's shader cache is warm). Letting it keep running until
+       first shown preserves that quiet warm-up; only scroll-*away*
+       afterwards pauses it. */
+    function setupVisibilityPause(app) {
+      if (!("IntersectionObserver" in window)) return;
+      var everShown = false;
+      var visIO = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!app) return;
+            if (entry.isIntersecting) {
+              everShown = true;
+              app.play();
+            } else if (everShown) {
+              app.stop();
+            }
+          });
+        },
+        { rootMargin: "200px" }
+      );
+      visIO.observe(canvas);
+    }
   }
 })();
