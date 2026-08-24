@@ -74,7 +74,7 @@ $ldm_flagship_cases = array(
 
 $ldm_client_groups = array(
 	'Hospitality & Nightlife' => array(
-		array( 'name' => 'Noah Yacht Club', 'type' => 'Yacht Club', 'img' => get_template_directory_uri() . '/assets/img/clients/noah-yacht-thumb.jpg', 'alt' => 'Noah Yacht Club client work' ),
+		array( 'name' => 'Noah Yacht Club', 'type' => 'Yacht Club', 'img' => get_template_directory_uri() . '/assets/img/clients/noah-yacht-thumb.jpg', 'alt' => 'Noah Yacht Club client work', 'fit' => 'contain' ),
 		array( 'name' => 'Tabu Bali', 'type' => 'Restaurant & Supperclub', 'img' => 'https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=500&auto=format&fit=crop', 'alt' => 'Tabu Bali client work' ),
 		array( 'name' => 'Carpe Diem', 'type' => 'Beach Restaurant, Beach Club, Pool Party', 'img' => 'https://images.unsplash.com/photo-1436076863939-06870fe779c2?q=80&w=500&auto=format&fit=crop', 'alt' => 'Carpe Diem client work' ),
 		array( 'name' => 'The Beach by Ours', 'type' => 'Beach Restaurant, Beach Club', 'img' => 'https://images.unsplash.com/photo-1508614999368-9260051292e5?q=80&w=500&auto=format&fit=crop', 'alt' => 'The Beach by Ours client work' ),

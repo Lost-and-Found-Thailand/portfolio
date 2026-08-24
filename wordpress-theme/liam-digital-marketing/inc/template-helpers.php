@@ -66,10 +66,16 @@ function ldm_render_client_groups( $groups ) {
 		<div class="ldm-client-group reveal">
 			<h4><?php echo esc_html( $title ); ?></h4>
 			<div class="ldm-client-photo-grid">
-				<?php foreach ( $clients as $client ) : ?>
+				<?php foreach ( $clients as $client ) :
+					$fit = empty( $client['fit'] ) ? 'cover' : $client['fit'];
+					$img_style = 'width:100%;height:100%;object-fit:' . esc_attr( $fit ) . ';';
+					if ( 'contain' === $fit ) {
+						$img_style .= 'background:var(--surface-1);';
+					}
+				?>
 					<div class="ldm-client-card reveal">
 						<div class="card-image" style="aspect-ratio:4/3;">
-							<img src="<?php echo esc_url( $client['img'] ); ?>" alt="<?php echo esc_attr( $client['alt'] ); ?>" loading="lazy" width="500" height="375" style="width:100%;height:100%;object-fit:cover;">
+							<img src="<?php echo esc_url( $client['img'] ); ?>" alt="<?php echo esc_attr( $client['alt'] ); ?>" loading="lazy" width="500" height="375" style="<?php echo esc_attr( $img_style ); ?>">
 						</div>
 						<div class="name"><?php echo esc_html( $client['name'] ); ?></div>
 						<?php if ( ! empty( $client['type'] ) ) : ?>

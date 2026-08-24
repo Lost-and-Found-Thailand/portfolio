@@ -227,7 +227,7 @@ $ldm_img = get_template_directory_uri();
       <a href="<?php echo esc_url( home_url( '/case-study/' ) ); ?>" class="ldm-case reveal">
         <div class="ldm-case-media">
           <span class="badge">Yacht Club</span>
-          <img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/noah-yacht-case.jpg' ); ?>" alt="Noah Yacht Club performance marketing case study" loading="lazy" width="1200" height="900">
+          <img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/noah-yacht-case.jpg' ); ?>" alt="Noah Yacht Club performance marketing case study" loading="lazy" width="1200" height="675" style="object-fit:contain;">
         </div>
         <div class="ldm-case-body">
           <div class="ldm-case-title"><span class="title-text">Noah Yacht Club</span> <span class="arrow">&rarr;</span></div>
