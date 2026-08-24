@@ -762,7 +762,7 @@
      cursor enters a project's media — a one-shot pulse, not a loop —
      contained by the media element's own overflow:hidden + radius.
      ---------------------------------------------------------------- */
-  if (!reduceMotion) {
+  if (pointerFine && !reduceMotion) {
     document.querySelectorAll(".ldm-case-media").forEach(function (host) {
       host.addEventListener("pointerenter", function (e) {
         var r = host.getBoundingClientRect();
