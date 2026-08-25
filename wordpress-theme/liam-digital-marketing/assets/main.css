@@ -624,6 +624,25 @@ img { max-width: 100%; display: block; }
   background: var(--surface-1);
   box-shadow: var(--shadow-elev-1);
 }
+/* Spotlight — a soft radial highlight that follows the cursor over an
+   image, adapted from 21st.dev's "Spotlight Card" (@easemize) and
+   recolored to the existing accent-glow tokens already used for
+   buttons and the results rings, rather than introducing a new color.
+   --spot-x/--spot-y are set by main.js on pointermove; CSS :hover
+   alone still shows a centered glow with no JS, so nothing breaks if
+   scripting or a fine pointer isn't available. */
+.card-image, .ldm-case-media { position: relative; }
+.card-image::before, .ldm-case-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(220px circle at var(--spot-x, 50%) var(--spot-y, 50%), var(--color-accent-glow-soft), transparent 70%);
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease-premium);
+  pointer-events: none;
+}
+.card-image:hover::before, .ldm-case-media:hover::before { opacity: 1; }
 .ldm-case-media img {
   width: 100%; height: 100%; object-fit: cover;
   transition: transform var(--dur-slow) var(--ease-premium);

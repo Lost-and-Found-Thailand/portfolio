@@ -779,6 +779,26 @@
   }
 
   /* ----------------------------------------------------------------
+     Spotlight — a soft radial highlight that follows the cursor over
+     an image card, adapted from 21st.dev's "Spotlight Card"
+     (@easemize). Delegated to one document-level listener rather than
+     one per card, since the client photo grid alone has 53 of them.
+     ---------------------------------------------------------------- */
+  if (pointerFine && !reduceMotion) {
+    document.addEventListener(
+      "pointermove",
+      function (e) {
+        var host = e.target.closest(".card-image, .ldm-case-media");
+        if (!host) return;
+        var r = host.getBoundingClientRect();
+        host.style.setProperty("--spot-x", (e.clientX - r.left) + "px");
+        host.style.setProperty("--spot-y", (e.clientY - r.top) + "px");
+      },
+      { passive: true }
+    );
+  }
+
+  /* ----------------------------------------------------------------
      Story rail — a persistent chapter map for the homepage. Chapters
      are evenly spaced by index rather than by actual scroll-percent
      of each section (which would need recalculating on every resize
