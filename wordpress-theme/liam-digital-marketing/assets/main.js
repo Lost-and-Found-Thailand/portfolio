@@ -1258,4 +1258,27 @@
       visIO.observe(canvas);
     }
   }
+
+  /* Neon Flow — lazy-loaded only once the section nears the viewport
+     (the underlying bundle is ~750KB), and skipped entirely under
+     reduced motion since it's a continuous cursor-driven animation. */
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    var neonFlowHost = document.querySelector("[data-neon-flow]");
+    if (neonFlowHost) {
+      var neonFlowIO = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              neonFlowIO.disconnect();
+              import("./neon-flow.js")
+                .then(function (mod) { mod.initNeonFlow(neonFlowHost); })
+                .catch(function () {});
+            }
+          });
+        },
+        { rootMargin: "400px" }
+      );
+      neonFlowIO.observe(neonFlowHost);
+    }
+  }
 })();
