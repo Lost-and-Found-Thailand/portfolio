@@ -16,7 +16,7 @@ get_header();
   <!-- PAGE HEADER -->
   <section class="ldm-page-header container">
     <span class="eyebrow">About</span>
-    <h1 class="fs-h1">I build marketing systems, not just campaigns.</h1>
+    <h1 class="fs-h1">Campaigns are just the start. I build marketing systems.</h1>
     <p class="lede">I'm Liam, a Digital Marketing Manager working at the intersection of performance marketing, growth and marketing technology. Over 6+ years I've managed $10M+ in ad spend and helped scale 100+ brands — turning ad spend into measurable outcomes, not impressions.</p>
   </section>
 

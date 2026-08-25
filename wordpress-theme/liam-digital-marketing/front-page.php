@@ -207,8 +207,8 @@ $ldm_img = get_template_directory_uri();
   <section class="ldm-section container" id="scene">
     <div class="reveal">
       <span class="eyebrow">The AI Shift</span>
-      <h2 class="fs-h2" style="margin:16px 0 24px;">The industry is getting smarter. So is everything built for it.</h2>
-      <p class="lede" style="max-width:none;">A small, moving glimpse of that shift.</p>
+      <h2 class="fs-h2" style="margin:16px 0 24px;">Marketing is getting smarter. Your growth system should too.</h2>
+      <p class="lede" style="max-width:none;">The future of marketing is more connected, more intelligent, and always moving.</p>
     </div>
     <div class="ldm-spline-card reveal">
       <canvas id="ldm-spline-canvas" data-spline-scene="<?php echo esc_url( get_template_directory_uri() . '/assets/vendor/spline/scene.splinecode' ); ?>" aria-hidden="true"></canvas>
