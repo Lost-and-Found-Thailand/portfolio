@@ -1258,4 +1258,27 @@
       visIO.observe(canvas);
     }
   }
+
+  /* Contact CTA ripple — lazy-loaded only once the closing CTA nears
+     the viewport, so it costs nothing on pages/visits that never
+     scroll that far. */
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    var ctaSection = document.querySelector(".ldm-contact");
+    if (ctaSection) {
+      var ctaIO = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              ctaIO.disconnect();
+              import("./shader-ripple.js")
+                .then(function (mod) { mod.initShaderRipple(ctaSection); })
+                .catch(function () {});
+            }
+          });
+        },
+        { rootMargin: "400px" }
+      );
+      ctaIO.observe(ctaSection);
+    }
+  }
 })();
