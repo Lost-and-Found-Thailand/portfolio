@@ -83,8 +83,10 @@
     <div class="grid grid-2 reveal" style="align-items:start;">
 
       <div class="card">
-        <!-- Static prototype form: action="#" is a placeholder. In production, wire this to the
-             WordPress/Elementor form widget, or a service such as Formspree or HubSpot Forms. -->
+        <!-- No server to POST to on a static site — main.js intercepts submit and opens a
+             mailto: link instead. action="#" is just a no-JS fallback (reloads the page rather
+             than doing nothing). Swap to the WordPress/Elementor form widget or a service like
+             Formspree/HubSpot Forms if/when a real backend is wired up. -->
         <form class="ldm-contact-form" action="#" method="post">
           <div class="ldm-form-row">
             <label for="name">Name</label>

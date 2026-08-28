@@ -26,21 +26,16 @@ get_header();
   </section>
 
   <!-- BACKGROUND -->
-  <section class="ldm-section container">
-    <div class="ldm-about reveal">
-      <div class="card-image" style="aspect-ratio:4/5;">
-        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1200&auto=format&fit=crop" alt="Workspace setup used for campaign strategy and analytics work" loading="lazy" width="1200" height="1500" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div>
-        <span class="eyebrow">Background</span>
-        <h2 class="fs-h2" style="margin:16px 0 24px;">From hospitality floors to performance dashboards.</h2>
-        <p style="color:var(--color-off-white);margin-bottom:20px;">Over six-plus years, I've managed and optimized multi-million-dollar advertising budgets — more than $10M in ad spend to date — across 100+ brands spanning hospitality, e-commerce, professional services and beyond. That range is deliberate: it's taught me that a performance system built for one industry rarely survives contact with another, so I build for the fundamentals — audience, offer, tracking — rather than for a template.</p>
-        <p style="color:var(--color-off-white);margin-bottom:20px;">My work spans the full paid and organic mix — Meta, Google, TikTok and LinkedIn Ads, alongside SEO, SEM, social and email marketing — plus the measurement layer underneath it, from GA4 and Google Tag Manager to server-side tracking, attribution modeling and Looker Studio reporting. I'm as comfortable inside an ad account as I am inside a GTM container or a data visualization dashboard, which is the point. Paid media without tracking is a black box. Tracking without strategy is just data.</p>
-        <p style="color:var(--color-off-white);">On the conversion side, I map the full customer journey and rebuild landing pages, forms and funnels around how people actually decide — testing changes rather than assuming them. And because none of this works in isolation, I spend real time in the martech layer: CRM integrations, marketing automation, and the WordPress/Elementor stack most of my clients' sites run on.</p>
-        <div class="ldm-about-stats">
-          <div><div class="num"><span data-counter="6" data-suffix="+">0+</span></div><div class="label">Years in performance marketing</div></div>
-          <div><div class="num"><span data-counter="100" data-suffix="+">0+</span></div><div class="label">Brands scaled</div></div>
-        </div>
+  <section class="ldm-section container container-narrow">
+    <div class="reveal">
+      <span class="eyebrow">Background</span>
+      <h2 class="fs-h2" style="margin:16px 0 24px;">From hospitality floors to performance dashboards.</h2>
+      <p style="color:var(--color-off-white);margin-bottom:20px;">Over six-plus years, I've managed and optimized multi-million-dollar advertising budgets — more than $10M in ad spend to date — across 100+ brands spanning hospitality, e-commerce, professional services and beyond. That range is deliberate: it's taught me that a performance system built for one industry rarely survives contact with another, so I build for the fundamentals — audience, offer, tracking — rather than for a template.</p>
+      <p style="color:var(--color-off-white);margin-bottom:20px;">My work spans the full paid and organic mix — Meta, Google, TikTok and LinkedIn Ads, alongside SEO, SEM, social and email marketing — plus the measurement layer underneath it, from GA4 and Google Tag Manager to server-side tracking, attribution modeling and Looker Studio reporting. I'm as comfortable inside an ad account as I am inside a GTM container or a data visualization dashboard, which is the point. Paid media without tracking is a black box. Tracking without strategy is just data.</p>
+      <p style="color:var(--color-off-white);">On the conversion side, I map the full customer journey and rebuild landing pages, forms and funnels around how people actually decide — testing changes rather than assuming them. And because none of this works in isolation, I spend real time in the martech layer: CRM integrations, marketing automation, and the WordPress/Elementor stack most of my clients' sites run on.</p>
+      <div class="ldm-about-stats">
+        <div><div class="num"><span data-counter="6" data-suffix="+">0+</span></div><div class="label">Years in performance marketing</div></div>
+        <div><div class="num"><span data-counter="100" data-suffix="+">0+</span></div><div class="label">Brands scaled</div></div>
       </div>
     </div>
   </section>

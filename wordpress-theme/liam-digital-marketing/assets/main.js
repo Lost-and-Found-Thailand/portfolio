@@ -1147,6 +1147,67 @@
   })();
 
   /* ----------------------------------------------------------------
+     Contact form — the static site has no server to receive a POST,
+     so action="#" alone did nothing at all on submit there. The
+     WordPress mirror of this same form already posts to a real
+     admin-post.php handler (see inc/contact-form.php) and must keep
+     doing that natively, so this only intercepts submit when the
+     form's action is still the static site's literal "#" placeholder
+     — anywhere else, it's a no-op and the real backend handles it.
+     Rather than wire the static site to a third-party form service (a
+     real account/API-key decision that isn't mine to make), this
+     builds a mailto: link from the filled-in fields and hands off to
+     the visitor's own mail client — zero new dependency, works
+     everywhere a mail client is configured, and reaches the same
+     inbox every other contact method on this page already points at.
+     ---------------------------------------------------------------- */
+  (function () {
+    var form = document.querySelector(".ldm-contact-form");
+    if (!form) return;
+    var action = form.getAttribute("action") || "";
+    if (action !== "#" && action !== "") return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var get = function (name) {
+        var el = form.querySelector('[name="' + name + '"]');
+        return el ? el.value.trim() : "";
+      };
+      var name = get("name");
+      var email = get("email");
+      var company = get("company");
+      var budgetEl = form.querySelector('[name="budget"]');
+      var budget = budgetEl && budgetEl.selectedIndex > 0 ? budgetEl.options[budgetEl.selectedIndex].text : "";
+      var message = get("message");
+
+      var lines = [
+        "Name: " + name,
+        "Email: " + email
+      ];
+      if (company) lines.push("Company: " + company);
+      if (budget) lines.push("Budget: " + budget);
+      lines.push("", message);
+
+      var subject = "New enquiry from " + (name || "the website");
+      var mailto =
+        "mailto:liam.digitalmarketing.ads@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(lines.join("\n"));
+
+      var status = form.querySelector(".ldm-form-status");
+      if (!status) {
+        status = document.createElement("p");
+        status.className = "ldm-form-status";
+        status.setAttribute("role", "status");
+        form.appendChild(status);
+      }
+      status.textContent = "Opening your email client to send this — if nothing happens, email liam.digitalmarketing.ads@gmail.com directly.";
+
+      window.location.href = mailto;
+    });
+  })();
+
+  /* ----------------------------------------------------------------
      Service worker: caches the self-hosted Spline runtime/scene files
      (sw.js) so a refresh or return visit serves them from local cache
      instead of depending on network conditions each time. Only worth
