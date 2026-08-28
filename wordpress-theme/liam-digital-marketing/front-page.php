@@ -246,7 +246,6 @@ $ldm_img = get_template_directory_uri();
           <div class="ldm-case-title"><span class="title-text">Ours Group</span> <span class="arrow">&rarr;</span></div>
           <div class="ldm-case-industry">Performance Marketing &middot; Analytics &middot; Conversion Tracking</div>
           <p class="ldm-case-desc">Running paid media and a shared tracking system across five venues under one restaurant group — Ama, Home, Mood, The Beach and Ours Bali.</p>
-          <div class="ldm-case-result">+XX% <span class="label">ROAS</span></div>
         </div>
       </a>
 
@@ -259,7 +258,6 @@ $ldm_img = get_template_directory_uri();
           <div class="ldm-case-title"><span class="title-text">Tirtha Bali</span> <span class="arrow">&rarr;</span></div>
           <div class="ldm-case-industry">Paid Media &middot; Lead Generation &middot; Conversion Tracking</div>
           <p class="ldm-case-desc">Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.</p>
-          <div class="ldm-case-result">+XX% <span class="label">Qualified Enquiries</span></div>
         </div>
       </a>
     </div>

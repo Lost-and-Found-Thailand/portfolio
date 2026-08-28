@@ -3,9 +3,8 @@
  * Tirtha Bali case study — ported from case-study.html. WordPress
  * auto-selects this template for a Page whose slug is "case-study".
  *
- * The results block's data-counter values are 0 in the source HTML
- * too (labelled "sample data, replace with real results") — carried
- * over as-is rather than invented.
+ * No metrics/results block — there's no real number for this case
+ * yet, and a placeholder stat reads as broken rather than honest.
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -75,46 +74,6 @@ get_header();
         <div class="num">05</div>
         <h4>Landing Page Optimization</h4>
         <p>A dedicated enquiry flow designed to filter for budget and intent before the form was ever submitted.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- RESULTS -->
-  <section class="ldm-section container">
-    <div class="ldm-section-head reveal">
-      <span class="eyebrow">The Results</span>
-      <h2 class="fs-h2">Fewer enquiries. Better ones.</h2>
-    </div>
-    <div class="ldm-metrics cols-3 reveal">
-      <div class="ldm-metric">
-        <div class="ldm-metric-ring">
-          <svg viewBox="0 0 120 120" aria-hidden="true">
-            <circle class="ring-track" cx="60" cy="60" r="52"></circle>
-            <circle class="ring-progress" cx="60" cy="60" r="52" pathLength="100"></circle>
-          </svg>
-          <div class="num"><span data-counter="0" data-prefix="+" data-suffix="%" class="accent">0%</span></div>
-        </div>
-        <div class="label">Qualified enquiry rate — sample data, replace with real results</div>
-      </div>
-      <div class="ldm-metric">
-        <div class="ldm-metric-ring">
-          <svg viewBox="0 0 120 120" aria-hidden="true">
-            <circle class="ring-track" cx="60" cy="60" r="52"></circle>
-            <circle class="ring-progress" cx="60" cy="60" r="52" pathLength="100"></circle>
-          </svg>
-          <div class="num"><span data-counter="0" data-suffix="%" class="accent">0%</span></div>
-        </div>
-        <div class="label">Cost per qualified lead reduction — sample data, replace with real results</div>
-      </div>
-      <div class="ldm-metric">
-        <div class="ldm-metric-ring">
-          <svg viewBox="0 0 120 120" aria-hidden="true">
-            <circle class="ring-track" cx="60" cy="60" r="52"></circle>
-            <circle class="ring-progress" cx="60" cy="60" r="52" pathLength="100"></circle>
-          </svg>
-          <div class="num"><span data-counter="0" data-suffix="%" class="accent">0%</span></div>
-        </div>
-        <div class="label">Increase in booked consultations — sample data, replace with real results</div>
       </div>
     </div>
   </section>
