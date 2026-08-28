@@ -79,6 +79,16 @@
 /* ---------- Base ---------- */
 * { box-sizing: border-box; }
 
+.ldm a:focus-visible,
+.ldm button:focus-visible,
+.ldm input:focus-visible,
+.ldm select:focus-visible,
+.ldm textarea:focus-visible,
+.ldm [tabindex]:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
 body.ldm {
   background: var(--color-black);
   color: var(--color-white);
@@ -185,6 +195,13 @@ body.ldm {
 
 .ldm .btn-accent-text {
   color: var(--color-accent);
+}
+
+.ldm .btn:disabled,
+.ldm .btn[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 /* ---------- Cards / Surfaces ---------- */

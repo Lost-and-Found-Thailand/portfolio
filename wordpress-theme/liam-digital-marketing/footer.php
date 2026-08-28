@@ -21,6 +21,12 @@ defined( 'ABSPATH' ) || exit;
         </div>
       </div>
       <div class="ldm-footer-col">
+        <h5><?php esc_html_e( 'Explore', 'liam-digital-marketing' ); ?></h5>
+        <ul>
+          <?php ldm_render_footer_nav_links(); ?>
+        </ul>
+      </div>
+      <div class="ldm-footer-col">
         <h5><?php esc_html_e( 'Contact', 'liam-digital-marketing' ); ?></h5>
         <ul>
           <?php ldm_render_footer_connect_links(); ?>

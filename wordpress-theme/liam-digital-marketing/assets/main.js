@@ -876,6 +876,24 @@
         { threshold: 0, rootMargin: "-45% 0px -45% 0px" }
       );
       chapters.forEach(function (c) { chapterIO.observe(c.el); });
+
+      /* The rail is fixed at vertical-center of the viewport, which
+         means it inevitably sits on top of whatever content is
+         vertical-centered once someone scrolls all the way down —
+         on every page that's the footer. Fade it out rather than let
+         it overlap footer text. */
+      var footerEl = document.querySelector(".ldm-footer");
+      if (footerEl) {
+        var footerIO = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              rail.classList.toggle("is-over-footer", entry.isIntersecting);
+            });
+          },
+          { threshold: 0 }
+        );
+        footerIO.observe(footerEl);
+      }
     }
   })();
 

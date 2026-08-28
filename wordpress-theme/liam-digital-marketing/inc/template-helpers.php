@@ -52,6 +52,13 @@ function ldm_render_footer_connect_links() {
 	<?php
 }
 
+/** The footer "Explore" column — reuses the same nav routes as the header, so it can never drift from what's actually in the site. */
+function ldm_render_footer_nav_links() {
+	foreach ( ldm_nav_links() as $link ) {
+		printf( '<li><a href="%1$s">%2$s</a></li>', esc_url( $link['url'] ), esc_html( $link['label'] ) );
+	}
+}
+
 /**
  * Work page client grid — data-driven instead of 53 hand-copied
  * near-identical blocks (the static HTML's actual approach). Same

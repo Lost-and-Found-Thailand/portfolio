@@ -1369,7 +1369,9 @@ body.ldm.has-custom-cursor select {
   align-items: center;
   height: 50vh;
   max-height: 420px;
+  transition: opacity var(--dur-fast) var(--ease-premium);
 }
+.ldm-story-rail.is-over-footer { opacity: 0; pointer-events: none; }
 .ldm-story-rail-track,
 .ldm-story-rail-fill {
   position: absolute;
