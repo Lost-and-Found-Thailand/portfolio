@@ -33,7 +33,7 @@ $ldm_img = get_template_directory_uri();
         </div>
         <div class="ldm-hero-photo">
           <div class="ldm-hero-photo-glow" aria-hidden="true"></div>
-          <img src="<?php echo esc_url( $ldm_img . '/assets/img/liam-cutout.png' ); ?>" alt="Liam, Digital Marketing Manager" width="640" height="582" loading="eager">
+          <img src="<?php echo esc_url( $ldm_img . '/assets/img/liam-cutout.png' ); ?>" alt="Liam, Digital Marketing Manager" width="640" height="582" loading="eager" fetchpriority="high">
         </div>
         <div class="ldm-hero-side ldm-hero-side--right">
           <p class="lede">Paid media, analytics and conversion tracking that turn ad spend into measurable growth.</p>
