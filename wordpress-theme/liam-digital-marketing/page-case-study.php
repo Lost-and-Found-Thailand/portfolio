@@ -29,7 +29,7 @@ get_header();
   <!-- HERO IMAGE -->
   <section class="container">
     <div class="card-image reveal" style="aspect-ratio:16/9;">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop" alt="Tirtha Bali luxury wedding venue overlooking the ocean" loading="lazy" width="1600" height="900" style="width:100%;height:100%;object-fit:cover;">
+      <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/clients/tirtha-bali-hero.jpg' ); ?>" alt="<?php esc_attr_e( 'Aerial view of the Tirtha Bali clifftop wedding venue overlooking the ocean', 'liam-digital-marketing' ); ?>" loading="lazy" width="1600" height="900" style="width:100%;height:100%;object-fit:cover;">
     </div>
   </section>
 
@@ -82,7 +82,7 @@ get_header();
   <section class="ldm-section container">
     <div class="grid grid-2 reveal">
       <div class="card-image" style="aspect-ratio:4/3;">
-        <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?q=80&w=1200&auto=format&fit=crop" alt="Bali coastline near the Tirtha Bali venue" loading="lazy" width="1200" height="900" style="width:100%;height:100%;object-fit:cover;">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/clients/tirtha-bali-garden.jpg' ); ?>" alt="<?php esc_attr_e( 'Garden courtyard at the Tirtha Bali venue', 'liam-digital-marketing' ); ?>" loading="lazy" width="1200" height="900" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="card-image" style="aspect-ratio:4/3;">
         <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200&auto=format&fit=crop" alt="Wedding rings detail from a Tirtha Bali ceremony" loading="lazy" width="1200" height="900" style="width:100%;height:100%;object-fit:cover;">

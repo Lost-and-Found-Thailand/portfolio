@@ -256,7 +256,7 @@ $ldm_img = get_template_directory_uri();
       <a href="<?php echo esc_url( home_url( '/case-study/' ) ); ?>" class="ldm-case reveal">
         <div class="ldm-case-media">
           <span class="badge">Luxury Weddings</span>
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Tirtha Bali luxury wedding campaign creative" loading="lazy" width="1200" height="900">
+          <img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/tirtha-bali.jpg' ); ?>" alt="<?php esc_attr_e( 'Aerial view of the Tirtha Bali clifftop wedding venue', 'liam-digital-marketing' ); ?>" loading="lazy" width="1200" height="900">
         </div>
         <div class="ldm-case-body">
           <div class="ldm-case-title"><span class="title-text">Tirtha Bali</span> <span class="arrow">&rarr;</span></div>
