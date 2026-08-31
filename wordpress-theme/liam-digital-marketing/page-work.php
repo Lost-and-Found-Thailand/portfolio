@@ -105,7 +105,7 @@ $ldm_client_groups = array(
 		array( 'name' => 'Ours Spa', 'img' => get_template_directory_uri() . '/assets/img/clients/ourspa.png', 'alt' => 'Ours Spa client work', 'fit' => 'contain' ),
 		array( 'name' => 'Shaz Aesthetic & Media Spa', 'img' => get_template_directory_uri() . '/assets/img/clients/shaz.png', 'alt' => 'Shaz Aesthetic & Media Spa client work', 'fit' => 'contain' ),
 		array( 'name' => 'Arna Oceanic Wellness Spa', 'img' => get_template_directory_uri() . '/assets/img/clients/arna.png', 'alt' => 'Arna Oceanic Wellness Spa client work', 'fit' => 'contain' ),
-		array( 'name' => 'Cave Rai Ra', 'type' => 'Wellness Spa', 'img' => 'https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=500&auto=format&fit=crop', 'alt' => 'Cave Rai Ra client work' ),
+		array( 'name' => 'Cave Rai Ra', 'type' => 'Wellness Spa', 'img' => get_template_directory_uri() . '/assets/img/clients/cave-rai-ra.png', 'alt' => 'Cave Rai Ra logo', 'fit' => 'contain' ),
 		array( 'name' => 'Raw Uluwatu', 'type' => 'Gym', 'img' => get_template_directory_uri() . '/assets/img/clients/raw-uluwatu.png', 'alt' => 'Raw Uluwatu client work', 'fit' => 'contain' ),
 		array( 'name' => 'Athlean', 'type' => 'Gym', 'img' => get_template_directory_uri() . '/assets/img/clients/athlean.png', 'alt' => 'Athlean client work', 'fit' => 'contain' ),
 		array( 'name' => 'Tribal Fitness', 'type' => 'Gym', 'img' => get_template_directory_uri() . '/assets/img/clients/tribal-fitness.png', 'alt' => 'Tribal Fitness client work', 'fit' => 'contain' ),
@@ -115,7 +115,7 @@ $ldm_client_groups = array(
 	),
 	'Finance'                 => array(
 		array( 'name' => 'Royal Finances', 'img' => get_template_directory_uri() . '/assets/img/clients/royal-finances.png', 'alt' => 'Royal Finances client work', 'fit' => 'contain' ),
-		array( 'name' => 'Simple Finances', 'img' => 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=500&auto=format&fit=crop', 'alt' => 'Simple Finances client work' ),
+		array( 'name' => 'Simple Financial', 'img' => get_template_directory_uri() . '/assets/img/clients/simple-financial.png', 'alt' => 'Simple Financial logo', 'fit' => 'contain' ),
 		array( 'name' => 'Simple Pret', 'img' => get_template_directory_uri() . '/assets/img/clients/simple-pret.png', 'alt' => 'Simple Pret client work', 'fit' => 'contain' ),
 		array( 'name' => 'Cash Depot', 'img' => get_template_directory_uri() . '/assets/img/clients/cash-depot.png', 'alt' => 'Cash Depot client work', 'fit' => 'contain' ),
 		array( 'name' => 'Trader2B', 'type' => 'Trading Simulator', 'img' => get_template_directory_uri() . '/assets/img/clients/trader2b.png', 'alt' => 'Trader2B client work', 'fit' => 'contain' ),
