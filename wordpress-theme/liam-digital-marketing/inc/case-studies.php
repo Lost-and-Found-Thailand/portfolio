@@ -91,7 +91,7 @@ function ldm_get_case_studies() {
 		array( 'slug' => 'mood-by-ours', 'name' => 'Mood by Ours', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant, Minimart', 'desc' => null, 'result' => null, 'img' => 'mood-by-ours-photo.jpg', 'alt' => 'Fresh market produce at Mood by Ours', 'href' => null ),
 		array( 'slug' => 'meso', 'name' => 'Meso', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Beach Restaurant', 'desc' => null, 'result' => null, 'img' => 'meso.png', 'alt' => 'Meso logo', 'href' => null ),
 		array( 'slug' => 'the-9th-degree', 'name' => 'The 9th Degree', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Lagoon Front Restaurant', 'desc' => null, 'result' => null, 'img' => 'the-9th-degree-photo.jpg', 'alt' => 'The lagoon-front boardwalk at The 9th Degree', 'href' => null ),
-		array( 'slug' => 'tempo', 'name' => 'Tempo', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Lounge & KTV', 'desc' => null, 'result' => null, 'img' => 'tempo-photo.jpg', 'alt' => 'A private room at Tempo', 'href' => null ),
+		array( 'slug' => 'tempo', 'name' => 'Tempo', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Lounge & KTV', 'desc' => null, 'result' => null, 'img' => 'tempo-photo.jpg', 'alt' => 'The exterior of Tempo Restaurant, Lounge &amp; KTV', 'href' => null, 'hero_img' => 'tempo-hero.jpg', 'hero_alt' => 'A KTV lounge room at Tempo', 'supporting_img' => 'tempo-supporting.jpg', 'supporting_alt' => 'Guests singing karaoke at Tempo' ),
 		array( 'slug' => 'penida-colada', 'name' => 'Penida Colada', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Beach Restaurant', 'desc' => null, 'result' => null, 'img' => 'penida-colada.png', 'alt' => 'Penida Colada logo', 'href' => null ),
 		array( 'slug' => 'bollywood-phuket', 'name' => 'Bollywood Phuket', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant', 'desc' => null, 'result' => null, 'img' => 'bollywood-phuket-photo.jpg', 'alt' => 'The entrance at Bollywood Phuket', 'href' => null ),
 		array( 'slug' => 'the-firefly-club', 'name' => 'The Firefly Club', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant', 'desc' => null, 'result' => null, 'img' => 'the-firefly-club.png', 'alt' => 'The Firefly Club logo', 'href' => null ),
@@ -180,8 +180,10 @@ function ldm_render_case_list() {
  * invented narrative when there's no description yet.
  */
 function ldm_render_generic_case_study( $entry ) {
-	$img_url  = get_template_directory_uri() . '/assets/img/clients/' . $entry['img'];
-	$is_photo = (bool) preg_match( '/\.(jpg|jpeg)$/i', $entry['img'] );
+	$hero_img  = $entry['hero_img'] ?? $entry['img'];
+	$hero_alt  = $entry['hero_alt'] ?? $entry['alt'];
+	$img_url   = get_template_directory_uri() . '/assets/img/clients/' . $hero_img;
+	$is_photo  = (bool) preg_match( '/\.(jpg|jpeg)$/i', $hero_img );
 	$img_style = $is_photo ? 'width:100%;height:100%;object-fit:cover;' : 'width:100%;height:100%;object-fit:contain;background:var(--surface-1);';
 	?>
 	<!-- PAGE HEADER -->
@@ -205,7 +207,7 @@ function ldm_render_generic_case_study( $entry ) {
 	<!-- HERO IMAGE -->
 	<section class="container">
 		<div class="card-image reveal" style="aspect-ratio:16/9;">
-			<img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $entry['alt'] ); ?>" loading="lazy" width="1600" height="900" style="<?php echo esc_attr( $img_style ); ?>">
+			<img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $hero_alt ); ?>" loading="lazy" width="1600" height="900" style="<?php echo esc_attr( $img_style ); ?>">
 		</div>
 	</section>
 
@@ -214,6 +216,15 @@ function ldm_render_generic_case_study( $entry ) {
 		<section class="ldm-section container container-narrow">
 			<div class="reveal">
 				<p class="lede" style="max-width:none;">The detailed write-up for this project is coming soon. In the meantime, feel free to get in touch to hear more about the work behind it.</p>
+			</div>
+		</section>
+	<?php endif; ?>
+
+	<?php if ( ! empty( $entry['supporting_img'] ) ) : ?>
+		<!-- SUPPORTING IMAGE -->
+		<section class="ldm-section container container-narrow">
+			<div class="card-image reveal" style="aspect-ratio:4/3;">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/clients/' . $entry['supporting_img'] ); ?>" alt="<?php echo esc_attr( $entry['supporting_alt'] ?? '' ); ?>" loading="lazy" width="1200" height="900" style="width:100%;height:100%;object-fit:cover;">
 			</div>
 		</section>
 	<?php endif; ?>
