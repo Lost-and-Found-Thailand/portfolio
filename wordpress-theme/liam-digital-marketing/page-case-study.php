@@ -46,12 +46,13 @@ get_header();
       <span class="tag">Bali, Indonesia</span>
     </div>
     <p class="lede">Generating higher-quality international wedding enquiries through targeted paid media and full-funnel conversion tracking.</p>
+    <div class="ldm-case-result" style="margin-top:8px;">+1,500% <span class="label">ROAS</span></div>
   </section>
 
   <!-- HERO IMAGE -->
   <section class="container">
     <div class="card-image reveal" style="aspect-ratio:16/9;">
-      <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/clients/tirtha-bali-hero.jpg' ); ?>" alt="<?php esc_attr_e( 'Aerial view of the Tirtha Bali clifftop wedding venue overlooking the ocean', 'liam-digital-marketing' ); ?>" loading="lazy" width="1600" height="900" style="width:100%;height:100%;object-fit:cover;">
+      <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/clients/tirtha-bali-hero.jpg' ); ?>" alt="<?php esc_attr_e( 'The glass ceremony pavilion at Tirtha Bali, set for a wedding', 'liam-digital-marketing' ); ?>" loading="lazy" width="1600" height="900" style="width:100%;height:100%;object-fit:cover;">
     </div>
   </section>
 
@@ -107,7 +108,7 @@ get_header();
         <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/clients/tirtha-bali-garden.jpg' ); ?>" alt="<?php esc_attr_e( 'Garden courtyard at the Tirtha Bali venue', 'liam-digital-marketing' ); ?>" loading="lazy" width="1200" height="900" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="card-image" style="aspect-ratio:4/3;">
-        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200&auto=format&fit=crop" alt="Wedding rings detail from a Tirtha Bali ceremony" loading="lazy" width="1200" height="900" style="width:100%;height:100%;object-fit:cover;">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/clients/tirtha-bali-supporting.jpg' ); ?>" alt="<?php esc_attr_e( 'A beachfront ceremony altar and sweetheart table at Tirtha Bali', 'liam-digital-marketing' ); ?>" loading="lazy" width="1200" height="900" style="width:100%;height:100%;object-fit:cover;">
       </div>
     </div>
   </section>
