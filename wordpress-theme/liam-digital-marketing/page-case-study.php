@@ -1,13 +1,35 @@
 <?php
 /**
- * Tirtha Bali case study — ported from case-study.html. WordPress
- * auto-selects this template for a Page whose slug is "case-study".
+ * Case study pages — ported from case-study.html. WordPress
+ * auto-selects this template for a Page whose slug is "case-study",
+ * and /case-study/{slug}/ (see inc/case-studies.php) routes every
+ * other project through it too via the ldm_case query var. Tirtha
+ * Bali is the only client with a full write-up so far, so it keeps
+ * its hand-written content below; every other slug renders through
+ * ldm_render_generic_case_study() using whatever real data exists
+ * for that client.
  *
- * No metrics/results block — there's no real number for this case
- * yet, and a placeholder stat reads as broken rather than honest.
+ * No metrics/results block on Tirtha's content below — there's no
+ * real number for this case yet, and a placeholder stat reads as
+ * broken rather than honest.
  */
 
 defined( 'ABSPATH' ) || exit;
+
+$ldm_case_slug = ldm_get_current_case_slug();
+$ldm_case      = ( $ldm_case_slug && 'tirtha-bali' !== $ldm_case_slug ) ? ldm_find_case_study( $ldm_case_slug ) : null;
+
+if ( $ldm_case ) {
+	$ldm_meta_title       = $ldm_case['name'] . ' Case Study | Liam Digital Marketing';
+	$ldm_meta_description = ! empty( $ldm_case['desc'] )
+		? $ldm_case['desc']
+		: 'A ' . strtolower( $ldm_case['badge'] ) . ' project by Liam Digital Marketing — performance marketing case study for ' . $ldm_case['name'] . '.';
+
+	get_header();
+	ldm_render_generic_case_study( $ldm_case );
+	get_footer();
+	return;
+}
 
 $ldm_meta_title       = 'Tirtha Bali Case Study | Luxury Wedding Paid Media & Conversion Tracking';
 $ldm_meta_description = 'How a full-funnel paid media and conversion tracking system helped Tirtha Bali generate higher-quality international wedding enquiries. A performance marketing and Meta Ads specialist case study.';

@@ -1,0 +1,236 @@
+<?php
+/**
+ * Per-client case studies. Every project on the Work page gets its
+ * own case-study URL instead of all of them pointing at the single
+ * "case-study" Page (which historically only ever covered Tirtha
+ * Bali). Rather than requiring a real WP Page per client, one
+ * rewrite rule sends /case-study/{slug}/ through the existing
+ * "case-study" Page's template (page-case-study.php), which reads
+ * the slug from a query var and looks it up in ldm_get_case_studies().
+ * Tirtha Bali (the only client with a full write-up) keeps rendering
+ * its existing hardcoded content when the slug is empty or
+ * "tirtha-bali", so /case-study/ on its own is unchanged.
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+function ldm_case_study_rewrite_rule() {
+	add_rewrite_rule( '^case-study/([^/]+)/?$', 'index.php?pagename=case-study&ldm_case=$matches[1]', 'top' );
+}
+add_action( 'init', 'ldm_case_study_rewrite_rule' );
+
+add_filter(
+	'query_vars',
+	function ( $vars ) {
+		$vars[] = 'ldm_case';
+		return $vars;
+	}
+);
+
+/**
+ * The rewrite rule above only takes effect once WordPress flushes
+ * its rewrite rules (normally done by hand under Settings > Permalinks).
+ * This flushes once automatically after a theme update introduces the
+ * rule, keyed by a version bump rather than running on every request.
+ */
+function ldm_maybe_flush_case_study_rewrite() {
+	if ( get_option( 'ldm_case_study_rewrite_version' ) !== '1' ) {
+		ldm_case_study_rewrite_rule();
+		flush_rewrite_rules();
+		update_option( 'ldm_case_study_rewrite_version', '1' );
+	}
+}
+add_action( 'init', 'ldm_maybe_flush_case_study_rewrite', 20 );
+
+/**
+ * Returns the slug requested via /case-study/{slug}/, or null for
+ * the bare /case-study/ URL (which page-case-study.php treats as
+ * an alias for "tirtha-bali").
+ */
+function ldm_get_current_case_slug() {
+	$slug = get_query_var( 'ldm_case' );
+	return $slug ? sanitize_title( $slug ) : null;
+}
+
+function ldm_find_case_study( $slug ) {
+	foreach ( ldm_get_case_studies() as $case ) {
+		if ( $case['slug'] === $slug ) {
+			return $case;
+		}
+	}
+	$extra = ldm_get_extra_case_studies();
+	return $extra[ $slug ] ?? null;
+}
+
+function ldm_case_study_url( $slug ) {
+	return home_url( '/case-study/' . $slug . '/' );
+}
+
+/** Every project this theme has real client data for, highest verified ROAS first. */
+function ldm_get_case_studies() {
+	return array(
+		array( 'slug' => 'rockfish-the-uluwatu', 'name' => 'Rockfish The Uluwatu', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Cliffside Restaurant', 'desc' => null, 'result' => '32,500% ROAS', 'img' => 'rockfish-uluwatu-photo.jpg', 'alt' => 'The clifftop dining deck at Rockfish The Uluwatu', 'href' => null ),
+		array( 'slug' => 'noah-yacht-club', 'name' => 'Noah Yacht Club', 'badge' => 'Yacht Club', 'industry' => 'Paid Media &middot; Lead Generation &middot; Analytics', 'type' => null, 'desc' => 'Building a full-funnel campaign system to fill charter and membership enquiries for this yacht club.', 'result' => '2,500%', 'img' => 'noah-yacht-case.jpg', 'alt' => 'Noah Yacht Club performance marketing case study', 'href' => null ),
+		array( 'slug' => 'tirtha-bali', 'name' => 'Tirtha Bali', 'badge' => 'Luxury Weddings', 'industry' => 'Paid Media &middot; Lead Generation &middot; Conversion Tracking', 'type' => null, 'desc' => 'Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.', 'result' => null, 'img' => 'tirtha-bali.jpg', 'alt' => 'Aerial view of the Tirtha Bali clifftop wedding venue', 'href' => 'case-study.html' ),
+		array( 'slug' => 'ulu-cliffhouse', 'name' => 'Ulu Cliffhouse', 'badge' => 'Hospitality', 'industry' => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking', 'type' => null, 'desc' => 'Building a measurement system that connects ad spend directly to bookings across this cliffside resort\'s restaurant, pool club and beach club venues.', 'result' => null, 'img' => 'ulu-cliffhouse-case.jpg', 'alt' => 'Ocean-view cliffside at Ulu Cliffhouse in Uluwatu', 'href' => null ),
+		array( 'slug' => 'the-barrel', 'name' => 'The Barrel', 'badge' => 'Lifestyle &amp; Retail', 'industry' => 'Conversion Optimization &middot; Digital Strategy', 'type' => null, 'desc' => 'Rebuilding the online discovery and reservation journey for this wine merchant and restaurant across paid channels.', 'result' => null, 'img' => 'the-barrel-case.jpg', 'alt' => 'Wine display at The Barrel wine merchant', 'href' => null ),
+		array( 'slug' => 'chalong-bay-rum', 'name' => 'Chalong Bay Rum', 'badge' => 'E-commerce', 'industry' => 'Meta Ads &middot; Google Shopping &middot; Marketing Analytics', 'type' => null, 'desc' => 'Rebuilding the tracking foundation so every dollar of ad spend for this rum distillery could be traced to revenue, not just clicks.', 'result' => null, 'img' => 'chalong-bay-rum-case.jpg', 'alt' => 'A Chalong Bay Rum cocktail served at the distillery', 'href' => null ),
+		array( 'slug' => 'raw-uluwatu', 'name' => 'Raw Uluwatu', 'badge' => 'Fitness', 'industry' => 'Lead Generation &middot; Google Ads &middot; CRM Integration', 'type' => null, 'desc' => 'Replacing generic form-fills with a qualified-lead pipeline for gym memberships, synced directly into the studio\'s CRM.', 'result' => null, 'img' => 'raw-uluwatu-case.jpg', 'alt' => 'Training floor at Raw Uluwatu gym', 'href' => null ),
+		array( 'slug' => 'ours-spa', 'name' => 'Ours Spa', 'badge' => 'Wellness', 'industry' => 'Paid Media &middot; Landing Page Optimization', 'type' => null, 'desc' => 'Turning a seasonal spike in interest into an always-on acquisition engine for treatment bookings.', 'result' => null, 'img' => 'ours-spa-case.jpg', 'alt' => 'A facial treatment in progress at Ours Spa', 'href' => null ),
+		array( 'slug' => 'tabu-bali', 'name' => 'Tabu Bali', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant & Supperclub', 'desc' => null, 'result' => null, 'img' => 'tabu-bali-photo.jpg', 'alt' => 'A real dish spread from Tabu Bali\'s menu', 'href' => null ),
+		array( 'slug' => 'carpe-diem', 'name' => 'Carpe Diem', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Beach Restaurant, Beach Club, Pool Party', 'desc' => null, 'result' => null, 'img' => 'carpe-diem-photo.jpg', 'alt' => 'The pool bar and sunbeds at Carpe Diem Beach Club', 'href' => null ),
+		array( 'slug' => 'the-beach-by-ours', 'name' => 'The Beach by Ours', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Beach Restaurant, Beach Club', 'desc' => null, 'result' => null, 'img' => 'the-beach-by-ours-photo.jpg', 'alt' => 'A real dish spread from The Beach by Ours', 'href' => null ),
+		array( 'slug' => 'soho-pool-club', 'name' => 'Soho Pool Club', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Pool Club', 'desc' => null, 'result' => null, 'img' => 'soho-pool-club-photo.jpg', 'alt' => 'The clubhouse and pool at Soho Pool Club', 'href' => null ),
+		array( 'slug' => 'marbella-beach-goa', 'name' => 'Marbella Beach Goa', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Beach Club & Resort', 'desc' => null, 'result' => null, 'img' => 'marbella-beach-goa-photo.jpg', 'alt' => 'The pool deck at Marbella Beach Goa', 'href' => null ),
+		array( 'slug' => 'ama-by-ours', 'name' => 'Ama by Ours', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant', 'desc' => null, 'result' => null, 'img' => 'ama-by-ours-photo.jpg', 'alt' => 'A dish spread from Ama by Ours', 'href' => null ),
+		array( 'slug' => 'bennys-cocktails-grill', 'name' => 'Benny’s Cocktails & Grill', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Steakhouse, Cocktail Bar', 'desc' => null, 'result' => null, 'img' => 'bennys-cocktails-grill-photo.jpg', 'alt' => 'The dining room at Benny\'s Cocktails & Grill', 'href' => null ),
+		array( 'slug' => 'ours-bali', 'name' => 'Ours Bali', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant', 'desc' => null, 'result' => null, 'img' => 'ours-bali-photo.jpg', 'alt' => 'A dish spread from Ours Bali', 'href' => null ),
+		array( 'slug' => 'home-by-ours', 'name' => 'Home by Ours', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant', 'desc' => null, 'result' => null, 'img' => 'home-by-ours-photo.jpg', 'alt' => 'The outdoor dining terrace at Home by Ours', 'href' => null ),
+		array( 'slug' => 'the-distillery-phuket', 'name' => 'The Distillery Phuket', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Distillery & Fusion Restaurant', 'desc' => null, 'result' => null, 'img' => 'the-distillery-phuket-photo.jpg', 'alt' => 'The garden pavilion at The Distillery Phuket', 'href' => null ),
+		array( 'slug' => 'bartolo', 'name' => 'Bartolo', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant, Cocktail', 'desc' => null, 'result' => null, 'img' => 'bartolo-photo.jpg', 'alt' => 'A cocktail being poured at Bartolo', 'href' => null ),
+		array( 'slug' => 'mood-by-ours', 'name' => 'Mood by Ours', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant, Minimart', 'desc' => null, 'result' => null, 'img' => 'mood-by-ours-photo.jpg', 'alt' => 'Fresh market produce at Mood by Ours', 'href' => null ),
+		array( 'slug' => 'meso', 'name' => 'Meso', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Beach Restaurant', 'desc' => null, 'result' => null, 'img' => 'meso.png', 'alt' => 'Meso logo', 'href' => null ),
+		array( 'slug' => 'the-9th-degree', 'name' => 'The 9th Degree', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Lagoon Front Restaurant', 'desc' => null, 'result' => null, 'img' => 'the-9th-degree-photo.jpg', 'alt' => 'The lagoon-front boardwalk at The 9th Degree', 'href' => null ),
+		array( 'slug' => 'tempo', 'name' => 'Tempo', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Lounge & KTV', 'desc' => null, 'result' => null, 'img' => 'tempo-photo.jpg', 'alt' => 'A private room at Tempo', 'href' => null ),
+		array( 'slug' => 'penida-colada', 'name' => 'Penida Colada', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Beach Restaurant', 'desc' => null, 'result' => null, 'img' => 'penida-colada.png', 'alt' => 'Penida Colada logo', 'href' => null ),
+		array( 'slug' => 'bollywood-phuket', 'name' => 'Bollywood Phuket', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant', 'desc' => null, 'result' => null, 'img' => 'bollywood-phuket-photo.jpg', 'alt' => 'The entrance at Bollywood Phuket', 'href' => null ),
+		array( 'slug' => 'the-firefly-club', 'name' => 'The Firefly Club', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant', 'desc' => null, 'result' => null, 'img' => 'the-firefly-club.png', 'alt' => 'The Firefly Club logo', 'href' => null ),
+		array( 'slug' => 'lulu-bistrot', 'name' => 'Lulu Bistrot', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant, Bistro, Cocktail Bar', 'desc' => null, 'result' => null, 'img' => 'lulu-bistrot-photo.jpg', 'alt' => 'A cocktail being poured at Lulu Bistrot', 'href' => null ),
+		array( 'slug' => 'babou', 'name' => 'Babou', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Restaurant, Club', 'desc' => null, 'result' => null, 'img' => 'babou-photo.jpg', 'alt' => 'The outdoor lounge at Babou', 'href' => null ),
+		array( 'slug' => 'hug-samui', 'name' => 'Hug Samui', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Beachfront Restaurant', 'desc' => null, 'result' => null, 'img' => 'hug-samui-photo.jpg', 'alt' => 'A seafood platter at Hug Samui', 'href' => null ),
+		array( 'slug' => 'burnt', 'name' => 'Burnt', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Beachfront Restaurant', 'desc' => null, 'result' => null, 'img' => 'burnt-photo.jpg', 'alt' => 'A char-grilled steak at Burnt', 'href' => null ),
+		array( 'slug' => 'muang-samui-resort', 'name' => 'Muang Samui Resort', 'badge' => 'Weddings &amp; Resorts', 'industry' => null, 'type' => '', 'desc' => null, 'result' => null, 'img' => 'muang-samui-resort-photo.jpg', 'alt' => 'The beachfront loungers at Muang Samui Resort', 'href' => null ),
+		array( 'slug' => 'mel-francis-villa', 'name' => 'Mel Francis Villa', 'badge' => 'Weddings &amp; Resorts', 'industry' => null, 'type' => 'Luxury Villas', 'desc' => null, 'result' => null, 'img' => 'mel-francis-villa-photo.jpg', 'alt' => 'A villa bathroom at Mel Francis Villa', 'href' => null ),
+		array( 'slug' => 'house-of-om', 'name' => 'House of Om', 'badge' => 'Wellness', 'industry' => null, 'type' => 'Yoga School', 'desc' => null, 'result' => null, 'img' => 'house-of-om-photo.jpg', 'alt' => 'The pool walkway at House of Om', 'href' => null ),
+		array( 'slug' => 'shaz-aesthetic-media-spa', 'name' => 'Shaz Aesthetic & Media Spa', 'badge' => 'Wellness', 'industry' => null, 'type' => '', 'desc' => null, 'result' => null, 'img' => 'shaz-spa-photo.jpg', 'alt' => 'The interior of Shaz Aesthetic & Media Spa', 'href' => null ),
+		array( 'slug' => 'arna-oceanic-wellness-spa', 'name' => 'Arna Oceanic Wellness Spa', 'badge' => 'Wellness', 'industry' => null, 'type' => '', 'desc' => null, 'result' => null, 'img' => 'arna.png', 'alt' => 'Arna Oceanic Wellness Spa logo', 'href' => null ),
+		array( 'slug' => 'cave-rai-ra', 'name' => 'Cave Rai Ra', 'badge' => 'Wellness', 'industry' => null, 'type' => 'Wellness Spa', 'desc' => null, 'result' => null, 'img' => 'cave-rai-ra.png', 'alt' => 'Cave Rai Ra logo', 'href' => null ),
+		array( 'slug' => 'athlean', 'name' => 'Athlean', 'badge' => 'Fitness', 'industry' => null, 'type' => 'Gym', 'desc' => null, 'result' => null, 'img' => 'athlean-photo.jpg', 'alt' => 'The weights area at Athlean', 'href' => null ),
+		array( 'slug' => 'tribal-fitness', 'name' => 'Tribal Fitness', 'badge' => 'Fitness', 'industry' => null, 'type' => 'Gym', 'desc' => null, 'result' => null, 'img' => 'tribal-fitness.png', 'alt' => 'Tribal Fitness logo', 'href' => null ),
+		array( 'slug' => 'raw-ubud', 'name' => 'Raw Ubud', 'badge' => 'Fitness', 'industry' => null, 'type' => 'Gym', 'desc' => null, 'result' => null, 'img' => 'raw-ubud.png', 'alt' => 'Raw Ubud logo', 'href' => null ),
+		array( 'slug' => 'nuhuman-raw', 'name' => 'Nuhuman Raw', 'badge' => 'Fitness', 'industry' => null, 'type' => 'Gym', 'desc' => null, 'result' => null, 'img' => 'nuhuman-raw.png', 'alt' => 'Nuhuman Raw logo', 'href' => null ),
+		array( 'slug' => 'kyzn', 'name' => 'Kyzn', 'badge' => 'Wellness', 'industry' => null, 'type' => '', 'desc' => null, 'result' => null, 'img' => 'kyzn-photo.jpg', 'alt' => 'The indoor basketball court at Kyzn', 'href' => null ),
+		array( 'slug' => 'royal-finances', 'name' => 'Royal Finances', 'badge' => 'Finance', 'industry' => null, 'type' => '', 'desc' => null, 'result' => null, 'img' => 'royal-finances.png', 'alt' => 'Royal Finances logo', 'href' => null ),
+		array( 'slug' => 'simple-financial', 'name' => 'Simple Financial', 'badge' => 'Finance', 'industry' => null, 'type' => '', 'desc' => null, 'result' => null, 'img' => 'simple-financial.png', 'alt' => 'Simple Financial logo', 'href' => null ),
+		array( 'slug' => 'simple-pret', 'name' => 'Simple Pret', 'badge' => 'Finance', 'industry' => null, 'type' => '', 'desc' => null, 'result' => null, 'img' => 'simple-pret.png', 'alt' => 'Simple Pret logo', 'href' => null ),
+		array( 'slug' => 'cash-depot', 'name' => 'Cash Depot', 'badge' => 'Finance', 'industry' => null, 'type' => '', 'desc' => null, 'result' => null, 'img' => 'cash-depot-photo.jpg', 'alt' => 'The storefront of Cash Depot', 'href' => null ),
+		array( 'slug' => 'trader2b', 'name' => 'Trader2B', 'badge' => 'Finance', 'industry' => null, 'type' => 'Trading Simulator', 'desc' => null, 'result' => null, 'img' => 'trader2b.png', 'alt' => 'Trader2B logo', 'href' => null ),
+		array( 'slug' => 'natuurvlees-nl', 'name' => 'Natuurvlees.nl', 'badge' => 'Retail', 'industry' => null, 'type' => 'Meat Butcher', 'desc' => null, 'result' => null, 'img' => 'natuurvlees-photo.jpg', 'alt' => 'The Natuurvlees.nl delivery van', 'href' => null ),
+		array( 'slug' => 'bb-b', 'name' => 'BB&B', 'badge' => 'Retail', 'industry' => null, 'type' => 'Beer & Beverage Import, Bangkok', 'desc' => null, 'result' => null, 'img' => 'bbb-photo.jpg', 'alt' => 'The retail showroom at BB&B', 'href' => null ),
+		array( 'slug' => 'simba-sea-trips', 'name' => 'Simba Sea Trips', 'badge' => 'Retail', 'industry' => null, 'type' => '', 'desc' => null, 'result' => null, 'img' => 'simba-sea-trips-photo.jpg', 'alt' => 'Snorkel gear aboard a Simba Sea Trips boat', 'href' => null ),
+		array( 'slug' => 'hug-ocean', 'name' => 'Hug Ocean', 'badge' => 'Retail', 'industry' => null, 'type' => 'Scuba Diving', 'desc' => null, 'result' => null, 'img' => 'hug-ocean-photo.jpg', 'alt' => 'The Hug Ocean dive boat', 'href' => null ),
+		array( 'slug' => 'steam-cleaning', 'name' => 'Steam Cleaning', 'badge' => 'Retail', 'industry' => null, 'type' => '', 'desc' => null, 'result' => null, 'img' => 'steam-cleaning-bangkok.png', 'alt' => 'Steam Cleaning logo', 'href' => null ),
+		array( 'slug' => 'dreamer-phuket', 'name' => 'Dreamer Phuket', 'badge' => 'Retail', 'industry' => null, 'type' => '', 'desc' => null, 'result' => null, 'img' => 'the-dreamer-phuket.png', 'alt' => 'Dreamer Phuket logo', 'href' => null ),
+		array( 'slug' => 'unity-festival-thailand', 'name' => 'Unity Festival Thailand', 'badge' => 'Retail', 'industry' => null, 'type' => 'Festival', 'desc' => null, 'result' => null, 'img' => 'unity.png', 'alt' => 'Unity Festival Thailand logo', 'href' => null ),
+	);
+}
+
+function ldm_get_extra_case_studies() {
+	return array(
+		'ours-group' => array( 'slug' => 'ours-group', 'name' => 'Ours Group', 'badge' => 'Restaurant Group', 'industry' => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking', 'type' => null, 'desc' => 'Running paid media and a shared tracking system across five venues under one restaurant group — Ama, Home, Mood, The Beach and Ours Bali.', 'result' => null, 'img' => 'home-by-ours-photo.jpg', 'alt' => 'The outdoor dining terrace at Home by Ours, part of the Ours restaurant group', 'href' => null ),
+	);
+}
+/**
+ * Renders one .ldm-case card. $entry comes from ldm_get_case_studies()
+ * or ldm_get_extra_case_studies(); $href overrides the computed
+ * /case-study/{slug}/ URL (used for Tirtha Bali's pre-existing Page).
+ */
+function ldm_render_case_card( $entry ) {
+	$img_url  = get_template_directory_uri() . '/assets/img/clients/' . $entry['img'];
+	$is_photo = (bool) preg_match( '/\.(jpg|jpeg)$/i', $entry['img'] );
+	$img_style = $is_photo ? '' : ' style="object-fit:contain;background:var(--surface-1);"';
+	$href = $entry['href'] ? home_url( '/case-study/' ) : ldm_case_study_url( $entry['slug'] );
+	?>
+	<a href="<?php echo esc_url( $href ); ?>" class="ldm-case reveal">
+		<div class="ldm-case-media">
+			<span class="badge"><?php echo wp_kses( $entry['badge'], array( 'amp' => array() ) ); ?></span>
+			<?php if ( ! empty( $entry['result'] ) ) : ?>
+				<span class="badge" style="left:auto;right:16px;background:var(--color-accent);color:var(--color-black);"><?php echo esc_html( str_replace( ' ROAS', '', $entry['result'] ) ); ?> ROAS</span>
+			<?php endif; ?>
+			<img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $entry['alt'] ); ?>" loading="lazy" width="1200" height="900"<?php echo $img_style; // phpcs:ignore -- static style string, not user input. ?>>
+		</div>
+		<div class="ldm-case-body">
+			<div class="ldm-case-title"><span class="title-text"><?php echo esc_html( $entry['name'] ); ?></span> <span class="arrow">&rarr;</span></div>
+			<?php if ( ! empty( $entry['industry'] ) ) : ?>
+				<div class="ldm-case-industry"><?php echo wp_kses( $entry['industry'], array( 'middot' => array() ) ); ?></div>
+			<?php elseif ( ! empty( $entry['type'] ) ) : ?>
+				<div class="ldm-case-industry"><?php echo esc_html( $entry['type'] ); ?></div>
+			<?php endif; ?>
+			<?php if ( ! empty( $entry['desc'] ) ) : ?>
+				<p class="ldm-case-desc"><?php echo esc_html( $entry['desc'] ); ?></p>
+			<?php endif; ?>
+		</div>
+	</a>
+	<?php
+}
+
+/** Renders the full Work-page case list — every project, highest verified ROAS first. */
+function ldm_render_case_list() {
+	foreach ( ldm_get_case_studies() as $entry ) {
+		ldm_render_case_card( $entry );
+	}
+}
+
+/**
+ * Renders a full /case-study/{slug}/ page for any project other than
+ * Tirtha Bali (which keeps its own hand-written page-case-study.php
+ * content — it's the only one with a full Challenge/Strategy write-up
+ * so far). Shows whatever real data exists (photo, tags, description,
+ * verified result) and an honest "coming soon" note instead of an
+ * invented narrative when there's no description yet.
+ */
+function ldm_render_generic_case_study( $entry ) {
+	$img_url  = get_template_directory_uri() . '/assets/img/clients/' . $entry['img'];
+	$is_photo = (bool) preg_match( '/\.(jpg|jpeg)$/i', $entry['img'] );
+	$img_style = $is_photo ? 'width:100%;height:100%;object-fit:cover;' : 'width:100%;height:100%;object-fit:contain;background:var(--surface-1);';
+	?>
+	<!-- PAGE HEADER -->
+	<section class="ldm-page-header container">
+		<span class="eyebrow">Case Study</span>
+		<h1 class="fs-h1"><?php echo esc_html( $entry['name'] ); ?></h1>
+		<div style="display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 24px;">
+			<span class="tag"><?php echo wp_kses( $entry['badge'], array( 'amp' => array() ) ); ?></span>
+			<?php if ( ! empty( $entry['type'] ) && $entry['type'] !== $entry['badge'] ) : ?>
+				<span class="tag"><?php echo esc_html( $entry['type'] ); ?></span>
+			<?php endif; ?>
+		</div>
+		<?php if ( ! empty( $entry['desc'] ) ) : ?>
+			<p class="lede"><?php echo esc_html( $entry['desc'] ); ?></p>
+		<?php endif; ?>
+		<?php if ( ! empty( $entry['result'] ) ) : ?>
+			<div class="ldm-case-result" style="margin-top:8px;"><?php echo esc_html( str_replace( ' ROAS', '', $entry['result'] ) ); ?> <span class="label">ROAS</span></div>
+		<?php endif; ?>
+	</section>
+
+	<!-- HERO IMAGE -->
+	<section class="container">
+		<div class="card-image reveal" style="aspect-ratio:16/9;">
+			<img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $entry['alt'] ); ?>" loading="lazy" width="1600" height="900" style="<?php echo esc_attr( $img_style ); ?>">
+		</div>
+	</section>
+
+	<?php if ( empty( $entry['desc'] ) ) : ?>
+		<!-- COMING SOON NOTE -->
+		<section class="ldm-section container container-narrow">
+			<div class="reveal">
+				<p class="lede" style="max-width:none;">The detailed write-up for this project is coming soon. In the meantime, feel free to get in touch to hear more about the work behind it.</p>
+			</div>
+		</section>
+	<?php endif; ?>
+
+	<!-- CONTACT CTA -->
+	<section class="ldm-section container ldm-contact">
+		<div class="reveal">
+			<span class="eyebrow">Next Steps</span>
+			<h2 class="fs-h2" style="margin-top:16px;">Have a similar project?</h2>
+			<p class="lede">If your brand needs a paid media and tracking system built around qualified leads, not just clicks, let's talk.</p>
+			<div class="ldm-contact-ctas">
+				<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Start a Conversation &rarr;</a>
+			</div>
+			<div class="ldm-contact-links">
+				<?php ldm_render_contact_links(); ?>
+			</div>
+		</div>
+	</section>
+	<?php
+}

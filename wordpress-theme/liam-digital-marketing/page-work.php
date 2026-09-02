@@ -1,9 +1,11 @@
 <?php
 /**
  * Work page — ported from work.html. WordPress auto-selects this
- * template for a Page whose slug is "work". The 53-card client grid
- * is data-driven (see ldm_render_client_groups() in
- * inc/template-helpers.php) rather than 53 hand-copied blocks.
+ * template for a Page whose slug is "work". Every project (all 53
+ * clients, highest verified ROAS first) is data-driven from
+ * ldm_get_case_studies() / ldm_render_case_list() in
+ * inc/case-studies.php, which also powers each project's individual
+ * /case-study/{slug}/ page.
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -12,125 +14,6 @@ $ldm_meta_title       = 'Selected Work | Liam Digital Marketing — Performance 
 $ldm_meta_description = 'Case studies in paid media, lead generation, conversion tracking and marketing analytics — real campaign work from a performance marketing specialist and Google Ads & Meta Ads consultant.';
 
 get_header();
-
-$ldm_case_study_url = home_url( '/case-study/' );
-
-$ldm_flagship_cases = array(
-	array(
-		'badge'    => 'Luxury Weddings',
-		'img'      => get_template_directory_uri() . '/assets/img/clients/tirtha-bali.jpg',
-		'alt'      => 'Aerial view of the Tirtha Bali clifftop wedding venue',
-		'title'    => 'Tirtha Bali',
-		'industry' => 'Paid Media &middot; Lead Generation &middot; Conversion Tracking',
-		'desc'     => 'Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.',
-	),
-	array(
-		'badge'    => 'Hospitality',
-		'img'      => get_template_directory_uri() . '/assets/img/clients/ulu-cliffhouse-case.jpg',
-		'alt'      => 'Ocean-view cliffside at Ulu Cliffhouse in Uluwatu',
-		'title'    => 'Ulu Cliffhouse',
-		'industry' => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
-		'desc'     => "Building a measurement system that connects ad spend directly to bookings across this cliffside resort's restaurant, pool club and beach club venues.",
-	),
-	array(
-		'badge'    => 'Lifestyle &amp; Retail',
-		'img'      => get_template_directory_uri() . '/assets/img/clients/the-barrel-case.jpg',
-		'alt'      => 'Wine display at The Barrel wine merchant',
-		'title'    => 'The Barrel',
-		'industry' => 'Conversion Optimization &middot; Digital Strategy',
-		'desc'     => 'Rebuilding the online discovery and reservation journey for this wine merchant and restaurant across paid channels.',
-	),
-	array(
-		'badge'    => 'E-commerce',
-		'img'      => get_template_directory_uri() . '/assets/img/clients/chalong-bay-rum-case.jpg',
-		'alt'      => 'A Chalong Bay Rum cocktail served at the distillery',
-		'title'    => 'Chalong Bay Rum',
-		'industry' => 'Meta Ads &middot; Google Shopping &middot; Marketing Analytics',
-		'desc'     => 'Rebuilding the tracking foundation so every dollar of ad spend for this rum distillery could be traced to revenue, not just clicks.',
-	),
-	array(
-		'badge'    => 'Fitness',
-		'img'      => get_template_directory_uri() . '/assets/img/clients/raw-uluwatu-case.jpg',
-		'alt'      => 'Training floor at Raw Uluwatu gym',
-		'title'    => 'Raw Uluwatu',
-		'industry' => 'Lead Generation &middot; Google Ads &middot; CRM Integration',
-		'desc'     => "Replacing generic form-fills with a qualified-lead pipeline for gym memberships, synced directly into the studio's CRM.",
-	),
-	array(
-		'badge'    => 'Wellness',
-		'img'      => get_template_directory_uri() . '/assets/img/clients/ours-spa-case.jpg',
-		'alt'      => 'A facial treatment in progress at Ours Spa',
-		'title'    => 'Ours Spa',
-		'industry' => 'Paid Media &middot; Landing Page Optimization',
-		'desc'     => 'Turning a seasonal spike in interest into an always-on acquisition engine for treatment bookings.',
-	),
-);
-
-$ldm_client_groups = array(
-	'Hospitality & Nightlife' => array(
-		array( 'name' => 'Noah Yacht Club', 'type' => 'Yacht Club', 'img' => get_template_directory_uri() . '/assets/img/clients/noah-yacht-thumb.jpg', 'alt' => 'Noah Yacht Club client work', 'fit' => 'contain' ),
-		array( 'name' => 'Tabu Bali', 'type' => 'Restaurant & Supperclub', 'img' => get_template_directory_uri() . '/assets/img/clients/tabu-bali-photo.jpg', 'alt' => 'A real dish spread from Tabu Bali\'s menu', 'fit' => 'contain' ),
-		array( 'name' => 'Carpe Diem', 'type' => 'Beach Restaurant, Beach Club, Pool Party', 'img' => get_template_directory_uri() . '/assets/img/clients/carpe-diem-photo.jpg', 'alt' => 'The pool bar and sunbeds at Carpe Diem Beach Club', 'fit' => 'contain' ),
-		array( 'name' => 'The Beach by Ours', 'type' => 'Beach Restaurant, Beach Club', 'img' => get_template_directory_uri() . '/assets/img/clients/the-beach-by-ours-photo.jpg', 'alt' => 'A real dish spread from The Beach by Ours', 'fit' => 'contain' ),
-		array( 'name' => 'Soho Pool Club', 'type' => 'Pool Club', 'img' => get_template_directory_uri() . '/assets/img/clients/soho-pool-club-photo.jpg', 'alt' => 'The clubhouse and pool at Soho Pool Club', 'fit' => 'contain' ),
-		array( 'name' => 'Marbella Beach Goa', 'type' => 'Beach Club & Resort', 'img' => get_template_directory_uri() . '/assets/img/clients/marbella-beach-goa-photo.jpg', 'alt' => 'The pool deck at Marbella Beach Goa', 'fit' => 'contain' ),
-		array( 'name' => 'Ama by Ours', 'type' => 'Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/ama-by-ours-photo.jpg', 'alt' => 'A dish spread from Ama by Ours', 'fit' => 'contain' ),
-		array( 'name' => 'Rockfish The Uluwatu', 'type' => 'Cliffside Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/rockfish-uluwatu-photo.jpg', 'alt' => 'The clifftop dining deck at Rockfish The Uluwatu', 'fit' => 'contain', 'result' => '32,500% ROAS' ),
-		array( 'name' => "Benny’s Cocktails & Grill", 'type' => 'Steakhouse, Cocktail Bar', 'img' => get_template_directory_uri() . '/assets/img/clients/bennys-cocktails-grill-photo.jpg', 'alt' => 'The dining room at Benny\'s Cocktails & Grill', 'fit' => 'contain' ),
-		array( 'name' => 'Ours Bali', 'type' => 'Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/ours-bali-photo.jpg', 'alt' => 'A dish spread from Ours Bali', 'fit' => 'contain' ),
-		array( 'name' => 'Home by Ours', 'type' => 'Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/home-by-ours-photo.jpg', 'alt' => 'The outdoor dining terrace at Home by Ours', 'fit' => 'contain' ),
-		array( 'name' => 'The Distillery Phuket', 'type' => 'Distillery & Fusion Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/the-distillery-phuket-photo.jpg', 'alt' => 'The garden pavilion at The Distillery Phuket', 'fit' => 'contain' ),
-		array( 'name' => 'Bartolo', 'type' => 'Restaurant, Cocktail', 'img' => get_template_directory_uri() . '/assets/img/clients/bartolo-photo.jpg', 'alt' => 'A cocktail being poured at Bartolo', 'fit' => 'contain' ),
-		array( 'name' => 'Mood by Ours', 'type' => 'Restaurant, Minimart', 'img' => get_template_directory_uri() . '/assets/img/clients/mood-by-ours-photo.jpg', 'alt' => 'Fresh market produce at Mood by Ours', 'fit' => 'contain' ),
-		array( 'name' => 'Meso', 'type' => 'Beach Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/meso.png', 'alt' => 'Meso client work', 'fit' => 'contain' ),
-		array( 'name' => 'The 9th Degree', 'type' => 'Lagoon Front Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/the-9th-degree-photo.jpg', 'alt' => 'The lagoon-front boardwalk at The 9th Degree', 'fit' => 'contain' ),
-		array( 'name' => 'Tempo', 'type' => 'Lounge & KTV', 'img' => get_template_directory_uri() . '/assets/img/clients/tempo-photo.jpg', 'alt' => 'A private room at Tempo', 'fit' => 'contain' ),
-		array( 'name' => 'Penida Colada', 'type' => 'Beach Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/penida-colada.png', 'alt' => 'Penida Colada client work', 'fit' => 'contain' ),
-		array( 'name' => 'Bollywood Phuket', 'type' => 'Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/bollywood-phuket-photo.jpg', 'alt' => 'The entrance at Bollywood Phuket', 'fit' => 'contain' ),
-		array( 'name' => 'The Firefly Club', 'type' => 'Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/the-firefly-club.png', 'alt' => 'The Firefly Club client work', 'fit' => 'contain' ),
-		array( 'name' => 'Lulu Bistrot', 'type' => 'Restaurant, Bistro, Cocktail Bar', 'img' => get_template_directory_uri() . '/assets/img/clients/lulu-bistrot-photo.jpg', 'alt' => 'A cocktail being poured at Lulu Bistrot', 'fit' => 'contain' ),
-		array( 'name' => 'Babou', 'type' => 'Restaurant, Club', 'img' => get_template_directory_uri() . '/assets/img/clients/babou-photo.jpg', 'alt' => 'The outdoor lounge at Babou', 'fit' => 'contain' ),
-		array( 'name' => 'Hug Samui', 'type' => 'Beachfront Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/hug-samui-photo.jpg', 'alt' => 'A seafood platter at Hug Samui', 'fit' => 'contain' ),
-		array( 'name' => 'Burnt', 'type' => 'Beachfront Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/burnt-photo.jpg', 'alt' => 'A char-grilled steak at Burnt', 'fit' => 'contain' ),
-		array( 'name' => 'Ulu Cliffhouse', 'type' => 'Beach Restaurant, Pool Club, Beach Club, Resort', 'img' => get_template_directory_uri() . '/assets/img/clients/ulu-cliffhouse.png', 'alt' => 'Ulu Cliffhouse client work', 'fit' => 'contain' ),
-		array( 'name' => 'The Barrel', 'type' => 'Wine Merchant & Wine Stores, Restaurant', 'img' => get_template_directory_uri() . '/assets/img/clients/the-barrel-wine-merchant.png', 'alt' => 'The Barrel client work', 'fit' => 'contain' ),
-	),
-	'Weddings & Resorts'      => array(
-		array( 'name' => 'Tirtha Bali', 'type' => 'Luxury Wedding Venue', 'img' => get_template_directory_uri() . '/assets/img/clients/tirtha-bali.png', 'alt' => 'Tirtha Bali client work', 'fit' => 'contain' ),
-		array( 'name' => 'Muang Samui Resort', 'img' => get_template_directory_uri() . '/assets/img/clients/muang-samui-resort-photo.jpg', 'alt' => 'The beachfront loungers at Muang Samui Resort', 'fit' => 'contain' ),
-		array( 'name' => 'Mel Francis Villa', 'type' => 'Luxury Villas', 'img' => get_template_directory_uri() . '/assets/img/clients/mel-francis-villa-photo.jpg', 'alt' => 'A villa bathroom at Mel Francis Villa', 'fit' => 'contain' ),
-	),
-	'Wellness & Fitness'      => array(
-		array( 'name' => 'House of Om', 'type' => 'Yoga School', 'img' => get_template_directory_uri() . '/assets/img/clients/house-of-om-photo.jpg', 'alt' => 'The pool walkway at House of Om', 'fit' => 'contain' ),
-		array( 'name' => 'Ours Spa', 'img' => get_template_directory_uri() . '/assets/img/clients/ourspa.png', 'alt' => 'Ours Spa client work', 'fit' => 'contain' ),
-		array( 'name' => 'Shaz Aesthetic & Media Spa', 'img' => get_template_directory_uri() . '/assets/img/clients/shaz-spa-photo.jpg', 'alt' => 'The interior of Shaz Aesthetic & Media Spa', 'fit' => 'contain' ),
-		array( 'name' => 'Arna Oceanic Wellness Spa', 'img' => get_template_directory_uri() . '/assets/img/clients/arna.png', 'alt' => 'Arna Oceanic Wellness Spa client work', 'fit' => 'contain' ),
-		array( 'name' => 'Cave Rai Ra', 'type' => 'Wellness Spa', 'img' => get_template_directory_uri() . '/assets/img/clients/cave-rai-ra.png', 'alt' => 'Cave Rai Ra logo', 'fit' => 'contain' ),
-		array( 'name' => 'Raw Uluwatu', 'type' => 'Gym', 'img' => get_template_directory_uri() . '/assets/img/clients/raw-uluwatu.png', 'alt' => 'Raw Uluwatu client work', 'fit' => 'contain' ),
-		array( 'name' => 'Athlean', 'type' => 'Gym', 'img' => get_template_directory_uri() . '/assets/img/clients/athlean-photo.jpg', 'alt' => 'The weights area at Athlean', 'fit' => 'contain' ),
-		array( 'name' => 'Tribal Fitness', 'type' => 'Gym', 'img' => get_template_directory_uri() . '/assets/img/clients/tribal-fitness.png', 'alt' => 'Tribal Fitness client work', 'fit' => 'contain' ),
-		array( 'name' => 'Raw Ubud', 'type' => 'Gym', 'img' => get_template_directory_uri() . '/assets/img/clients/raw-ubud.png', 'alt' => 'Raw Ubud client work', 'fit' => 'contain' ),
-		array( 'name' => 'Nuhuman Raw', 'type' => 'Gym', 'img' => get_template_directory_uri() . '/assets/img/clients/nuhuman-raw.png', 'alt' => 'Nuhuman Raw client work', 'fit' => 'contain' ),
-		array( 'name' => 'Kyzn', 'img' => get_template_directory_uri() . '/assets/img/clients/kyzn-photo.jpg', 'alt' => 'The indoor basketball court at Kyzn', 'fit' => 'contain' ),
-	),
-	'Finance'                 => array(
-		array( 'name' => 'Royal Finances', 'img' => get_template_directory_uri() . '/assets/img/clients/royal-finances.png', 'alt' => 'Royal Finances client work', 'fit' => 'contain' ),
-		array( 'name' => 'Simple Financial', 'img' => get_template_directory_uri() . '/assets/img/clients/simple-financial.png', 'alt' => 'Simple Financial logo', 'fit' => 'contain' ),
-		array( 'name' => 'Simple Pret', 'img' => get_template_directory_uri() . '/assets/img/clients/simple-pret.png', 'alt' => 'Simple Pret client work', 'fit' => 'contain' ),
-		array( 'name' => 'Cash Depot', 'img' => get_template_directory_uri() . '/assets/img/clients/cash-depot-photo.jpg', 'alt' => 'The storefront of Cash Depot', 'fit' => 'contain' ),
-		array( 'name' => 'Trader2B', 'type' => 'Trading Simulator', 'img' => get_template_directory_uri() . '/assets/img/clients/trader2b.png', 'alt' => 'Trader2B client work', 'fit' => 'contain' ),
-	),
-	'Retail & Other Ventures' => array(
-		array( 'name' => 'Natuurvlees.nl', 'type' => 'Meat Butcher', 'img' => get_template_directory_uri() . '/assets/img/clients/natuurvlees-photo.jpg', 'alt' => 'The Natuurvlees.nl delivery van', 'fit' => 'contain' ),
-		array( 'name' => 'BB&B', 'type' => 'Beer & Beverage Import, Bangkok', 'img' => get_template_directory_uri() . '/assets/img/clients/bbb-photo.jpg', 'alt' => 'The retail showroom at BB&B', 'fit' => 'contain' ),
-		array( 'name' => 'Chalong Bay Rum', 'type' => 'Rum Distillery', 'img' => get_template_directory_uri() . '/assets/img/clients/chalong-bay.png', 'alt' => 'Chalong Bay Rum client work', 'fit' => 'contain' ),
-		array( 'name' => 'Simba Sea Trips', 'img' => get_template_directory_uri() . '/assets/img/clients/simba-sea-trips-photo.jpg', 'alt' => 'Snorkel gear aboard a Simba Sea Trips boat', 'fit' => 'contain' ),
-		array( 'name' => 'Hug Ocean', 'type' => 'Scuba Diving', 'img' => get_template_directory_uri() . '/assets/img/clients/hug-ocean-photo.jpg', 'alt' => 'The Hug Ocean dive boat', 'fit' => 'contain' ),
-		array( 'name' => 'Steam Cleaning', 'img' => get_template_directory_uri() . '/assets/img/clients/steam-cleaning-bangkok.png', 'alt' => 'Steam Cleaning client work', 'fit' => 'contain' ),
-		array( 'name' => 'Dreamer Phuket', 'img' => get_template_directory_uri() . '/assets/img/clients/the-dreamer-phuket.png', 'alt' => 'Dreamer Phuket client work', 'fit' => 'contain' ),
-		array( 'name' => 'Unity Festival Thailand', 'type' => 'Festival', 'img' => get_template_directory_uri() . '/assets/img/clients/unity.png', 'alt' => 'Unity Festival Thailand client work', 'fit' => 'contain' ),
-	),
-);
 ?>
 
   <!-- PAGE HEADER -->
@@ -142,32 +25,15 @@ $ldm_client_groups = array(
 
   <!-- CASE LIST -->
   <section class="ldm-section container">
-    <div class="ldm-case-list">
-      <?php foreach ( $ldm_flagship_cases as $case ) : ?>
-        <a href="<?php echo esc_url( $ldm_case_study_url ); ?>" class="ldm-case reveal">
-          <div class="ldm-case-media">
-            <span class="badge"><?php echo wp_kses( $case['badge'], array( 'amp' => array() ) ); ?></span>
-            <img src="<?php echo esc_url( $case['img'] ); ?>" alt="<?php echo esc_attr( $case['alt'] ); ?>" loading="lazy" width="1200" height="900">
-          </div>
-          <div class="ldm-case-body">
-            <div class="ldm-case-title"><span class="title-text"><?php echo esc_html( $case['title'] ); ?></span> <span class="arrow">&rarr;</span></div>
-            <div class="ldm-case-industry"><?php echo wp_kses( $case['industry'], array( 'middot' => array() ) ); ?></div>
-            <p class="ldm-case-desc"><?php echo esc_html( $case['desc'] ); ?></p>
-          </div>
-        </a>
-      <?php endforeach; ?>
-    </div>
-  </section>
-
-  <!-- SELECTED CLIENTS -->
-  <section class="ldm-section container">
     <div class="ldm-section-head reveal">
-      <span class="eyebrow">Selected Clients</span>
+      <span class="eyebrow">Selected Work</span>
       <h2 class="fs-h2">100+ brands, one system.</h2>
       <p class="lede">Every brand I've built paid media, tracking and growth systems for — across hospitality, wellness, fitness, finance and beyond.</p>
     </div>
 
-    <?php ldm_render_client_groups( $ldm_client_groups ); ?>
+    <div class="ldm-case-list">
+      <?php ldm_render_case_list(); ?>
+    </div>
   </section>
 
   <!-- CONTACT CTA -->
