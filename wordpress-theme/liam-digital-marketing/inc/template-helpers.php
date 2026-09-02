@@ -82,6 +82,9 @@ function ldm_render_client_groups( $groups ) {
 				?>
 					<div class="ldm-client-card reveal">
 						<div class="card-image" style="aspect-ratio:4/3;">
+							<?php if ( ! empty( $client['result'] ) ) : ?>
+								<span class="result-badge"><?php echo esc_html( $client['result'] ); ?></span>
+							<?php endif; ?>
 							<img src="<?php echo esc_url( $client['img'] ); ?>" alt="<?php echo esc_attr( $client['alt'] ); ?>" loading="lazy" width="500" height="375" style="<?php echo esc_attr( $img_style ); ?>">
 						</div>
 						<div class="name"><?php echo esc_html( $client['name'] ); ?></div>
