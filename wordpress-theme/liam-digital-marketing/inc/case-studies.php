@@ -69,7 +69,7 @@ function ldm_case_study_url( $slug ) {
 /** Every project this theme has real client data for, highest verified ROAS first. */
 function ldm_get_case_studies() {
 	return array(
-		array( 'slug' => 'rockfish-the-uluwatu', 'name' => 'Rockfish The Uluwatu', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Cliffside Restaurant', 'desc' => null, 'result' => '32,500% ROAS', 'img' => 'rockfish-uluwatu-photo.jpg', 'alt' => 'The clifftop dining deck at Rockfish The Uluwatu', 'href' => null ),
+		array( 'slug' => 'rockfish-the-uluwatu', 'name' => 'Rockfish The Uluwatu', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Cliffside Restaurant', 'desc' => null, 'result' => '32,500%', 'img' => 'rockfish-uluwatu-photo.jpg', 'alt' => 'The clifftop dining deck at Rockfish The Uluwatu', 'href' => null ),
 		array( 'slug' => 'noah-yacht-club', 'name' => 'Noah Yacht Club', 'badge' => 'Yacht Club', 'industry' => 'Paid Media &middot; Lead Generation &middot; Analytics', 'type' => null, 'desc' => 'Building a full-funnel campaign system to fill charter and membership enquiries for this yacht club.', 'result' => '2,500%', 'img' => 'noah-yacht-case.jpg', 'alt' => 'Noah Yacht Club performance marketing case study', 'href' => null ),
 		array( 'slug' => 'tirtha-bali', 'name' => 'Tirtha Bali', 'badge' => 'Luxury Weddings', 'industry' => 'Paid Media &middot; Lead Generation &middot; Conversion Tracking', 'type' => null, 'desc' => 'Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.', 'result' => null, 'img' => 'tirtha-bali.jpg', 'alt' => 'Aerial view of the Tirtha Bali clifftop wedding venue', 'href' => 'case-study.html' ),
 		array( 'slug' => 'ulu-cliffhouse', 'name' => 'Ulu Cliffhouse', 'badge' => 'Hospitality', 'industry' => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking', 'type' => null, 'desc' => 'Building a measurement system that connects ad spend directly to bookings across this cliffside resort\'s restaurant, pool club and beach club venues.', 'result' => null, 'img' => 'ulu-cliffhouse-case.jpg', 'alt' => 'Ocean-view cliffside at Ulu Cliffhouse in Uluwatu', 'href' => null ),
@@ -144,9 +144,6 @@ function ldm_render_case_card( $entry ) {
 	<a href="<?php echo esc_url( $href ); ?>" class="ldm-case reveal">
 		<div class="ldm-case-media">
 			<span class="badge"><?php echo wp_kses( $entry['badge'], array( 'amp' => array() ) ); ?></span>
-			<?php if ( ! empty( $entry['result'] ) ) : ?>
-				<span class="badge" style="left:auto;right:16px;background:var(--color-accent);color:var(--color-black);"><?php echo esc_html( str_replace( ' ROAS', '', $entry['result'] ) ); ?> ROAS</span>
-			<?php endif; ?>
 			<img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $entry['alt'] ); ?>" loading="lazy" width="1200" height="900"<?php echo $img_style; // phpcs:ignore -- static style string, not user input. ?>>
 		</div>
 		<div class="ldm-case-body">
@@ -158,6 +155,9 @@ function ldm_render_case_card( $entry ) {
 			<?php endif; ?>
 			<?php if ( ! empty( $entry['desc'] ) ) : ?>
 				<p class="ldm-case-desc"><?php echo esc_html( $entry['desc'] ); ?></p>
+			<?php endif; ?>
+			<?php if ( ! empty( $entry['result'] ) ) : ?>
+				<div class="ldm-case-result">+<?php echo esc_html( str_replace( ' ROAS', '', $entry['result'] ) ); ?> <span class="label">ROAS</span></div>
 			<?php endif; ?>
 		</div>
 	</a>
@@ -200,7 +200,7 @@ function ldm_render_generic_case_study( $entry ) {
 			<p class="lede"><?php echo esc_html( $entry['desc'] ); ?></p>
 		<?php endif; ?>
 		<?php if ( ! empty( $entry['result'] ) ) : ?>
-			<div class="ldm-case-result" style="margin-top:8px;"><?php echo esc_html( str_replace( ' ROAS', '', $entry['result'] ) ); ?> <span class="label">ROAS</span></div>
+			<div class="ldm-case-result" style="margin-top:8px;">+<?php echo esc_html( str_replace( ' ROAS', '', $entry['result'] ) ); ?> <span class="label">ROAS</span></div>
 		<?php endif; ?>
 	</section>
 

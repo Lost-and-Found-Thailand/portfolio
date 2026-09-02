@@ -237,7 +237,7 @@ $ldm_img = get_template_directory_uri();
           <div class="ldm-case-title"><span class="title-text">Noah Yacht Club</span> <span class="arrow">&rarr;</span></div>
           <div class="ldm-case-industry">Paid Media &middot; Lead Generation &middot; Analytics</div>
           <p class="ldm-case-desc">Building a full-funnel campaign system to fill charter and membership enquiries for this yacht club.</p>
-          <div class="ldm-case-result">2,500% <span class="label">ROAS</span></div>
+          <div class="ldm-case-result">+2,500% <span class="label">ROAS</span></div>
         </div>
       </a>
 
