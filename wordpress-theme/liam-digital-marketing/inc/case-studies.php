@@ -69,7 +69,7 @@ function ldm_case_study_url( $slug ) {
 /** Every project this theme has real client data for, highest verified ROAS first. */
 function ldm_get_case_studies() {
 	return array(
-		array( 'slug' => 'rockfish-the-uluwatu', 'name' => 'Rockfish The Uluwatu', 'badge' => 'Hospitality', 'industry' => null, 'type' => 'Cliffside Restaurant', 'desc' => null, 'result' => '32,500%', 'img' => 'rockfish-uluwatu-photo.jpg', 'alt' => 'The clifftop dining deck at Rockfish The Uluwatu', 'href' => null, 'hero_img' => 'rockfish-uluwatu-hero.jpg' ),
+		array( 'slug' => 'rockfish-the-uluwatu', 'name' => 'Rockfish The Uluwatu', 'badge' => 'Fine Dining Restaurant', 'industry' => null, 'type' => 'Cliffside Restaurant', 'desc' => null, 'result' => '32,500%', 'img' => 'rockfish-uluwatu-photo.jpg', 'alt' => 'The clifftop dining deck at Rockfish The Uluwatu', 'href' => null, 'hero_img' => 'rockfish-uluwatu-hero.jpg', 'about' => 'Rockfish The Uluwatu is a fine dining restaurant set inside a natural limestone grotto on the cliffs of Uluwatu, Bali &mdash; one of the area&rsquo;s most iconic landmarks and a top tourist destination. Perched roughly 100 metres above the Indian Ocean, the venue serves fine dining seafood and wagyu with Japanese, French and Italian influences under Head Chef Andrey Legkiy, whose background includes Nobu, Ginza and Tiffany Caf&eacute;. The space transforms through the day, from natural limestone and turquoise-water views at lunch to candlelight, violet uplighting and live DJ sets in the evening, and was recognised with the 2025 Exquisite Awards title for Best Cliffside Wedding Venue.' ),
 		array( 'slug' => 'noah-yacht-club', 'name' => 'Noah Yacht Club', 'badge' => 'Yacht Club', 'industry' => 'Paid Media &middot; Lead Generation &middot; Analytics', 'type' => null, 'desc' => 'Building a full-funnel campaign system to fill charter and membership enquiries for this yacht club.', 'result' => '2,500%', 'img' => 'noah-yacht-case.jpg', 'alt' => 'Noah Yacht Club performance marketing case study', 'href' => null ),
 		array( 'slug' => 'tirtha-bali', 'name' => 'Tirtha Bali', 'badge' => 'Luxury Weddings', 'industry' => 'Paid Media &middot; Lead Generation &middot; Conversion Tracking', 'type' => null, 'desc' => 'Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.', 'result' => '1,500%', 'img' => 'tirtha-bali.jpg', 'alt' => 'Aerial view of the Tirtha Bali clifftop wedding venue', 'href' => 'case-study.html' ),
 		array( 'slug' => 'ulu-cliffhouse', 'name' => 'Ulu Cliffhouse', 'badge' => 'Hospitality', 'industry' => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking', 'type' => null, 'desc' => 'Building a measurement system that connects ad spend directly to bookings across this cliffside resort\'s restaurant, pool club and beach club venues.', 'result' => null, 'img' => 'ulu-cliffhouse-case.jpg', 'alt' => 'Ocean-view cliffside at Ulu Cliffhouse in Uluwatu', 'href' => null ),
@@ -210,6 +210,16 @@ function ldm_render_generic_case_study( $entry ) {
 			<img src="<?php echo esc_url( $img_url ); ?>" alt="<?php echo esc_attr( $hero_alt ); ?>" loading="lazy" width="1600" height="900" style="<?php echo esc_attr( $img_style ); ?>">
 		</div>
 	</section>
+
+	<?php if ( ! empty( $entry['about'] ) ) : ?>
+		<!-- ABOUT THE VENUE -->
+		<section class="ldm-section container container-narrow">
+			<div class="reveal">
+				<span class="eyebrow">About <?php echo esc_html( $entry['name'] ); ?></span>
+				<p class="lede" style="max-width:none;margin-top:16px;"><?php echo wp_kses_post( $entry['about'] ); ?></p>
+			</div>
+		</section>
+	<?php endif; ?>
 
 	<?php if ( empty( $entry['desc'] ) ) : ?>
 		<!-- COMING SOON NOTE -->
