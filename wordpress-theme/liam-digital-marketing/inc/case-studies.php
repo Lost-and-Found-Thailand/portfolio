@@ -69,7 +69,28 @@ function ldm_case_study_url( $slug ) {
 /** Every project this theme has real client data for, highest verified ROAS first. */
 function ldm_get_case_studies() {
 	return array(
-		array( 'slug' => 'rockfish-the-uluwatu', 'name' => 'Rockfish The Uluwatu', 'badge' => 'Cliffside Restaurant', 'industry' => 'Paid Media &middot; Full-Funnel Marketing &middot; Conversion Rate Optimization', 'type' => null, 'desc' => 'Managing full-funnel paid media and conversion rate optimization for Rockfish since it opened, turning its iconic cliffside setting into a steady stream of qualified diner and event enquiries.', 'result' => '32,500%', 'img' => 'rockfish-uluwatu-photo.jpg', 'alt' => 'The clifftop dining deck at Rockfish The Uluwatu', 'href' => null, 'hero_img' => 'rockfish-uluwatu-hero.jpg', 'about' => 'Rockfish The Uluwatu is a fine dining restaurant set inside a natural limestone grotto on the cliffs of Uluwatu, Bali &mdash; one of the area&rsquo;s most iconic landmarks and a top tourist destination. Perched roughly 100 metres above the Indian Ocean, it serves fine dining seafood and wagyu with Japanese, French and Italian influences.' ),
+		array(
+			'slug'           => 'rockfish-the-uluwatu',
+			'name'           => 'Rockfish The Uluwatu',
+			'badge'          => 'Cliffside Restaurant',
+			'industry'       => 'Paid Media &middot; Full-Funnel Marketing &middot; Conversion Rate Optimization',
+			'type'           => null,
+			'desc'           => 'Managing full-funnel paid media and conversion rate optimization for Rockfish since it opened, turning its iconic cliffside setting into a steady stream of qualified diner and event enquiries.',
+			'result'         => '32,500%',
+			'img'            => 'rockfish-uluwatu-photo.jpg',
+			'alt'            => 'The clifftop dining deck at Rockfish The Uluwatu',
+			'href'           => null,
+			'hero_img'       => 'rockfish-uluwatu-hero.jpg',
+			'challenge_title' => 'A landmark location doesn\'t fill the calendar on its own.',
+			'challenge_body'  => 'Rockfish The Uluwatu draws attention as one of Bali\'s most recognizable cliffside dining destinations, but reputation and foot traffic alone don\'t convert into a steady stream of reservations and private event enquiries. The venue needed a paid media system that could turn its location into a measurable acquisition channel, with tracking built to prove which bookings actually came from the ad spend.',
+			'strategy_title' => 'Full-funnel marketing, managed since the restaurant opened.',
+			'strategy_intro' => 'Three connected workstreams built to turn Rockfish\'s cliffside profile into qualified diner and event enquiries.',
+			'strategy_steps' => array(
+				array( 'title' => 'Paid Media', 'desc' => 'Campaigns built around real venue photography and audience targeting suited to Uluwatu\'s international dining and event crowd.' ),
+				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to reservation and private event enquiry, not just optimizing for clicks.' ),
+				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified leads.' ),
+			),
+		),
 		array( 'slug' => 'noah-yacht-club', 'name' => 'Noah Yacht Club', 'badge' => 'Yacht Club', 'industry' => 'Paid Media &middot; Lead Generation &middot; Analytics', 'type' => null, 'desc' => 'Building a full-funnel campaign system to fill charter and membership enquiries for this yacht club.', 'result' => '2,500%', 'img' => 'noah-yacht-case.jpg', 'alt' => 'Noah Yacht Club performance marketing case study', 'href' => null ),
 		array( 'slug' => 'tirtha-bali', 'name' => 'Tirtha Bali', 'badge' => 'Luxury Weddings', 'industry' => 'Paid Media &middot; Lead Generation &middot; Conversion Tracking', 'type' => null, 'desc' => 'Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.', 'result' => '1,500%', 'img' => 'tirtha-bali.jpg', 'alt' => 'Aerial view of the Tirtha Bali clifftop wedding venue', 'href' => 'case-study.html' ),
 		array( 'slug' => 'ulu-cliffhouse', 'name' => 'Ulu Cliffhouse', 'badge' => 'Hospitality', 'industry' => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking', 'type' => null, 'desc' => 'Building a measurement system that connects ad spend directly to bookings across this cliffside resort\'s restaurant, pool club and beach club venues.', 'result' => null, 'img' => 'ulu-cliffhouse-case.jpg', 'alt' => 'Ocean-view cliffside at Ulu Cliffhouse in Uluwatu', 'href' => null ),
@@ -211,12 +232,35 @@ function ldm_render_generic_case_study( $entry ) {
 		</div>
 	</section>
 
-	<?php if ( ! empty( $entry['about'] ) ) : ?>
-		<!-- ABOUT THE VENUE -->
+	<?php if ( ! empty( $entry['challenge_body'] ) ) : ?>
+		<!-- CHALLENGE -->
 		<section class="ldm-section container container-narrow">
 			<div class="reveal">
-				<span class="eyebrow">About <?php echo esc_html( $entry['name'] ); ?></span>
-				<p class="lede" style="max-width:none;margin-top:16px;"><?php echo wp_kses_post( $entry['about'] ); ?></p>
+				<span class="eyebrow">The Challenge</span>
+				<h2 class="fs-h2" style="margin:16px 0 24px;"><?php echo esc_html( $entry['challenge_title'] ); ?></h2>
+				<p class="lede" style="max-width:none;"><?php echo esc_html( $entry['challenge_body'] ); ?></p>
+			</div>
+		</section>
+	<?php endif; ?>
+
+	<?php if ( ! empty( $entry['strategy_steps'] ) ) : ?>
+		<!-- STRATEGY -->
+		<section class="ldm-section container">
+			<div class="ldm-section-head reveal">
+				<span class="eyebrow">The Strategy</span>
+				<h2 class="fs-h2"><?php echo esc_html( $entry['strategy_title'] ); ?></h2>
+				<?php if ( ! empty( $entry['strategy_intro'] ) ) : ?>
+					<p class="lede"><?php echo esc_html( $entry['strategy_intro'] ); ?></p>
+				<?php endif; ?>
+			</div>
+			<div class="ldm-process cols-3 reveal">
+				<?php foreach ( $entry['strategy_steps'] as $i => $step ) : ?>
+					<div class="ldm-process-step">
+						<div class="num"><?php echo esc_html( str_pad( $i + 1, 2, '0', STR_PAD_LEFT ) ); ?></div>
+						<h4><?php echo esc_html( $step['title'] ); ?></h4>
+						<p><?php echo esc_html( $step['desc'] ); ?></p>
+					</div>
+				<?php endforeach; ?>
 			</div>
 		</section>
 	<?php endif; ?>

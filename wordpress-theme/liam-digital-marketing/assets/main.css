@@ -712,6 +712,8 @@ img { max-width: 100%; display: block; }
    same numbered/staggered-reveal component, different column count. */
 @media (min-width: 768px) { .ldm-process.cols-5 { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1100px) { .ldm-process.cols-5 { grid-template-columns: repeat(5, 1fr); } }
+/* 3-step variant (fewer, but still sequential, workstreams). */
+@media (min-width: 768px) { .ldm-process.cols-3 { grid-template-columns: repeat(3, 1fr); } }
 /* Each step's top border lights up in sequence as the group reveals,
    so the four stages read as one flowing process rather than four
    unrelated cards — a direct visual of "Discover -> Build ->
