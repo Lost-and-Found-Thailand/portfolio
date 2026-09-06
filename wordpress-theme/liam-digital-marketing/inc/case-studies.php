@@ -101,7 +101,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'            => 'tabu-bali',
 			'name'            => 'Tabu Bali',
-			'badge'           => 'Hospitality',
+			'badge'           => 'Restaurant & Supperclub',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'            => 'Restaurant & Supperclub',
 			'desc'            => 'Managing paid media and full-funnel tracking for Tabu Bali, turning its day-to-night concept into a steady stream of qualified reservations and event enquiries.',
@@ -123,7 +123,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'            => 'carpe-diem',
 			'name'            => 'Carpe Diem',
-			'badge'           => 'Hospitality',
+			'badge'           => 'Beach Restaurant',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'            => 'Beach Restaurant, Beach Club, Pool Party',
 			'desc'            => 'Managing paid media and full-funnel tracking for Carpe Diem, turning its beachfront profile into a steady stream of qualified bookings.',
@@ -145,7 +145,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'            => 'the-beach-by-ours',
 			'name'            => 'The Beach by Ours',
-			'badge'           => 'Hospitality',
+			'badge'           => 'Beach Restaurant',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'            => 'Beach Restaurant, Beach Club',
 			'desc'            => 'Managing paid media and full-funnel tracking for The Beach by Ours, turning its sunset beachfront setting into a steady stream of qualified reservations.',
@@ -167,7 +167,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'            => 'soho-pool-club',
 			'name'            => 'Soho Pool Club',
-			'badge'           => 'Hospitality',
+			'badge'           => 'Pool Club',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'            => 'Pool Club',
 			'desc'            => 'Managing paid media and full-funnel tracking for Soho Pool Club, turning its pool club setting into a steady stream of qualified bookings.',
@@ -189,7 +189,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'            => 'marbella-beach-goa',
 			'name'            => 'Marbella Beach Goa',
-			'badge'           => 'Hospitality',
+			'badge'           => 'Beach Club & Resort',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'            => 'Beach Club & Resort',
 			'desc'            => 'Managing paid media and full-funnel tracking for Marbella Beach Goa, turning its established beachfront reputation into a steady stream of qualified booking enquiries.',
@@ -211,7 +211,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'            => 'ama-by-ours',
 			'name'            => 'Ama by Ours',
-			'badge'           => 'Hospitality',
+			'badge'           => 'Restaurant',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'            => 'Restaurant',
 			'desc'            => 'Managing paid media and full-funnel tracking for Ama by Ours, turning its Mediterranean concept into a steady stream of qualified reservations.',
@@ -233,7 +233,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'            => 'bennys-cocktails-grill',
 			'name'            => 'Benny’s Cocktails & Grill',
-			'badge'           => 'Hospitality',
+			'badge'           => 'Steakhouse',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'            => 'Steakhouse, Cocktail Bar',
 			'desc'            => 'Managing paid media and full-funnel tracking for Benny\'s Cocktails & Grill, turning its steakhouse reputation into a steady stream of qualified reservations.',
@@ -255,7 +255,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'            => 'ours-bali',
 			'name'            => 'Ours Bali',
-			'badge'           => 'Hospitality',
+			'badge'           => 'Restaurant',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'            => 'Restaurant',
 			'desc'            => 'Managing paid media and full-funnel tracking for Ours Bali, turning its all-day dining concept into a steady stream of qualified reservations.',
@@ -277,7 +277,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'            => 'home-by-ours',
 			'name'            => 'Home by Ours',
-			'badge'           => 'Hospitality',
+			'badge'           => 'Restaurant',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'            => 'Restaurant',
 			'desc'            => 'Managing paid media and full-funnel tracking for Home by Ours, turning its terrace dining concept into a steady stream of qualified reservations.',
@@ -299,7 +299,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'the-distillery-phuket',
 			'name'              => 'The Distillery Phuket',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Distillery & Fusion Restaurant',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Distillery & Fusion Restaurant',
 			'desc'              => 'Managing paid media and full-funnel tracking for The Distillery Phuket, turning its distillery-and-restaurant concept into a steady stream of qualified bookings.',
@@ -321,7 +321,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'bartolo',
 			'name'              => 'Bartolo',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Restaurant',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Restaurant, Cocktail',
 			'desc'              => 'Managing paid media and full-funnel tracking for Bartolo, turning its bistro concept into a steady stream of qualified reservations.',
@@ -343,7 +343,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'mood-by-ours',
 			'name'              => 'Mood by Ours',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Restaurant',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Restaurant, Minimart',
 			'desc'              => 'Managing paid media and full-funnel tracking for Mood by Ours, turning its farm-to-table story into a steady stream of qualified orders and visits.',
@@ -365,7 +365,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'meso',
 			'name'              => 'Meso',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Beach Restaurant',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Beach Restaurant',
 			'desc'              => 'Managing paid media and full-funnel tracking for Meso, turning its beachfront setting into a steady stream of qualified bookings.',
@@ -386,7 +386,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'the-9th-degree',
 			'name'              => 'The 9th Degree',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Lagoon Front Restaurant',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Lagoon Front Restaurant',
 			'desc'              => 'Managing paid media and full-funnel tracking for The 9th Degree, turning its lagoon-front setting into a steady stream of qualified reservations.',
@@ -408,7 +408,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'tempo',
 			'name'              => 'Tempo',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Lounge & KTV',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Lounge & KTV',
 			'desc'              => 'Managing paid media and full-funnel tracking for Tempo, turning its restaurant, lounge and KTV concept into a steady stream of qualified bookings.',
@@ -433,7 +433,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'penida-colada',
 			'name'              => 'Penida Colada',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Beach Restaurant',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Beach Restaurant',
 			'desc'              => 'Managing paid media and full-funnel tracking for Penida Colada, turning its remote beachfront setting into a steady stream of qualified bookings.',
@@ -454,7 +454,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'bollywood-phuket',
 			'name'              => 'Bollywood Phuket',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Restaurant',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Restaurant',
 			'desc'              => 'Managing paid media and full-funnel tracking for Bollywood Phuket, turning its home-kitchen story into a steady stream of qualified reservations.',
@@ -476,7 +476,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'the-firefly-club',
 			'name'              => 'The Firefly Club',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Restaurant',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Restaurant',
 			'desc'              => 'Managing paid media and full-funnel tracking for The Firefly Club, turning interest in its concept into a steady stream of qualified reservations.',
@@ -497,7 +497,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'lulu-bistrot',
 			'name'              => 'Lulu Bistrot',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Restaurant',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Restaurant, Bistro, Cocktail Bar',
 			'desc'              => 'Managing paid media and full-funnel tracking for Lulu Bistrot, turning its bistro concept into a steady stream of qualified reservations.',
@@ -519,7 +519,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'babou',
 			'name'              => 'Babou',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Restaurant',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Restaurant, Club',
 			'desc'              => 'Managing paid media and full-funnel tracking for Babou, turning its rebrand into a steady stream of qualified bookings.',
@@ -541,7 +541,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'hug-samui',
 			'name'              => 'Hug Samui',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Beachfront Restaurant',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Beachfront Restaurant',
 			'desc'              => 'Managing paid media and full-funnel tracking for Hug Samui, turning its beachfront seafood concept into a steady stream of qualified reservations.',
@@ -563,7 +563,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'burnt',
 			'name'              => 'Burnt',
-			'badge'             => 'Hospitality',
+			'badge'             => 'Beachfront Restaurant',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Beachfront Restaurant',
 			'desc'              => 'Managing paid media and full-funnel tracking for Burnt, turning its char-grill concept into a steady stream of qualified reservations.',
@@ -585,7 +585,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'muang-samui-resort',
 			'name'              => 'Muang Samui Resort',
-			'badge'             => 'Weddings &amp; Resorts',
+			'badge'             => 'Beachfront Resort',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => '',
 			'desc'              => 'Managing paid media and full-funnel tracking for Muang Samui Resort, turning its resort amenities into a steady stream of qualified bookings.',
@@ -607,7 +607,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'mel-francis-villa',
 			'name'              => 'Mel Francis Villa',
-			'badge'             => 'Weddings &amp; Resorts',
+			'badge'             => 'Luxury Villas',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Luxury Villas',
 			'desc'              => 'Managing paid media and full-funnel tracking for Mel Francis Villa, turning its villa investment offer into a steady stream of qualified buyer enquiries.',
@@ -629,7 +629,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'house-of-om',
 			'name'              => 'House of Om',
-			'badge'             => 'Wellness',
+			'badge'             => 'Yoga School',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Yoga School',
 			'desc'              => 'Managing paid media and full-funnel tracking for House of Om, turning interest across its campuses into a steady stream of qualified enrollments.',
@@ -651,7 +651,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'shaz-aesthetic-media-spa',
 			'name'              => 'Shaz Aesthetic & Media Spa',
-			'badge'             => 'Wellness',
+			'badge'             => 'Aesthetic Clinic',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => '',
 			'desc'              => 'Managing paid media and full-funnel tracking for Shaz Aesthetic & Media Spa, turning interest in its treatments into a steady stream of qualified appointment bookings.',
@@ -673,7 +673,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'arna-oceanic-wellness-spa',
 			'name'              => 'Arna Oceanic Wellness Spa',
-			'badge'             => 'Wellness',
+			'badge'             => 'Wellness Spa',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => '',
 			'desc'              => 'Managing paid media and full-funnel tracking for Arna Oceanic Wellness Spa, turning its spa concept into a steady stream of qualified bookings.',
@@ -694,7 +694,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'cave-rai-ra',
 			'name'              => 'Cave Rai Ra',
-			'badge'             => 'Wellness',
+			'badge'             => 'Wellness Spa',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Wellness Spa',
 			'desc'              => 'Managing paid media and full-funnel tracking for Cave Rai Ra, turning its cave-themed concept into a steady stream of qualified treatment bookings.',
@@ -715,7 +715,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'athlean',
 			'name'              => 'Athlean',
-			'badge'             => 'Fitness',
+			'badge'             => 'Gym',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Gym',
 			'desc'              => 'Managing paid media and full-funnel tracking for Athlean, turning interest into a steady stream of qualified membership sign-ups.',
@@ -737,7 +737,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'tribal-fitness',
 			'name'              => 'Tribal Fitness',
-			'badge'             => 'Fitness',
+			'badge'             => 'Gym',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Gym',
 			'desc'              => 'Managing paid media and full-funnel tracking for Tribal Fitness, turning its data-driven training story into a steady stream of qualified trial sign-ups.',
@@ -758,7 +758,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'raw-ubud',
 			'name'              => 'Raw Ubud',
-			'badge'             => 'Fitness',
+			'badge'             => 'Gym',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Gym',
 			'desc'              => 'Managing paid media and full-funnel tracking for Raw Ubud, turning interest into a steady stream of qualified membership sign-ups.',
@@ -779,7 +779,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'nuhuman-raw',
 			'name'              => 'Nuhuman Raw',
-			'badge'             => 'Fitness',
+			'badge'             => 'Gym',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Gym',
 			'desc'              => 'Managing paid media and full-funnel tracking for Nuhuman Raw, turning interest into a steady stream of qualified membership applications.',
@@ -800,7 +800,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'kyzn',
 			'name'              => 'Kyzn',
-			'badge'             => 'Wellness',
+			'badge'             => 'Wellness Club',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => '',
 			'desc'              => 'Managing paid media and full-funnel tracking for Kyzn, turning interest across its clubs into a steady stream of qualified membership sign-ups.',
@@ -822,7 +822,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'royal-finances',
 			'name'              => 'Royal Finances',
-			'badge'             => 'Finance',
+			'badge'             => 'Short-Term Lending',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => '',
 			'desc'              => 'Managing paid media and full-funnel tracking for Royal Finances, turning ad interest into a steady stream of qualified loan applications.',
@@ -843,7 +843,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'simple-financial',
 			'name'              => 'Simple Financial',
-			'badge'             => 'Finance',
+			'badge'             => 'Short-Term Lending',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => '',
 			'desc'              => 'Managing paid media and full-funnel tracking for Simple Financial, turning ad traffic into a steady stream of qualified loan applications.',
@@ -864,7 +864,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'simple-pret',
 			'name'              => 'Simple Pret',
-			'badge'             => 'Finance',
+			'badge'             => 'Short-Term Lending',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => '',
 			'desc'              => 'Managing paid media and full-funnel tracking for Simple Pret, turning ad interest into a steady stream of qualified loan applications.',
@@ -885,7 +885,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'cash-depot',
 			'name'              => 'Cash Depot',
-			'badge'             => 'Finance',
+			'badge'             => 'Consumer Finance',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => '',
 			'desc'              => 'Managing paid media and full-funnel tracking for Cash Depot, turning ad interest into a steady stream of qualified applications.',
@@ -907,7 +907,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'trader2b',
 			'name'              => 'Trader2B',
-			'badge'             => 'Finance',
+			'badge'             => 'Trading Simulator',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Trading Simulator',
 			'desc'              => 'Managing paid media and full-funnel tracking for Trader2B, turning interest into a steady stream of qualified challenge sign-ups.',
@@ -928,7 +928,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'natuurvlees-nl',
 			'name'              => 'Natuurvlees.nl',
-			'badge'             => 'Retail',
+			'badge'             => 'Meat Butcher',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Meat Butcher',
 			'desc'              => 'Managing paid media and full-funnel tracking for Natuurvlees.nl, turning its farm-direct story into a steady stream of qualified orders.',
@@ -950,7 +950,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'bb-b',
 			'name'              => 'BB&B',
-			'badge'             => 'Retail',
+			'badge'             => 'Beer & Beverage Import',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Beer & Beverage Import, Bangkok',
 			'desc'              => 'Managing paid media and full-funnel tracking for BB&B, turning interest into a steady stream of qualified trade enquiries.',
@@ -972,7 +972,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'simba-sea-trips',
 			'name'              => 'Simba Sea Trips',
-			'badge'             => 'Retail',
+			'badge'             => 'Boat Tours',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => '',
 			'desc'              => 'Managing paid media and full-funnel tracking for Simba Sea Trips, turning its reputation into a steady stream of qualified tour bookings.',
@@ -994,7 +994,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'hug-ocean',
 			'name'              => 'Hug Ocean',
-			'badge'             => 'Retail',
+			'badge'             => 'Scuba Diving',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Scuba Diving',
 			'desc'              => 'Managing paid media and full-funnel tracking for Hug Ocean, turning interest into a steady stream of qualified course and trip bookings.',
@@ -1016,7 +1016,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'steam-cleaning',
 			'name'              => 'Steam Cleaning',
-			'badge'             => 'Retail',
+			'badge'             => 'Cleaning Services',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => '',
 			'desc'              => 'Managing paid media and full-funnel tracking for Steam Cleaning, turning its certification into a steady stream of qualified commercial enquiries.',
@@ -1037,7 +1037,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'dreamer-phuket',
 			'name'              => 'Dreamer Phuket',
-			'badge'             => 'Retail',
+			'badge'             => 'Cafe & Lifestyle Space',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => '',
 			'desc'              => 'Managing paid media and full-funnel tracking for Dreamer Phuket, turning interest into a steady stream of qualified customer visits.',
@@ -1058,7 +1058,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'unity-festival-thailand',
 			'name'              => 'Unity Festival Thailand',
-			'badge'             => 'Retail',
+			'badge'             => 'Festival',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Festival',
 			'desc'              => 'Managing paid media and full-funnel tracking for Unity Festival Thailand, turning interest into a steady stream of qualified ticket sales.',
