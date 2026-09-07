@@ -23,7 +23,7 @@ if ( $ldm_case ) {
 	$ldm_meta_title       = $ldm_case['name'] . ' Case Study | Liam Digital Marketing';
 	$ldm_meta_description = ! empty( $ldm_case['desc'] )
 		? $ldm_case['desc']
-		: 'A ' . strtolower( $ldm_case['badge'] ) . ' project by Liam Digital Marketing — performance marketing case study for ' . $ldm_case['name'] . '.';
+		: "Liam Digital Marketing's performance marketing case study for " . $ldm_case['name'] . ', a ' . strtolower( $ldm_case['badge'] ) . ' project.';
 
 	get_header();
 	ldm_render_generic_case_study( $ldm_case );
@@ -60,8 +60,8 @@ get_header();
   <section class="ldm-section container container-narrow">
     <div class="reveal">
       <span class="eyebrow">The Challenge</span>
-      <h2 class="fs-h2" style="margin:16px 0 24px;">International enquiries were coming in — but too few were qualified.</h2>
-      <p class="lede" style="max-width:none;">Tirtha Bali was attracting broad interest from paid social, but much of it wasn't a fit for a luxury international wedding venue — budget mismatches, wrong locations, and enquiries with no real intent to book. The brand needed a way to attract couples who were both qualified and ready to plan, and a reliable way to prove which channels were actually driving bookings rather than just clicks.</p>
+      <h2 class="fs-h2" style="margin:16px 0 24px;">International enquiries were coming in. But too few were qualified.</h2>
+      <p class="lede" style="max-width:none;">Tirtha Bali was attracting broad interest from paid social, but much of it wasn't a fit for a luxury international wedding venue: budget mismatches, wrong locations, and enquiries with no real intent to book. The brand needed a way to attract couples who were both qualified and ready to plan, and a reliable way to prove which channels were actually driving bookings rather than just clicks.</p>
     </div>
   </section>
 

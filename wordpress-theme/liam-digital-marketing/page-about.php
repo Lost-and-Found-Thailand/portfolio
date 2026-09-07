@@ -7,8 +7,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$ldm_meta_title       = 'About | Digital Marketing Manager — $10M+ Ad Spend, 100+ Brands Scaled';
-$ldm_meta_description = 'Meet Liam — a Digital Marketing Manager with 6+ years managing $10M+ in ad spend and scaling 100+ brands through performance marketing, marketing technology and analytics.';
+$ldm_meta_title       = 'About | Digital Marketing Manager, $10M+ Ad Spend, 100+ Brands Scaled';
+$ldm_meta_description = 'Meet Liam, a Digital Marketing Manager with 6+ years managing $10M+ in ad spend and scaling 100+ brands through performance marketing, marketing technology and analytics.';
 
 get_header();
 ?>
@@ -17,12 +17,12 @@ get_header();
   <section class="ldm-page-header container">
     <span class="eyebrow">About</span>
     <h1 class="fs-h1">Campaigns are just the start. I build marketing systems.</h1>
-    <p class="lede">I'm Liam, a Digital Marketing Manager working at the intersection of performance marketing, growth and marketing technology. Over 6+ years I've managed $10M+ in ad spend and helped scale 100+ brands — turning ad spend into measurable outcomes, not impressions.</p>
+    <p class="lede">I'm Liam, a Digital Marketing Manager working at the intersection of performance marketing, growth and marketing technology. Over 6+ years I've managed $10M+ in ad spend and helped scale 100+ brands, turning ad spend into measurable outcomes, not impressions.</p>
   </section>
 
   <!-- INTRO STATEMENT -->
   <section class="container container-narrow">
-    <p class="lede reveal" style="max-width:none;">Most marketing work stops at the campaign. Mine starts there. I care as much about how a lead gets tracked, scored and reported on as I do about the creative that brought them in — because a beautiful ad that nobody can measure isn't a strategy, it's a guess.</p>
+    <p class="lede reveal" style="max-width:none;">Most marketing work stops at the campaign. Mine starts there. I care as much about how a lead gets tracked, scored and reported on as I do about the creative that brought them in, because a beautiful ad that nobody can measure isn't a strategy, it's a guess.</p>
   </section>
 
   <!-- BACKGROUND -->
@@ -30,9 +30,9 @@ get_header();
     <div class="reveal">
       <span class="eyebrow">Background</span>
       <h2 class="fs-h2" style="margin:16px 0 24px;">From hospitality floors to performance dashboards.</h2>
-      <p style="color:var(--color-off-white);margin-bottom:20px;">Over six-plus years, I've managed and optimized multi-million-dollar advertising budgets — more than $10M in ad spend to date — across 100+ brands spanning hospitality, e-commerce, professional services and beyond. That range is deliberate: it's taught me that a performance system built for one industry rarely survives contact with another, so I build for the fundamentals — audience, offer, tracking — rather than for a template.</p>
-      <p style="color:var(--color-off-white);margin-bottom:20px;">My work spans the full paid and organic mix — Meta, Google, TikTok and LinkedIn Ads, alongside SEO, SEM, social and email marketing — plus the measurement layer underneath it, from GA4 and Google Tag Manager to server-side tracking, attribution modeling and Looker Studio reporting. I'm as comfortable inside an ad account as I am inside a GTM container or a data visualization dashboard, which is the point. Paid media without tracking is a black box. Tracking without strategy is just data.</p>
-      <p style="color:var(--color-off-white);">On the conversion side, I map the full customer journey and rebuild landing pages, forms and funnels around how people actually decide — testing changes rather than assuming them. And because none of this works in isolation, I spend real time in the martech layer: CRM integrations, marketing automation, and the WordPress/Elementor stack most of my clients' sites run on.</p>
+      <p style="color:var(--color-off-white);margin-bottom:20px;">Over six-plus years, I've managed and optimized multi-million-dollar advertising budgets (more than $10M in ad spend to date) across 100+ brands spanning hospitality, e-commerce, professional services and beyond. That range is deliberate: it's taught me that a performance system built for one industry rarely survives contact with another, so I build for the fundamentals (audience, offer, tracking) rather than for a template.</p>
+      <p style="color:var(--color-off-white);margin-bottom:20px;">My work spans the full paid and organic mix (Meta, Google, TikTok and LinkedIn Ads, alongside SEO, SEM, social and email marketing) plus the measurement layer underneath it, from GA4 and Google Tag Manager to server-side tracking, attribution modeling and Looker Studio reporting. I'm as comfortable inside an ad account as I am inside a GTM container or a data visualization dashboard, which is the point. Paid media without tracking is a black box. Tracking without strategy is just data.</p>
+      <p style="color:var(--color-off-white);">On the conversion side, I map the full customer journey and rebuild landing pages, forms and funnels around how people actually decide, testing changes rather than assuming them. And because none of this works in isolation, I spend real time in the martech layer: CRM integrations, marketing automation, and the WordPress/Elementor stack most of my clients' sites run on.</p>
       <div class="ldm-about-stats">
         <div><div class="num"><span data-counter="6" data-suffix="+">0+</span></div><div class="label">Years in performance marketing</div></div>
         <div><div class="num"><span data-counter="100" data-suffix="+">0+</span></div><div class="label">Brands scaled</div></div>

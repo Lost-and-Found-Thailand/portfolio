@@ -24,7 +24,7 @@ $ldm_contact_status = isset( $_GET['ldm_contact'] ) ? sanitize_key( wp_unslash( 
   <section class="ldm-page-header container">
     <span class="eyebrow">Contact</span>
     <h1 class="fs-h1">Let's Build Something That Performs.</h1>
-    <p class="lede">Have a project, campaign or growth challenge? Tell me about it — I read every enquiry personally.</p>
+    <p class="lede">Have a project, campaign or growth challenge? Tell me about it. I read every enquiry personally.</p>
   </section>
 
   <!-- CONTACT FORM + DIRECT LINKS -->
@@ -33,10 +33,10 @@ $ldm_contact_status = isset( $_GET['ldm_contact'] ) ? sanitize_key( wp_unslash( 
 
       <div class="card">
         <?php if ( 'success' === $ldm_contact_status ) : ?>
-          <p class="lede" style="max-width:none;">Thanks — your message is on its way. I'll get back to you within one to two business days.</p>
+          <p class="lede" style="max-width:none;">Thanks, your message is on its way. I'll get back to you within one to two business days.</p>
         <?php else : ?>
           <?php if ( 'error' === $ldm_contact_status ) : ?>
-            <p class="text-gray" style="margin-bottom:20px;">Something went wrong sending that — please check the form and try again, or reach out directly using the details on the right.</p>
+            <p class="text-gray" style="margin-bottom:20px;">Something went wrong sending that. Please check the form and try again, or reach out directly using the details on the right.</p>
           <?php endif; ?>
           <form class="ldm-contact-form" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
             <input type="hidden" name="action" value="ldm_contact_form">

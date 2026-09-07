@@ -10,8 +10,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$ldm_meta_title       = 'Selected Work | Liam Digital Marketing — Performance Marketing Case Studies';
-$ldm_meta_description = 'Case studies in paid media, lead generation, conversion tracking and marketing analytics — real campaign work from a performance marketing specialist and Google Ads & Meta Ads consultant.';
+$ldm_meta_title       = 'Selected Work | Liam Digital Marketing, Performance Marketing Case Studies';
+$ldm_meta_description = 'Case studies in paid media, lead generation, conversion tracking and marketing analytics: real campaign work from a performance marketing specialist and Google Ads & Meta Ads consultant.';
 
 get_header();
 ?>
@@ -20,7 +20,7 @@ get_header();
   <section class="ldm-page-header container">
     <span class="eyebrow">Work</span>
     <h1 class="fs-h1">Selected Work</h1>
-    <p class="lede">A closer look at the campaigns, growth systems and digital projects behind the numbers — how they were built, what they solved, and what they delivered.</p>
+    <p class="lede">A closer look at the campaigns, growth systems and digital projects behind the numbers: how they were built, what they solved, and what they delivered.</p>
   </section>
 
   <!-- CASE LIST -->
@@ -28,7 +28,7 @@ get_header();
     <div class="ldm-section-head reveal">
       <span class="eyebrow">Selected Work</span>
       <h2 class="fs-h2">100+ brands, one system.</h2>
-      <p class="lede">Every brand I've built paid media, tracking and growth systems for — across hospitality, wellness, fitness, finance and beyond.</p>
+      <p class="lede">Every brand I've built paid media, tracking and growth systems for, spanning hospitality, wellness, fitness, finance and beyond.</p>
     </div>
 
     <div class="ldm-case-list">

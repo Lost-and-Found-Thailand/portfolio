@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 
 function ldm_handle_contact_form() {
 	if ( ! isset( $_POST['ldm_contact_nonce'] ) || ! wp_verify_nonce( $_POST['ldm_contact_nonce'], 'ldm_contact_form' ) ) {
-		wp_die( esc_html__( 'Security check failed — please go back and try again.', 'liam-digital-marketing' ) );
+		wp_die( esc_html__( 'Security check failed. Please go back and try again.', 'liam-digital-marketing' ) );
 	}
 
 	$name    = isset( $_POST['name'] ) ? sanitize_text_field( wp_unslash( $_POST['name'] ) ) : '';

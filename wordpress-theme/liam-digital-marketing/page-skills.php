@@ -6,8 +6,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$ldm_meta_title       = 'Skills | Digital Marketing Specialist — Paid Media, Analytics & Tracking';
-$ldm_meta_description = 'What I do and the tools I work with — paid media, lead generation, conversion tracking, marketing analytics, conversion optimization and digital strategy, from a hands-on digital marketing specialist.';
+$ldm_meta_title       = 'Skills | Digital Marketing Specialist, Paid Media, Analytics & Tracking';
+$ldm_meta_description = 'What I do and the tools I work with: paid media, lead generation, conversion tracking, marketing analytics, conversion optimization and digital strategy, from a hands-on digital marketing specialist.';
 
 get_header();
 ?>
@@ -16,7 +16,7 @@ get_header();
   <section class="ldm-page-header container">
     <span class="eyebrow">Skills</span>
     <h1 class="fs-h1">What I Do</h1>
-    <p class="lede">Six connected disciplines — strategy, media, tracking and data — working as one system, rather than six separate vendors.</p>
+    <p class="lede">Six connected disciplines (strategy, media, tracking and data) working as one system, rather than six separate vendors.</p>
     <div class="ldm-discipline-row" aria-hidden="true">
       <span class="ldm-discipline-pill">Paid Media</span>
       <span class="ldm-discipline-pill">Lead Generation</span>
@@ -39,7 +39,7 @@ get_header();
           <h3>Paid Media</h3>
         </div>
         <div>
-          <p class="ldm-service-detail-desc">Campaigns across Meta, Google, TikTok and LinkedIn Ads, plus Performance Max and Search — built for efficiency, not just reach. Every campaign is structured around a clear objective, tested creative, and a budget that's allowed to work instead of being guessed at. I've managed $10M+ in ad spend this way, across 100+ brands.</p>
+          <p class="ldm-service-detail-desc">Campaigns across Meta, Google, TikTok and LinkedIn Ads, plus Performance Max and Search, built for efficiency, not just reach. Every campaign is structured around a clear objective, tested creative, and a budget that's allowed to work instead of being guessed at. I've managed $10M+ in ad spend this way, across 100+ brands.</p>
           <ul class="ldm-service-detail-list-items">
             <li>Meta &amp; TikTok Ads campaign build &amp; management</li>
             <li>Google Ads Search, Performance Max &amp; LinkedIn Ads</li>
@@ -71,7 +71,7 @@ get_header();
           <h3>Conversion Tracking</h3>
         </div>
         <div>
-          <p class="ldm-service-detail-desc">GA4, Google Tag Manager, Meta Pixel, conversion APIs and server-side event tracking — so every dollar of ad spend can be traced back to a real business outcome, not just a pixel fire. This is the foundation everything else depends on.</p>
+          <p class="ldm-service-detail-desc">GA4, Google Tag Manager, Meta Pixel, conversion APIs and server-side event tracking, so every dollar of ad spend can be traced back to a real business outcome, not just a pixel fire. This is the foundation everything else depends on.</p>
           <ul class="ldm-service-detail-list-items">
             <li>GA4 &amp; Google Tag Manager implementation</li>
             <li>Meta Conversions API</li>
@@ -87,7 +87,7 @@ get_header();
           <h3>Marketing Analytics</h3>
         </div>
         <div>
-          <p class="ldm-service-detail-desc">Measurement systems, dashboards and campaign analysis that turn raw platform data into decisions — what's working, what isn't, and what to do about it next. Reporting built to be read, not just produced.</p>
+          <p class="ldm-service-detail-desc">Measurement systems, dashboards and campaign analysis that turn raw platform data into decisions: what's working, what isn't, and what to do about it next. Reporting built to be read, not just produced.</p>
           <ul class="ldm-service-detail-list-items">
             <li>Looker Studio dashboards</li>
             <li>Multi-channel reporting</li>
@@ -103,7 +103,7 @@ get_header();
           <h3>Conversion Optimization</h3>
         </div>
         <div>
-          <p class="ldm-service-detail-desc">Landing pages, forms and funnels rebuilt around how people actually decide, not how a template assumes they will. Changes are proposed, tested and measured — not shipped on instinct.</p>
+          <p class="ldm-service-detail-desc">Landing pages, forms and funnels rebuilt around how people actually decide, not how a template assumes they will. Changes are proposed, tested and measured, not shipped on instinct.</p>
           <ul class="ldm-service-detail-list-items">
             <li>Landing page audits &amp; rebuilds</li>
             <li>Form &amp; funnel optimization</li>
@@ -119,7 +119,7 @@ get_header();
           <h3>Growth &amp; Digital Strategy</h3>
         </div>
         <div>
-          <p class="ldm-service-detail-desc">Data-driven marketing strategy and growth planning that connects paid, organic and lifecycle channels — SEO, SEM, social and email — into a single plan, not a list of disconnected tactics run in isolation.</p>
+          <p class="ldm-service-detail-desc">Data-driven marketing strategy and growth planning that connects paid, organic and lifecycle channels (SEO, SEM, social and email) into a single plan, not a list of disconnected tactics run in isolation.</p>
           <ul class="ldm-service-detail-list-items">
             <li>SEO &amp; SEM strategy</li>
             <li>Social media &amp; email marketing</li>
@@ -139,7 +139,7 @@ get_header();
     <div class="ldm-section-head reveal">
       <span class="eyebrow">Skills &amp; Tools</span>
       <h2 class="fs-h2">Tools I Work With.</h2>
-      <p class="lede">These are the platforms and technologies I use day to day — not a partner-page list, just what I know how to use.</p>
+      <p class="lede">These are the platforms and technologies I use day to day. Not a partner-page list, just what I know how to use.</p>
     </div>
     <div class="ldm-tech-grid reveal">
       <div class="ldm-tech-cat">
