@@ -901,16 +901,19 @@ img { max-width: 100%; display: block; }
    vertical line would no longer line up with the numbers). */
 .ldm-service-detail-list {
   /* Single source of truth for the spine's horizontal position —
-     centered in the 32px gap between .ldm-service-detail's 220px
-     first column and its description column, not inside the first
+     sits just past .ldm-service-detail's 220px first column, inside
+     the 32px gap before its description column, not inside the first
      column itself. That column holds both the numeral AND its <h3>
      title stacked underneath (see markup), and a title like "Growth
      & Digital Strategy" is far wider than the numeral alone — placing
      the spine "through" that column sliced right through the title
-     text. Sitting in the gap is text-free at any column width. If
-     the 220px column or --gap-lg (32px) ever change, update this to
-     match (220px column + half of --gap-lg). */
-  --spine-x: 236px;
+     text. Sitting close to the LEFT edge of the gap (rather than
+     centered in it) leaves the glow below room to fall off before it
+     ever reaches the description column's text — centering it caused
+     the marker dot's glow to bleed onto the paragraph text next to it.
+     If the 220px column ever changes, update this to match (220px + a
+     few px). */
+  --spine-x: 224px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -927,7 +930,7 @@ img { max-width: 100%; display: block; }
 .ldm-service-spine-fill {
   height: 0%;
   background: var(--color-accent);
-  box-shadow: 0 0 10px var(--color-accent-glow-strong);
+  box-shadow: 0 0 6px var(--color-accent-glow-strong);
 }
 .ldm-service-detail {
   display: grid;
@@ -942,13 +945,17 @@ img { max-width: 100%; display: block; }
   content: "";
   position: absolute;
   top: 50%;
-  left: calc(var(--spine-x) + 7px);
+  /* Centered on the spine line itself (line is 2px wide, dot is 9px)
+     rather than offset further toward the description column — the
+     previous +7px offset put the dot's glow right at, and its blur
+     past, that column's text. */
+  left: calc(var(--spine-x) - 3.5px);
   width: 9px;
   height: 9px;
   margin-top: -4.5px;
   border-radius: 50%;
   background: var(--color-accent);
-  box-shadow: 0 0 10px 3px var(--color-accent-glow-strong);
+  box-shadow: 0 0 6px 1px var(--color-accent-glow-strong);
   opacity: 0;
   transform: scale(0.4);
   transition: opacity 400ms var(--ease-premium), transform 400ms var(--ease-premium);
