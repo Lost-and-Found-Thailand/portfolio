@@ -901,11 +901,16 @@ img { max-width: 100%; display: block; }
    vertical line would no longer line up with the numbers). */
 .ldm-service-detail-list {
   /* Single source of truth for the spine's horizontal position —
-     tuned to sit ~half-way across the numeral column below, so it
-     reads as centered on the number's optical weight. If
-     .ldm-service-detail's 220px first column ever changes, update
-     this to match (roughly half the new column width). */
-  --spine-x: 109px;
+     centered in the 32px gap between .ldm-service-detail's 220px
+     first column and its description column, not inside the first
+     column itself. That column holds both the numeral AND its <h3>
+     title stacked underneath (see markup), and a title like "Growth
+     & Digital Strategy" is far wider than the numeral alone — placing
+     the spine "through" that column sliced right through the title
+     text. Sitting in the gap is text-free at any column width. If
+     the 220px column or --gap-lg (32px) ever change, update this to
+     match (220px column + half of --gap-lg). */
+  --spine-x: 236px;
   display: flex;
   flex-direction: column;
   position: relative;
