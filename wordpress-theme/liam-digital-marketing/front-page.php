@@ -289,7 +289,7 @@ $ldm_img = get_template_directory_uri();
         <div class="index">02</div>
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16l-6.5 8v6l-3 1.5v-7.5z"/></svg>
         <h3>Lead Generation</h3>
-        <p>Campaigns designed around qualified enquiries rather than vanity metrics.</p>
+        <p>Campaigns designed around qualified bookings and enquiries rather than vanity metrics.</p>
       </div>
       <div class="ldm-service">
         <div class="index">03</div>
