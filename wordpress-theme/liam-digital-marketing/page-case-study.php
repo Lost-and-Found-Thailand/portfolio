@@ -91,7 +91,7 @@ get_header();
       <div class="ldm-process-step">
         <div class="num">04</div>
         <h4>Audience Testing</h4>
-        <p>Structured testing across interest, lookalike and geographic segments to isolate what qualified leads.</p>
+        <p>Structured testing across interest, lookalike and geographic segments to isolate what actually drives qualified enquiries.</p>
       </div>
       <div class="ldm-process-step">
         <div class="num">05</div>
@@ -118,7 +118,7 @@ get_header();
     <div class="reveal">
       <span class="eyebrow">Next Steps</span>
       <h2 class="fs-h2" style="margin-top:16px;">Have a similar challenge?</h2>
-      <p class="lede">If your brand needs a paid media and tracking system built around qualified leads, not just clicks, let's talk.</p>
+      <p class="lede">If your brand needs a paid media and tracking system built around qualified bookings and leads, not just clicks, let's talk.</p>
       <div class="ldm-contact-ctas">
         <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Start a Conversation &rarr;</a>
       </div>

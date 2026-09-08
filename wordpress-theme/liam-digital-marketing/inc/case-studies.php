@@ -88,7 +88,7 @@ function ldm_get_case_studies() {
 			'strategy_steps' => array(
 				array( 'title' => 'Paid Media', 'desc' => 'Campaigns built around real venue photography and audience targeting suited to Uluwatu\'s international dining and event crowd.' ),
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to reservation and private event enquiry, not just optimizing for clicks.' ),
-				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified leads.' ),
+				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified diner and event enquiries.' ),
 			),
 		),
 		array( 'slug' => 'noah-yacht-club', 'name' => 'Noah Yacht Club', 'badge' => 'Yacht Club', 'industry' => 'Paid Media &middot; Lead Generation &middot; Analytics', 'type' => null, 'desc' => 'Building a full-funnel campaign system to fill charter and membership enquiries for this yacht club.', 'result' => '2,500%', 'img' => 'noah-yacht-case.jpg', 'alt' => 'Noah Yacht Club performance marketing case study', 'href' => null ),
@@ -895,7 +895,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'cash-depot-hero.jpg',
 			'challenge_title' => 'A storefront lending business needed a way to prove which applications its ads drove.',
-			'challenge_body'  => 'Cash Depot operates from a physical storefront. A storefront alone doesn\'t guarantee a steady, trackable stream of qualified applications. The business needed a paid media system built to turn interest into measurable, qualified leads.',
+			'challenge_body'  => 'Cash Depot operates from a physical storefront. A storefront alone doesn\'t guarantee a steady, trackable stream of qualified applications. The business needed a paid media system built to turn interest into measurable, qualified applications.',
 			'strategy_title'  => 'Full-funnel marketing built for applications, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Cash Depot\'s reputation into qualified applications.',
 			'strategy_steps'  => array(
@@ -1221,7 +1221,7 @@ function ldm_render_generic_case_study( $entry ) {
 		<div class="reveal">
 			<span class="eyebrow">Next Steps</span>
 			<h2 class="fs-h2" style="margin-top:16px;">Have a similar project?</h2>
-			<p class="lede">If your brand needs a paid media and tracking system built around qualified leads, not just clicks, let's talk.</p>
+			<p class="lede">If your brand needs a paid media and tracking system built around qualified bookings and leads, not just clicks, let's talk.</p>
 			<div class="ldm-contact-ctas">
 				<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Start a Conversation &rarr;</a>
 			</div>
