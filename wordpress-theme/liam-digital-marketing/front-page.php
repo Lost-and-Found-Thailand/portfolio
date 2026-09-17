@@ -465,7 +465,7 @@ $ldm_img = get_template_directory_uri();
       </svg>
       <span class="eyebrow">Contact</span>
       <h2 class="fs-h2" style="margin-top:16px;">Let's Build Something That Performs.</h2>
-      <p class="lede">Have a project, campaign or growth challenge? Let's talk.</p>
+      <p class="lede">Have a project, campaign or growth challenge? Let's talk. If there's no result, I work for free.</p>
       <div class="ldm-contact-ctas">
         <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Start a Conversation &rarr;</a>
       </div>

@@ -118,7 +118,7 @@ get_header();
     <div class="reveal">
       <span class="eyebrow">Next Steps</span>
       <h2 class="fs-h2" style="margin-top:16px;">Have a similar challenge?</h2>
-      <p class="lede">If your brand needs a paid media and tracking system built around qualified bookings and leads, not just clicks, let's talk.</p>
+      <p class="lede">If your brand needs a paid media and tracking system built around qualified bookings and leads, not just clicks, let's talk. If there's no result, I work for free.</p>
       <div class="ldm-contact-ctas">
         <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Start a Conversation &rarr;</a>
       </div>

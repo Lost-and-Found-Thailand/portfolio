@@ -24,7 +24,7 @@ $ldm_contact_status = isset( $_GET['ldm_contact'] ) ? sanitize_key( wp_unslash( 
   <section class="ldm-page-header container">
     <span class="eyebrow">Contact</span>
     <h1 class="fs-h1">Let's Build Something That Performs.</h1>
-    <p class="lede">Have a project, campaign or growth challenge? Tell me about it. I read every enquiry personally.</p>
+    <p class="lede">Have a project, campaign or growth challenge? Tell me about it. I read every enquiry personally. If there's no result, I work for free.</p>
   </section>
 
   <!-- CONTACT FORM + DIRECT LINKS -->

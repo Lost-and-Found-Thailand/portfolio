@@ -41,7 +41,7 @@ get_header();
     <div class="reveal">
       <span class="eyebrow">Contact</span>
       <h2 class="fs-h2" style="margin-top:16px;">Have a project like these?</h2>
-      <p class="lede">Let's talk about what a connected paid media and tracking system could do for your brand.</p>
+      <p class="lede">Let's talk about what a connected paid media and tracking system could do for your brand. If there's no result, I work for free.</p>
       <div class="ldm-contact-ctas">
         <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary">Start a Conversation &rarr;</a>
       </div>
