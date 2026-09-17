@@ -228,6 +228,19 @@ $ldm_img = get_template_directory_uri();
     </div>
 
     <div class="ldm-case-list">
+      <a href="<?php echo esc_url( ldm_case_study_url( 'rockfish-the-uluwatu' ) ); ?>" class="ldm-case reveal">
+        <div class="ldm-case-media">
+          <span class="badge">Cliffside Restaurant</span>
+          <img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/rockfish-uluwatu-photo.jpg' ); ?>" alt="The clifftop dining deck at Rockfish The Uluwatu" loading="lazy" width="1200" height="900">
+        </div>
+        <div class="ldm-case-body">
+          <div class="ldm-case-title"><span class="title-text">Rockfish The Uluwatu</span> <span class="arrow">&rarr;</span></div>
+          <div class="ldm-case-industry">Paid Media &middot; Full-Funnel Marketing &middot; Conversion Rate Optimization</div>
+          <p class="ldm-case-desc">Managing full-funnel paid media and conversion rate optimization for Rockfish since it opened, turning its iconic cliffside setting into a steady stream of qualified diner and event enquiries.</p>
+          <div class="ldm-case-result">+32,500% <span class="label">ROAS</span></div>
+        </div>
+      </a>
+
       <a href="<?php echo esc_url( ldm_case_study_url( 'noah-yacht-club' ) ); ?>" class="ldm-case reveal">
         <div class="ldm-case-media">
           <span class="badge">Yacht Club</span>
@@ -237,7 +250,7 @@ $ldm_img = get_template_directory_uri();
           <div class="ldm-case-title"><span class="title-text">Noah Yacht Club</span> <span class="arrow">&rarr;</span></div>
           <div class="ldm-case-industry">Paid Media &middot; Lead Generation &middot; Analytics</div>
           <p class="ldm-case-desc">Building a full-funnel campaign system to fill charter and membership enquiries for this yacht club.</p>
-          <div class="ldm-case-result">+2,500% <span class="label">ROAS</span></div>
+          <div class="ldm-case-result">+3,373% <span class="label">ROAS</span></div>
         </div>
       </a>
 
