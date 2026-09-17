@@ -1084,7 +1084,30 @@ function ldm_get_case_studies() {
 
 function ldm_get_extra_case_studies() {
 	return array(
-		'ours-group' => array( 'slug' => 'ours-group', 'name' => 'Ours Group', 'badge' => 'Restaurant Group', 'industry' => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking', 'type' => null, 'desc' => 'Running paid media and a shared tracking system across five venues under one restaurant group: Ama, Home, Mood, The Beach and Ours Bali.', 'result' => null, 'img' => 'home-by-ours-photo.jpg', 'alt' => 'The outdoor dining terrace at Home by Ours, part of the Ours restaurant group', 'href' => null, 'hero_img' => 'home-by-ours-hero.jpg' ),
+		'ours-group' => array(
+			'slug'            => 'ours-group',
+			'name'            => 'Ours Group',
+			'badge'           => 'Hospitality Group',
+			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
+			'type'            => null,
+			'desc'            => 'Managing paid media and a shared tracking system across seven venues under one Uluwatu hospitality group: Tabu Supper Club, AMA by Ours, Ours Uluwatu, Ours Spa, Home by Ours, Mood by Ours and The Beach by Ours.',
+			'result'          => '7,244%',
+			'img'             => 'ours-group-photo.jpg',
+			'alt'             => 'The wood-beamed dining room and bar at an Ours Group venue in Uluwatu',
+			'href'            => null,
+			'hero_img'        => 'ours-group-hero.jpg',
+			'challenge_title' => 'Seven venues, one shared identity, and no way to prove what was working where.',
+			'challenge_body'  => 'Ours Group is a hospitality collective in Uluwatu, Bali, built around seven venues that share one philosophy of community, hospitality and design, with a Scandinavian-minimalism-meets-Balinese-warmth aesthetic across each space. Running that many venues under one identity meant the group needed a paid media and tracking system that could prove which campaigns were actually driving bookings at each specific venue, not just traffic to the group as a whole.',
+			'strategy_title'  => 'Full-funnel marketing built for bookings at every venue, not just clicks.',
+			'strategy_intro'  => 'Three connected workstreams built to turn interest across all seven Ours Group venues into qualified bookings at each one.',
+			'strategy_steps'  => array(
+				array( 'title' => 'Paid Media', 'desc' => 'Campaigns built around each venue\'s own real photography and audience targeting, tailored to what makes Tabu, AMA, Ours Uluwatu, Ours Spa, Home by Ours, Mood by Ours and The Beach by Ours each distinct.' ),
+				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to a booking at the right venue, not just optimizing for clicks.' ),
+				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow across the group to convert more of that attention into qualified bookings.' ),
+			),
+			'result_title'    => 'A +7,244% return across the group.',
+			'result_body'     => 'Managing paid media and a shared tracking system across all seven venues, the group now converts far more of its ad spend into real, trackable bookings, delivering a +7,244% return across the network.',
+		),
 	);
 }
 /**

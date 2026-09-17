@@ -256,13 +256,14 @@ $ldm_img = get_template_directory_uri();
 
       <a href="<?php echo esc_url( ldm_case_study_url( 'ours-group' ) ); ?>" class="ldm-case reveal">
         <div class="ldm-case-media">
-          <span class="badge">Restaurant Group</span>
-          <img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/home-by-ours-photo.jpg' ); ?>" alt="The outdoor dining terrace at Home by Ours, part of the Ours restaurant group" loading="lazy" width="1200" height="900">
+          <span class="badge">Hospitality Group</span>
+          <img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/ours-group-photo.jpg' ); ?>" alt="The wood-beamed dining room and bar at an Ours Group venue in Uluwatu" loading="lazy" width="1200" height="900">
         </div>
         <div class="ldm-case-body">
           <div class="ldm-case-title"><span class="title-text">Ours Group</span> <span class="arrow">&rarr;</span></div>
           <div class="ldm-case-industry">Performance Marketing &middot; Analytics &middot; Conversion Tracking</div>
-          <p class="ldm-case-desc">Running paid media and a shared tracking system across five venues under one restaurant group: Ama, Home, Mood, The Beach and Ours Bali.</p>
+          <p class="ldm-case-desc">Managing paid media and a shared tracking system across seven venues under one Uluwatu hospitality group: Tabu Supper Club, AMA by Ours, Ours Uluwatu, Ours Spa, Home by Ours, Mood by Ours and The Beach by Ours.</p>
+          <div class="ldm-case-result">+7,244% <span class="label">ROAS</span></div>
         </div>
       </a>
 
