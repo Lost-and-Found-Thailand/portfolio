@@ -75,7 +75,7 @@ function ldm_get_case_studies() {
 			'badge'          => 'Cliffside Restaurant',
 			'industry'       => 'Paid Media &middot; Full-Funnel Marketing &middot; Conversion Rate Optimization',
 			'type'           => null,
-			'desc'           => 'Managing full-funnel paid media and conversion rate optimization for Rockfish since it opened, turning its iconic cliffside setting into a steady stream of qualified diner and event enquiries.',
+			'desc'           => 'Managing full-funnel paid media and conversion rate optimization for Rockfish since it opened, turning its iconic cliffside setting into a steady stream of qualified diner and event bookings.',
 			'result'         => '32,500%',
 			'img'            => 'rockfish-uluwatu-photo.jpg',
 			'alt'            => 'The clifftop dining deck at Rockfish The Uluwatu',

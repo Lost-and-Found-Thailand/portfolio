@@ -236,7 +236,7 @@ $ldm_img = get_template_directory_uri();
         <div class="ldm-case-body">
           <div class="ldm-case-title"><span class="title-text">Rockfish The Uluwatu</span> <span class="arrow">&rarr;</span></div>
           <div class="ldm-case-industry">Paid Media &middot; Full-Funnel Marketing &middot; Conversion Rate Optimization</div>
-          <p class="ldm-case-desc">Managing full-funnel paid media and conversion rate optimization for Rockfish since it opened, turning its iconic cliffside setting into a steady stream of qualified diner and event enquiries.</p>
+          <p class="ldm-case-desc">Managing full-funnel paid media and conversion rate optimization for Rockfish since it opened, turning its iconic cliffside setting into a steady stream of qualified diner and event bookings.</p>
           <div class="ldm-case-result">+32,500% <span class="label">ROAS</span></div>
         </div>
       </a>
