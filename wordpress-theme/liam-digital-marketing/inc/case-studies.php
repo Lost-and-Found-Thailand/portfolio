@@ -1106,7 +1106,7 @@ function ldm_get_extra_case_studies() {
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow across the group to convert more of that attention into qualified bookings.' ),
 			),
 			'result_title'    => 'One of Uluwatu\'s most recognized hospitality brands, ahead of the competition.',
-			'result_body'     => 'Managing Meta Ads, Google Ads and SEO across all seven venues, Ours Group now brings in hundreds of bookings daily across the group and has grown into one of Uluwatu\'s most recognized hospitality brands, ahead of its competitors.',
+			'result_body'     => 'Managing Meta Ads, Google Ads and SEO across all seven venues, Ours Group now brings in hundreds of bookings daily across the group and has grown into one of Uluwatu\'s most recognized hospitality brands, ahead of its competitors. Every event marketed across the group has been fully booked.',
 		),
 	);
 }
