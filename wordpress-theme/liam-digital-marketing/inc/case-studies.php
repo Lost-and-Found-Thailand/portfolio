@@ -81,6 +81,7 @@ function ldm_get_case_studies() {
 			'alt'            => 'The clifftop dining deck at Rockfish The Uluwatu',
 			'href'           => null,
 			'hero_img'       => 'rockfish-uluwatu-hero.jpg',
+			'hero_alt'       => 'The tree-canopy dining terrace at Rockfish The Uluwatu at night, with ocean views in the background',
 			'challenge_title' => 'A landmark location doesn\'t fill the calendar on its own.',
 			'challenge_body'  => 'Rockfish The Uluwatu draws attention as one of Bali\'s most recognizable cliffside dining destinations, but reputation and foot traffic alone don\'t convert into a steady stream of reservations and private event enquiries. The venue needed a paid media system that could turn its location into a measurable acquisition channel, with tracking built to prove which bookings actually came from the ad spend.',
 			'strategy_title' => 'Full-funnel marketing, managed since the restaurant opened.',
@@ -90,6 +91,8 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to reservation and private event enquiry, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified diner and event enquiries.' ),
 			),
+			'result_title' => 'Hundreds of bookings a day, in high season and low.',
+			'result_body'  => 'Managing Meta Ads, Google Ads and organic traffic together, the campaign now drives hundreds of bookings a day for Rockfish. Returns have stayed strong regardless of season, holding up through Bali\'s quieter months just as well as its busiest ones.',
 		),
 		array( 'slug' => 'noah-yacht-club', 'name' => 'Noah Yacht Club', 'badge' => 'Yacht Club', 'industry' => 'Paid Media &middot; Lead Generation &middot; Analytics', 'type' => null, 'desc' => 'Building a full-funnel campaign system to fill charter and membership enquiries for this yacht club.', 'result' => '2,500%', 'img' => 'noah-yacht-case.jpg', 'alt' => 'Noah Yacht Club performance marketing case study', 'href' => null ),
 		array( 'slug' => 'tirtha-bali', 'name' => 'Tirtha Bali', 'badge' => 'Luxury Weddings', 'industry' => 'Paid Media &middot; Lead Generation &middot; Conversion Tracking', 'type' => null, 'desc' => 'Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.', 'result' => '1,500%', 'img' => 'tirtha-bali.jpg', 'alt' => 'Aerial view of the Tirtha Bali clifftop wedding venue', 'href' => 'case-study.html' ),
@@ -1194,6 +1197,17 @@ function ldm_render_generic_case_study( $entry ) {
 						<p><?php echo esc_html( $step['desc'] ); ?></p>
 					</div>
 				<?php endforeach; ?>
+			</div>
+		</section>
+	<?php endif; ?>
+
+	<?php if ( ! empty( $entry['result_body'] ) ) : ?>
+		<!-- RESULT -->
+		<section class="ldm-section container container-narrow">
+			<div class="reveal">
+				<span class="eyebrow">The Result</span>
+				<h2 class="fs-h2" style="margin:16px 0 24px;"><?php echo esc_html( $entry['result_title'] ); ?></h2>
+				<p class="lede" style="max-width:none;"><?php echo esc_html( $entry['result_body'] ); ?></p>
 			</div>
 		</section>
 	<?php endif; ?>
