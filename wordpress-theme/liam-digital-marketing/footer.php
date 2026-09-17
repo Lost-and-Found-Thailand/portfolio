@@ -17,7 +17,8 @@ defined( 'ABSPATH' ) || exit;
         <p class="ldm-footer-tag">Digital Marketing &bull; Paid Media &bull; Analytics &bull; Growth</p>
         <div class="ldm-footer-social">
           <a href="<?php echo esc_url( LDM_CONTACT_WHATSAPP_URL ); ?>" rel="noopener" aria-label="WhatsApp"><?php echo ldm_contact_icon( 'whatsapp' ); ?></a>
-          <a href="<?php echo esc_url( LDM_CONTACT_LINKEDIN_URL ); ?>" rel="noopener" aria-label="LinkedIn"><?php echo ldm_contact_icon( 'linkedin' ); ?></a>
+          <a href="tel:<?php echo esc_attr( LDM_CONTACT_PHONE_TEL ); ?>" aria-label="Phone"><?php echo ldm_contact_icon( 'phone' ); ?></a>
+          <a href="mailto:<?php echo esc_attr( LDM_CONTACT_EMAIL ); ?>" aria-label="Email"><?php echo ldm_contact_icon( 'email' ); ?></a>
         </div>
       </div>
       <div class="ldm-footer-col">
