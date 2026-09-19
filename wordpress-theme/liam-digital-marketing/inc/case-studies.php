@@ -238,8 +238,6 @@ function ldm_get_case_studies() {
 			'img'             => 'the-beach-by-ours-photo.jpg',
 			'alt'             => 'The rattan-lantern dining terrace at The Beach by Ours, looking out over the ocean',
 			'href'            => null,
-			'hero_img'        => 'the-beach-by-ours-hero.jpg',
-			'hero_alt'        => 'A real dish spread from The Beach by Ours',
 			'challenge_title' => 'A sunset-facing destination needed a way to prove which bookings its ads actually drove.',
 			'challenge_body'  => 'The Beach by Ours is a beachfront dining venue on Bingin Beach, Uluwatu, part of the Ours Group, built around sunset-focused fine dining and cocktails. A striking location and menu don\'t automatically convert into a steady, trackable stream of reservations. The venue needed a paid media and tracking system built for exactly that.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
