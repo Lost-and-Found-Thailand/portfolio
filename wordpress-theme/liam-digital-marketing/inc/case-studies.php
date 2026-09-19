@@ -240,9 +240,8 @@ function ldm_get_case_studies() {
 			'desc'              => 'Managing paid media and full-funnel tracking for House of Om, turning interest across its campuses into a steady stream of qualified enrollments.',
 			'result'            => '2,243%',
 			'img'               => 'house-of-om-photo.jpg',
-			'alt'               => 'The pool walkway at House of Om',
+			'alt'               => 'Graduating yoga teacher trainees in white celebrating with certificates amid flower petals at House of Om',
 			'href'              => null,
-			'hero_img'          => 'house-of-om-hero.jpg',
 			'challenge_title' => 'A multi-campus yoga school needed one system to fill every campus, not just the flagship.',
 			'challenge_body'  => 'House of Om is a yoga teacher training organization founded in Dubai in 2016, now running multiple campuses across Bali, Rishikesh and Koh Phangan, with an online academy it states has educated over 10,000 students. Growing across that many locations meant the school needed a paid media system built to turn interest into a steady, trackable stream of enrollments at every campus.',
 			'strategy_title'  => 'Full-funnel marketing built for enrollments, not just clicks.',
@@ -251,6 +250,11 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Paid Media', 'desc' => 'Campaigns built around real venue photography and audience targeting suited to House of Om\'s prospective yoga-teacher-training students.' ),
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to training enrollment, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified enrollments.' ),
+			),
+			'gallery'         => array(
+				array( 'img' => 'house-of-om-gallery-1.jpg', 'alt' => 'Aerial view of a House of Om campus\'s terraced accommodation complex set into a forested hillside' ),
+				array( 'img' => 'house-of-om-gallery-2.jpg', 'alt' => 'House of Om graduates celebrating with certificates amid flower petals by a river' ),
+				array( 'img' => 'house-of-om-gallery-3.jpg', 'alt' => 'Dusk view of a House of Om campus\'s thatched-roof building and lantern-lit courtyard' ),
 			),
 		),
 		array(
