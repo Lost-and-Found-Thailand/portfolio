@@ -134,8 +134,6 @@ function ldm_get_case_studies() {
 			'img'             => 'tabu-bali-photo.jpg',
 			'alt'             => 'The red-lit lounge and DJ area at Tabu Bali as it shifts into late-night club energy',
 			'href'            => null,
-			'hero_img'        => 'tabu-bali-hero.jpg',
-			'hero_alt'        => 'A real dish spread from Tabu Bali\'s menu',
 			'challenge_title' => 'A day-to-night concept needed marketing that could keep up with it.',
 			'challenge_body'  => 'Tabu is a Japanese-Latin supper club in Uluwatu, Bali, part of the Ours Group, serving sushi, Wagyu beef and real wasabi in a concept that shifts from fine dining into late-night club energy across dinner, drinks and events. That kind of range doesn\'t fill tables on its own. The venue needed a paid media system built to turn its concept into a steady, trackable stream of reservations and event enquiries.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations and event enquiries, not just clicks.',
