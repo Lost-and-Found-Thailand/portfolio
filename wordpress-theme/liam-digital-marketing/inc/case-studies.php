@@ -236,9 +236,10 @@ function ldm_get_case_studies() {
 			'desc'            => 'Managing paid media and full-funnel tracking for The Beach by Ours, turning its sunset beachfront setting into a steady stream of qualified reservations.',
 			'result'          => null,
 			'img'             => 'the-beach-by-ours-photo.jpg',
-			'alt'             => 'A real dish spread from The Beach by Ours',
+			'alt'             => 'The rattan-lantern dining terrace at The Beach by Ours, looking out over the ocean',
 			'href'            => null,
 			'hero_img'        => 'the-beach-by-ours-hero.jpg',
+			'hero_alt'        => 'A real dish spread from The Beach by Ours',
 			'challenge_title' => 'A sunset-facing destination needed a way to prove which bookings its ads actually drove.',
 			'challenge_body'  => 'The Beach by Ours is a beachfront dining venue on Bingin Beach, Uluwatu, part of the Ours Group, built around sunset-focused fine dining and cocktails. A striking location and menu don\'t automatically convert into a steady, trackable stream of reservations. The venue needed a paid media and tracking system built for exactly that.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
@@ -247,6 +248,11 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Paid Media', 'desc' => 'Campaigns built around real venue photography and audience targeting suited to The Beach by Ours\' sunset-dining crowd.' ),
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to reservation, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified reservations.' ),
+			),
+			'gallery'         => array(
+				array( 'img' => 'the-beach-by-ours-gallery-1.jpg', 'alt' => 'The Beach by Ours\' building, cabanas and sunbeds on Bingin Beach' ),
+				array( 'img' => 'the-beach-by-ours-gallery-2.jpg', 'alt' => 'Guests at a table overlooking the ocean at The Beach by Ours' ),
+				array( 'img' => 'the-beach-by-ours-gallery-3.jpg', 'alt' => 'The beachfront terrace and sunbeds at The Beach by Ours' ),
 			),
 		),
 		array(
