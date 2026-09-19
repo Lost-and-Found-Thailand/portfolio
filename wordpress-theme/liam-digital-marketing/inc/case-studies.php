@@ -98,10 +98,10 @@ function ldm_get_case_studies() {
 		array(
 			'slug'            => 'the-beach-by-ours',
 			'name'            => 'The Beach by Ours',
-			'badge'           => 'Beach Restaurant',
+			'badge'           => 'Beach Club',
 			'location'        => 'Bali, Indonesia',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
-			'type'            => 'Beach Restaurant, Beach Club',
+			'type'            => null,
 			'desc'            => 'Managing paid media and full-funnel tracking for The Beach by Ours, turning its sunset beachfront setting into a steady stream of qualified reservations.',
 			'result'          => '14,842%',
 			'img'             => 'the-beach-by-ours-photo.jpg',
