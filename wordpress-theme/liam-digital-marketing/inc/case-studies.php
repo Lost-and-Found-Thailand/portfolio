@@ -235,6 +235,7 @@ function ldm_get_case_studies() {
 			'slug'              => 'house-of-om',
 			'name'              => 'House of Om',
 			'badge'             => 'Yoga School',
+			'location'          => 'Bali, Koh Phangan &amp; Rishikesh',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Yoga School',
 			'desc'              => 'Managing paid media and full-funnel tracking for House of Om, turning interest across its campuses into a steady stream of qualified enrollments.',
