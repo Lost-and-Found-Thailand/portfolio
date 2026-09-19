@@ -189,6 +189,11 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to reservation or event enquiry, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified reservations and event enquiries.' ),
 			),
+			'gallery'         => array(
+				array( 'img' => 'tabu-bali-gallery-1.jpg', 'alt' => 'Guests enjoying dinner at Tabu Bali\'s dining room' ),
+				array( 'img' => 'tabu-bali-gallery-2.jpg', 'alt' => 'A DJ set at Tabu Bali as it shifts into late-night club energy' ),
+				array( 'img' => 'tabu-bali-gallery-3.jpg', 'alt' => 'The neon-lit dance floor at a Tabu Bali night event' ),
+			),
 		),
 		array(
 			'slug'            => 'carpe-diem',
