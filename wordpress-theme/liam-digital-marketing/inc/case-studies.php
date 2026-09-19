@@ -114,6 +114,11 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to a confirmed charter or catamaran booking, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to keep the schedule filling as demand grew.' ),
 			),
+			'gallery'         => array(
+				array( 'img' => 'noah-yacht-gallery-1.jpg', 'alt' => 'The NOAH catamaran anchored off Phuket at sunset with guests on board' ),
+				array( 'img' => 'noah-yacht-gallery-2.jpg', 'alt' => 'The NOAH sailing catamaran under sail near a beach in the Andaman Sea' ),
+				array( 'img' => 'noah-yacht-gallery-3.jpg', 'alt' => 'A DJ set at sunset aboard the NOAH catamaran' ),
+			),
 			'result_title'    => 'From opening day to Phuket\'s top yacht club, booked out two months ahead.',
 			'result_body'     => 'Managing Noah Yacht Club\'s paid media since the day it opened, the campaign has helped it grow into Phuket\'s top yacht club. Every charter and catamaran slot on the schedule is now booked solid up to two months in advance.',
 		),
