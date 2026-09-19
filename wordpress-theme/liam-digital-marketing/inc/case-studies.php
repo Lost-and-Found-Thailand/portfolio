@@ -94,6 +94,7 @@ function ldm_get_case_studies() {
 			'result_title' => 'Hundreds of bookings a day, in high season and low.',
 			'result_body'  => 'Managing Meta Ads, Google Ads and organic traffic together, the campaign now drives hundreds of bookings a day for Rockfish. Returns have stayed strong regardless of season, holding up through Bali\'s quieter months just as well as its busiest ones.',
 		),
+		array( 'slug' => 'tirtha-bali', 'name' => 'Tirtha Bali', 'badge' => 'Luxury Weddings', 'industry' => 'Paid Media &middot; Lead Generation &middot; Conversion Tracking', 'type' => null, 'desc' => 'Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.', 'result' => '3,628%', 'img' => 'tirtha-bali.jpg', 'alt' => 'Aerial view of the Tirtha Bali clifftop wedding venue', 'href' => 'case-study.html' ),
 		array(
 			'slug'            => 'noah-yacht-club',
 			'name'            => 'Noah Yacht Club',
@@ -122,7 +123,6 @@ function ldm_get_case_studies() {
 			'result_title'    => 'From opening day to Phuket\'s top yacht club, booked out two months ahead.',
 			'result_body'     => 'Managing Noah Yacht Club\'s paid media since the day it opened, the campaign has helped it grow into Phuket\'s top yacht club. Every charter and catamaran slot on the schedule is now booked solid up to two months in advance.',
 		),
-		array( 'slug' => 'tirtha-bali', 'name' => 'Tirtha Bali', 'badge' => 'Luxury Weddings', 'industry' => 'Paid Media &middot; Lead Generation &middot; Conversion Tracking', 'type' => null, 'desc' => 'Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.', 'result' => '1,500%', 'img' => 'tirtha-bali.jpg', 'alt' => 'Aerial view of the Tirtha Bali clifftop wedding venue', 'href' => 'case-study.html' ),
 		array(
 			'slug'            => 'ulu-cliffhouse',
 			'name'            => 'Ulu Cliffhouse',
