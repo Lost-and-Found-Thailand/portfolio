@@ -52,7 +52,7 @@ get_header();
   <!-- HERO IMAGE -->
   <section class="container">
     <div class="card-image reveal" style="aspect-ratio:16/9;">
-      <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/clients/tirtha-bali-hero.jpg' ); ?>" alt="<?php esc_attr_e( 'A bride on Tirtha Bali\'s cliffside lawn, with the ocean-view reception table set at sunset', 'liam-digital-marketing' ); ?>" loading="lazy" width="1600" height="900" style="width:100%;height:100%;object-fit:cover;">
+      <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/clients/tirtha-bali-hero.jpg' ); ?>" alt="<?php esc_attr_e( 'The glass ceremony pavilion at Tirtha Bali, set for a wedding', 'liam-digital-marketing' ); ?>" loading="lazy" width="1600" height="900" style="width:100%;height:100%;object-fit:cover;">
     </div>
   </section>
 
@@ -103,7 +103,10 @@ get_header();
 
   <!-- SUPPORTING IMAGES -->
   <section class="ldm-section container">
-    <div class="grid grid-2 reveal">
+    <div class="reveal" style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+      <div class="card-image" style="aspect-ratio:4/3;">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/clients/tirtha-bali-reception.jpg' ); ?>" alt="<?php esc_attr_e( 'A bride on Tirtha Bali\'s cliffside lawn, with the ocean-view reception table set at sunset', 'liam-digital-marketing' ); ?>" loading="lazy" width="1200" height="900" style="width:100%;height:100%;object-fit:cover;">
+      </div>
       <div class="card-image" style="aspect-ratio:4/3;">
         <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/clients/tirtha-bali-garden.jpg' ); ?>" alt="<?php esc_attr_e( 'An oceanfront reception table with floral chandeliers on Tirtha Bali\'s cliffside terrace', 'liam-digital-marketing' ); ?>" loading="lazy" width="1200" height="900" style="width:100%;height:100%;object-fit:cover;">
       </div>
