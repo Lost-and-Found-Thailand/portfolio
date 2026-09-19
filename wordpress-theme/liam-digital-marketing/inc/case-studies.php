@@ -206,10 +206,10 @@ function ldm_get_case_studies() {
 		array(
 			'slug'            => 'carpe-diem',
 			'name'            => 'Carpe Diem',
-			'badge'           => 'Beach Restaurant',
+			'badge'           => 'Beach Club',
 			'location'        => 'Phuket, Thailand',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
-			'type'            => 'Beach Restaurant, Beach Club, Pool Party',
+			'type'            => null,
 			'desc'            => 'Managing paid media and full-funnel tracking for Carpe Diem, turning its beachfront profile into a steady stream of qualified bookings.',
 			'result'          => '2,750%',
 			'img'             => 'carpe-diem-photo.jpg',
