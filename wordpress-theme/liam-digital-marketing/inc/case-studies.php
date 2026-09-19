@@ -138,6 +138,11 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to a booking at the right venue, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified bookings.' ),
 			),
+			'gallery'         => array(
+				array( 'img' => 'ulu-cliffhouse-gallery-1.jpg', 'alt' => 'A sunset pool party crowd at Ulu Cliffhouse\'s clifftop Pool Club, with the DJ stage and ocean behind them' ),
+				array( 'img' => 'ulu-cliffhouse-gallery-2.jpg', 'alt' => 'Guests dancing in the pool during a night event at Ulu Cliffhouse\'s Pool Club' ),
+				array( 'img' => 'ulu-cliffhouse-gallery-3.jpg', 'alt' => 'A fireworks show over the crowd at an Ulu Cliffhouse event' ),
+			),
 		),
 		array( 'slug' => 'the-barrel', 'name' => 'The Barrel', 'badge' => 'Lifestyle &amp; Retail', 'industry' => 'Conversion Optimization &middot; Digital Strategy', 'type' => null, 'desc' => 'Rebuilding the online discovery and reservation journey for this wine merchant and restaurant across paid channels.', 'result' => null, 'img' => 'the-barrel-case.jpg', 'alt' => 'Wine display at The Barrel wine merchant', 'href' => null ),
 		array( 'slug' => 'chalong-bay-rum', 'name' => 'Chalong Bay Rum', 'badge' => 'E-commerce', 'industry' => 'Meta Ads &middot; Google Shopping &middot; Marketing Analytics', 'type' => null, 'desc' => 'Rebuilding the tracking foundation so every dollar of ad spend for this rum distillery could be traced to revenue, not just clicks.', 'result' => null, 'img' => 'chalong-bay-rum-case.jpg', 'alt' => 'A Chalong Bay Rum cocktail served at the distillery', 'href' => null ),
@@ -1280,6 +1285,19 @@ function ldm_render_generic_case_study( $entry ) {
 						<div class="num"><?php echo esc_html( str_pad( $i + 1, 2, '0', STR_PAD_LEFT ) ); ?></div>
 						<h4><?php echo esc_html( $step['title'] ); ?></h4>
 						<p><?php echo esc_html( $step['desc'] ); ?></p>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</section>
+	<?php endif; ?>
+
+	<?php if ( ! empty( $entry['gallery'] ) ) : ?>
+		<!-- GALLERY -->
+		<section class="ldm-section container">
+			<div class="reveal" style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+				<?php foreach ( $entry['gallery'] as $shot ) : ?>
+					<div class="card-image" style="aspect-ratio:4/3;">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/clients/' . $shot['img'] ); ?>" alt="<?php echo esc_attr( $shot['alt'] ); ?>" loading="lazy" width="1200" height="900" style="width:100%;height:100%;object-fit:cover;">
 					</div>
 				<?php endforeach; ?>
 			</div>
