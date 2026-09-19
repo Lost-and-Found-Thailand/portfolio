@@ -149,7 +149,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'tabu-bali-gallery-3.jpg', 'alt' => 'The neon-lit dance floor at a Tabu Bali night event' ),
 			),
 			'result_title'    => 'Weekly events and major nights fully booked, dinner tables sold out every day.',
-			'result_body'     => 'Managing paid media and full-funnel tracking for Tabu Bali, the campaign now fills its weekly events and larger events to capacity, while dinner table reservations sell out every day.',
+			'result_body'     => 'Managing paid media and full-funnel tracking for Tabu Bali, the campaign now keeps its weekly events and larger events fully booked well ahead of each date. Dinner table reservations have followed the same trend, selling out every single day.',
 		),
 		array(
 			'slug'            => 'ours-bali',
