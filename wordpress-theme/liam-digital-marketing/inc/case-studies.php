@@ -211,6 +211,11 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to table or sunbed booking, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified bookings.' ),
 			),
+			'gallery'         => array(
+				array( 'img' => 'carpe-diem-gallery-1.jpg', 'alt' => 'A poolside champagne toast at Carpe Diem\'s pool club in Phuket' ),
+				array( 'img' => 'carpe-diem-gallery-2.jpg', 'alt' => 'Guests dining at Carpe Diem\'s beachfront restaurant at night' ),
+				array( 'img' => 'carpe-diem-gallery-3.jpg', 'alt' => 'The dance floor at a Carpe Diem nightlife event' ),
+			),
 		),
 		array(
 			'slug'            => 'the-beach-by-ours',
