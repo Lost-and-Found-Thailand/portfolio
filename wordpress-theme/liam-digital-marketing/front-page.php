@@ -236,7 +236,7 @@ $ldm_img = get_template_directory_uri();
         <div class="ldm-case-body">
           <div class="ldm-case-title"><span class="title-text">Rockfish The Uluwatu</span> <span class="arrow">&rarr;</span></div>
           <div class="ldm-case-industry">Paid Media &middot; Full-Funnel Marketing &middot; Conversion Rate Optimization</div>
-          <p class="ldm-case-desc">Managing full-funnel paid media and conversion rate optimization for Rockfish since it opened, turning its iconic cliffside setting into a steady stream of qualified diner and event bookings.</p>
+          <p class="ldm-case-desc">One of Bali's most recognizable cliffside dining destinations, tracked closely enough to trace every diner and event booking back to the ad spend that drove it.</p>
           <div class="ldm-case-result">+32,500% <span class="label">ROAS</span></div>
         </div>
       </a>
@@ -249,7 +249,7 @@ $ldm_img = get_template_directory_uri();
         <div class="ldm-case-body">
           <div class="ldm-case-title"><span class="title-text">Noah Yacht Club</span> <span class="arrow">&rarr;</span></div>
           <div class="ldm-case-industry">Performance Marketing &middot; Analytics &middot; Conversion Tracking</div>
-          <p class="ldm-case-desc">Managing full-funnel paid media for Noah Yacht Club since it opened in Phuket, turning its catamaran day trips and private yacht charters into a fully booked schedule two months out.</p>
+          <p class="ldm-case-desc">Since opening day in Phuket, Noah Yacht Club's catamaran trips and private charters have stayed booked two months out, powered by full-funnel paid media built from launch.</p>
           <div class="ldm-case-result">+3,373% <span class="label">ROAS</span></div>
         </div>
       </a>
@@ -262,7 +262,7 @@ $ldm_img = get_template_directory_uri();
         <div class="ldm-case-body">
           <div class="ldm-case-title"><span class="title-text">Ours Group</span> <span class="arrow">&rarr;</span></div>
           <div class="ldm-case-industry">Performance Marketing &middot; Analytics &middot; Conversion Tracking</div>
-          <p class="ldm-case-desc">Managing paid media and a shared tracking system across seven venues under one Uluwatu hospitality group: Tabu Supper Club, AMA by Ours, Ours Uluwatu, Ours Spa, Home by Ours, Mood by Ours and The Beach by Ours.</p>
+          <p class="ldm-case-desc">One shared tracking system across seven Uluwatu venues — Tabu Supper Club, AMA by Ours, Ours Uluwatu, Ours Spa, Home by Ours, Mood by Ours and The Beach by Ours — built to prove which campaigns actually drive bookings at each address.</p>
           <div class="ldm-case-result">+7,244% <span class="label">ROAS</span></div>
         </div>
       </a>
