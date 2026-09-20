@@ -93,7 +93,7 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified diner and event enquiries.' ),
 			),
 			'result_title' => 'Hundreds of bookings a day, in high season and low.',
-			'result_body'  => 'Managing Meta Ads, Google Ads and organic traffic together, the campaign now drives hundreds of bookings a day for Rockfish. Returns have stayed strong regardless of season, holding up through Bali\'s quieter months just as well as its busiest ones.',
+			'result_body'  => 'Meta Ads, Google Ads and organic traffic working together now drive hundreds of bookings a day for Rockfish. Returns have stayed strong regardless of season, holding up through Bali\'s quieter months just as well as its busiest ones.',
 		),
 		array(
 			'slug'            => 'the-beach-by-ours',
@@ -149,7 +149,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'tabu-bali-gallery-3.jpg', 'alt' => 'The neon-lit dance floor at a Tabu Bali night event' ),
 			),
 			'result_title'    => 'Weekly events and major nights fully booked, dinner tables sold out every day.',
-			'result_body'     => 'Weekly events and larger events at Tabu Bali are now fully booked well ahead of each date, and dinner table reservations have followed the same trend, selling out every single day.',
+			'result_body'     => 'Every calendar slot for its weekly events and larger nights is now locked in well ahead of time, and dinner table reservations have followed the same pattern, selling out every single day.',
 		),
 		array(
 			'slug'            => 'ours-bali',
@@ -202,7 +202,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'noah-yacht-gallery-3.jpg', 'alt' => 'A DJ set at sunset aboard the NOAH catamaran' ),
 			),
 			'result_title'    => 'From opening day to Phuket\'s top yacht club, booked out two months ahead.',
-			'result_body'     => 'Managing Noah Yacht Club\'s paid media since the day it opened, the campaign has helped it grow into Phuket\'s top yacht club. Every charter and catamaran slot on the schedule is now booked solid up to two months in advance.',
+			'result_body'     => 'Since the day it opened, Noah Yacht Club\'s paid media has helped it grow into Phuket\'s top yacht club. Every charter and catamaran slot on the schedule is now booked solid up to two months in advance.',
 		),
 		array(
 			'slug'            => 'carpe-diem',
@@ -1244,7 +1244,7 @@ function ldm_get_extra_case_studies() {
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow across the group to convert more of that attention into qualified bookings.' ),
 			),
 			'result_title'    => 'One of Uluwatu\'s most recognized hospitality brands, ahead of the competition.',
-			'result_body'     => 'Managing Meta Ads, Google Ads and SEO across all seven venues, Ours Group now brings in hundreds of bookings daily across the group and has grown into one of Uluwatu\'s most recognized hospitality brands, ahead of its competitors. Every event marketed across the group has been fully booked.',
+			'result_body'     => 'Meta Ads, Google Ads and SEO working together across all seven venues now bring in hundreds of bookings daily for Ours Group, which has grown into one of Uluwatu\'s most recognized hospitality brands, ahead of its competitors. Every event marketed across the group has been fully booked.',
 		),
 	);
 }
