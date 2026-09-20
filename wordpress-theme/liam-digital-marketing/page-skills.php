@@ -7,7 +7,7 @@
 defined( 'ABSPATH' ) || exit;
 
 $ldm_meta_title       = 'Skills | Digital Marketing Specialist, Paid Media, Analytics & Tracking';
-$ldm_meta_description = 'What I do and the tools I work with: paid media, lead generation, conversion tracking, marketing analytics, conversion optimization and digital strategy, from a hands-on digital marketing specialist.';
+$ldm_meta_description = 'What I do and the tools I work with: paid media, lead generation, conversion tracking, marketing analytics, conversion optimization, digital strategy and AI & answer engine optimization, from a hands-on digital marketing specialist.';
 
 get_header();
 ?>
@@ -16,7 +16,7 @@ get_header();
   <section class="ldm-page-header container">
     <span class="eyebrow">Skills</span>
     <h1 class="fs-h1">What I Do</h1>
-    <p class="lede">Six connected disciplines (strategy, media, tracking and data) working as one system, rather than six separate vendors.</p>
+    <p class="lede">Seven connected disciplines (strategy, media, tracking and data) working as one system, rather than seven separate vendors.</p>
     <div class="ldm-discipline-row" aria-hidden="true">
       <span class="ldm-discipline-pill">Paid Media</span>
       <span class="ldm-discipline-pill">Lead Generation</span>
@@ -24,6 +24,7 @@ get_header();
       <span class="ldm-discipline-pill">Marketing Analytics</span>
       <span class="ldm-discipline-pill">Conversion Optimization</span>
       <span class="ldm-discipline-pill">Growth &amp; Digital Strategy</span>
+      <span class="ldm-discipline-pill">AI &amp; Answer Engine Optimization</span>
     </div>
   </section>
 
@@ -127,6 +128,23 @@ get_header();
             <li>Growth roadmaps</li>
             <li>Competitive &amp; market analysis</li>
             <li>Marketing technology audits</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ldm-service-detail reveal">
+        <div>
+          <div class="ldm-service-detail-num">07</div>
+          <h3>AI &amp; Answer Engine Optimization</h3>
+        </div>
+        <div>
+          <p class="ldm-service-detail-desc">Optimizing for how people are discovering brands today, not just search rankings but AI Overviews, chatbots and generative answers, so content gets found, cited and recommended across both traditional and AI-driven search.</p>
+          <ul class="ldm-service-detail-list-items">
+            <li>Answer Engine Optimization (AEO)</li>
+            <li>AI Optimization (AIO)</li>
+            <li>Generative Engine Optimization (GEO)</li>
+            <li>AI Content Optimization (ACO)</li>
+            <li>Search Engine Marketing (SEM)</li>
           </ul>
         </div>
       </div>
