@@ -262,7 +262,7 @@ $ldm_img = get_template_directory_uri();
         <div class="ldm-case-body">
           <div class="ldm-case-title"><span class="title-text">Ours Group</span> <span class="arrow">&rarr;</span></div>
           <div class="ldm-case-industry">Performance Marketing &middot; Analytics &middot; Conversion Tracking</div>
-          <p class="ldm-case-desc">One shared tracking system across seven Uluwatu venues — Tabu Supper Club, AMA by Ours, Ours Uluwatu, Ours Spa, Home by Ours, Mood by Ours and The Beach by Ours — built to prove which campaigns actually drive bookings at each address.</p>
+          <p class="ldm-case-desc">One shared tracking system across seven Uluwatu venues (Tabu Supper Club, AMA by Ours, Ours Uluwatu, Ours Spa, Home by Ours, Mood by Ours and The Beach by Ours), built to prove which campaigns actually drive bookings at each address.</p>
           <div class="ldm-case-result">+7,244% <span class="label">ROAS</span></div>
         </div>
       </a>
