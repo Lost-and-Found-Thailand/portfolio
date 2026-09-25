@@ -180,8 +180,8 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to reservation, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified reservations.' ),
 			),
-			'result_title'    => 'Table reservations fully booked for breakfast, lunch and dinner — the best dining spot in Uluwatu.',
-			'result_body'     => 'Every reservation slot for breakfast, lunch and dinner stays fully booked at Ours Bali, which has grown into the best dining spot in Uluwatu.',
+			'result_title'    => 'Uluwatu\'s best dining spot, fully booked all day.',
+			'result_body'     => 'Reservations for breakfast, lunch and dinner all stay fully booked at Ours Bali, table after table, day after day. That steady demand has turned the restaurant into the best dining spot in Uluwatu.',
 		),
 		array( 'slug' => 'tirtha-bali', 'name' => 'Tirtha Bali', 'badge' => 'Luxury Weddings', 'industry' => 'Paid Media &middot; Lead Generation &middot; Conversion Tracking', 'type' => null, 'desc' => 'Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.', 'result' => '3,628%', 'img' => 'tirtha-bali.jpg', 'alt' => 'Aerial view of the Tirtha Bali clifftop wedding venue', 'href' => 'case-study.html' ),
 		array(
