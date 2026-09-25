@@ -45,7 +45,7 @@ get_header();
       <span class="tag">Luxury Weddings</span>
       <span class="tag">Bali, Indonesia</span>
     </div>
-    <p class="lede">Tirtha Bali was drawing broad interest from paid social that wasn't the right fit for a luxury international wedding venue. Targeted paid media and full-funnel conversion tracking turn that into higher-quality wedding enquiries.</p>
+    <p class="lede">Generating higher-quality international wedding enquiries through targeted paid media and full-funnel conversion tracking.</p>
     <div class="ldm-case-result" style="margin-top:8px;">+3,628% <span class="label">ROAS</span></div>
   </section>
 
