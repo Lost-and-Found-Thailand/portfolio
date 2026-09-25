@@ -126,6 +126,8 @@ function ldm_get_case_studies() {
 				array( 'img' => 'the-beach-by-ours-gallery-2.jpg', 'alt' => 'Guests at a table overlooking the ocean at The Beach by Ours' ),
 				array( 'img' => 'the-beach-by-ours-gallery-3.jpg', 'alt' => 'The beachfront terrace and sunbeds at The Beach by Ours' ),
 			),
+			'result_title'    => 'Event bookings sold out every time, tables fully booked every day.',
+			'result_body'     => 'Every event now sells out, and tables at The Beach by Ours stay fully booked day after day, with paid media and tracking continuing to drive that demand.',
 		),
 		array(
 			'slug'            => 'tabu-bali',
