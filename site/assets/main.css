@@ -1453,7 +1453,7 @@ body.ldm.has-custom-cursor select {
   .ldm-story-node { display: none; flex: none; width: auto; }
   .ldm-story-node.is-active { display: flex; gap: 9px; }
   .ldm-story-node-dot { flex-shrink: 0; }
-  .ldm-story-node-label {
+  .ldm-story-node.is-active .ldm-story-node-label {
     position: static;
     opacity: 1;
     transform: none;
