@@ -399,6 +399,12 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to reservation, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified reservations.' ),
 			),
+			'gallery'         => array(
+				array( 'img' => 'burnt-gallery-1.jpg', 'alt' => 'Aerial view of Burnt\'s clifftop dining deck and lounge area overlooking the ocean' ),
+				array( 'img' => 'burnt-gallery-2.jpg', 'alt' => 'An ocean-view lounge seating area at Burnt with a fire pit' ),
+				array( 'img' => 'burnt-gallery-3.jpg', 'alt' => 'A table of grilled fish, small plates and cocktails at Burnt' ),
+				array( 'img' => 'burnt-gallery-4.jpg', 'alt' => 'Guests dining at sunset at Burnt' ),
+			),
 		),
 		array( 'slug' => 'the-barrel', 'name' => 'The Barrel', 'badge' => 'Lifestyle &amp; Retail', 'industry' => 'Conversion Optimization &middot; Digital Strategy', 'type' => null, 'desc' => 'Rebuilding the online discovery and reservation journey for this wine merchant and restaurant across paid channels.', 'result' => null, 'img' => 'the-barrel-case.jpg', 'alt' => 'Wine display at The Barrel wine merchant', 'href' => null ),
 		array( 'slug' => 'chalong-bay-rum', 'name' => 'Chalong Bay Rum', 'badge' => 'E-commerce', 'location' => 'Phuket, Thailand', 'industry' => 'Meta Ads &middot; Google Shopping &middot; Marketing Analytics', 'type' => null, 'desc' => 'Rebuilding the tracking foundation so every dollar of ad spend for this rum distillery could be traced to revenue, not just clicks.', 'result' => null, 'img' => 'chalong-bay-rum-case.jpg', 'alt' => 'A Chalong Bay Rum cocktail served at the distillery', 'href' => null ),
