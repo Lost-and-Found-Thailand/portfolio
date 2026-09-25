@@ -498,6 +498,12 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to reservation, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified reservations.' ),
 			),
+			'gallery'         => array(
+				array( 'img' => 'ama-by-ours-gallery-1.jpg', 'alt' => 'The terracotta-toned dining room at Ama by Ours, styled with pottery in arched wall niches' ),
+				array( 'img' => 'ama-by-ours-gallery-2.jpg', 'alt' => 'Guests dining at Ama by Ours\' open-air bar and terrace' ),
+				array( 'img' => 'ama-by-ours-gallery-3.jpg', 'alt' => 'A server bringing food to a table of diners at Ama by Ours' ),
+				array( 'img' => 'ama-by-ours-gallery-4.jpg', 'alt' => 'A Greek meze spread of feta, olives and flatbread at Ama by Ours' ),
+			),
 		),
 		array(
 			'slug'            => 'bennys-cocktails-grill',
