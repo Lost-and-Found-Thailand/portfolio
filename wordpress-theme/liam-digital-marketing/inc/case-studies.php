@@ -92,6 +92,11 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to reservation and private event enquiry, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified diner and event enquiries.' ),
 			),
+			'gallery'        => array(
+				array( 'img' => 'rockfish-uluwatu-gallery-1.jpg', 'alt' => 'Guests dining on Rockfish The Uluwatu\'s clifftop terrace at sunset, with the coastline below' ),
+				array( 'img' => 'rockfish-uluwatu-gallery-2.jpg', 'alt' => 'Guests toasting under Rockfish The Uluwatu\'s cave-like canopy, with the ocean at dusk behind them' ),
+				array( 'img' => 'rockfish-uluwatu-gallery-3.jpg', 'alt' => 'A seafood spread on Rockfish The Uluwatu\'s glass-floor deck, overlooking the ocean' ),
+			),
 			'result_title' => 'Hundreds of bookings a day, in high season and low.',
 			'result_body'  => 'Meta Ads, Google Ads and organic traffic working together now drive hundreds of bookings a day for Rockfish. Returns have stayed strong regardless of season, holding up through Bali\'s quieter months just as well as its busiest ones.',
 		),
