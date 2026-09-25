@@ -236,7 +236,7 @@ $ldm_img = get_template_directory_uri();
         <div class="ldm-case-body">
           <div class="ldm-case-title"><span class="title-text">Rockfish The Uluwatu</span> <span class="arrow">&rarr;</span></div>
           <div class="ldm-case-industry">Paid Media &middot; Full-Funnel Marketing &middot; Conversion Rate Optimization</div>
-          <p class="ldm-case-desc">One of Bali's most recognizable cliffside dining destinations, where reputation and foot traffic alone were never going to fill every table. A full-funnel paid media system traces every diner and event booking back to the ad spend that actually drove it, holding up in high season and low.</p>
+          <p class="ldm-case-desc">One of Bali's most recognizable cliffside dining destinations, tracked closely enough to trace every diner and event booking back to the ad spend that drove it, in high season and low.</p>
           <div class="ldm-case-result">+32,500% <span class="label">ROAS</span></div>
         </div>
       </a>
@@ -275,7 +275,7 @@ $ldm_img = get_template_directory_uri();
         <div class="ldm-case-body">
           <div class="ldm-case-title"><span class="title-text">Tirtha Bali</span> <span class="arrow">&rarr;</span></div>
           <div class="ldm-case-industry">Paid Media &middot; Lead Generation &middot; Conversion Tracking</div>
-          <p class="ldm-case-desc">Tirtha Bali was drawing broad interest from paid social, but too much of it was the wrong fit for a luxury international wedding venue. Targeted paid media and full-funnel tracking turn that traffic into higher-quality wedding enquiries, from couples who are both qualified and ready to plan.</p>
+          <p class="ldm-case-desc">Tirtha Bali was drawing broad interest from paid social that wasn't the right fit for a luxury international wedding venue. Targeted paid media and full-funnel tracking turn that into higher-quality wedding enquiries.</p>
           <div class="ldm-case-result">+3,628% <span class="label">ROAS</span></div>
         </div>
       </a>
