@@ -120,8 +120,8 @@ get_header();
   <section class="ldm-section container container-narrow">
     <div class="reveal">
       <span class="eyebrow">The Result</span>
-      <h2 class="fs-h2" style="margin:16px 0 24px;">30% more of Tirtha Bali's leads are now highly qualified, with most converting into bookings.</h2>
-      <p class="lede" style="max-width:none;">A dedicated spam-filtering system now keeps low-intent and fake enquiries out of the funnel, while Meta Ads and Google Ads continue to bring in a steady flow of qualified leads. The share of highly qualified enquiries is up 30%, wedding bookings have increased, and most leads that come through are now genuinely likely to convert into a booking.</p>
+      <h2 class="fs-h2" style="margin:16px 0 24px;">30% more of Tirtha Bali's leads are now converting into bookings.</h2>
+      <p class="lede" style="max-width:none;">A dedicated spam-filtering system now keeps low-intent and fake enquiries out of the funnel, while Meta Ads and Google Ads continue to bring in a steady flow of qualified leads. Most of those leads are now genuinely likely to book, and 30% more of them convert into actual wedding bookings.</p>
     </div>
   </section>
 
