@@ -335,6 +335,12 @@ $ldm_img = get_template_directory_uri();
         <h3>AI &amp; Answer Engine Optimization</h3>
         <p>AEO, AIO, GEO and ACO, so content gets found and cited across AI-driven search, not just traditional rankings.</p>
       </div>
+      <div class="ldm-service">
+        <div class="index">08</div>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="14" height="14" rx="3"/><circle cx="8" cy="11" r="1"/><circle cx="14" cy="11" r="1"/><path d="M8 14.5c1.2 1 3 1 4 0"/><path d="M20 9v6"/></svg>
+        <h3>AI Automation &amp; Bots</h3>
+        <p>One-click AI dashboards, automated reporting, and WhatsApp bots that clients and the team can message for instant results and suggestions.</p>
+      </div>
     </div>
   </section>
 

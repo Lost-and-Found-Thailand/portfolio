@@ -16,7 +16,7 @@ get_header();
   <section class="ldm-page-header container">
     <span class="eyebrow">Skills</span>
     <h1 class="fs-h1">What I Do</h1>
-    <p class="lede">Seven connected disciplines (strategy, media, tracking and data) working as one system, rather than seven separate vendors.</p>
+    <p class="lede">Eight connected disciplines (strategy, media, tracking and data) working as one system, rather than eight separate vendors.</p>
     <div class="ldm-discipline-row" aria-hidden="true">
       <span class="ldm-discipline-pill">Paid Media</span>
       <span class="ldm-discipline-pill">Lead Generation</span>
@@ -25,6 +25,7 @@ get_header();
       <span class="ldm-discipline-pill">Conversion Optimization</span>
       <span class="ldm-discipline-pill">Growth &amp; Digital Strategy</span>
       <span class="ldm-discipline-pill">AI &amp; Answer Engine Optimization</span>
+      <span class="ldm-discipline-pill">AI Automation &amp; Bots</span>
     </div>
   </section>
 
@@ -144,6 +145,23 @@ get_header();
             <li>AI Optimization (AIO)</li>
             <li>Generative Engine Optimization (GEO)</li>
             <li>AI Content Optimization (ACO)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ldm-service-detail reveal">
+        <div>
+          <div class="ldm-service-detail-num">08</div>
+          <h3>AI Automation &amp; Bots</h3>
+        </div>
+        <div>
+          <p class="ldm-service-detail-desc">Custom AI systems built to put answers one click away instead of buried in a dashboard: automated reporting, and WhatsApp bots that clients and team members can message directly for an instant, real answer.</p>
+          <ul class="ldm-service-detail-list-items">
+            <li>One-click AI dashboards &amp; reporting</li>
+            <li>WhatsApp bots for client updates</li>
+            <li>Internal WhatsApp bots for quick performance checks</li>
+            <li>Bots that flag campaign issues and suggest optimizations</li>
+            <li>Bots that generate ad spend invoices and summaries on request</li>
           </ul>
         </div>
       </div>
