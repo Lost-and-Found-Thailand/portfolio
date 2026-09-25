@@ -182,6 +182,12 @@ function ldm_get_case_studies() {
 			),
 			'result_title'    => 'Uluwatu\'s best dining spot, fully booked all day.',
 			'result_body'     => 'Reservations for breakfast, lunch and dinner all stay fully booked at Ours Bali, table after table, day after day. That steady demand has turned the restaurant into the best dining spot in Uluwatu.',
+			'gallery_after_result' => true,
+			'gallery'         => array(
+				array( 'img' => 'ours-bali-gallery-1.jpg', 'alt' => 'Guests sharing pasta, olives and salad on the wooden table at Ours Bali' ),
+				array( 'img' => 'ours-bali-gallery-2.jpg', 'alt' => 'The open-air dining pavilion and entrance at Ours Bali in the evening' ),
+				array( 'img' => 'ours-bali-gallery-3.jpg', 'alt' => 'Four pasta dishes served at Ours Bali' ),
+			),
 		),
 		array( 'slug' => 'tirtha-bali', 'name' => 'Tirtha Bali', 'badge' => 'Luxury Weddings', 'industry' => 'Paid Media &middot; Lead Generation &middot; Conversion Tracking', 'type' => null, 'desc' => 'Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.', 'result' => '3,628%', 'img' => 'tirtha-bali.jpg', 'alt' => 'Aerial view of the Tirtha Bali clifftop wedding venue', 'href' => 'case-study.html' ),
 		array(
@@ -1374,7 +1380,10 @@ function ldm_render_generic_case_study( $entry ) {
 		</section>
 	<?php endif; ?>
 
-	<?php if ( ! empty( $entry['gallery'] ) ) : ?>
+	<?php
+	ob_start();
+	if ( ! empty( $entry['gallery'] ) ) :
+		?>
 		<!-- GALLERY -->
 		<section class="ldm-section container">
 			<div class="reveal" style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
@@ -1385,9 +1394,13 @@ function ldm_render_generic_case_study( $entry ) {
 				<?php endforeach; ?>
 			</div>
 		</section>
-	<?php endif; ?>
+		<?php
+	endif;
+	$gallery_html = ob_get_clean();
 
-	<?php if ( ! empty( $entry['result_body'] ) ) : ?>
+	ob_start();
+	if ( ! empty( $entry['result_body'] ) ) :
+		?>
 		<!-- RESULT -->
 		<section class="ldm-section container container-narrow">
 			<div class="reveal">
@@ -1396,7 +1409,16 @@ function ldm_render_generic_case_study( $entry ) {
 				<p class="lede" style="max-width:none;"><?php echo esc_html( $entry['result_body'] ); ?></p>
 			</div>
 		</section>
-	<?php endif; ?>
+		<?php
+	endif;
+	$result_html = ob_get_clean();
+
+	if ( ! empty( $entry['gallery_after_result'] ) ) {
+		echo $result_html . $gallery_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- both buffers are built entirely from already-escaped output above.
+	} else {
+		echo $gallery_html . $result_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- both buffers are built entirely from already-escaped output above.
+	}
+	?>
 
 	<?php if ( empty( $entry['desc'] ) ) : ?>
 		<!-- COMING SOON NOTE -->
