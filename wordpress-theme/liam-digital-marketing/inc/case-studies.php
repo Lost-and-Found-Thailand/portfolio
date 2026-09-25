@@ -172,7 +172,7 @@ function ldm_get_case_studies() {
 			'href'            => null,
 			'hero_img'        => 'ours-bali-hero.jpg',
 			'challenge_title' => 'An all-day concept needed marketing that worked as hard across the whole day as the kitchen does.',
-			'challenge_body'  => 'Ours Bali is an all-day restaurant in Uluwatu open from 8am to 11pm, part of the Ours Group, blending Balinese open-living interiors with Scandinavian and Mediterranean influences. Running from breakfast through to late dinner means the venue needed a paid media system that could turn that all-day concept into a steady, trackable stream of reservations across every part of the day.',
+			'challenge_body'  => 'Ours Bali is an all-day restaurant in Uluwatu, part of the Ours Group, blending Balinese open-living interiors with Scandinavian and Mediterranean influences. Running from breakfast through to late dinner means the venue needed a paid media system that could turn that all-day concept into a steady, trackable stream of reservations across every part of the day.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Ours Bali\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
@@ -180,6 +180,8 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to reservation, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified reservations.' ),
 			),
+			'result_title'    => 'Table reservations fully booked for breakfast, lunch and dinner — the best dining spot in Uluwatu.',
+			'result_body'     => 'Every reservation slot for breakfast, lunch and dinner stays fully booked at Ours Bali, which has grown into the best dining spot in Uluwatu.',
 		),
 		array( 'slug' => 'tirtha-bali', 'name' => 'Tirtha Bali', 'badge' => 'Luxury Weddings', 'industry' => 'Paid Media &middot; Lead Generation &middot; Conversion Tracking', 'type' => null, 'desc' => 'Generating higher-quality international wedding enquiries through targeted paid media and full-funnel tracking.', 'result' => '3,628%', 'img' => 'tirtha-bali.jpg', 'alt' => 'Aerial view of the Tirtha Bali clifftop wedding venue', 'href' => 'case-study.html' ),
 		array(
