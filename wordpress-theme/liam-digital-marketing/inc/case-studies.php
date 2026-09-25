@@ -274,6 +274,8 @@ function ldm_get_case_studies() {
 				array( 'img' => 'house-of-om-gallery-2.jpg', 'alt' => 'House of Om graduates celebrating with certificates amid flower petals by a river' ),
 				array( 'img' => 'house-of-om-gallery-3.jpg', 'alt' => 'Dusk view of a House of Om campus\'s thatched-roof building and lantern-lit courtyard' ),
 			),
+			'result_title'    => 'Promotional events and everyday packages both sell out for House of Om.',
+			'result_body'     => 'Most promotional enrollment events bring in a strong wave of sign-ups. It isn\'t only those campaigns either: regular training packages sell out daily too, with a high return on ad spend behind both.',
 		),
 		array(
 			'slug'            => 'ulu-cliffhouse',
@@ -1244,7 +1246,7 @@ function ldm_get_extra_case_studies() {
 			'location'        => 'Bali, Indonesia',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'            => null,
-			'desc'            => 'One shared tracking system across seven Uluwatu venues (Tabu Supper Club, AMA by Ours, Ours Uluwatu, Ours Spa, Home by Ours, Mood by Ours and The Beach by Ours), built to prove which campaigns actually drive bookings at each address.',
+			'desc'            => 'One shared tracking system spans seven Uluwatu venues: Tabu Supper Club, AMA by Ours, Ours Uluwatu, Ours Spa, Home by Ours, Mood by Ours and The Beach by Ours. It\'s built to prove which campaigns actually drive bookings at each address.',
 			'result'          => '7,244%',
 			'img'             => 'ours-group-photo.jpg',
 			'alt'             => 'The wood-beamed dining room and bar at an Ours Group venue in Uluwatu',
