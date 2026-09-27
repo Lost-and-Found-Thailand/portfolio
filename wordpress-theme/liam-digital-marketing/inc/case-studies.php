@@ -246,7 +246,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'penida-colada-gallery-3.jpg', 'alt' => 'Live music on Penida Colada\'s deck after dark' ),
 			),
 			'result_title'    => 'Table reservations have grown significantly for Penida Colada.',
-			'result_body'     => 'Since launching paid media, table reservations at Penida Colada have grown a lot, with a high return on ad spend behind that growth.',
+			'result_body'     => 'Since launching paid media, table reservations at Penida Colada have grown a lot, despite its off-the-beaten-path location on Nusa Penida. That growth has come with a high return on ad spend, proving paid media can still perform even reaching a harder-to-access island.',
 		),
 		array(
 			'slug'            => 'carpe-diem',
