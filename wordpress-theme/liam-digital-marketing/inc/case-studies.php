@@ -350,7 +350,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'babou-hero.jpg',
 			'challenge_title' => 'A rebrand needed marketing that could carry three decades of history into a new identity.',
-			'challenge_body'  => 'Babou is an island supper club within Muang Samui Spa Resort in Chaweng, Koh Samui, built beneath one of Chaweng\'s last mature tree canopies and serving MediterrAsian cuisine, cocktails and evening entertainment around a torch-lit palm courtyard. The site carries three decades of hospitality history, from Drop In Restaurant & Club to Samui Seafood Grill & Restaurant, before its relaunch as Babou. A rebrand like that needed a paid media system built to turn renewed interest into a steady, trackable stream of bookings.',
+			'challenge_body'  => 'Babou is an island supper club in Chaweng, Koh Samui, built beneath one of Chaweng\'s last mature tree canopies and serving MediterrAsian cuisine, cocktails and evening entertainment around a torch-lit palm courtyard. The site carries three decades of hospitality history, from Drop In Restaurant & Club to Samui Seafood Grill & Restaurant, before its relaunch as Babou. A rebrand like that needed a paid media system built to turn renewed interest into a steady, trackable stream of bookings.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Babou\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
