@@ -45,7 +45,7 @@ get_header();
       <span class="tag">Luxury Weddings</span>
       <span class="tag">Bali, Indonesia</span>
     </div>
-    <p class="lede">Generating higher-quality international wedding enquiries through targeted paid media and full-funnel conversion tracking.</p>
+    <p class="lede">Generating higher-quality international wedding enquiries for this luxury clifftop venue through targeted paid media and full-funnel conversion tracking.</p>
     <div class="ldm-case-result" style="margin-top:8px;">+3,628% <span class="label">ROAS</span></div>
   </section>
 
