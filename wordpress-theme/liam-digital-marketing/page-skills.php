@@ -8,6 +8,7 @@ defined( 'ABSPATH' ) || exit;
 
 $ldm_meta_title       = 'Skills | Digital Marketing Specialist, Paid Media, Analytics & Tracking';
 $ldm_meta_description = 'What I do and the tools I work with: paid media, lead generation, conversion tracking, marketing analytics, conversion optimization, digital strategy and AI & answer engine optimization, from a hands-on digital marketing specialist.';
+$ldm_img              = get_template_directory_uri();
 
 get_header();
 ?>
@@ -28,9 +29,9 @@ get_header();
       <span class="ldm-discipline-pill">AI Automation &amp; Bots</span>
     </div>
     <div class="ldm-cert-row">
-      <span class="ldm-cert-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Meta Certified Media Buyer</span>
-      <span class="ldm-cert-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Google Ads Certified</span>
-      <span class="ldm-cert-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>HubSpot Certified</span>
+      <span class="ldm-cert-pill"><img src="<?php echo esc_url( $ldm_img . '/assets/icons/meta.svg' ); ?>" alt="" width="16" height="16">Meta Certified Media Buyer</span>
+      <span class="ldm-cert-pill"><img src="<?php echo esc_url( $ldm_img . '/assets/icons/google-ads.svg' ); ?>" alt="" width="16" height="16">Google Ads Certified</span>
+      <span class="ldm-cert-pill"><img src="<?php echo esc_url( $ldm_img . '/assets/icons/hubspot.svg' ); ?>" alt="" width="16" height="16">HubSpot Certified</span>
     </div>
   </section>
 
