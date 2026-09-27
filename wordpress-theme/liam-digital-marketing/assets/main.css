@@ -879,6 +879,19 @@ img { max-width: 100%; display: block; }
 .ldm-discipline-pill:nth-child(4) { animation-delay: 820ms; }
 .ldm-discipline-pill:nth-child(5) { animation-delay: 880ms; }
 .ldm-discipline-pill:nth-child(6) { animation-delay: 940ms; }
+.ldm-cert-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.ldm-cert-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  font-size: var(--fs-label);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+.ldm-cert-pill svg { width: 14px; height: 14px; flex-shrink: 0; }
 
 /* ---------- Counter num anim helper ---------- */
 [data-counter] { font-variant-numeric: tabular-nums; }
