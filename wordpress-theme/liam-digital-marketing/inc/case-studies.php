@@ -1159,7 +1159,7 @@ function ldm_get_case_studies() {
 			'desc'              => 'An award-winning Phuket speedboat operator running since 2005, converted reputation into a steady flow of tour bookings through full-funnel paid media.',
 			'result'            => null,
 			'img'               => 'simba-sea-trips-photo.jpg',
-			'alt'               => 'Snorkel gear aboard a Simba Sea Trips boat',
+			'alt'               => 'Aerial view of a Simba Sea Trips speedboat carving a wake across the water',
 			'href'              => null,
 			'hero_img'          => 'simba-sea-trips-hero.jpg',
 			'challenge_title' => 'A multi-award tour operator still needed proof of which bookings its ads actually drove.',
@@ -1170,6 +1170,11 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Paid Media', 'desc' => 'Campaigns built around real venue photography and audience targeting suited to Simba Sea Trips\' tour guests in Phuket.' ),
 				array( 'title' => 'Full-Funnel Marketing', 'desc' => 'Connecting every stage from first ad view through to tour booking, not just optimizing for clicks.' ),
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified bookings.' ),
+			),
+			'gallery'         => array(
+				array( 'img' => 'simba-sea-trips-gallery-1.jpg', 'alt' => 'A Simba Sea Trips boat moored beside a sandbar with a guest wading in the shallows' ),
+				array( 'img' => 'simba-sea-trips-gallery-2.jpg', 'alt' => 'Guests aboard a Simba Sea Trips boat at sunset' ),
+				array( 'img' => 'simba-sea-trips-gallery-3.jpg', 'alt' => 'A Simba Sea Trips boat anchored off a white-sand sandbar' ),
 			),
 		),
 		array(
