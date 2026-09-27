@@ -360,7 +360,7 @@ function ldm_get_case_studies() {
 			),
 			'gallery'         => array(
 				array( 'img' => 'babou-gallery-1.jpg', 'alt' => 'Costumed dancers performing outside Babou\'s thatched-roof entrance in the evening' ),
-				array( 'img' => 'babou-gallery-2.jpg', 'alt' => 'A steak, salad and cocktail plated at Babou\'s candlelit table' ),
+				array( 'img' => 'babou-gallery-2.jpg', 'alt' => 'Babou\'s lantern-lit tower entrance and thatched-roof courtyard at night' ),
 				array( 'img' => 'babou-gallery-3.jpg', 'alt' => 'Guests reading the menu at Babou\'s bar by candlelight' ),
 			),
 			'result_title'    => 'Babou has grown into Koh Samui\'s Best Supper Club, with reservations climbing higher.',
