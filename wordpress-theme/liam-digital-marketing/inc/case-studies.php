@@ -339,7 +339,7 @@ function ldm_get_case_studies() {
 		array(
 			'slug'              => 'babou',
 			'name'              => 'Babou',
-			'badge'             => 'Restaurant',
+			'badge'             => 'Supper Club',
 			'location'        => 'Koh Samui, Thailand',
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Restaurant, Club',
