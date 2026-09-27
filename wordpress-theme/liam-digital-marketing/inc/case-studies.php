@@ -290,6 +290,7 @@ function ldm_get_case_studies() {
 			'img'             => 'ulu-cliffhouse-case.jpg',
 			'alt'             => 'Ocean-view cliffside at Ulu Cliffhouse in Uluwatu',
 			'href'            => null,
+			'hero_img'        => 'ulu-cliffhouse-hero.jpg',
 			'challenge_title' => 'A cliffside destination with several venues needed one system to prove what was working where.',
 			'challenge_body'  => 'Ulu Cliffhouse is a cliffside destination in Uluwatu, Bali, built around clifftop dining, nightlife and stays: Burnt, its fire-dining restaurant with sunset views; Cliffhouse Restaurant for all-day dining; a clifftop Pool Club; Ocean Deck, its evening venue for live music and DJ sets; and Ulu Stay, its boutique hotel suites. Running that many distinct experiences from one iconic location meant the destination needed a paid media and tracking system that could prove which campaigns were driving bookings at each individual venue, not just traffic to the destination as a whole.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings at every venue, not just clicks.',
