@@ -364,7 +364,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'babou-gallery-3.jpg', 'alt' => 'Guests reading the menu at Babou\'s bar by candlelight' ),
 			),
 			'result_title'    => 'Babou has grown into Koh Samui\'s Best Supper Club, with reservations climbing higher.',
-			'result_body'     => 'Paid media has helped Babou grow into Koh Samui\'s Best Supper Club, with table reservations climbing a lot higher since its relaunch.',
+			'result_body'     => 'Paid media has helped Babou grow into Koh Samui\'s Best Supper Club, with table reservations climbing a lot higher since its relaunch. That growth has turned three decades of history on the site into a steady, trackable stream of bookings for its new MediterrAsian concept.',
 		),
 		array(
 			'slug'              => 'arna-oceanic-wellness-spa',
