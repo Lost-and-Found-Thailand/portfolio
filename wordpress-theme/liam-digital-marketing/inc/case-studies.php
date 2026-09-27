@@ -461,7 +461,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'the-9th-degree-hero.jpg',
 			'challenge_title' => 'A lagoon-front setting needed a way to turn its view into trackable bookings.',
-			'challenge_body'  => 'The 9th Degree is a lagoon-front restaurant in Phuket, built around its waterfront boardwalk setting. A striking view alone doesn\'t convert into a steady, trackable stream of reservations. The venue needed a paid media system built to turn that setting into measurable, qualified bookings.',
+			'challenge_body'  => 'The 9th Degree is a restaurant and wine bar in Phuket, set on a marina\'s lagoon-front boardwalk surrounded by yacht moorings, with an indoor wine bar and lounge alongside its outdoor waterfront seating. A striking view and setting like that don\'t by themselves convert into a steady, trackable stream of reservations. The venue needed a paid media system built to turn that setting into measurable, qualified bookings.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn The 9th Degree\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
