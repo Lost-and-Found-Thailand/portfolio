@@ -285,7 +285,7 @@ function ldm_get_case_studies() {
 			'location'        => 'Bali, Indonesia',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'            => null,
-			'desc'            => 'Building a measurement system that connects ad spend directly to bookings across this cliffside destination\'s restaurants, pool club, yoga & Pilates and hotel suites.',
+			'desc'            => 'Building a measurement system that connects ad spend directly to bookings across this cliffside destination\'s restaurants, pool club, yoga & pilates and hotel suites.',
 			'result'          => '2,509%',
 			'img'             => 'ulu-cliffhouse-case.jpg',
 			'alt'             => 'Ocean-view cliffside at Ulu Cliffhouse in Uluwatu',
@@ -306,7 +306,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'ulu-cliffhouse-gallery-3.jpg', 'alt' => 'A fireworks show over the crowd at an Ulu Cliffhouse event' ),
 			),
 			'result_title'    => 'Every experience at Ulu Cliffhouse sells out, from dining to hotel suites.',
-			'result_body'     => 'Table reservations have grown steadily, day beds sell out quickly, and tickets to both weekly and big events sell out within a day. Ulu Stay\'s boutique hotel suites stay fully booked, and its mat Pilates and sunrise yoga spots sell out fast every day.',
+			'result_body'     => 'Table reservations have grown steadily, day beds sell out quickly, and tickets to both weekly and big events sell out within a day. Ulu Stay\'s boutique hotel suites stay fully booked, and its mat pilates and sunrise yoga spots sell out fast every day.',
 		),
 		array(
 			'slug'              => 'house-of-om',
