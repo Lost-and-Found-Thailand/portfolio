@@ -285,7 +285,7 @@ function ldm_get_case_studies() {
 			'location'        => 'Bali, Indonesia',
 			'industry'        => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'            => null,
-			'desc'            => 'Building a measurement system that connects ad spend directly to bookings across this cliffside destination\'s restaurants, pool club and boutique hotel suites.',
+			'desc'            => 'Building a measurement system that connects ad spend directly to bookings across this cliffside destination\'s restaurants, pool club, yoga & Pilates and hotel suites.',
 			'result'          => '2,509%',
 			'img'             => 'ulu-cliffhouse-case.jpg',
 			'alt'             => 'Ocean-view cliffside at Ulu Cliffhouse in Uluwatu',
