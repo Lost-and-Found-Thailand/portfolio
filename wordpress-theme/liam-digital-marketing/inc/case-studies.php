@@ -423,6 +423,8 @@ function ldm_get_case_studies() {
 				array( 'img' => 'burnt-gallery-2.jpg', 'alt' => 'A table of grilled fish, small plates and cocktails at Burnt' ),
 				array( 'img' => 'burnt-gallery-3.jpg', 'alt' => 'Guests dining at sunset at Burnt' ),
 			),
+			'result_title'    => 'Already fully booked most nights, just months after opening.',
+			'result_body'     => 'Even as a newly opened venue, Burnt is already fully booked most nights, with reservations coming in fast and tables hard to find on short notice. That demand has turned a distinctive char-grilled menu into a steady, trackable stream of bookings within its first months open.',
 		),
 		array(
 			'slug'              => 'simba-sea-trips',
