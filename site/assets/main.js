@@ -1240,19 +1240,36 @@
      scene loads exactly as fast as any other same-origin asset.
 
      Skipped entirely under reduced motion (same rule as every other
-     animated effect on this page). Starts loading immediately on
-     page load — not gated on scroll proximity — since the runtime
-     and scene assets are sizeable and the goal is for the scene to
-     already be ready by the time a visitor scrolls down to it,
-     rather than starting the fetch only once they're near it. Given
-     a generous timeout so a slow-but-succeeding load isn't mistaken
-     for a failure; if it genuinely hasn't resolved by then, the card
-     is marked .is-failed so it never sits there indefinitely mid-spin.
+     animated effect on this page). The runtime and scene assets are
+     sizeable (several MB of WASM/JS), so loading them is gated on
+     scroll proximity via IntersectionObserver with a generous
+     rootMargin instead of starting on page load — that previously
+     meant every visitor paid that network cost upfront even if they
+     never scrolled that far, competing with above-the-fold images
+     for bandwidth on first load. The large rootMargin still gives
+     the scene time to finish loading before it actually scrolls into
+     view on a normal scroll speed, just without the immediate-load
+     cost. Given a generous timeout so a slow-but-succeeding load
+     isn't mistaken for a failure; if it genuinely hasn't resolved by
+     then, the card is marked .is-failed so it never sits there
+     indefinitely mid-spin.
      ---------------------------------------------------------------- */
   if (!reduceMotion) {
     var splineCanvas = document.querySelector("[data-spline-scene]");
     if (splineCanvas) {
-      initSplineScene(splineCanvas);
+      if ("IntersectionObserver" in window) {
+        var splineObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              splineObserver.disconnect();
+              initSplineScene(splineCanvas);
+            }
+          });
+        }, { rootMargin: "800px 0px" });
+        splineObserver.observe(splineCanvas);
+      } else {
+        initSplineScene(splineCanvas);
+      }
     }
   }
 

@@ -34,8 +34,6 @@ $ldm_og_image         = get_template_directory_uri() . '/assets/brand-kit/logo/l
 <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() . '/assets/brand-kit/logo/favicon.svg' ); ?>" type="image/svg+xml">
 <?php if ( is_front_page() ) : ?>
 <link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/liam-cutout.png' ); ?>" as="image" fetchpriority="high">
-<link rel="modulepreload" href="<?php echo esc_url( get_template_directory_uri() . '/assets/vendor/spline/runtime.js' ); ?>">
-<link rel="preload" href="<?php echo esc_url( get_template_directory_uri() . '/assets/vendor/spline/scene.splinecode' ); ?>" as="fetch" crossorigin>
 <?php endif; ?>
 <?php if ( is_front_page() ) : ?>
 <script type="application/ld+json">
