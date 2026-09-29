@@ -380,7 +380,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Two guests receiving a side-by-side facial and neck massage at Arna Oceanic Wellness Spa',
 			'href'              => null,
 			'challenge_title' => 'A spa built around a distinctive concept needed a way to turn that concept into trackable bookings.',
-			'challenge_body'  => 'Arna Oceanic Wellness Spa is a spa within Muang Samui Spa Resort on Chaweng Beach, Koh Samui, built around onsen baths, Vichy showers, plunge pools, a Finnish sauna and Ayurvedic treatments. A concept this distinctive needed a paid media system built to turn interest into a steady, trackable stream of spa bookings.',
+			'challenge_body'  => 'Arna Oceanic Wellness Spa is a spa within Muang Samui Spa Resort on Chaweng Beach, Koh Samui, built around onsen baths, Vichy showers, plunge pools, a Finnish sauna, hydrotherapy and Ayurvedic treatments, alongside group yoga sessions and ocean-view facials. A concept this distinctive needed a paid media system built to turn that interest into a steady, trackable stream of spa bookings.',
 			'strategy_title'  => 'Full-funnel marketing built for spa bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Arna Oceanic Wellness Spa\'s reputation into qualified spa bookings.',
 			'strategy_steps'  => array(
@@ -410,7 +410,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'burnt-hero.jpg',
 			'challenge_title' => 'A char-grill concept needed a way to turn its menu into trackable bookings.',
-			'challenge_body'  => 'Burnt is a beachfront restaurant built around char-grilled, live-fire cooking. A distinctive menu alone doesn\'t convert into a steady, trackable stream of reservations. The venue needed a paid media system built to turn interest in its food into measurable, qualified bookings.',
+			'challenge_body'  => 'Burnt is a beachfront restaurant in Bali built around char-grilled, live-fire cooking, with a clifftop dining deck, fire pit lounge and sunset dining overlooking the ocean. A distinctive menu and setting alone don\'t convert into a steady, trackable stream of reservations. The venue needed a paid media system built to turn interest in its food and setting into measurable, qualified bookings.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Burnt\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
