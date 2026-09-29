@@ -61,7 +61,16 @@
     });
   }
 
-  /* Scroll reveal */
+  /* Scroll reveal — triggers well before an element is actually
+     scrolled into view (rootMargin extends the viewport 400px past
+     its real bottom edge) rather than waiting for 15% of it to
+     already be visible. On tall mobile cards, that old threshold
+     meant a card's image sat behind its still-closed clip-path (and
+     its lazy-loaded <img> hadn't started fetching yet either) for a
+     long stretch of scroll, reading as a broken/blank photo rather
+     than one still loading. Triggering early gives both the reveal
+     transition and the image's own network fetch a head start so
+     they're more likely already finished by the time it's in view. */
   var revealEls = document.querySelectorAll(".reveal");
   if (revealEls.length) {
     if (reduceMotion || !("IntersectionObserver" in window)) {
@@ -76,7 +85,7 @@
             }
           });
         },
-        { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+        { threshold: 0, rootMargin: "0px 0px 400px 0px" }
       );
       var groupCounts = new Map();
       revealEls.forEach(function (el) {
