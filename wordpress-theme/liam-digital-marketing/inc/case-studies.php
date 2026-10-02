@@ -345,7 +345,7 @@ function ldm_get_case_studies() {
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Restaurant, Club',
 			'desc'              => 'Three decades of history behind a fresh rebrand into an island supper club, backed by paid media built to convert new attention into bookings.',
-			'result'            => '711%',
+			'result'            => '1,529%',
 			'img'               => 'babou-photo.jpg',
 			'alt'               => 'The torch-lit lounge seating at Babou',
 			'href'              => null,
