@@ -405,7 +405,7 @@ function ldm_get_case_studies() {
 			'industry'          => 'Performance Marketing &middot; Analytics &middot; Conversion Tracking',
 			'type'              => 'Beachfront Restaurant',
 			'desc'              => 'Char-grilled, live-fire cooking on the beach, converted into measurable, qualified bookings through a paid media system built around that distinctive menu.',
-			'result'            => '615%',
+			'result'            => '641%',
 			'img'               => 'burnt-photo.jpg',
 			'alt'               => 'Aerial view of Burnt\'s clifftop dining deck and lounge area overlooking the ocean',
 			'href'              => null,
