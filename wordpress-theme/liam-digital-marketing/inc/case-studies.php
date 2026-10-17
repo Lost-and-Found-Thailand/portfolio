@@ -456,7 +456,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'simba-sea-trips-gallery-3.jpg', 'alt' => 'A Simba Sea Trips boat anchored off a white-sand sandbar' ),
 			),
 			'result_title'    => 'Simba Sea Trips has become one of the best sea trip operators in Phuket, selling out fast.',
-			'result_body'     => 'Tour packages sell out quickly and the boats stay fully booked every day, helping Simba Sea Trips grow into one of the best sea trip operators in Phuket.',
+			'result_body'     => 'Tour packages to Phi Phi Islands, Phang Nga Bay and Krabi sell out quickly, and the boats stay fully booked every day. That demand has helped this Australian-owned, family-run operator and World Luxury Travel Awards winner grow into one of the best sea trip operators in Phuket.',
 		),
 		array(
 			'slug'              => 'the-barrel',
