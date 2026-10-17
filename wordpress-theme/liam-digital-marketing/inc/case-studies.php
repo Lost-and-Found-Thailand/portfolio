@@ -84,7 +84,7 @@ function ldm_get_case_studies() {
 			'hero_img'       => 'rockfish-uluwatu-hero.jpg',
 			'hero_alt'       => 'The tree-canopy dining terrace at Rockfish The Uluwatu at night, with ocean views in the background',
 			'challenge_title' => 'A landmark location doesn\'t fill the calendar on its own.',
-			'challenge_body'  => 'Rockfish The Uluwatu draws attention as one of Bali\'s most recognizable cliffside dining destinations, but reputation and foot traffic alone don\'t convert into a steady stream of reservations and private event enquiries. The venue needed a paid media system that could turn its location into a measurable acquisition channel, with tracking built to prove which bookings actually came from the ad spend.',
+			'challenge_body'  => 'Rockfish The Uluwatu is one of Bali\'s most recognizable cliffside dining destinations, which brings plenty of attention and foot traffic on its own. Neither one shows up as a reservation or a private event enquiry by default, so the venue needed its location turned into a measurable acquisition channel, with tracking built to prove exactly which bookings the ad spend was responsible for.',
 			'strategy_title' => 'Full-funnel marketing, managed since the restaurant opened.',
 			'strategy_intro' => 'Three connected workstreams built to turn Rockfish\'s cliffside profile into qualified diner and event enquiries.',
 			'strategy_steps' => array(
@@ -113,7 +113,7 @@ function ldm_get_case_studies() {
 			'alt'             => 'The rattan-lantern dining terrace at The Beach by Ours, looking out over the ocean',
 			'href'            => null,
 			'challenge_title' => 'A sunset-facing destination needed a way to prove which bookings its ads actually drove.',
-			'challenge_body'  => 'The Beach by Ours is a beach club on Bingin Beach, Uluwatu, part of the Ours Group, offering sunset-focused dining and cocktails alongside day beds, rooms to stay and private events. A striking location and menu don\'t automatically convert into a steady, trackable stream of bookings. The venue needed a paid media and tracking system built for exactly that.',
+			'challenge_body'  => 'The Beach by Ours is a beach club on Bingin Beach, Uluwatu, part of the Ours Group, offering sunset-focused dining and cocktails alongside day beds, rooms to stay and private events. None of that, the location, the menu or the lineup of offerings, turns into a booking on its own, so the venue needed a paid media and tracking system built to connect the two.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn The Beach by Ours\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -127,7 +127,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'the-beach-by-ours-gallery-3.jpg', 'alt' => 'The beachfront terrace and sunbeds at The Beach by Ours' ),
 			),
 			'result_title'    => 'Event bookings sold out every time, tables, day beds and rooms fully booked every day.',
-			'result_body'     => 'Every event sells out, and tables, day beds and rooms at The Beach by Ours stay fully booked day after day, with paid media and tracking continuing to drive that demand.',
+			'result_body'     => 'Every event now sells out, and tables, day beds and rooms stay booked solid day after day, with paid media and tracking continuing to drive that demand at The Beach by Ours.',
 		),
 		array(
 			'slug'            => 'tabu-bali',
@@ -142,7 +142,7 @@ function ldm_get_case_studies() {
 			'alt'             => 'The red-lit lounge and DJ area at Tabu Bali as it shifts into late-night club energy',
 			'href'            => null,
 			'challenge_title' => 'A day-to-night concept needed marketing that could keep up with it.',
-			'challenge_body'  => 'Tabu is a Japanese-Latin supper club in Uluwatu, Bali, part of the Ours Group, serving sushi, Wagyu beef and real wasabi in a concept that shifts from fine dining into late-night club energy across dinner, drinks and events. That kind of range doesn\'t fill tables on its own. The venue needed a paid media system built to turn its concept into a steady, trackable stream of bookings.',
+			'challenge_body'  => 'Tabu is a Japanese-Latin supper club in Uluwatu, Bali, part of the Ours Group, serving sushi, Wagyu beef and real wasabi in a concept that shifts from fine dining into late-night club energy across dinner, drinks and events. Covering that much range night to night isn\'t something a venue can count on filling by reputation alone, which is why it needed a paid media system built around turning its concept into consistent bookings.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Tabu Bali\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -156,7 +156,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'tabu-bali-gallery-3.jpg', 'alt' => 'The neon-lit dance floor at a Tabu Bali night event' ),
 			),
 			'result_title'    => 'Weekly events and major nights fully booked, dinner tables sold out every day.',
-			'result_body'     => 'Every calendar slot for its weekly events and larger nights is now locked in well ahead of time, and dinner table reservations have followed the same pattern, selling out every single day.',
+			'result_body'     => 'Every calendar slot for its weekly events and bigger nights now locks in well ahead of time, and dinner reservations follow the same pattern, selling out day after day.',
 		),
 		array(
 			'slug'            => 'ours-bali',
@@ -172,7 +172,7 @@ function ldm_get_case_studies() {
 			'href'            => null,
 			'hero_img'        => 'ours-bali-hero.jpg',
 			'challenge_title' => 'An all-day concept needed marketing that worked as hard across the whole day as the kitchen does.',
-			'challenge_body'  => 'Ours Bali is an all-day restaurant in Uluwatu, part of the Ours Group, blending Balinese open-living interiors with Scandinavian and Mediterranean influences. Running from breakfast through to late dinner means the venue needed a paid media system that could turn that all-day concept into a steady, trackable stream of reservations across every part of the day.',
+			'challenge_body'  => 'Ours Bali is an all-day restaurant in Uluwatu, part of the Ours Group, blending Balinese open-living interiors with Scandinavian and Mediterranean influences. Running from breakfast through to late dinner meant no single mealtime could be left to chance, so the venue needed a paid media system built to fill reservations across every part of the day, not just its peak hours.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Ours Bali\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
@@ -181,7 +181,7 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow to convert more of that attention into qualified reservations.' ),
 			),
 			'result_title'    => 'Uluwatu\'s best dining spot, fully booked all day.',
-			'result_body'     => 'Reservations for breakfast, lunch and dinner all stay fully booked at Ours Bali, table after table, day after day. That steady demand has turned the restaurant into the best dining spot in Uluwatu.',
+			'result_body'     => 'Breakfast, lunch and dinner reservations all stay booked solid at Ours Bali, table after table, day after day, demand steady enough to make it the best dining spot in Uluwatu.',
 			'gallery'         => array(
 				array( 'img' => 'ours-bali-gallery-1.jpg', 'alt' => 'Guests sharing pasta, olives and salad on the wooden table at Ours Bali' ),
 				array( 'img' => 'ours-bali-gallery-2.jpg', 'alt' => 'The open-air dining pavilion and entrance at Ours Bali in the evening' ),
@@ -202,7 +202,7 @@ function ldm_get_case_studies() {
 			'alt'             => 'Noah Yacht Club performance marketing case study',
 			'href'            => null,
 			'challenge_title' => 'A brand-new luxury yacht club needed to build its bookings from zero.',
-			'challenge_body'  => 'Noah Yacht Club opened in Phuket with catamaran day trips and a 75-foot private charter yacht built for the Andaman Sea, aiming to bring an international standard of maritime hospitality to a market long dominated by budget boat trips. As a brand-new venue with no existing customer base, it needed a paid media system that could build a steady flow of charter and catamaran bookings from day one.',
+			'challenge_body'  => 'Noah Yacht Club opened in Phuket with catamaran day trips and a 75-foot private charter yacht built for the Andaman Sea, aiming to bring an international standard of maritime hospitality to a market long dominated by budget boat trips. Opening with no existing customer base meant it needed a paid media system capable of building charter and catamaran bookings from the very first day.',
 			'strategy_title'  => 'Full-funnel marketing, managed since the club opened.',
 			'strategy_intro'  => 'Three connected workstreams built to turn a brand-new yacht club into a fully booked one.',
 			'strategy_steps'  => array(
@@ -216,7 +216,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'noah-yacht-gallery-3.jpg', 'alt' => 'A DJ set at sunset aboard the NOAH catamaran' ),
 			),
 			'result_title'    => 'From opening day to Phuket\'s top yacht club, booked out two months ahead.',
-			'result_body'     => 'Since the day it opened, Noah Yacht Club\'s paid media has helped it grow into Phuket\'s top yacht club. Every charter and catamaran slot on the schedule is now booked solid up to two months in advance.',
+			'result_body'     => 'Since opening day, paid media has helped Noah Yacht Club become Phuket\'s top yacht club, with every charter and catamaran slot on the schedule now booked solid up to two months ahead.',
 		),
 
 		array(
@@ -234,7 +234,7 @@ function ldm_get_case_studies() {
 			'hero_img'        => 'carpe-diem-hero.jpg',
 			'hero_alt'        => 'The pool bar and sunbeds at Carpe Diem Beach Club',
 			'challenge_title' => 'A Phuket beach club with day beds, pool beds and events needed a measurable booking system.',
-			'challenge_body'  => 'Carpe Diem is a beachfront restaurant and beach club in Bang Tao, Phuket, serving Mediterranean cuisine and craft cocktails alongside day beds, pool beds, table reservations and events across its beachfront and poolside spaces. A striking setting doesn\'t by itself convert into a steady, trackable stream of bookings across all of that. The venue needed a paid media and tracking system built for exactly that.',
+			'challenge_body'  => 'Carpe Diem is a beachfront restaurant and beach club in Bang Tao, Phuket, serving Mediterranean cuisine and craft cocktails alongside day beds, pool beds, table reservations and events across its beachfront and poolside spaces. A setting this striking still needs a system behind it, since none of those offerings books itself, so the venue needed paid media and tracking built around that many moving parts at once.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Carpe Diem\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -248,7 +248,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'carpe-diem-gallery-3.jpg', 'alt' => 'The dance floor at a Carpe Diem nightlife event' ),
 			),
 			'result_title'    => 'One of Phuket\'s most famous beach clubs, weekly events and big events sold out.',
-			'result_body'     => 'Weekly events and larger events at Carpe Diem sell out consistently, hundreds of dinner reservations come in, and pool beds and day beds stay booked alongside them. That steady demand has helped Carpe Diem grow into one of Phuket\'s most famous beach clubs.',
+			'result_body'     => 'Weekly events and bigger nights at Carpe Diem sell out consistently, hundreds of dinner reservations come in, and pool beds and day beds stay booked alongside them, demand steady enough to make it one of Phuket\'s most famous beach clubs.',
 		),
 		array(
 			'slug'            => 'ulu-cliffhouse',
@@ -264,7 +264,7 @@ function ldm_get_case_studies() {
 			'href'            => null,
 			'hero_img'        => 'ulu-cliffhouse-hero.jpg',
 			'challenge_title' => 'A cliffside destination with several venues needed one system to prove what was working where.',
-			'challenge_body'  => 'Ulu Cliffhouse is a cliffside destination in Uluwatu, Bali, built around clifftop dining, nightlife and stays: Burnt, its fire-dining restaurant with sunset views; Cliffhouse Restaurant for all-day dining; a clifftop Pool Club; Ocean Deck, its evening venue for live music and DJ sets; and Ulu Stay, its boutique hotel suites. Running that many distinct experiences from one iconic location meant the destination needed a paid media and tracking system that could prove which campaigns were driving bookings at each individual venue, not just traffic to the destination as a whole.',
+			'challenge_body'  => 'Ulu Cliffhouse is a cliffside destination in Uluwatu, Bali, built around clifftop dining, nightlife and stays: Burnt, its fire-dining restaurant with sunset views; Cliffhouse Restaurant for all-day dining; a clifftop Pool Club; Ocean Deck, its evening venue for live music and DJ sets; and Ulu Stay, its boutique hotel suites. With that many distinct experiences sharing one address, the destination needed a system that could show which campaigns were actually filling which venue, not just driving general traffic to the location.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings at every venue, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn interest in Ulu Cliffhouse\'s cliffside setting into qualified bookings at each venue.',
 			'strategy_steps'  => array(
@@ -278,7 +278,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'ulu-cliffhouse-gallery-3.jpg', 'alt' => 'A fireworks show over the crowd at an Ulu Cliffhouse event' ),
 			),
 			'result_title'    => 'Every experience at Ulu Cliffhouse sells out, from dining to hotel suites.',
-			'result_body'     => 'Table reservations have grown steadily, day beds sell out quickly, and tickets to both weekly and big events sell out within a day. Ulu Stay\'s boutique hotel suites stay fully booked, and its mat pilates and sunrise yoga spots sell out fast every day.',
+			'result_body'     => 'Table reservations keep climbing, day beds sell out quickly, and tickets to both weekly and headline events are gone within a day. Ulu Stay\'s suites stay fully booked, and its mat pilates and sunrise yoga spots fill up fast every single day.',
 		),
 		array(
 			'slug'              => 'house-of-om',
@@ -293,7 +293,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Graduating yoga teacher trainees in white celebrating with certificates amid flower petals at House of Om',
 			'href'              => null,
 			'challenge_title' => 'A multi-campus yoga school and resort needed one system to fill every campus, not just the flagship.',
-			'challenge_body'  => 'House of Om is a yoga teacher training organization and resort running multiple campuses across Bali, Rishikesh and Koh Phangan, with an online academy that has educated over 10,000 students. Growing across that many locations meant the school needed a paid media system built to turn interest into a steady, trackable stream of training package enrollments and room bookings at every campus.',
+			'challenge_body'  => 'House of Om is a yoga teacher training organization and resort running multiple campuses across Bali, Rishikesh and Koh Phangan, with an online academy that has educated over 10,000 students. Scaling across that many locations meant no single campus could rely on word of mouth alone, so the school needed a paid media system built to fill training package enrollments and room bookings everywhere it operates.',
 			'strategy_title'  => 'Full-funnel marketing built for package enrollments, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn House of Om\'s reputation into qualified training package enrollments.',
 			'strategy_steps'  => array(
@@ -307,7 +307,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'house-of-om-gallery-3.jpg', 'alt' => 'Dusk view of a House of Om campus\'s thatched-roof building and lantern-lit courtyard' ),
 			),
 			'result_title'    => 'Promotional events and everyday packages both sell out for House of Om.',
-			'result_body'     => 'Most promotional enrollment events bring in a strong wave of sign-ups. It isn\'t only those campaigns either: regular training packages sell out daily too, with a high return on ad spend behind both.',
+			'result_body'     => 'Promotional enrollment events consistently bring in a strong wave of sign-ups, and regular training packages sell out daily too, both backed by a high return on ad spend.',
 		),
 		array(
 			'slug'              => 'babou',
@@ -323,7 +323,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'babou-hero.jpg',
 			'challenge_title' => 'A rebrand needed marketing that could carry three decades of history into a new identity.',
-			'challenge_body'  => 'Babou is an island supper club in Chaweng, Koh Samui, built beneath one of Chaweng\'s last mature tree canopies and serving MediterrAsian cuisine, cocktails and evening entertainment around a torch-lit palm courtyard. The site carries three decades of hospitality history, from Drop In Restaurant & Club to Samui Seafood Grill & Restaurant, before its relaunch as Babou. A rebrand like that needed a paid media system built to turn renewed interest into a steady, trackable stream of bookings.',
+			'challenge_body'  => 'Babou is an island supper club in Chaweng, Koh Samui, built beneath one of Chaweng\'s last mature tree canopies and serving MediterrAsian cuisine, cocktails and evening entertainment around a torch-lit palm courtyard. The site carries three decades of hospitality history, from Drop In Restaurant & Club to Samui Seafood Grill & Restaurant, before its relaunch as Babou, and a rebrand with that much history behind it needed marketing built to carry it into a new identity, not just announce one.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Babou\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -337,7 +337,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'babou-gallery-3.jpg', 'alt' => 'Guests reading the menu at Babou\'s bar by candlelight' ),
 			),
 			'result_title'    => 'Babou has grown into Koh Samui\'s Best Supper Club, with reservations climbing higher.',
-			'result_body'     => 'Paid media has helped Babou grow into Koh Samui\'s Best Supper Club, with table reservations climbing a lot higher since its relaunch. That growth has turned three decades of history on the site into a steady, trackable stream of bookings for its new MediterrAsian concept.',
+			'result_body'     => 'Reservations at Babou have climbed a lot higher since its relaunch, turning three decades of history on the site into consistent, trackable demand for its new MediterrAsian concept and helping it grow into Koh Samui\'s Best Supper Club.',
 		),
 		array(
 			'slug'              => 'penida-colada',
@@ -353,7 +353,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'penida-colada-hero.jpg',
 			'challenge_title' => 'A remote-island location made trackable marketing more important, not less.',
-			'challenge_body'  => 'Penida Colada is a beachfront restaurant and bar on the north shore of Nusa Penida, Bali, serving a Modern Australian-Indonesian menu with nightly live music. It has grown into one of the island\'s most recognized dining spots, but being off the main Bali tourist strip means it can\'t rely on passing foot traffic. It needed a paid media system built to turn its ocean-view setting into a steady, trackable stream of bookings.',
+			'challenge_body'  => 'Penida Colada is a beachfront restaurant and bar on the north shore of Nusa Penida, Bali, serving a Modern Australian-Indonesian menu with nightly live music. It has grown into one of the island\'s most recognized dining spots, but sitting off the main Bali tourist strip means it can\'t lean on passing foot traffic the way a mainland venue could, so it needed a paid media system built to turn its ocean-view setting into bookings it could actually trace.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Penida Colada\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -367,7 +367,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'penida-colada-gallery-3.jpg', 'alt' => 'Live music on Penida Colada\'s deck after dark' ),
 			),
 			'result_title'    => 'Table reservations have grown significantly for Penida Colada.',
-			'result_body'     => 'Since launching paid media, table reservations at Penida Colada have grown a lot, despite its off-the-beaten-path location on Nusa Penida. That growth has come with a high return on ad spend, proving paid media can still perform even reaching a harder-to-access island.',
+			'result_body'     => 'Table reservations at Penida Colada have grown a lot since launching paid media, despite its off-the-beaten-path location on Nusa Penida, proof that a high return on ad spend is still possible even reaching a harder-to-access island.',
 		),
 		array(
 			'slug'              => 'arna-oceanic-wellness-spa',
@@ -382,7 +382,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Two guests receiving a side-by-side facial and neck massage at Arna Oceanic Wellness Spa',
 			'href'              => null,
 			'challenge_title' => 'A spa built around a distinctive concept needed a way to turn that concept into trackable bookings.',
-			'challenge_body'  => 'Arna Oceanic Wellness Spa is a spa within Muang Samui Spa Resort on Chaweng Beach, Koh Samui, built around onsen baths, Vichy showers, plunge pools, a Finnish sauna, hydrotherapy and Ayurvedic treatments, alongside group yoga sessions and ocean-view facials. A concept this distinctive needed a paid media system built to turn that interest into a steady, trackable stream of spa bookings.',
+			'challenge_body'  => 'Arna Oceanic Wellness Spa is a spa within Muang Samui Spa Resort on Chaweng Beach, Koh Samui, built around onsen baths, Vichy showers, plunge pools, a Finnish sauna, hydrotherapy and Ayurvedic treatments, alongside group yoga sessions and ocean-view facials. A concept with that many distinct treatments needed a paid media system capable of turning all of that interest into bookings it could actually measure.',
 			'strategy_title'  => 'Full-funnel marketing built for spa bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Arna Oceanic Wellness Spa\'s reputation into qualified spa bookings.',
 			'strategy_steps'  => array(
@@ -396,7 +396,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'arna-gallery-3.jpg', 'alt' => 'Guests relaxing in a hydrotherapy jet pool at Arna Oceanic Wellness Spa' ),
 			),
 			'result_title'    => 'Bookings, leads and location visits have all grown a lot for Arna.',
-			'result_body'     => 'Paid media has driven a big increase in spa bookings for Arna Oceanic Wellness Spa, along with a steady rise in leads generated straight from marketing messages and a lot more visits to the location itself. That growth has turned a distinctive spa concept into a steady, trackable stream of bookings.',
+			'result_body'     => 'Spa bookings at Arna Oceanic Wellness Spa have grown a lot since launching paid media, alongside a steady rise in leads generated straight from marketing messages and a lot more visits to the location itself.',
 		),
 		array(
 			'slug'              => 'burnt',
@@ -412,7 +412,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'burnt-hero.jpg',
 			'challenge_title' => 'A char-grill concept needed a way to turn its menu into trackable bookings.',
-			'challenge_body'  => 'Burnt is a beachfront restaurant in Bali built around char-grilled, live-fire cooking, with a clifftop dining deck, fire pit lounge and sunset dining overlooking the ocean. A distinctive menu and setting alone don\'t convert into a steady, trackable stream of reservations. The venue needed a paid media system built to turn interest in its food and setting into measurable, qualified bookings.',
+			'challenge_body'  => 'Burnt is a beachfront restaurant in Bali built around char-grilled, live-fire cooking, with a clifftop dining deck, fire pit lounge and sunset dining overlooking the ocean. A menu and setting this distinctive still needed a system behind them, since neither converts reservations on its own, so the venue needed paid media built to turn that interest into measurable bookings.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Burnt\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
@@ -426,7 +426,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'burnt-gallery-3.jpg', 'alt' => 'Guests dining at sunset at Burnt' ),
 			),
 			'result_title'    => 'Already fully booked most nights, just months after opening.',
-			'result_body'     => 'Even as a newly opened venue, Burnt is already fully booked most nights, with reservations coming in fast and tables hard to find on short notice. That demand has turned a distinctive char-grilled menu into a steady, trackable stream of bookings within its first months open.',
+			'result_body'     => 'Even as a newly opened venue, Burnt is already booked solid most nights, with reservations coming in fast and tables hard to find on short notice, demand that\'s turned a distinctive char-grilled menu into reliable bookings within its first months open.',
 		),
 		array(
 			'slug'              => 'simba-sea-trips',
@@ -442,7 +442,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'simba-sea-trips-hero.jpg',
 			'challenge_title' => 'A multi-award tour operator still needed proof of which bookings its ads actually drove.',
-			'challenge_body'  => 'Simba Sea Trips is an Australian-owned, family-run speedboat tour operator based at Boat Lagoon Marina in Phuket, running trips to Phi Phi Islands, Phang Nga Bay and Krabi since 2005, and a winner of the World Luxury Travel Awards. Even with strong reviews and awards, the operator needed a paid media system built to turn interest into a steady, trackable stream of tour bookings.',
+			'challenge_body'  => 'Simba Sea Trips is an Australian-owned, family-run speedboat tour operator based at Boat Lagoon Marina in Phuket, running trips to Phi Phi Islands, Phang Nga Bay and Krabi since 2005, and a winner of the World Luxury Travel Awards. Strong reviews and awards like that still don\'t show up as a booking on their own, so the operator needed a paid media system built to turn that reputation into tour bookings it could track.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Simba Sea Trips\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -456,7 +456,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'simba-sea-trips-gallery-3.jpg', 'alt' => 'A Simba Sea Trips boat anchored off a white-sand sandbar' ),
 			),
 			'result_title'    => 'Simba Sea Trips has become one of the best sea trip operators in Phuket, selling out fast.',
-			'result_body'     => 'Tour packages to Phi Phi Islands, Phang Nga Bay and Krabi sell out quickly, and the boats stay fully booked every day. That demand has helped this Australian-owned, family-run operator and World Luxury Travel Awards winner grow into one of the best sea trip operators in Phuket.',
+			'result_body'     => 'Tour packages to Phi Phi Islands, Phang Nga Bay and Krabi sell out quickly, and the boats stay booked out every day. That demand has helped this Australian-owned, family-run operator and World Luxury Travel Awards winner become one of the best sea trip operators in Phuket.',
 		),
 		array(
 			'slug'              => 'the-barrel',
@@ -471,7 +471,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Wine display at The Barrel wine merchant',
 			'href'              => null,
 			'challenge_title' => 'A four-location brand across southern Thailand needed one system to grow it, not just market it.',
-			'challenge_body'  => 'The Barrel is a wine merchant and restaurant brand with four locations across southern Thailand: The Barrel Cherngtalay, The Barrel Phuket Town and The Barrel Rawai in Phuket, plus The Barrel Ao Nang in Krabi. Growing a brand across that many addresses meant more than paid media alone, it needed a new website built around discovery and reservations, backed by conversion optimization and a digital strategy built to turn that attention into trackable growth at every location.',
+			'challenge_body'  => 'The Barrel is a wine merchant and restaurant brand with four locations across southern Thailand: The Barrel Cherngtalay, The Barrel Phuket Town and The Barrel Rawai in Phuket, plus The Barrel Ao Nang in Krabi. Growing a brand across that many addresses takes more than paid media alone, so it needed a new website built around discovery and reservations, backed by conversion optimization and a digital strategy built to turn that attention into growth it could track at every location.',
 			'strategy_title'  => 'Full-service marketing and web built for growth across every location, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn The Barrel into a well-known brand across its four locations.',
 			'strategy_steps'  => array(
@@ -480,7 +480,7 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Digital Strategy', 'desc' => 'One digital strategy connecting Cherngtalay, Phuket Town, Rawai and Ao Nang under a single growing brand.' ),
 			),
 			'result_title'    => 'The Barrel has grown into a well-known brand across Thailand.',
-			'result_body'     => 'Full-service digital work across web, conversion optimization and digital strategy has helped The Barrel grow into a well-known brand in Thailand, with a +415% return on ad spend across its four locations in Cherngtalay, Phuket Town, Rawai and Ao Nang.',
+			'result_body'     => 'Full-service digital work across web, conversion optimization and digital strategy has turned The Barrel into a well-known name in Thailand, backed by a +415% return on ad spend across its four locations in Cherngtalay, Phuket Town, Rawai and Ao Nang.',
 		),
 		array(
 			'slug'              => 'the-9th-degree',
@@ -496,7 +496,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'the-9th-degree-hero.jpg',
 			'challenge_title' => 'A lagoon-front setting needed a way to turn its view into trackable bookings.',
-			'challenge_body'  => 'The 9th Degree is a restaurant and wine bar in Phuket, set on a marina\'s lagoon-front boardwalk surrounded by yacht moorings, with an indoor wine bar and lounge alongside its outdoor waterfront seating. A striking view and setting like that don\'t by themselves convert into a steady, trackable stream of reservations. The venue needed a paid media system built to turn that setting into measurable, qualified bookings.',
+			'challenge_body'  => 'The 9th Degree is a restaurant and wine bar in Phuket, set on a marina\'s lagoon-front boardwalk surrounded by yacht moorings, with an indoor wine bar and lounge alongside its outdoor waterfront seating. A view and setting that striking still won\'t fill a reservation book by itself, so the venue needed a paid media system built around turning that setting into bookings it could measure.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn The 9th Degree\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
@@ -510,7 +510,7 @@ function ldm_get_case_studies() {
 				array( 'img' => 'the-9th-degree-gallery-3.jpg', 'alt' => 'The 9th Degree\'s lagoon-front boardwalk lit up at dusk' ),
 			),
 			'result_title'    => 'Bookings at The 9th Degree have increased a lot, with events and promotions selling out fast.',
-			'result_body'     => 'Bookings have increased significantly compared to before, and events and promotions get fully booked quickly, keeping the lagoon-front boardwalk busy night after night.',
+			'result_body'     => 'Bookings at The 9th Degree have increased significantly compared to before, and events and promotions now fill up quickly, keeping the lagoon-front boardwalk busy night after night.',
 		),
 		array( 'slug' => 'chalong-bay-rum', 'name' => 'Chalong Bay Rum', 'badge' => 'E-commerce', 'location' => 'Phuket, Thailand', 'industry' => 'Meta Ads &middot; Google Shopping &middot; Marketing Analytics', 'type' => null, 'desc' => 'Rebuilding the e-commerce tracking foundation so every dollar of ad spend for this Phuket rum distillery could be traced to revenue, not just clicks.', 'result' => null, 'img' => 'chalong-bay-rum-case.jpg', 'alt' => 'A Chalong Bay Rum cocktail served at the distillery', 'href' => null ),
 		array( 'slug' => 'raw-uluwatu', 'name' => 'Raw Uluwatu', 'badge' => 'Gym', 'location' => 'Bali, Indonesia', 'industry' => 'Lead Generation &middot; Google Ads &middot; CRM Integration', 'type' => null, 'desc' => 'Replacing generic form-fills with a qualified-lead pipeline for this Bali gym\'s memberships, built on Google Ads and synced directly into the studio\'s CRM.', 'result' => null, 'img' => 'raw-uluwatu-case.jpg', 'alt' => 'Training floor at Raw Uluwatu gym', 'href' => null ),
@@ -527,7 +527,7 @@ function ldm_get_case_studies() {
 			'alt'             => 'A facial treatment in progress at Ours Spa',
 			'href'            => null,
 			'challenge_title' => 'A niche nail-and-beauty salon needed a measurable way to keep its chairs booked.',
-			'challenge_body'  => 'Ours Spa is a nail and beauty salon in Uluwatu, Bali, part of the Ours Group, known as one of the island\'s first to offer BIAB gel nail extensions, alongside Dermalogica facials, hair treatments, massage and waxing. A specialist reputation like that doesn\'t fill the appointment book on its own. The salon needed a paid media system built to turn interest into a steady, trackable stream of treatment bookings.',
+			'challenge_body'  => 'Ours Spa is a nail and beauty salon in Uluwatu, Bali, part of the Ours Group, known as one of the island\'s first to offer BIAB gel nail extensions, alongside Dermalogica facials, hair treatments, massage and waxing. Being a specialist like that still doesn\'t fill an appointment book on its own, so the salon needed a paid media system built around turning that reputation into bookings it could track.',
 			'strategy_title'  => 'Full-funnel marketing built for treatment bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Ours Spa\'s reputation into qualified treatment bookings.',
 			'strategy_steps'  => array(
@@ -549,7 +549,7 @@ function ldm_get_case_studies() {
 			'href'            => null,
 			'hero_img'        => 'soho-pool-club-hero.jpg',
 			'challenge_title' => 'A pool club needed a way to turn its setting into trackable bookings, not just foot traffic.',
-			'challenge_body'  => 'Soho Pool Club is a pool club built around its clubhouse and pool as the centerpiece of the guest experience. A striking space alone doesn\'t fill sunbeds and tables on a consistent basis. The venue needed a paid media system built to turn interest into a steady, trackable stream of bookings.',
+			'challenge_body'  => 'Soho Pool Club is a pool club built around its clubhouse and pool as the centerpiece of the guest experience. A striking space like that still needs demand generation behind it; it won\'t fill sunbeds and tables consistently on its own. What the venue needed was a system that could convert that interest into bookings it could actually measure.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Soho Pool Club\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -572,7 +572,7 @@ function ldm_get_case_studies() {
 			'href'            => null,
 			'hero_img'        => 'marbella-beach-goa-hero.jpg',
 			'challenge_title' => 'A well-established resort still needed to prove which bookings its ads actually drove.',
-			'challenge_body'  => 'Marbela Beach is a beachfront resort and beach club on Morjim Beach, North Goa, India, operating for over 17 years with beachfront pool, cabanas, an Ibiza-inspired beach club and its own Meso restaurant. Even an established, well-loved venue needs a paid media system that proves which channels are actually driving qualified stays and beach-club bookings, rather than relying on reputation alone.',
+			'challenge_body'  => 'Marbela Beach is a beachfront resort and beach club on Morjim Beach, North Goa, India, operating for over 17 years with beachfront pool, cabanas, an Ibiza-inspired beach club and its own Meso restaurant. Even an established, well-loved venue like this needed a paid media system that could prove which channels were actually driving qualified stays and beach-club bookings, rather than leaning on reputation alone.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Marbella Beach Goa\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -595,7 +595,7 @@ function ldm_get_case_studies() {
 			'href'            => null,
 			'hero_img'        => 'ama-by-ours-hero.jpg',
 			'challenge_title' => 'A Mediterranean concept needed a measurable way to fill tables in a crowded Uluwatu dining scene.',
-			'challenge_body'  => 'Ama by Ours is a Mediterranean restaurant in Uluwatu, Bali, part of the Ours Group, serving Greek and Italian fusion cuisine in a space styled around olive trees and terracotta tones. In a dining scene this competitive, a distinctive concept alone doesn\'t guarantee a steady, trackable stream of reservations. The venue needed a paid media system built for exactly that.',
+			'challenge_body'  => 'Ama by Ours is a Mediterranean restaurant in Uluwatu, Bali, part of the Ours Group, serving Greek and Italian fusion cuisine in a space styled around olive trees and terracotta tones. Uluwatu\'s dining scene is competitive enough that a distinctive concept alone isn\'t a guarantee of reservations, so the venue needed a paid media system built to close that gap.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Ama by Ours\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
@@ -623,7 +623,7 @@ function ldm_get_case_studies() {
 			'href'            => null,
 			'hero_img'        => 'bennys-cocktails-grill-hero.jpg',
 			'challenge_title' => 'A specialist steakhouse needed a system to turn its reputation into trackable bookings.',
-			'challenge_body'  => 'Benny\'s Cocktails & Grill is a steakhouse and cocktail bar in Bang Tao, Phuket, founded in 2015 by restaurateur Benedikt De Bellis, specializing in Australian Angus, Wagyu and Japanese Wagyu with tableside preparations. A specialist menu like that deserves a paid media system built to convert interest into a steady, trackable stream of reservations, not just walk-ins.',
+			'challenge_body'  => 'Benny\'s Cocktails & Grill is a steakhouse and cocktail bar in Bang Tao, Phuket, founded in 2015 by restaurateur Benedikt De Bellis, specializing in Australian Angus, Wagyu and Japanese Wagyu with tableside preparations. A specialist menu at that level deserved a paid media system that could turn interest into table reservations, rather than relying on walk-ins to fill the room.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Benny\'s Cocktails & Grill\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
@@ -646,7 +646,7 @@ function ldm_get_case_studies() {
 			'href'            => null,
 			'hero_img'        => 'home-by-ours-hero.jpg',
 			'challenge_title' => 'A rustic-modern dining room needed a measurable way to compete for attention in Uluwatu.',
-			'challenge_body'  => 'Home by Ours is an all-day dining spot in Uluwatu, part of the Ours Group, built around a rustic-modern outdoor terrace and a menu fusing Western and Asian dishes with local ingredients. A distinctive terrace and menu don\'t fill tables on their own. The venue needed a paid media system built to turn that into a steady, trackable stream of reservations.',
+			'challenge_body'  => 'Home by Ours is an all-day dining spot in Uluwatu, part of the Ours Group, built around a rustic-modern outdoor terrace and a menu fusing Western and Asian dishes with local ingredients. A terrace and menu this distinctive still don\'t fill tables by themselves, so what it needed was a paid media system that could turn that distinctiveness into reservations, not just admiration.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Home by Ours\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
@@ -669,7 +669,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'the-distillery-phuket-hero.jpg',
 			'challenge_title' => 'A working distillery needed marketing that could turn tours and reviews into bookings.',
-			'challenge_body'  => 'The Distillery Phuket is a working craft-spirits distillery and restaurant in Chalong, Phuket, distilling Chalong Bay rum, Saneha gin and Lanna vodka on-site from Thai ingredients, alongside a Thai-fusion dining menu and distillery tours. A strong reputation (including TripAdvisor Travelers\' Choice Awards in 2023, 2024 and 2025) doesn\'t by itself convert into a steady, trackable stream of tour and table bookings.',
+			'challenge_body'  => 'The Distillery Phuket is a working craft-spirits distillery and restaurant in Chalong, Phuket, distilling Chalong Bay rum, Saneha gin and Lanna vodka on-site from Thai ingredients, alongside a Thai-fusion dining menu and distillery tours. A strong reputation, including TripAdvisor Travelers\' Choice Awards in 2023, 2024 and 2025, still isn\'t the same as a steady flow of tour and table bookings, so the distillery needed a paid media system built to close that gap.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn The Distillery Phuket\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -692,7 +692,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'bartolo-hero.jpg',
 			'challenge_title' => 'A neighborhood bistro needed a way to prove which bookings its ads actually drove.',
-			'challenge_body'  => 'Bartolo is a bistro and cocktail bar in Uluwatu, Bali, serving French and Italian cooking with a vermouth-focused cocktail program, open daily with a nightly happy hour. Being named one of Travel + Leisure\'s 25 best restaurants in Indonesia on its 2024 Tastemakers list builds recognition, but it doesn\'t by itself show up as a steady, trackable stream of reservations. The venue needed a paid media system built for exactly that.',
+			'challenge_body'  => 'Bartolo is a bistro and cocktail bar in Uluwatu, Bali, serving French and Italian cooking with a vermouth-focused cocktail program, open daily with a nightly happy hour. Being named one of Travel + Leisure\'s 25 best restaurants in Indonesia on its 2024 Tastemakers list builds recognition, but recognition alone doesn\'t show up as a reservation. The venue needed a system that could convert that attention into bookings instead.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Bartolo\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
@@ -715,7 +715,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'mood-by-ours-hero.jpg',
 			'challenge_title' => 'A farm-to-table concept needed marketing that matched its supply chain story.',
-			'challenge_body'  => 'Mood by Ours is a farm-to-table cafe and organic market in Uluwatu, Bali, part of the Ours Group, sourcing 75% of its produce from the group\'s own farm in Bedugul and making its pastas, sauces and pantry staples in-house. A real supply-chain story like that needed a paid media system built to turn it into a steady, trackable stream of cafe visits and market orders.',
+			'challenge_body'  => 'Mood by Ours is a farm-to-table cafe and organic market in Uluwatu, Bali, part of the Ours Group, sourcing 75% of its produce from the group\'s own farm in Bedugul and making its pastas, sauces and pantry staples in-house. A supply-chain story this genuine deserved a paid media system built to turn it into actual cafe visits and market orders, not just goodwill.',
 			'strategy_title'  => 'Full-funnel marketing built for orders and visits, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Mood by Ours\'s reputation into qualified orders and visits.',
 			'strategy_steps'  => array(
@@ -737,7 +737,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Meso logo',
 			'href'              => null,
 			'challenge_title' => 'A resort restaurant needed a way to turn its setting into trackable bookings.',
-			'challenge_body'  => 'Meso is a beach restaurant on the resort grounds of Marbela Beach on Morjim Beach, North Goa, India. Sitting inside an established beachfront resort brings passing interest, but it doesn\'t by itself convert into a steady, trackable stream of table bookings. The restaurant needed a paid media system built for exactly that.',
+			'challenge_body'  => 'Meso is a beach restaurant on the resort grounds of Marbela Beach on Morjim Beach, North Goa, India. Sitting inside an established beachfront resort brings passing interest, but passing interest isn\'t the same as a table booking, so the restaurant needed a paid media system built to close that gap.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Meso\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -763,7 +763,7 @@ function ldm_get_case_studies() {
 			'supporting_img'    => 'tempo-supporting.jpg',
 			'supporting_alt'    => 'Guests singing karaoke at Tempo',
 			'challenge_title' => 'A restaurant, lounge and KTV concept needed one system to fill three different rooms.',
-			'challenge_body'  => 'Tempo Restaurant, Lounge & KTV is a multipurpose venue in Chalong, Phuket, combining a restaurant, a cocktail lounge and private karaoke rooms in three sizes. Running three distinct experiences under one roof meant the venue needed a paid media system built to turn interest in any of them into a steady, trackable stream of bookings.',
+			'challenge_body'  => 'Tempo Restaurant, Lounge & KTV is a multipurpose venue in Chalong, Phuket, combining a restaurant, a cocktail lounge and private karaoke rooms in three sizes. Running three distinct experiences under one roof meant no single one of them could be marketed in isolation, so the venue needed one paid media system capable of turning interest in any of them into bookings.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Tempo\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -786,7 +786,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'bollywood-phuket-hero.jpg',
 			'challenge_title' => 'A home-kitchen story needed marketing that could carry it beyond word of mouth.',
-			'challenge_body'  => 'Bollywood Phuket is an Indian bistro and bar in Phuket, built on a founding story that grew out of a home kitchen. A great origin story travels by word of mouth, but it doesn\'t by itself convert into a steady, trackable stream of reservations. The venue needed a paid media system built for exactly that.',
+			'challenge_body'  => 'Bollywood Phuket is an Indian bistro and bar in Phuket, built on a founding story that grew out of a home kitchen. A good origin story travels by word of mouth, but word of mouth alone doesn\'t scale into a steady flow of reservations, so the venue needed a paid media system built to carry that story further.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Bollywood Phuket\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
@@ -807,7 +807,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'The Firefly Club logo',
 			'href'              => null,
 			'challenge_title' => 'A restaurant needed a way to turn interest into trackable reservations.',
-			'challenge_body'  => 'The Firefly Club is a restaurant built around its own concept and menu. A good concept alone doesn\'t convert into a steady, trackable stream of reservations. The venue needed a paid media system built to turn interest into measurable, qualified bookings.',
+			'challenge_body'  => 'The Firefly Club is a restaurant built around its own concept and menu. A good concept on its own isn\'t a guarantee of reservations. The venue needed a system built around proving which bookings that interest actually produced.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn The Firefly Club\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
@@ -830,7 +830,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'lulu-bistrot-hero.jpg',
 			'challenge_title' => 'A Parisian-inspired bistro needed a way to prove which reservations its ads actually drove.',
-			'challenge_body'  => 'Lulu Bistrot is a French bistro and bar in Canggu, Bali, serving French classics with Indonesian influences, with a six-seat Chef\'s Counter tasting menu and a sister restaurant, Bartolo, in Uluwatu. Being selected for Tatler\'s Best 100 in Asia list in 2024 builds recognition, but it doesn\'t by itself fill tables and the Chef\'s Counter on a nightly basis. The venue needed a paid media system built to turn interest into a steady, trackable stream of reservations.',
+			'challenge_body'  => 'Lulu Bistrot is a French bistro and bar in Canggu, Bali, serving French classics with Indonesian influences, with a six-seat Chef\'s Counter tasting menu and a sister restaurant, Bartolo, in Uluwatu. Being selected for Tatler\'s Best 100 in Asia list in 2024 builds recognition, but recognition alone won\'t fill tables and the Chef\'s Counter night after night. What closed that gap was a paid media system built to convert that attention into reservations.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Lulu Bistrot\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
@@ -853,7 +853,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'hug-samui-hero.jpg',
 			'challenge_title' => 'A beachfront seafood spot needed a way to turn its setting into trackable bookings.',
-			'challenge_body'  => 'Hug Samui is a beachfront restaurant on Koh Samui known for its seafood. A beachfront location and a strong menu don\'t automatically convert into a steady, trackable stream of reservations. The venue needed a paid media system built for exactly that.',
+			'challenge_body'  => 'Hug Samui is a beachfront restaurant on Koh Samui known for its seafood. A beachfront location and a strong menu are a good start, but neither one converts into a reservation automatically, so the venue needed a paid media system built to close that gap.',
 			'strategy_title'  => 'Full-funnel marketing built for reservations, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Hug Samui\'s reputation into qualified reservations.',
 			'strategy_steps'  => array(
@@ -876,7 +876,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'muang-samui-resort-hero.jpg',
 			'challenge_title' => 'A resort with real amenities still needed proof that its ads were driving bookings.',
-			'challenge_body'  => 'Muang Samui Spa Resort is a 53-suite beachfront resort on Chaweng Beach, Koh Samui, with a freeform beachfront pool, an on-site gym, a spa, and two in-house restaurants under the philosophy "Sleep Well, Move Well, Dine Well." A resort with amenities this complete needed a paid media system built to turn interest into a steady, trackable stream of room bookings.',
+			'challenge_body'  => 'Muang Samui Spa Resort is a 53-suite beachfront resort on Chaweng Beach, Koh Samui, with a freeform beachfront pool, an on-site gym, a spa, and two in-house restaurants under the philosophy "Sleep Well, Move Well, Dine Well." A resort with amenities this complete still needed a way to turn that range of offerings into room bookings it could actually track.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Muang Samui Resort\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -899,7 +899,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'mel-francis-villa-hero.jpg',
 			'challenge_title' => 'A villa investment offer needed marketing built for serious buyers, not just browsers.',
-			'challenge_body'  => 'Mel Francis Villas is a luxury villa design, construction and off-plan investment company based in Uluwatu, Bali, offering custom villa builds near Balangan and Nyang Nyang beaches with projected ROI figures and a five-year structural warranty. An investment offer like that needed a paid media system built to turn interest into a steady, trackable stream of qualified buyer enquiries, not just casual browsing.',
+			'challenge_body'  => 'Mel Francis Villas is a luxury villa design, construction and off-plan investment company based in Uluwatu, Bali, offering custom villa builds near Balangan and Nyang Nyang beaches with projected ROI figures and a five-year structural warranty. An investment offer at that scale needed marketing built for serious buyers, not casual browsing, so it needed a paid media system built around qualified enquiries rather than clicks.',
 			'strategy_title'  => 'Full-funnel marketing built for buyer enquiries, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Mel Francis Villa\'s reputation into qualified buyer enquiries.',
 			'strategy_steps'  => array(
@@ -922,7 +922,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'shaz-spa-hero.jpg',
 			'challenge_title' => 'A two-location clinic needed a way to prove which bookings its ads actually drove.',
-			'challenge_body'  => 'Shaz is a medical aesthetic clinic and salon with locations in Seminyak and Canggu, Bali, offering facials, injectables, laser treatments and body contouring under a stated medical team. Two locations and a wide service menu meant the clinic needed a paid media system built to turn interest into a steady, trackable stream of appointment bookings.',
+			'challenge_body'  => 'Shaz is a medical aesthetic clinic and salon with locations in Seminyak and Canggu, Bali, offering facials, injectables, laser treatments and body contouring under a stated medical team. Running two locations with that wide a service menu meant the clinic needed one paid media system capable of converting interest into appointment bookings at both.',
 			'strategy_title'  => 'Full-funnel marketing built for appointment bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Shaz Aesthetic & Media Spa\'s reputation into qualified appointment bookings.',
 			'strategy_steps'  => array(
@@ -944,7 +944,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Cave Rai Ra logo',
 			'href'              => null,
 			'challenge_title' => 'A cave-themed spa needed marketing that could turn its concept into trackable bookings.',
-			'challenge_body'  => 'Cave Rai-Ra is a cave-themed spa at Royal Muang Samui Villas on Choengmon Beach, Koh Samui, with five treatment rooms designed around the landscapes of Ang Thong Marine Park. A concept this distinctive doesn\'t fill an appointment book on its own. The spa needed a paid media system built to turn interest into a steady, trackable stream of treatment bookings.',
+			'challenge_body'  => 'Cave Rai-Ra is a cave-themed spa at Royal Muang Samui Villas on Choengmon Beach, Koh Samui, with five treatment rooms designed around the landscapes of Ang Thong Marine Park. A concept this distinctive still won\'t fill an appointment book on its own, so the spa needed a system that could turn that interest into treatment bookings it could actually trace.',
 			'strategy_title'  => 'Full-funnel marketing built for treatment bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Cave Rai Ra\'s reputation into qualified treatment bookings.',
 			'strategy_steps'  => array(
@@ -967,7 +967,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'athlean-hero.jpg',
 			'challenge_title' => 'A neighborhood gym needed a way to turn interest into trackable membership sign-ups.',
-			'challenge_body'  => 'Athlean is a gym in Seminyak, Bali, part of the Raw Gym Bali network, offering modern equipment, personal training and group classes. In a neighborhood with plenty of gym options, Athlean needed a paid media system built to turn interest into a steady, trackable stream of trial visits and membership sign-ups.',
+			'challenge_body'  => 'Athlean is a gym in Seminyak, Bali, part of the Raw Gym Bali network, offering modern equipment, personal training and group classes. With plenty of other gym options in the neighborhood, Athlean needed a system that could convert interest into trial visits and membership sign-ups it could actually track.',
 			'strategy_title'  => 'Full-funnel marketing built for membership sign-ups, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Athlean\'s reputation into qualified membership sign-ups.',
 			'strategy_steps'  => array(
@@ -989,7 +989,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Tribal Fitness logo',
 			'href'              => null,
 			'challenge_title' => 'A data-driven training method needed marketing that could explain it and still convert.',
-			'challenge_body'  => 'Tribal Fitness is a community-focused gym in BSD, Jakarta, built around a science-based, data-driven training methodology developed by a 30-year fitness-industry veteran. A more technical pitch than a typical gym needed a paid media system built to turn that story into a steady, trackable stream of trial sign-ups.',
+			'challenge_body'  => 'Tribal Fitness is a community-focused gym in BSD, Jakarta, built around a science-based, data-driven training methodology developed by a 30-year fitness-industry veteran. A more technical pitch than a typical gym needed marketing that could explain that methodology clearly and still convert it into trial sign-ups.',
 			'strategy_title'  => 'Full-funnel marketing built for trial sign-ups, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Tribal Fitness\'s reputation into qualified trial sign-ups.',
 			'strategy_steps'  => array(
@@ -1011,7 +1011,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Raw Ubud logo',
 			'href'              => null,
 			'challenge_title' => 'A gym in a competitive wellness town needed proof of which sign-ups its ads drove.',
-			'challenge_body'  => 'Raw Ubud is a gym in Ubud, Bali, part of the Raw Gym Bali chain, offering equipment, coaching, classes and recovery facilities. Ubud\'s wellness scene is crowded, so the gym needed a paid media system built to turn interest into a steady, trackable stream of trial and membership sign-ups.',
+			'challenge_body'  => 'Raw Ubud is a gym in Ubud, Bali, part of the Raw Gym Bali chain, offering equipment, coaching, classes and recovery facilities. Ubud\'s wellness scene is crowded enough that the gym needed a way to turn that interest into trial and membership sign-ups it could actually trace.',
 			'strategy_title'  => 'Full-funnel marketing built for membership sign-ups, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Raw Ubud\'s reputation into qualified membership sign-ups.',
 			'strategy_steps'  => array(
@@ -1033,7 +1033,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Nuhuman Raw logo',
 			'href'              => null,
 			'challenge_title' => 'A curated-membership model needed marketing built for qualified applicants, not just clicks.',
-			'challenge_body'  => 'nuHuman by RAW is a beachfront performance and recovery facility in Canggu, Bali, combining strength training zones with cold/heat recovery protocols and an on-site nutrition cafe, using a curated membership application process. That kind of positioning needed a paid media system built to turn interest into a steady, trackable stream of qualified membership applications.',
+			'challenge_body'  => 'nuHuman by RAW is a beachfront performance and recovery facility in Canggu, Bali, combining strength training zones with cold/heat recovery protocols and an on-site nutrition cafe, using a curated membership application process. A positioning that selective needed marketing built for qualified applicants, not just volume of clicks.',
 			'strategy_title'  => 'Full-funnel marketing built for membership applications, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Nuhuman Raw\'s reputation into qualified membership applications.',
 			'strategy_steps'  => array(
@@ -1056,7 +1056,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'kyzn-hero.jpg',
 			'challenge_title' => 'A multi-club, all-ages concept needed one system to fill sign-ups across every location.',
-			'challenge_body'  => 'KYZN is a family and social wellness club chain headquartered in Jakarta with clubs across Kuningan, BSD City, Surabaya and Bekasi, offering wellness, sports and lifestyle programs for all ages. Running programs across that many clubs and age groups meant KYZN needed a paid media system built to turn interest into a steady, trackable stream of membership sign-ups at every location.',
+			'challenge_body'  => 'KYZN is a family and social wellness club chain headquartered in Jakarta with clubs across Kuningan, BSD City, Surabaya and Bekasi, offering wellness, sports and lifestyle programs for all ages. Running programs across that many clubs and age groups meant KYZN needed one paid media system capable of turning interest into membership sign-ups at every location, not just the flagship.',
 			'strategy_title'  => 'Full-funnel marketing built for membership sign-ups, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Kyzn\'s reputation into qualified membership sign-ups.',
 			'strategy_steps'  => array(
@@ -1078,7 +1078,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Royal Finances logo',
 			'href'              => null,
 			'challenge_title' => 'A short-term lender needed a way to turn ad clicks into trackable, qualified applications.',
-			'challenge_body'  => 'Royal Finances is a short-term lending service based in Rawdon, Quebec, Canada, offering fast loan approvals with funds sent by e-Transfer. In lending, a click means little without a completed, qualified application. The business needed a paid media system built to turn interest into a steady, trackable stream of loan applications.',
+			'challenge_body'  => 'Royal Finances is a short-term lending service based in Rawdon, Quebec, Canada, offering fast loan approvals with funds sent by e-Transfer. In lending, a click means little on its own; what matters is a completed, qualified application, so the business needed a paid media system built around exactly that.',
 			'strategy_title'  => 'Full-funnel marketing built for loan applications, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Royal Finances\'s reputation into qualified loan applications.',
 			'strategy_steps'  => array(
@@ -1100,7 +1100,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Simple Financial logo',
 			'href'              => null,
 			'challenge_title' => 'A licensed lender needed marketing built for qualified applicants, not just traffic.',
-			'challenge_body'  => 'Simple Financial is a licensed online payday lender based in Mississauga, Ontario, Canada, offering short-term loans with e-Transfer funding. In a regulated lending category, the business needed a paid media and tracking system built to turn traffic into a steady, trackable stream of qualified loan applications.',
+			'challenge_body'  => 'Simple Financial is a licensed online payday lender based in Mississauga, Ontario, Canada, offering short-term loans with e-Transfer funding. Operating in a regulated lending category meant traffic alone wasn\'t the goal, so the business needed a paid media and tracking system built to turn that traffic into qualified loan applications.',
 			'strategy_title'  => 'Full-funnel marketing built for loan applications, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Simple Financial\'s reputation into qualified loan applications.',
 			'strategy_steps'  => array(
@@ -1122,7 +1122,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Simple Pret logo',
 			'href'              => null,
 			'challenge_title' => 'A Quebec lender needed proof of which applications its ad spend actually drove.',
-			'challenge_body'  => 'Simple Pret is a short-term loan company licensed in Quebec, Canada, offering loans funded by e-Transfer with no credit checks. Operating in a regulated lending category meant the business needed a paid media and tracking system built to turn interest into a steady, trackable stream of qualified loan applications.',
+			'challenge_body'  => 'Simple Pret is a short-term loan company licensed in Quebec, Canada, offering loans funded by e-Transfer with no credit checks. Working within a regulated lending category meant the business needed a paid media and tracking system built to turn interest into applications it could actually qualify.',
 			'strategy_title'  => 'Full-funnel marketing built for loan applications, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Simple Pret\'s reputation into qualified loan applications.',
 			'strategy_steps'  => array(
@@ -1144,7 +1144,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'cash-depot-hero.jpg',
 			'challenge_title' => 'A storefront lending business needed a way to prove which applications its ads drove.',
-			'challenge_body'  => 'Cash Depot operates from a physical storefront. A storefront alone doesn\'t guarantee a steady, trackable stream of qualified applications. The business needed a paid media system built to turn interest into measurable, qualified applications.',
+			'challenge_body'  => 'Cash Depot operates from a physical storefront. A storefront alone isn\'t proof that marketing dollars are turning into applications, so the business needed a paid media system built to measure exactly that.',
 			'strategy_title'  => 'Full-funnel marketing built for applications, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Cash Depot\'s reputation into qualified applications.',
 			'strategy_steps'  => array(
@@ -1166,7 +1166,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Trader2B logo',
 			'href'              => null,
 			'challenge_title' => 'A trader-evaluation program needed marketing built for serious, qualified sign-ups.',
-			'challenge_body'  => 'Trader2B is a US-based proprietary trading firm running the ToroChallenge, a paid trader-evaluation program across simulated $25K, $100K and $250K account tiers, with a profit split of up to 99% for traders who pass. A challenge like that needed a paid media system built to turn interest into a steady, trackable stream of qualified challenge sign-ups.',
+			'challenge_body'  => 'Trader2B is a US-based proprietary trading firm running the ToroChallenge, a paid trader-evaluation program across simulated $25K, $100K and $250K account tiers, with a profit split of up to 99% for traders who pass. A challenge with stakes like that needed a paid media system built for serious, qualified sign-ups rather than casual interest.',
 			'strategy_title'  => 'Full-funnel marketing built for challenge sign-ups, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Trader2B\'s reputation into qualified challenge sign-ups.',
 			'strategy_steps'  => array(
@@ -1189,7 +1189,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'natuurvlees-hero.jpg',
 			'challenge_title' => 'A farm-direct butcher needed marketing that could carry its supply-chain story to online orders.',
-			'challenge_body'  => 'Natuurvlees.nl is a Dutch online butcher tied to the farm Waterlant\'s Weelde in Drenthe, the Netherlands, sourcing meat directly from its own farmers and running its own in-house sausage-making operation, with home delivery. A direct-from-farm story like that needed a paid media system built to turn interest into a steady, trackable stream of online orders.',
+			'challenge_body'  => 'Natuurvlees.nl is a Dutch online butcher tied to the farm Waterlant\'s Weelde in Drenthe, the Netherlands, sourcing meat directly from its own farmers and running its own in-house sausage-making operation, with home delivery. A direct-from-farm story this genuine needed a system that could turn that story into actual online orders, not just brand awareness.',
 			'strategy_title'  => 'Full-funnel marketing built for orders, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Natuurvlees.nl\'s reputation into qualified orders.',
 			'strategy_steps'  => array(
@@ -1212,7 +1212,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'bbb-hero.jpg',
 			'challenge_title' => 'A specialty beverage distributor needed marketing built for trade enquiries, not just awareness.',
-			'challenge_body'  => 'BB&B (Bangkok Beer & Beverages Co., Ltd.) is a Bangkok-headquartered importer and distributor of specialty beers, wines, spirits, coffee and tea, with offices across Thailand and its own beverage training academy. A B2B distribution business like this needed a paid media system built to turn interest into a steady, trackable stream of trade enquiries.',
+			'challenge_body'  => 'BB&B (Bangkok Beer & Beverages Co., Ltd.) is a Bangkok-headquartered importer and distributor of specialty beers, wines, spirits, coffee and tea, with offices across Thailand and its own beverage training academy. A B2B distribution business at that scale needed a paid media system built around trade enquiries specifically, not general brand reach.',
 			'strategy_title'  => 'Full-funnel marketing built for trade enquiries, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn BB&B\'s reputation into qualified trade enquiries.',
 			'strategy_steps'  => array(
@@ -1235,7 +1235,7 @@ function ldm_get_case_studies() {
 			'href'              => null,
 			'hero_img'          => 'hug-ocean-hero.jpg',
 			'challenge_title' => 'A dive center needed a way to turn interest into trackable course and trip bookings.',
-			'challenge_body'  => 'Hug Ocean is a PADI 5 Star Dive Center in Rawai, Phuket, offering scuba courses, dive trips and equipment rental. A strong PADI rating alone doesn\'t fill a dive calendar. The center needed a paid media system built to turn interest into a steady, trackable stream of course and trip bookings.',
+			'challenge_body'  => 'Hug Ocean is a PADI 5 Star Dive Center in Rawai, Phuket, offering scuba courses, dive trips and equipment rental. A strong PADI rating builds trust, but it doesn\'t fill a dive calendar by itself, so the center needed a system that could turn that trust into course and trip bookings, not just goodwill.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Hug Ocean\'s reputation into qualified bookings.',
 			'strategy_steps'  => array(
@@ -1257,7 +1257,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Steam Cleaning logo',
 			'href'              => null,
 			'challenge_title' => 'A specialist certification needed marketing built for qualified commercial enquiries.',
-			'challenge_body'  => 'Steam Cleaning Phuket is a decontamination and cleaning company serving yachts, hotels, resorts, condominiums and restaurants, stating it is Thailand\'s only AFNOR NF T72-110 certified operator using a chemical-free steam and enzymatic cleaning process. A specialist certification like that needed a paid media system built to turn interest into a steady, trackable stream of qualified commercial enquiries.',
+			'challenge_body'  => 'Steam Cleaning Phuket is a decontamination and cleaning company serving yachts, hotels, resorts, condominiums and restaurants, stating it is Thailand\'s only AFNOR NF T72-110 certified operator using a chemical-free steam and enzymatic cleaning process. A specialist certification like that needed a paid media system built around qualified commercial enquiries, not general awareness.',
 			'strategy_title'  => 'Full-funnel marketing built for commercial enquiries, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Steam Cleaning\'s reputation into qualified commercial enquiries.',
 			'strategy_steps'  => array(
@@ -1279,7 +1279,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Dreamer Phuket logo',
 			'href'              => null,
 			'challenge_title' => 'A multi-concept lifestyle space needed one system to turn interest into trackable visits.',
-			'challenge_body'  => 'Dreamers Phuket is a lifestyle space in Kamala, Phuket, combining a cafe, a boutique and a co-working area under one roof. Running several concepts in one space meant the business needed a paid media system built to turn interest into a steady, trackable stream of customer visits.',
+			'challenge_body'  => 'Dreamers Phuket is a lifestyle space in Kamala, Phuket, combining a cafe, a boutique and a co-working area under one roof. Running several concepts in one space meant the business needed a paid media system capable of turning interest in any of them into actual visits.',
 			'strategy_title'  => 'Full-funnel marketing built for visits, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Dreamer Phuket\'s reputation into qualified visits.',
 			'strategy_steps'  => array(
@@ -1301,7 +1301,7 @@ function ldm_get_case_studies() {
 			'alt'               => 'Unity Festival Thailand logo',
 			'href'              => null,
 			'challenge_title' => 'A first-year festival needed marketing built for ticket sales, not just buzz.',
-			'challenge_body'  => 'Unity Festival Thailand is an electronic music festival on Paradise Beach, Patong, Phuket, whose first edition featured international trance acts and psychedelic art installations. A first-year event has no track record to lean on. It needed a paid media system built to turn interest into a steady, trackable stream of ticket sales.',
+			'challenge_body'  => 'Unity Festival Thailand is an electronic music festival on Paradise Beach, Patong, Phuket, whose first edition featured international trance acts and psychedelic art installations. A first-year event has no track record to lean on, so it needed a paid media system built specifically around ticket sales rather than general buzz.',
 			'strategy_title'  => 'Full-funnel marketing built for ticket sales, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn Unity Festival Thailand\'s reputation into qualified ticket sales.',
 			'strategy_steps'  => array(
@@ -1329,7 +1329,7 @@ function ldm_get_extra_case_studies() {
 			'href'            => null,
 			'hero_img'        => 'ours-group-hero.jpg',
 			'challenge_title' => 'Seven venues, one shared identity, and no way to prove what was working where.',
-			'challenge_body'  => 'Ours Group is a hospitality collective in Uluwatu, Bali, built around seven venues that share one philosophy of community, hospitality and design, with a Scandinavian-minimalism-meets-Balinese-warmth aesthetic across each space. Running that many venues under one identity meant the group needed a paid media and tracking system that could prove which campaigns were actually driving bookings at each specific venue, not just traffic to the group as a whole.',
+			'challenge_body'  => 'Ours Group is a hospitality collective in Uluwatu, Bali, built around seven venues that share one philosophy of community, hospitality and design, with a Scandinavian-minimalism-meets-Balinese-warmth aesthetic across each space. Running that many venues under one identity meant no single campaign could speak for the whole group, so it needed a paid media and tracking system that could prove which campaigns were actually driving bookings at each specific venue.',
 			'strategy_title'  => 'Full-funnel marketing built for bookings at every venue, not just clicks.',
 			'strategy_intro'  => 'Three connected workstreams built to turn interest across all seven Ours Group venues into qualified bookings at each one.',
 			'strategy_steps'  => array(
@@ -1338,7 +1338,7 @@ function ldm_get_extra_case_studies() {
 				array( 'title' => 'Conversion Rate Optimization', 'desc' => 'Ongoing testing of the enquiry and booking flow across the group to convert more of that attention into qualified bookings.' ),
 			),
 			'result_title'    => 'One of Uluwatu\'s most recognized hospitality brands, ahead of the competition.',
-			'result_body'     => 'Meta Ads, Google Ads and SEO working together across all seven venues now bring in hundreds of bookings daily for Ours Group, which has grown into one of Uluwatu\'s most recognized hospitality brands, ahead of its competitors. Every event marketed across the group has been fully booked.',
+			'result_body'     => 'Meta Ads, Google Ads and SEO working together across all seven venues bring in hundreds of bookings daily for Ours Group, now one of Uluwatu\'s most recognized hospitality brands ahead of its competitors, with every event marketed across the group selling out.',
 		),
 	);
 }
