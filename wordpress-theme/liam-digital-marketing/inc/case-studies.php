@@ -480,7 +480,7 @@ function ldm_get_case_studies() {
 				array( 'title' => 'Digital Strategy', 'desc' => 'One digital strategy connecting Cherngtalay, Phuket Town, Rawai and Ao Nang under a single growing brand.' ),
 			),
 			'result_title'    => 'The Barrel has grown into a well-known brand across Thailand.',
-			'result_body'     => 'Full-service digital work across web, conversion optimization and digital strategy has turned The Barrel into a well-known name in Thailand, backed by a +415% return on ad spend across its four locations in Cherngtalay, Phuket Town, Rawai and Ao Nang.',
+			'result_body'     => 'Full-service digital work across web, conversion optimization and digital strategy has turned The Barrel into a well-known name in Thailand, backed by a high return on ad spend across its four locations in Cherngtalay, Phuket Town, Rawai and Ao Nang.',
 		),
 		array(
 			'slug'              => 'the-9th-degree',
