@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lost-and-found-thailand.github.io/portfolio/sitemap.xml

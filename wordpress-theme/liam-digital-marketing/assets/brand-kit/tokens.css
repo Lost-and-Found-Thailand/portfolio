@@ -68,7 +68,10 @@
 
 /* ---------- Layout ----------
    Breakpoint scale (literal values — custom properties don't work
-   inside @media conditions): 480 / 640 / 768 / 900 / 1100.
+   inside @media conditions): 640 / 768 / 900 / 1100. The 767/1099
+   variants are the deliberate max-width complement of the 768/1100
+   min-width breakpoints (avoids both firing at the exact same pixel),
+   not a separate value in the scale.
    ---------------------------- */
 @media (max-width: 767px) {
   :root {

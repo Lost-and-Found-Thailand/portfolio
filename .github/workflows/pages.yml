@@ -28,6 +28,8 @@ jobs:
           mkdir -p dist
           cp -r site dist/site
           cp -r brand-kit dist/brand-kit
+          cp robots.txt dist/robots.txt
+          cp sitemap.xml dist/sitemap.xml
           cat > dist/index.html <<'EOF'
           <!doctype html>
           <meta charset="utf-8">
