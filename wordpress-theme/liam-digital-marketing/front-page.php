@@ -257,7 +257,7 @@ $ldm_img = get_template_directory_uri();
       <a href="<?php echo esc_url( ldm_case_study_url( 'ours-group' ) ); ?>" class="ldm-case reveal">
         <div class="ldm-case-media">
           <span class="badge">Hospitality Group</span>
-          <img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/ours-group-photo.jpg' ); ?>" alt="The wood-beamed dining room and bar at an Ours Group venue in Uluwatu" loading="lazy" width="1200" height="900">
+          <img src="<?php echo esc_url( $ldm_img . '/assets/img/clients/ours-group-photo.jpg' ); ?>" alt="A packed dance floor under pink laser lights and hanging rattan lanterns at an Ours Group venue in Uluwatu" loading="lazy" width="1200" height="900">
         </div>
         <div class="ldm-case-body">
           <div class="ldm-case-title"><span class="title-text">Ours Group</span> <span class="arrow">&rarr;</span></div>
